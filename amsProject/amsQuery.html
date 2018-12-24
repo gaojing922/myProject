@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>老化监控系统-查询</title>
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/asm.css" />
+		<link rel="stylesheet" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="js/vue_Development.js"></script>
+		<script>
+			$(function(){
+				$(".asmLeft").mCustomScrollbar();
+			})
+		</script>
+	</head>
+	<body class="layui-layout-body">
+		<div class="layui-layout">
+			<div class="layui-side asmLeft">
+		    	<div class="layui-side-scroll">
+		    		<div class="asmBg"><span>G</span></div>
+				    <ul class="asmMenu">
+				        <li class="asm-one" onclick="window.location.href='amsMenu.html'">
+				        	<i></i><span>主菜单</span>
+				        </li>
+				        <li class="asm-two" onclick="window.location.href='amsShow.html'"><i></i><span>显示</span></li>
+				        <li class="selectBg asm-three" onclick="window.location.href='amsQuery.html'"><i></i><span>查询</span></li>
+				        <!--<li class="asm-four"><i></i><span>系统管理</span></li>-->
+				    </ul>
+		    	</div>
+		  	</div>
+			<div class="layui-body asmBody">
+				<!-- 内容主体区域 开始-->
+				<div class="content-box layui-layout sameContent" id="queryBox" v-cloak>
+					<div class="layui-header sameHeader">
+						<div class="clearBox">
+							<div class="showMenue">
+								<i class="layui-icon layui-icon-spread-left"></i>
+							</div>
+							<div class="fl header-bg">
+								<span>老化监控系统</span>
+								<span>(Aging monitoring system)</span>
+							</div>
+							<div class="fr loginOut" onclick="window.location.href='amsLogin.html'">退出</div>
+						</div>
+						<div class="queryList">
+							<span>产品代码:</span>
+							<input type="text" class="asm-input" v-model="pCode" id="abcd"/>
+							<span>功率代码:</span>
+							<input type="text" class="asm-input" v-model="gCode"/>
+							<span>周期代码:</span>
+							<div class="mqSelect">
+								<input type="text" class="asm-input" v-model="dCode"/>
+								<div class="selectBox" :name="selected" @click="chooseCode">
+									<i class="one"></i>
+									<i class="two" v-html="oText"></i>
+									<i class="three"></i>
+									<ul class="four" v-show="showCode">
+										<li @click="chooseText($event)">&gt;</li>
+										<li @click="chooseText($event)">&lt;</li>
+										<li @click="chooseText($event)">=</li>
+									</ul>
+								</div>
+								
+							</div>
+							<span>序列号:</span>
+							<input type="text" class="asm-input" v-model="xCode"/>
+							<button class="asm-btn" @click="queryData">查询</button>
+						</div>
+					</div>	
+					<div class="layui-body scrollBox menueBox">
+						<div class="interBox clearBox" v-show="isData">
+							<div class="sameAsm-list">
+								<div class="sameAsm-title clearBox">
+									<div class="fl">
+										<span>逆变器1</span>
+										<span>(inverter1)</span>
+									</div>
+									<div class="fr">
+										<i class="asmRefresh"></i>
+										<span>运行效率:</span>
+										<div class="asmXl">
+											<ul class="asmXl-list clearBox" name="1">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</div>
+										<span>60%</span>
+									</div>
+								</div>
+								<div class="inverter-pro">
+									<div class="ip-main clearBox">
+										<div class="fl">
+											<table class="ipTitle-table">
+												<tr>
+													<td><span>产品型号</span><span>(Model):</span></td>
+													<td>PV001.01552</td>
+												</tr>
+												<tr>
+													<td><span>序列号</span><span>(S/N):</span></td>
+													<td>4k3k4342</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<span>参数表</span><span>(Parameter table):</span>
+														<span class="intoPro" @click="showInfo">参数详情</span>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="fr">
+											<img src="img/asmDd.png" />
+											<p class="status"><span>等待</span><span>(Wait)</span></p>
+											<p class="status-title"><span>当前状态</span><span>(Status) </span></p>
+										</div>
+									</div>
+									<div class="ip-table">
+										<p class="ip-tableTitle">PV直流输入端参数 (PV DC input parameters):</p>
+										<table class="one">
+											<tr>
+												<td>参数\输入</td>
+												<td>PV1</td>
+												<td>PV2</td>
+												<td>PV3</td>
+												<td>PV4</td>
+												<td>PV5</td>
+												<td>PV6</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+												<td>230</td>
+												<td>225</td>
+												<td>216</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+												<td>15</td>
+												<td>22</td>
+												<td>44</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">U\V\W交流输出端参数(>U\V\W AC output parameters):</p>
+										<table class="two">
+											<tr>
+												<td>参数\输出</td>
+												<td>U</td>
+												<td>V</td>
+												<td>W</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+											<tr>
+												<td>THD</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">效率 (Ratio of input power to output power):</p>
+										<table class="three">
+											<tr>
+												<td>∩</td>
+												<td>0.5</td>
+												<td>0.5</td>
+												<td>0.7</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="sameAsm-list">
+								<div class="sameAsm-title clearBox">
+									<div class="fl">
+										<span>逆变器2</span>
+										<span>(inverter2)</span>
+									</div>
+									<div class="fr">
+										<i class="asmRefresh"></i>
+										<span>运行效率:</span>
+										<div class="asmXl">
+											<ul class="asmXl-list clearBox" name="2">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</div>
+										<span>80%</span>
+									</div>
+								</div>
+								<div class="inverter-pro">
+									<div class="ip-main clearBox">
+										<div class="fl">
+											<table class="ipTitle-table">
+												<tr>
+													<td><span>产品型号</span><span>(Model):</span></td>
+													<td>PV001.01552</td>
+												</tr>
+												<tr>
+													<td><span>序列号</span><span>(S/N):</span></td>
+													<td>4k3k4342</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<span>参数表</span><span>(Parameter table):</span>
+														<span class="intoPro" @click="showInfo">参数详情</span>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="fr">
+											<img src="img/asmZx.png" />
+											<p class="status"><span>在线</span><span>(Wait)</span></p>
+											<p class="status-title"><span>当前状态</span><span>(Status) </span></p>
+										</div>
+									</div>
+									<div class="ip-table">
+										<p class="ip-tableTitle">PV直流输入端参数 (PV DC input parameters):</p>
+										<table class="one">
+											<tr>
+												<td>参数\输入</td>
+												<td>PV1</td>
+												<td>PV2</td>
+												<td>PV3</td>
+												<td>PV4</td>
+												<td>PV5</td>
+												<td>PV6</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+												<td>230</td>
+												<td>225</td>
+												<td>216</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+												<td>15</td>
+												<td>22</td>
+												<td>44</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">U\V\W交流输出端参数(>U\V\W AC output parameters):</p>
+										<table class="two">
+											<tr>
+												<td>参数\输出</td>
+												<td>U</td>
+												<td>V</td>
+												<td>W</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+											<tr>
+												<td>THD</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">效率 (Ratio of input power to output power):</p>
+										<table class="three">
+											<tr>
+												<td>∩</td>
+												<td>0.5</td>
+												<td>0.5</td>
+												<td>0.7</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="sameAsm-list">
+								<div class="sameAsm-title clearBox">
+									<div class="fl">
+										<span>逆变器2</span>
+										<span>(inverter2)</span>
+									</div>
+									<div class="fr">
+										<i class="asmRefresh"></i>
+										<span>运行效率:</span>
+										<div class="asmXl">
+											<ul class="asmXl-list clearBox" name="1">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</div>
+										<span>40%</span>
+									</div>
+								</div>
+								<div class="inverter-pro">
+									<div class="ip-main clearBox">
+										<div class="fl">
+											<table class="ipTitle-table">
+												<tr>
+													<td><span>产品型号</span><span>(Model):</span></td>
+													<td>PV001.01552</td>
+												</tr>
+												<tr>
+													<td><span>序列号</span><span>(S/N):</span></td>
+													<td>4k3k4342</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<span>参数表</span><span>(Parameter table):</span>
+														<span class="intoPro" @click="showInfo">参数详情</span>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="fr">
+											<img src="img/asmGz.png" />
+											<p class="status"><span>故障</span><span>(Fault)</span></p>
+											<p class="status-title"><span>当前状态</span><span>(Status) </span></p>
+										</div>
+									</div>
+									<div class="ip-table">
+										<p class="ip-tableTitle">PV直流输入端参数 (PV DC input parameters):</p>
+										<table class="one">
+											<tr>
+												<td>参数\输入</td>
+												<td>PV1</td>
+												<td>PV2</td>
+												<td>PV3</td>
+												<td>PV4</td>
+												<td>PV5</td>
+												<td>PV6</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+												<td>230</td>
+												<td>225</td>
+												<td>216</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+												<td>15</td>
+												<td>22</td>
+												<td>44</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">U\V\W交流输出端参数(>U\V\W AC output parameters):</p>
+										<table class="two">
+											<tr>
+												<td>参数\输出</td>
+												<td>U</td>
+												<td>V</td>
+												<td>W</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+											<tr>
+												<td>THD</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">效率 (Ratio of input power to output power):</p>
+										<table class="three">
+											<tr>
+												<td>∩</td>
+												<td>0.5</td>
+												<td>0.5</td>
+												<td>0.7</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="sameAsm-list">
+								<div class="sameAsm-title clearBox">
+									<div class="fl">
+										<span>逆变器2</span>
+										<span>(inverter2)</span>
+									</div>
+									<div class="fr">
+										<i class="asmRefresh"></i>
+										<span>运行效率:</span>
+										<div class="asmXl">
+										</div>
+										<span>0</span>
+									</div>
+								</div>
+								<div class="inverter-pro">
+									<div class="ip-main clearBox">
+										<div class="fl">
+											<table class="ipTitle-table">
+												<tr>
+													<td><span>产品型号</span><span>(Model):</span></td>
+													<td>PV001.01552</td>
+												</tr>
+												<tr>
+													<td><span>序列号</span><span>(S/N):</span></td>
+													<td>4k3k4342</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<span>参数表</span><span>(Parameter table):</span>
+														<span class="intoPro" @click="showInfo">参数详情</span>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="fr">
+											<img src="img/asmLx.png" />
+											<p class="status"><span>离线</span><span>(Off-line)</span></p>
+											<p class="status-title"><span>当前状态</span><span>(Status) </span></p>
+										</div>
+									</div>
+									<div class="ip-table">
+										<p class="ip-tableTitle">PV直流输入端参数 (PV DC input parameters):</p>
+										<table class="one">
+											<tr>
+												<td>参数\输入</td>
+												<td>PV1</td>
+												<td>PV2</td>
+												<td>PV3</td>
+												<td>PV4</td>
+												<td>PV5</td>
+												<td>PV6</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">U\V\W交流输出端参数(>U\V\W AC output parameters):</p>
+										<table class="two">
+											<tr>
+												<td>参数\输出</td>
+												<td>U</td>
+												<td>V</td>
+												<td>W</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>THD</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">效率 (Ratio of input power to output power):</p>
+										<table class="three">
+											<tr>
+												<td>∩</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="sameAsm-list">
+								<div class="sameAsm-title clearBox">
+									<div class="fl">
+										<span>逆变器2</span>
+										<span>(inverter2)</span>
+									</div>
+									<div class="fr">
+										<i class="asmRefresh"></i>
+										<span>运行效率:</span>
+										<div class="asmXl">
+											<ul class="asmXl-list clearBox" name="1">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</div>
+										<span>40%</span>
+									</div>
+								</div>
+								<div class="inverter-pro">
+									<div class="ip-main clearBox">
+										<div class="fl">
+											<table class="ipTitle-table">
+												<tr>
+													<td><span>产品型号</span><span>(Model):</span></td>
+													<td>PV001.01552</td>
+												</tr>
+												<tr>
+													<td><span>序列号</span><span>(S/N):</span></td>
+													<td>4k3k4342</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<span>参数表</span><span>(Parameter table):</span>
+														<span class="intoPro" @click="showInfo">参数详情</span>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="fr">
+											<img src="img/asmGz.png" />
+											<p class="status"><span>故障</span><span>(Fault)</span></p>
+											<p class="status-title"><span>当前状态</span><span>(Status) </span></p>
+										</div>
+									</div>
+									<div class="ip-table">
+										<p class="ip-tableTitle">PV直流输入端参数 (PV DC input parameters):</p>
+										<table class="one">
+											<tr>
+												<td>参数\输入</td>
+												<td>PV1</td>
+												<td>PV2</td>
+												<td>PV3</td>
+												<td>PV4</td>
+												<td>PV5</td>
+												<td>PV6</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+												<td>230</td>
+												<td>225</td>
+												<td>216</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+												<td>15</td>
+												<td>22</td>
+												<td>44</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">U\V\W交流输出端参数(>U\V\W AC output parameters):</p>
+										<table class="two">
+											<tr>
+												<td>参数\输出</td>
+												<td>U</td>
+												<td>V</td>
+												<td>W</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+											<tr>
+												<td>THD</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">效率 (Ratio of input power to output power):</p>
+										<table class="three">
+											<tr>
+												<td>∩</td>
+												<td>0.5</td>
+												<td>0.5</td>
+												<td>0.7</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="sameAsm-list">
+								<div class="sameAsm-title clearBox">
+									<div class="fl">
+										<span>逆变器2</span>
+										<span>(inverter2)</span>
+									</div>
+									<div class="fr">
+										<i class="asmRefresh"></i>
+										<span>运行效率:</span>
+										<div class="asmXl">
+											<ul class="asmXl-list clearBox" name="1">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</div>
+										<span>40%</span>
+									</div>
+								</div>
+								<div class="inverter-pro">
+									<div class="ip-main clearBox">
+										<div class="fl">
+											<table class="ipTitle-table">
+												<tr>
+													<td><span>产品型号</span><span>(Model):</span></td>
+													<td>PV001.01552</td>
+												</tr>
+												<tr>
+													<td><span>序列号</span><span>(S/N):</span></td>
+													<td>4k3k4342</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<span>参数表</span><span>(Parameter table):</span>
+														<span class="intoPro" @click="showInfo">参数详情</span>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="fr">
+											<img src="img/asmGz.png" />
+											<p class="status"><span>故障</span><span>(Fault)</span></p>
+											<p class="status-title"><span>当前状态</span><span>(Status) </span></p>
+										</div>
+									</div>
+									<div class="ip-table">
+										<p class="ip-tableTitle">PV直流输入端参数 (PV DC input parameters):</p>
+										<table class="one">
+											<tr>
+												<td>参数\输入</td>
+												<td>PV1</td>
+												<td>PV2</td>
+												<td>PV3</td>
+												<td>PV4</td>
+												<td>PV5</td>
+												<td>PV6</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+												<td>230</td>
+												<td>225</td>
+												<td>216</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+												<td>15</td>
+												<td>22</td>
+												<td>44</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">U\V\W交流输出端参数(>U\V\W AC output parameters):</p>
+										<table class="two">
+											<tr>
+												<td>参数\输出</td>
+												<td>U</td>
+												<td>V</td>
+												<td>W</td>
+											</tr>
+											<tr>
+												<td>电压(V)</td>
+												<td>220</td>
+												<td>250</td>
+												<td>210</td>
+											</tr>
+											<tr>
+												<td>电流(A)</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+											<tr>
+												<td>THD</td>
+												<td>12</td>
+												<td>14</td>
+												<td>14</td>
+											</tr>
+										</table>
+										<p class="ip-tableTitle">效率 (Ratio of input power to output power):</p>
+										<table class="three">
+											<tr>
+												<td>∩</td>
+												<td>0.5</td>
+												<td>0.5</td>
+												<td>0.7</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--暂无数据-->
+						<div class="noData" v-show="!isData">
+							<p>无数据</p>
+						</div>
+					</div>
+				</div>
+				<!-- 内容主体区域 结束-->
+			</div>
+		</div>
+		<script src="layui/layui.js"></script>
+		<script src="js/common.js"></script>
+		<script>
+			new Vue({
+				el:'#queryBox',
+				data:{
+					selected:'0',
+					showCode:false,
+					oText:'&gt;',
+					isData:true,
+					pCode:'',
+					gCode:'',
+					dCode:'',
+					xCode:''
+				},
+				methods:{
+					chooseCode(){
+						this.showCode=!this.showCode;
+						if(this.selected == 0)this.selected=1;
+						else this.selected=0
+					},
+					chooseText(event){
+						this.oText = event.target.innerHTML;
+					},
+					queryData(){
+						var _this = this;
+						if(this.pCode == ""){
+							dialogTips('请输入产品代码!');
+							return false;
+						}else if(this.gCode == ""){
+							dialogTips('请输入功率代码!');
+							return false;
+						}else if(this.dCode == ""){
+							dialogTips('请输入周期代码!');
+							return false;
+						}else if(this.xCode == ""){
+							dialogTips('请输入序列号!');
+							return false;
+						}else{
+							dialogLoading(1);
+						}
+					},
+					//定位
+					changePos(){
+						var oBox = document.getElementsByClassName('sameAsm-list');
+						var height = document.getElementsByClassName("sameAsm-list")[0].offsetHeight;
+						for(let i = 0;i<oBox.length;i++){
+							let a = oBox[i];
+							a.index = i;
+							let s;
+							if(i%2 == 0){
+								oBox[i].style.marginTop = i/2*20+'px';
+								oBox[i].style.top = i/2*height+'px';
+							}else{
+								oBox[i].style.marginTop = (i-1)/2*20+'px';
+								oBox[i].style.top = (i-1)/2*height+'px';
+							}
+						}
+					},
+					showInfo(){
+						layer.open({
+						  type: 2,
+						  title: false,
+						  resize:false,
+						  closeBtn: 0, //不显示关闭按钮
+						  area: ['900px', '585px'],
+						  content: ['amsInfo.html', 'no'],
+							success:function (layero,index) {
+									var sendInfo = $("#sid", layero.find("iframe")[0].contentWindow.document);  
+									sendInfo.attr("value", '这是父页面传递过来的值aa');  
+							}
+						});				
+					}
+				},
+				mounted:function(){
+					this.changePos();
+				}
+			})
+		</script>
+	</body>
+</html>

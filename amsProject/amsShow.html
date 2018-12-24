@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>老化监控系统-显示</title>
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/asm.css" />
+		<link rel="stylesheet" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="js/vue_Development.js"></script>
+		<style>
+			.scrollBox{overflow: hidden;}
+		</style>
+		<script>
+			$(function(){
+				$(".scrollBox").mCustomScrollbar({
+					scrollButtons:{
+						enable:true
+					}
+				});
+				$(".asmLeft").mCustomScrollbar();
+			})
+		</script>
+	</head>
+	<body class="layui-layout-body">
+		<div class="layui-layout" id="showCount" v-cloak>
+			<div class="layui-side asmLeft">
+		    	<div class="layui-side-scroll">
+		    		<div class="asmBg"><span>G</span></div>
+				    <ul class="asmMenu">
+				        <li class="asm-one" onclick="window.location.href='amsMenu.html'"><i></i><span>主菜单</span></li>
+				        <li class="selectBg asm-two" onclick="window.location.href='amsShow.html'"><i></i><span>显示</span></li>
+				        <li class="asm-three" onclick="window.location.href='amsQuery.html'"><i></i><span>查询</span></li>
+				        <!--<li class="asm-four"><i></i><span>系统管理</span></li>-->
+				    </ul>
+		    	</div>
+		  	</div>
+			<div class="layui-body asmBody">
+				<!-- 内容主体区域 开始-->
+				<div class="content-box layui-layout">
+					<div class="layui-header clearBox">
+						<div class="showMenue">
+							<i class="layui-icon layui-icon-spread-left"></i>
+						</div>
+						<div class="fl header-bg">
+							<span>老化监控系统</span>
+							<span>(Aging monitoring system)</span>
+						</div>
+						<div class="fr loginOut" onclick="window.location.href='amsLogin.html'">退出</div>
+					</div>	
+					<div class="layui-body scrollBox">
+						<div class="showTitle">
+							<p class="showTitle-main">选择主菜单界面显示的逆变器数量</p>
+							<p class="showTitle-sub">(Aging monitoring system)</p>
+						</div>
+						<div class="showCount">
+							<div class="countBox">
+								<div class="count_9" :class="{selectedName:selectd.count_9}" @click="asmSelect($event)">
+									<i><em v-show="selectd.count_9"></em></i>
+								</div>
+								<div class="count_16" :class="{selectedName:selectd.count_16}" @click="asmSelect($event)">
+									<i><em v-show="selectd.count_16"></em></i>
+								</div>
+								<div class="count_25" :class="{selectedName:selectd.count_25}" @click="asmSelect($event)">
+									<i><em v-show="selectd.count_25"></em></i>
+								</div>
+							</div>
+							<div class="countBox">
+								<div class="count_36" :class="{selectedName:selectd.count_36}" @click="asmSelect($event)">
+									<i><em v-show="selectd.count_36"></em></i>
+								</div>
+								<div class="count_108" :class="{selectedName:selectd.count_108}" @click="asmSelect($event)">
+									<i><em v-show="selectd.count_108"></em></i>
+								</div>
+							</div>
+						</div>
+						<div class="countBtn">
+							<button class="asm-btn">保存</button>
+						</div>
+					</div>
+				</div>
+				<!-- 内容主体区域 结束-->
+			</div>
+		</div>
+		<script src="layui/layui.js"></script>
+		<script>
+			//JavaScript代码区域
+			layui.use('element', function(){
+			  var element = layui.element;
+			});
+			new Vue({
+				el:'#showCount',
+				data:{
+					selectd:{
+						"count_9":false,
+						"count_16":false,
+						"count_25":false,
+						"count_36":false,
+						"count_108":false
+					}
+				},
+				methods:{
+					asmSelect(event){
+						var className = event.currentTarget.className;
+						for(key in this.selectd){
+							if(key == className){
+								this.selectd[key] = true;
+							}else{
+								this.selectd[key] = false;
+							}
+						}
+					}
+				}				
+			})
+			$(function(){
+
+				
+			})
+		</script>
+	</body>
+</html>

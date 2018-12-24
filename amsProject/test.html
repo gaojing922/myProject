@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{padding: 0;margin: 0;list-style: none;}
+			.sameSelect{direction: inline-block;vertical-align: middle;position: relative;height: 30px;width: 180px;margin: 150px;}
+			.sameSelect select{height: 28px;border: 1px solid #dddddd;border-radius: 5px;cursor: pointer;width: 180px;position: absolute;left: 0;top: 0;outline: none;}
+			.sameSelect a{cursor: pointer;position: absolute;left: 0;top: 0;height: 28px;width: 150px;padding-right: 30px;border-radius: 5px;background: red;z-index: 2;overflow: hidden;text-overflow: ellipsis;}
+			.sameSelect>div{display: block;position: absolute;right: 1px;top: 1px;transition: all .3s linear;background-color: #fff;
+							
+							width: 16px;height: 25px;border-radius: 0 5px 5px 0;}
+			.sameSelect>div i{position: absolute;height: 4px;width: 8px;transition: all .3s linear;background-image: url(../img/asmBottom.png);background-repeat: no-repeat;background-position: center;top: 50%;margin-top: -2px;left: 50%;margin-left: -4px;}
+			.sameSelect select[name='1'] +div i{transform: rotate(180deg)}
+			.sameSelect select[name='0'] +div i{transform: rotate(0deg)}
+		</style>
+	</head>
+	<body>
+		<div class="sameSelect">
+			<select name="0">
+				<option>1asefqwefasdcfaqefasdfawedf</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<div>
+				<i></i>
+			</div>
+		</div>
+	</body>
+</html>

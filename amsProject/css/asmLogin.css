@@ -1,0 +1,63 @@
+@charset "utf-8";
+*{padding: 0;margin: 0;list-style: none;}
+body,html{width: 100%;height: 100%;font-family: "微软雅黑",arial;font-size: 14px;
+	background-color: #2f7ebe;
+	background-image:url(../img/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+em,i{font-style: normal;}
+[v-cloak]{display: none;}
+input,button,img{vertical-align: middle;outline: none;}
+.fl{float: left;}
+.fr{float: right;}
+.clearBox:after{display: block;content: '';clear: both;}
+.loginLogo{left: 70px;top: 22px;position: absolute;width: 162px;height: 40px;background: url(../img/logo.png) no-repeat center;}
+.loginBox{width: 760px;margin: 0px auto;padding-top: 30px;}
+.loginBox .title{color: #072e43;text-align: center;}
+.loginBox .title p:nth-child(1){font-size: 30px;font-weight: bold;margin-bottom: 3px;}
+.loginBox .title p:nth-child(2){font-size: 16px;}
+.loginBox-t{padding-top: 100px;position: relative;margin-top: 80px;transition: all .3s linear;width: 100%;height: 300px;background: #fff;border-radius: 5px;box-shadow: 0 0 10px #11384a;}
+.ltImg{left: 50%;top: -31px;;margin-left: -134px;line-height: 62px;text-align: center;font-size: 30px;font-weight: bold;color: #fff;position: absolute;width: 268px;height: 62px;background: url(../img/asmLogin.png) no-repeat center;}
+.sameRow,.loginBtn{width: 500px;margin: 0 auto;height: 50px;line-height: 50px;}
+.sameRow{font-size: 12px;margin-bottom: 40px;position: relative;}
+.sameRow>div{
+	 -webkit-perspective: 500;
+    -moz-perspective: 500;
+    -ms-perspective: 500;
+    perspective: 500;
+    -ms-transform: perspective(500px);
+    -moz-transform: perspective(500px); 
+    transform-style: preserve-3d; 
+	position: absolute;cursor: pointer;width: 55px;height: 37px;text-align: center;line-height: 37px;right: 6px;top: 8px;border-radius: 0 5px 5px 0;}
+.sameRow>div i{
+	transition: 0.6s;
+    transform-style: preserve-3d; 
+	width: 20px;height: 12px;position: absolute;top: 50%;left: 50%;margin-left: -10px;margin-top: -6px;
+}
+.sameRow>div[data-name="0"] i{transform: rotateY(180deg);}
+.sameRow>div[data-name="1"] i{transform: rotateY(0deg);}
+.sameRow>div i em{backface-visibility: hidden;position: absolute;display: inline-block;width: 100%;height: 100%;left: 0;top: 0;}
+.sameRow>div i em.showP{background:url(../img/asmHide.png) no-repeat center;z-index: 2;transform: rotateY(0deg);}
+.sameRow>div i em.hideP{background:url(../img/asmShowp.png) no-repeat center;z-index: 1;transform: rotateY(-180deg);}
+
+
+
+
+
+
+.loginBtn{text-align: center;}
+.sameRow>span.titleBg{display: inline-block;width: 70px;padding-left: 25px;background-repeat: no-repeat;}
+.userRow>span.titleBg{background-image: url(../img/asmUser.png);background-position: left 15px;}
+.pawdRow>span.titleBg{background-image: url(../img/asmPawd.png);background-position: left 15px;}
+.sameRow input{height: 35px;width: 365px;padding-right: 15px;border: 1px solid transparent;border-radius: 5px;transition: all .3s linear;background: #f7f7f7;padding-left: 15px;}
+.pawdRow input{padding-right: 55px;width: 323px;}
+.sameRow input:focus{border-color: #2cc5f2;}
+.loginBtn button{
+	border: none;transition: all .3s linear;border-radius: 5px;color: #fff;font-size: 14px;text-align: center;cursor: pointer;padding: 10px 80px;
+	background: -webkit-linear-gradient(left, #6f59d7 , #14e6f9);
+    background: -o-linear-gradient(right, #6f59d7, #14e6f9); 
+    background: -moz-linear-gradient(right, #6f59d7, #14e6f9); 
+    background: linear-gradient(to right, #6f59d7 , #14e6f9); 
+}
+.loginBtn button:hover{box-shadow: 0 0 5px #14e6f9;}

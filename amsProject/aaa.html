@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<style>
+			*{padding: 0;margin: 0;}
+			body,html{height: 100%;}
+			.fl{float: left;}
+			.fr{float: right;}
+			.clearBox{clear: both;content: '';display: block;}
+			.sameB{position: relative;height: 150px;margin-bottom: 15px;}
+			.box>div{transition: all.3s linear;z-index: 1;width: 48%;height: 150px;background: grey;border-radius: 5px;position: absolute;}
+			.box>div:nth-child(2n){right: 0;}
+			.box>div:nth-child(2n+1){left: 0;}
+			.box>div:hover{height: 300px;z-index: 3;}
+		</style>
+	</head>
+	<body>
+		<div class="box" style="width: 800px;margin: 0px auto;position: relative;">
+			<div class="a" style="background-color: green;">1</div>
+			<div class="a" style="background-color: goldenrod;">2</div>
+			<div class="a" style="background-color: blueviolet;">3</div>
+			<div class="a" style="background-color: blueviolet;">3</div>
+			<div class="a" style="background-color: green;">1</div>
+			<div class="a" style="background-color: goldenrod;">2</div>
+			<div class="a" style="background-color: blueviolet;">3</div>
+			<div class="a" style="background-color: blueviolet;">3</div>
+			<div class="a" style="background-color: green;">1</div>
+			<div class="a" style="background-color: goldenrod;">2</div>
+			<div class="a" style="background-color: blueviolet;">3</div>
+			<div class="a" style="background-color: blueviolet;">3</div>
+		</div>
+		<script>
+			let d = new Date();
+			let day = d.getDate();
+			alert(typeof day.toString())
+			//alert(a.padStart(8,'0'))
+			window.onload=function(){
+				var oBox = document.getElementsByClassName('a');
+				var height = document.getElementsByClassName("a")[0].offsetHeight;
+				for(var i = 0;i<oBox.length;i++){
+					var a = oBox[i];
+					a.index = i;
+					var s;
+					if(i%2 == 0){
+						oBox[i].style.marginTop = i/2*20+'px';
+						oBox[i].style.top = i/2*height+'px';
+					}else{
+						oBox[i].style.marginTop = (i-1)/2*20+'px';
+						oBox[i].style.top = (i-1)/2*height+'px';
+					}
+					oBox[i].onmouseover=function(){
+						var bodyH = document.documentElement.scrollHeight || document.body.scrollHeight;;
+						var h = document.getElementsByClassName('box')[0];
+						if(i%2 == 0) s = i/2*150+((i/2-1)*20);
+						else s = (i+1)/2*150+(((i+1)/2-1)*20);
+						if((this.index == oBox.length-1 || (this.index%2 == 0 && this.index == oBox.length-2)) && s>(bodyH-150)){
+							h.style.height = bodyH+150+'px'
+						}else{
+							h.style.height = bodyH+'px'
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

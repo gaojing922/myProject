@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>老化监控系统-登录</title>
+		<link rel="stylesheet" href="css/asmLogin.css" />
+		<link rel="stylesheet" href="layui/css/layui.css"/>
+		<script src="js/vue_Development.js"></script>
+	</head>
+	<body>
+		<div class="loginLogo"></div>
+		<div class="loginBox" id="loginBox">
+			<div class="title">
+				<p>老化监控系统</p>
+				<p>(Aging monitoring system)</p>
+			</div>
+			<div class="loginBox-t">
+				<div class="ltImg">登录系统</div>
+				<div class="sameRow userRow">
+					<span class="titleBg">用户名</span>
+					<input type="text" @keyup.enter="login" v-model="userName" autofocus="autofocus"/>
+				</div>
+				<div class="sameRow pawdRow">
+					<span class="titleBg">密码</span>
+					<input :type="pawdType" @keyup.enter="login" v-model="passWd" @keyup.enter='a'/>
+					<div :data-name="changeP" @click="changePwad">
+						<i>
+							<em class="showP"></em>
+							<em class="hideP"></em>
+						</i>
+					</div>
+				</div>
+				<div class="loginBtn">
+					<button @click="login">登录</button>
+				</div>
+			</div>
+		</div>
+		<script src="layui/layui.js"></script>
+		<script src="js/common.js"></script>
+		<script>
+			new Vue({
+				el:'#loginBox',
+				data:{
+					userName:'',
+					passWd:'',
+					changeP:'0',
+					pawdType:'password'
+				},
+				methods:{
+					login(){
+						if(this.userName == ""){
+							dialogTips('请输入用户名!');
+							return false;
+						}else if(this.passWd == ""){
+							dialogTips('请输入密码!');
+							return false;
+						}else{
+							dialogLoading(1);
+							setTimeout(function(){
+								window.location.href="amsMenu.html";
+								dialogLoading=null
+							},2000)
+						}
+					},
+					changePwad(){
+						if(this.changeP == 0){
+							this.changeP = 1;
+							this.pawdType = "text";
+						}else{
+							this.changeP = 0;
+							this.pawdType = "password";
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
