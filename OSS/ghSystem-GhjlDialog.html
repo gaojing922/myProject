@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<script src="js/jquery.min.js"></script>
+	<title>供货系统-供货记录-详情</title>
+	</head>
+	<body>
+		<div class="ghjl-query-box">
+			<div class="ghjl-query-time">
+				<input type="text" class="allInputHover device-typeG" placeholder="SN号/设备类型/设备名称" />
+				<span>订单日期</span>
+				<input class="allInputHover layui-input" onclick="layui.laydate({elem: this, festival: true})">
+				<button class="allQueryBtn">查询</button>
+			</div>
+			<div class="main-right-count-table">
+				<table class="all-table">
+					<thead>
+						<tr>
+							<td>序列号</td>
+							<td>名称</td>
+							<td>规格型号</td>
+							<td>数量</td>
+							<td>IP等级</td>
+							<td>派单单号</td>
+							<td>交易日期</td>
+							<td>锁库标志</td>
+							<td>出库数量</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>BTA2165</td>
+							<td>Growatt123</td>
+							<td>Gtad013541</td>
+							<td>7</td>
+							<td>63</td>
+							<td>gad16545</td>
+							<td>2016-06-23</td>
+							<td>被锁</td>
+							<td>5</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="count-table-bottom-btn">
+					<div id="queryGl-page" class="floatR"></div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="layui/layui.js"></script>
+		<script src="js/ossIndex.js"></script>
+		<script>
+			//分页
+			layui.use('laypage', function(){ //独立版的layer无需执行这一句
+				var laypage = layui.laypage;//分页
+				//分页
+				laypage({
+				   cont: 'queryGl-page',
+				   pages: 5, //总页数
+				   skip: true, //是否开启跳页
+				   groups: 5 //连续显示分页数
+				});
+				
+			});
+		</script>
+	</body>
+</html>

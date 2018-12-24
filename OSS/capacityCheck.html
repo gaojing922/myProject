@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<title>智能检测</title>
+	</head>
+	<body>
+		<div class="znCheck-box">
+			<table class="znFilter">
+				<tr>
+					<td>
+						<div class="check-same-box check-one" name='0'>
+							<p class="same-text">智能I-V曲线扫描</p>
+							<p>可远程扫描每路I-V曲线或P-V曲线</p>
+						</div>
+					</td>
+					<td>
+						<div class="check-same-box check-two">
+							<p class="same-text" name='0'>故障录波检测</p>
+							<p>可远程、快速、精确地进行故障定位</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="check-same-box check-three">
+							<p class="same-text">实时录波检测</p>
+							<p>可实时观察逆变器电压电流质量等</p>
+						</div>
+					</td>
+					<td>
+						<div class="check-same-box check-four">
+							<p class="same-text">一键诊断</p>
+							<p>一键检测电站环境信息,包括I-V曲线扫描,电网侧电压波形,THDV以及线路阻抗</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="check-title">
+				<span>智能I-V曲线扫描</span>
+			</div>
+			<div class="check-charts-box">
+				<!--I-V曲线-->
+				<div class="ivBox sameBox" name='0'>
+					<div class="title">
+						<span class="btn checkBtn ivBtn znNotclick">I-V曲线</span>
+						<span class="btn pvBtn znNotclick">P-V曲线</span>
+					</div>
+					<div class="sameTime-show clearBox">
+						<span>上一次刷新时间:</span>
+						<span>2018-02-10 12:30:31</span>
+						<span class="btn floatR">导出当前数据</span>
+					</div>
+					<ul class="chart clearBox">
+						<li class="vChart" id="vChart">
+							
+						</li>
+						<li>
+							<p class="allIv-title">MPPT(Voc,Isc)</p>
+							<table class="ivPv-table ivPv-click">
+								<!--<tr>
+									<td class="toggleText">MPPT(Voc,Isc)</td>
+								</tr>-->
+								<tbody>
+									<tr data-name="0">
+										<td class="Iv_one"><span class="same_ivBg"></span><span>1</span>(1000V,30A)</td>
+									</tr>
+									<tr data-name="0">
+										<td class="Iv_two"><span class="same_ivBg"></span><span>2</span>(1000V,30A)</td>
+									</tr>
+									<tr data-name="0">
+										<td class="Iv_three"><span class="same_ivBg"></span><span>3</span>(1000V,30A)</td>
+									</tr>
+									<tr data-name="0">
+										<td class="Iv_four"><span class="same_ivBg"></span><span>4</span>(1000V,30A)</td>
+									</tr>
+									<tr data-name="0">
+										<td class="Iv_five"><span class="same_ivBg"></span><span>5</span>(1000V,30A)</td>
+									</tr>
+									<tr data-name="0">
+										<td class="Iv_six"><span class="same_ivBg"></span><span>6</span>(1000V,30A)</td>
+									</tr>
+									<tr data-name="1">
+										<td class="Iv_serven"><span class="same_ivBg"></span><span>7</span>(1000V,30A)</td>
+									</tr>
+									<tr data-name="1">
+										<td class="Iv_eight"><span class="same_ivBg"></span><span>8</span>(1000V,30A)</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+					</ul>
+				</div>
+				<!--故障录波-->
+				<div class="gzBox sameBox znCheck-hide" name="1">
+					<div class="sameTime-show clearBox">
+						<span>波形触发时间:</span>
+						<span>2018-02-10 12:30:31</span>
+						<span class="btn floatR">导出当前数据</span>
+					</div>
+					<ul>
+						<li>
+							<div class="gzBox-title layui-form clearBox">
+								<div class="floatL">
+									<span>故障序号:</span>
+						        	<select name="quiz">
+							          	<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>0</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+						        	</select>
+								</div>
+								<div class="floatR">
+									<span>故障码:</span>
+									<span>6</span>
+								</div>
+							</div>
+							<div class="gzChart" id="gzChart"></div>
+						</li>
+						<li>
+							<table class="problem-table">
+								<thead>
+									<tr>
+										<td>ID</td>
+										<td>显示倍数</td>
+										<td>波形值</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-name="0">
+										<td class="gz_one"><span class="same_ivBg"></span>2656</td>
+										<td>
+											<input type="number" class="allInputHover" min="0"/>
+											<span class="gzImg gzAddData"></span>
+										</td>
+										<td>500V</td>
+									</tr>
+									<tr data-name="0">
+										<td class="gz_two"><span class="same_ivBg"></span>0012</td>
+										<td>
+											<input type="number" class="allInputHover" min="0"/>
+											<span class="gzImg gzAddData"></span>
+										</td>
+										<td>302V</td>
+									</tr>
+									<tr data-name="0">
+										<td class="gz_three"><span class="same_ivBg"></span>635</td>
+										<td>
+											<input type="number" class="allInputHover" min="0"/>
+											<span class="gzImg gzAddData"></span>
+										</td>
+										<td>100V</td>
+									</tr>
+									<tr data-name="0">
+										<td class="gz_four"><span class="same_ivBg"></span>265</td>
+										<td>
+											<input type="number" class="allInputHover" min="0"/>
+											<span class="gzImg gzAddData"></span>
+										</td>
+										<td>102V</td>
+									</tr>
+								</tbody>
+								
+							</table>
+						</li>
+					</ul>
+					
+				</div>
+				<!--实时录波-->
+				<div class="ssBox sameBox znCheck-hide" name='2'>
+					<div class="sameTime-show clearBox">
+						<span>上一次刷新时间:</span>
+						<span>2018-02-10 12:30:31</span>
+						<span class="btn floatR">导出当前数据</span>
+					</div>
+					<ul>
+						<li>
+							<div class="ssChart" id="ssChart"></div>
+						</li>
+						<li>
+							<table class="sslb-table">
+								<thead>
+									<tr>
+										<td>ID</td>
+										<td>显示倍数</td>
+										<td>波形值</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-name="0">
+										<td class="gz_one">
+											<span class="same_ivBg"></span>
+											<input class="setId-input allInputHover" placeholder="设置ID"/>
+										</td>
+										<td>
+											<input type="number" class="allInputHover" min="0"/>
+											<span class="gzImg"></span>
+										</td>
+										<td>500V</td>
+									</tr>
+									<tr data-name="0">
+										<td class="gz_two">
+											<span class="same_ivBg"></span>
+											<input class="setId-input allInputHover" placeholder="设置ID"/>
+										</td>
+										<td>
+											<input type="number" class="allInputHover" min="0"/>
+											<span class="gzImg"></span>
+										</td>
+										<td>302V</td>
+									</tr>
+									<tr data-name="0">
+										<td class="gz_three">
+											<span class="same_ivBg"></span>
+											<input class="setId-input allInputHover" placeholder="设置ID"/>
+										</td>
+										<td>
+											<input type="number" class="allInputHover" min="0"/>
+											<span class="gzImg"></span>
+										</td>
+										<td>100V</td>
+									</tr>
+									<tr data-name="0">
+										<td class="gz_four">
+											<span class="same_ivBg"></span>
+											<input class="setId-input allInputHover" placeholder="设置ID"/>
+										</td>
+										<td>
+											<input type="number" class="allInputHover" min="0"/>
+											<span class="gzImg"></span>
+										</td>
+										<td>102V</td>
+									</tr>
+								</tbody>
+								
+							</table>
+						</li>
+					</ul>
+				</div>
+				<!--一键诊断-->
+				<div class="zdBox sameBox znCheck-hide" name='3'>
+					<table class="zdBox-title layui-form">
+						<tr>
+							<td>
+								<input type="checkbox" name="zd" value="0" lay-skin="primary" title="I-V/P-V曲线" checked="" lay-filter="yjzdInput">
+								<!--<input type="checkbox" name="zd" value="i" lay-skin="primary" title="I-V/P-V curves">-->
+							</td>
+							<td>
+								<input type="checkbox" name="zd" value="1" lay-skin="primary" value="d" title="电网电压波形" lay-filter="yjzdInput">
+								<!--<input type="checkbox" name="zd" lay-skin="primary" value="d" title="Power grid voltage harmonic">-->
+							</td>
+							<td>
+								<input type="checkbox" name="zd" value="2" lay-skin="primary" value="w" title="电网电压谐波(THDV)" lay-filter="yjzdInput">
+								<!--<input type="checkbox" name="zd" lay-skin="primary" value="w" title="Power grid voltage harmonic(THDV)">-->
+							</td>
+							<td>
+								<input type="checkbox" name="zd" value="3" lay-skin="primary" value="x" title="电网线路阻抗" lay-filter="yjzdInput">
+								<!--<input type="checkbox" name="zd" lay-skin="primary" value="x" title="Grid line impedance">-->
+							</td>
+						</tr>
+					</table>
+					<ul class="zdBox-content">
+						<!--I-V/P-V曲线-->
+						<li class="clearBox">
+							<div class="zdChart_one_title">I-V/P-V曲线</div>
+							<div class="title">
+								<span class="btn checkBtn">I-V曲线</span>
+								<span class="btn">P-V曲线</span>
+							</div>
+							<div class="sameTime-show clearBox">
+								<span>上一次刷新时间:</span>
+								<span>2018-02-10 12:30:31</span>
+								<span class="btn floatR">导出当前数据</span>
+							</div>
+							<div class="zdChart_one zdBox_sameBox zbBox_c" id="zdChart_one">
+								
+							</div>
+							<div class="zdBox_sameBox zdBox-IP">
+								<p class="allIv-title">MPPT(Voc,Isc)</p>
+								<table class="ivPv-table zdIvPv-table">
+									<tbody>
+										<tr data-name="0">
+											<td class="Iv_one"><span class="same_ivBg"></span><span>1</span>(1000V,30A)</td>
+										</tr>
+										<tr data-name="0">
+											<td class="Iv_two"><span class="same_ivBg"></span><span>2</span>(1000V,30A)</td>
+										</tr>
+										<tr data-name="0">
+											<td class="Iv_three"><span class="same_ivBg"></span><span>3</span>(1000V,30A)</td>
+										</tr>
+										<tr data-name="0">
+											<td class="Iv_four"><span class="same_ivBg"></span><span>4</span>(1000V,30A)</td>
+										</tr>
+										<tr data-name="0">
+											<td class="Iv_five"><span class="same_ivBg"></span><span>5</span>(1000V,30A)</td>
+										</tr>
+										<tr data-name="0">
+											<td class="Iv_six"><span class="same_ivBg"></span><span>6</span>(1000V,30A)</td>
+										</tr>
+										<tr data-name="0">
+											<td class="Iv_serven"><span class="same_ivBg"></span><span>7</span>(1000V,30A)</td>
+										</tr>
+										<tr data-name="0">
+											<td class="Iv_eight"><span class="same_ivBg"></span><span>8</span>(1000V,30A)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+						<!--电网电压波形-->
+						<li class="clearBox znCheck-hide">
+							<div class="zdChart_one_title">电网电压波形</div>
+							<div class="sameTime-show clearBox">
+								<span>上一次刷新时间:</span>
+								<span>2018-02-10 12:30:31</span>
+								<span class="btn floatR">导出当前数据</span>
+							</div>
+							<div class="zdBox_sameBox acChart" id="acChart">
+								
+							</div>
+							<div class="zdBox_sameBox dwdyBx">
+								<table class="dwdy-table">
+									<thead>
+										<tr>
+											<td>Phase</td>
+											<td>Rms(V),f(Hz)</td>
+											<td>波形值</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-name="0">
+											<td class="gz_one"><span class="same_ivBg"></span>R</td>
+											<td><span>---</span>,<span>---</span></td>
+											<td><span>---</span>,<span>---</span></td>
+										</tr>
+										<tr data-name="0">
+											<td class="gz_two"><span class="same_ivBg"></span>S</td>
+											<td><span>---</span>,<span>---</span></td>
+											<td><span>---</span>,<span>---</span></td>
+										</tr>
+										<tr data-name="0">
+											<td class="gz_three"><span class="same_ivBg"></span>T</td>
+											<td><span>---</span>,<span>---</span></td>
+											<td><span>---</span>,<span>---</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+						<!--电网电压谐波(THDV)-->
+						<li class="clearBox znCheck-hide">
+							<div class="zdChart_one_title">电网电压谐波</div>
+							<div class="sameTime-show clearBox">
+								<span>上一次刷新时间:</span>
+								<span>2018-02-10 12:30:31</span>
+								<span class="btn floatR">导出当前数据</span>
+								<div class="floatR xbdata-content">
+									<span class="showXb-data"></span>		
+									<div class="xbData-box">
+										<table>
+											<thead>
+												<tr>
+													<td>R</td>
+													<td>S</td>
+													<td>T</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<p>1</p>
+														<p>2</p>
+														<p>3</p>
+														<p>4</p>
+														<p>5</p>
+														<p>6</p>
+														<p>7</p>
+														<p>8</p>
+														<p>9</p>
+														<p>10</p>
+													</td>
+													<td>
+														<p>1</p>
+														<p>2</p>
+														<p>3</p>
+														<p>4</p>
+														<p>5</p>
+														<p>6</p>
+														<p>7</p>
+														<p>8</p>
+														<p>9</p>
+														<p>10</p>
+													</td>
+													<td>
+														<p>1</p>
+														<p>2</p>
+														<p>3</p>
+														<p>4</p>
+														<p>5</p>
+														<p>6</p>
+														<p>7</p>
+														<p>8</p>
+														<p>9</p>
+														<p>10</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										
+									</div>
+								</div>
+							</div>	
+							<div class="zdBox_sameBox thdvChart">
+								
+							</div>
+							<div class="zdBox_sameBox dwxlCount">
+								<table class="dwxb-table">
+									<tbody>
+										<tr data-name="0">
+											<td class="gz_one"><span class="same_ivBg"></span>Total(R)</td>
+											<td><span>---</span>,<span>---</span></td>
+										</tr>
+										<tr data-name="0">
+											<td class="gz_two"><span class="same_ivBg"></span>Total(S)</td>
+											<td><span>---</span>,<span>---</span></td>
+										</tr>
+										<tr data-name="0">
+											<td class="gz_three"><span class="same_ivBg"></span>Total(T)</td>
+											<td><span>---</span>,<span>---</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+						<!--电网线路阻抗-->
+						<li class="clearBox dwxlCount znCheck-hide">
+							<div class="zdChart_one_title">电网线路阻抗</div>
+							<div class="dwxlSame">
+								<span>R相阴抗</span>
+								<input type="text" class="allInputHover" readonly="readonly"/>
+								<span>Ω</span>
+							</div>
+							<div class="dwxlSame">
+								<span>R相阴抗</span>
+								<input type="text" class="allInputHover" readonly="readonly"/>
+								<span>Ω</span>
+							</div>
+							<div class="dwxlSame">
+								<span>R相阴抗</span>
+								<input type="text" class="allInputHover" readonly="readonly"/>
+								<span>Ω</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="layui/layui.js"></script>
+		<script src="js/ossIndex.js"></script>
+		<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+		<script src="https://img.hcharts.cn/highcharts/modules/no-data-to-display.js"></script>
+		<script src="js/znjcCharts.js"></script>
+		<script>
+			
+			layui.use(['layer','form','layedit','laydate','element'], function(){ //独立版的layer无需执行这一句
+				var form = layui.form();//form表单模块
+				form.on('checkbox(yjzdInput)', function(data){
+				  /*alert(data.elem.checked);
+				  alert(data.value)
+				  console.log(data.elem); //得到checkbox原始DOM对象
+				  console.log(data.elem.checked); //是否被选中，true或者false
+				  console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+				  console.log(data.othis); //得到美化后的DOM对象*/
+					if(data.elem.checked){
+						$(".zdBox-content li").eq(data.value).show();
+					}else{
+						$(".zdBox-content li").eq(data.value).hide();
+					}
+				});     
+			}); 
+			$(function(){
+				//IV曲线和PV曲线
+				$(".title span.btn").unbind("click").bind("click",function(){
+					$(this).addClass('checkBtn').siblings().removeClass("checkBtn");
+					if($(this).hasClass("ivBtn")){
+						$(".toggleText").text("MPPT(Voc,Isc)")
+					}else{
+						$(".toggleText").text("MPPT(Vpv,ipv)")
+					};
+				})
+				/*****************其它的js在 ossIndex.js最后************************/
+				//智能IV-PV曲线点击
+				clickToogleLinear($(".ivPv-click tbody tr td:nth-child(1)"),chart2)//IV曲线点击
+				clickToogleLinear($(".problem-table tbody tr td:nth-child(1)"),chart3)//故障录波点击
+				clickToogleLinear($(".sslb-table tbody tr td:nth-child(1)>span.same_ivBg"),chart4)//实时录波检测
+				clickToogleLinear($(".zdIvPv-table tbody tr td:nth-child(1)"),chart5)//一键诊断-IVPV曲线
+				clickToogleLinear($(".dwdy-table tbody tr td:nth-child(1)"),chart6)//一键诊断-电网电压波形
+				//点击表格隐藏图表数据列
+				function clickToogleLinear(obj,charts){
+					$(obj).each(function(i,v){
+						$(v).click(function(){
+							if($(v).parents("tr").attr("data-name") == 0){
+								if($(v).siblings("td").find("input[type='number']").length>0){
+									$(v).siblings("td").find("input[type='number']").attr("disabled",true);
+									$(v).siblings("td").find("span.gzImg").addClass("gzImgSelected");
+								}
+								if($(v).siblings("input.setId-input").length>0){
+									$(v).siblings("input.setId-input").attr("disabled",true);
+									$(v).parent().parent().attr("data-name",1);
+									$(v).parent("td").siblings("td").find("input[type='number']").attr("disabled",true);
+									$(v).parent("td").siblings("td").find("span.gzImg").addClass("gzImgSelected");
+								}
+								$(v).parent().attr("data-name",1);
+								charts.series[i].update({  
+					                visible: false  
+					            });  
+							}else{
+								if($(v).siblings("td").find("input[type='number']").length>0){
+									$(v).siblings("td").find("input[type='number']").removeAttr("disabled");
+									$(v).siblings("td").find("span.gzImg").removeClass("gzImgSelected");
+								}
+								if($(v).siblings("input.setId-input").length>0){
+									$(v).parent("td").siblings("td").find("input[type='number']").removeAttr("disabled");
+									$(v).parent("td").siblings("td").find("span.gzImg").removeClass("gzImgSelected");
+									$(v).siblings("input.setId-input").removeAttr("disabled");
+									$(v).parent().parent().attr("data-name",0);
+								}
+								$(v).parents("tr").attr("data-name",0);
+								charts.series[i].update({  
+					                visible: true  
+					            });  
+							}
+						})
+					})
+				}
+				//更新数据列
+				updateData(".problem-table tbody .gzAddData",chart3)
+				
+				function updateData(obj,chartObj){
+					$(obj).each(function(i,v){
+						$(v).click(function(){
+							var inputVal = $.trim($(v).siblings("input").val());//这是要增加的倍数
+							if(inputVal == ""){
+								alert("请输入有效的值!")
+							}else{
+								alert("将原来的数据增加"+inputVal+"倍")
+								chartObj.series[i].update({  
+					                data:  [[100, 150], [100, 500], [18, 32.5], [15, 6], [20, 3]]//这里是增加之后的数据
+					            });  
+							}
+							
+						})
+					})
+				}
+			})
+		</script>
+	</body>
+</html>

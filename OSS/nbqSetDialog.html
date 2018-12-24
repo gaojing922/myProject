@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<title>逆变器设置</title>
+	</head>
+	<body>
+		<div class="bzlb-nbqSet-box">
+			<h3>逆变器</h3>
+			<table class="nbq-box-table width">
+				<tr>
+					<td>
+						<span>序列号:</span>
+						<span>EH11234</span>
+					</td>
+					<td>
+						<span>别名:</span>
+						<span>宴会厅4#逆变器 多晶硅组件</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>端口:</span>
+						<span>GT31411441</span>
+					</td>
+					<td>
+						<span>属 性:</span>
+						<span> 0C0.9/0D360C28/A0B0D1T0PFU1M3SA</span>
+					</td>
+				</tr>
+			</table>
+			<h3>命令</h3>
+			<div class="nbq-pasd-box">
+				<div class="nbq-input-pasd">
+					<span class="color3">请输入要保存的密钥</span>
+					<input class="allInputHover" placeholder="需要保存的密钥" />
+				</div>
+			</div>
+			<ul class="nbq-box-ul layui-form">
+				<li class="same-select-o">
+					<div class="floatL">
+						<input type="radio" name="nbqSet" title="设置逆变器开关机" lay-filter="nbq-radio">
+					</div>
+					<div class="floatL">
+			        	<select name="quiz">
+				          	<option>开机</option>
+							<option>关机</option>
+			        	</select>
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li class="same-select-o">
+					<div class="floatL">
+				    	<input type="radio" name="nbqSet" title="设置是否存储以下PF命令" lay-filter="nbq-radio">
+					</div>
+					<div class="floatL">
+			        	<select name="quiz">
+				          	<option>开启</option>
+							<option>关闭</option>
+			        	</select>
+				   </div>
+				   <div class="clear"></div>
+				</li>
+				<li>
+					<div class="floatL">
+				    	<input type="radio" name="nbqSet" title="设置有功功率" lay-filter="nbq-radio">
+					</div>
+					<div class="floatL">
+						<input type="text" class="allInputHover"/><label>%</label>
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li class="same-select-p">
+					<div class="floatL">
+				    	<input type="radio" name="nbqSet" title="设置无功功率" lay-filter="nbq-radio">
+					</div>
+					<div class="floatL wggl-select">
+						<input type="text" class="allInputHover"/><label>%</label>
+						<div class="layui-inline">
+				      		<div class="layui-input-inline">
+					        	<select name="quiz">
+						          	<option>容性</option>
+									<option>感性</option>
+					        	</select>
+				      		</div>
+				   		</div>
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="floatL">
+				    	<input type="radio" name="nbqSet" title="设置PF值" lay-filter="nbq-radio">
+					</div>
+					<div class="floatL same-input-a">
+						<input type="text" class="allInputHover"/><label>(-0.8 - -1/0.8 - 1)</label>
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="floatL">
+				    	<input type="radio" name="nbqSet" title="设置逆变器时间" lay-filter="nbq-radio">
+					</div>
+					<div class="floatL">
+						<input type="text" class="allInputHover" onclick="layui.laydate({elem: this, festival: true})"/>
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="floatL">
+				    	<input type="radio" name="nbqSet" title="市电电压上限" lay-filter="nbq-radio">
+					</div>
+					<div class="floatL">
+						<input type="text" class="allInputHover"/>
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="floatL">
+				    	<input type="radio" name="nbqSet" title="寄存器" lay-filter="nbq-radio">
+						<input type="text" class="allInputHover"/>
+					</div>
+					<div class="floatL">
+						<span>值</span>
+						<input type="text" class="allInputHover"/>
+					</div>
+					<div class="clear"></div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="layui/layui.js"></script>
+	<script src="js/ossIndex.js"></script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		
+		<input class="a" />
+		
+		<br>
+		<input class="b" />
+		
+		<br>
+		<br>
+		<button id="c">提交</button>
+		
+		
+		<script>
+			$(function(){
+				
+				if(localStorage.getItem('historyData')!=undefined){
+					var historyData = JSON.parse(localStorage.getItem('historyData'));
+					var hTime = historyData.time;
+					var d = new Date();
+	        		var curTime = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();//当前时间
+	        		if(DateDiff("2018-10-2",curTime)>=10){
+	        			localStorage.removeItem("historyData");
+	        			alert("会话已过期");
+	        		}else{
+	        			var data = JSON.parse(historyData.data);
+						$(".a").val(data.a)
+						$(".b").val(data.b)
+	        		}
+					
+				}
+				$("#c").click(function(){
+					var data = {
+						'a':$(".a").val(),
+						'b':$(".b").val()
+					};
+					set("historyData",JSON.stringify(data))
+				})
+			})
+			
+			//封装过期控制代码
+		    function set(key,value){
+		        var d = new Date();
+		        var curTime = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+		        localStorage.setItem(key,JSON.stringify({data:value,time:curTime}));
+		    }
+			//计算天数差的函数 
+		    function DateDiff(sDate1,sDate2){    //sDate1和sDate2是2006-12-18格式  
+		       var aDate,oDate1,oDate2,iDays;
+		       aDate = sDate1.split("-");  
+		       oDate1 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);    //转换为12-18-2006格式  
+		       aDate = sDate2.split("-");  
+		       oDate2 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);  
+		       iDays = parseInt(Math.abs(oDate1 - oDate2)/1000/60/60/24);    //把相差的毫秒数转换为天数  
+		       return iDays;  
+		    }    
+		</script>
+	</body>
+</html>

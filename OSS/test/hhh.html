@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+	</head>
+	<body>
+		<div id="dd"></div>
+		<script>
+			$(function(){
+				$('#dd').highcharts({
+		        	credits: {//禁用版权信息
+			            enabled:false
+			        }, 
+			        chart: {
+			            type: 'spline'            
+			        },
+					title: {
+							text: null
+					},
+					xAxis: {
+							categories: [
+									'一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'
+							],
+							crosshair: true
+					},
+					yAxis: {
+							min: 0,
+							title: {
+									text: null
+							}
+					},
+					tooltip: {
+							// head + 每个 point + footer 拼接成完整的 table
+							headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+							pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+							'<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+							footerFormat: '</table>',
+							shared: true,
+							useHTML: true
+					},
+					/*plotOptions: {
+			            line: {
+			                connectNulls:true,//该设置会连接空值点
+			               // gapSize:1,//缺失点小于gapSize则连接
+			                dataLabels: {
+			                    enabled: true
+			                },
+			                enableMouseTracking: false
+			            }
+			        },*/
+			        plotOptions: {
+						series: {
+								connectNulls: true
+						}
+					},
+					series: [{
+							name: '东京',
+							data: [null, null, null, null, null, null, null, null, null, null, null, null]
+					}]
+		        });
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>layui</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+		<style>
+			table{width:80%;height:400px;margin: 20px auto;}
+		</style>
+	</head>
+	<body>
+		
+		<input class="aa" onclick="layui.laydate({elem: this, festival: true,format:'YYYY-MM'})">
+		<button onclick="doTime(-1);">上一月</button>
+		<button onclick="doTime(1);">下一月</button>
+		<script src="js/jquery.min.js"></script>
+		<script src="layui/layui.js"></script>
+		<script src="highcharts/js/highcharts.js"></script>
+		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+		<script>
+			layui.use(['form','layedit','laydate'], function(){});
+			var form = layui.form,
+		  	laydate = layui.laydate;
+		  	$(function(){
+		  		var date = new Date();
+		  		var y = date.getFullYear();
+		  		var m = date.getMonth()+1>9?date.getMonth()+1:"0"+(date.getMonth()+1);
+		  		$(".aa").val(y+"-"+m);
+		  	})
+		  	function doTime(days){//datetime--要进行加减的日期,days--要加减的天数,减的话就传入负数
+		  		var a = new Date();
+		  		if($(".aa").val()== a.getFullYear()+"-"+(a.getMonth()+1>9?a.getMonth()+1:"0"+(a.getMonth()+1))){
+		  			alert('不能选');
+		  			return false;
+		  		}
+				var d = new Date($(".aa").val());
+				d.setMonth(d.getMonth()+days);
+				var time = d.getFullYear()+"-"+(d.getMonth()+1>9?d.getMonth()+1:"0"+(d.getMonth()+1));
+				$(".aa").val(time);
+			}
+		  	
+		  	
+		</script>
+	</body>
+</html>

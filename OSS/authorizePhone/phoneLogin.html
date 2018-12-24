@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.5.css">
+		<script src="../js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/login.css" />
+		<title>手机号登录</title>
+		<script>
+			$(function(){
+				$(".login-input,.phone-pwd input,.sameNot").attr('data-role','none');//清除默认样式  
+			})
+		</script>
+		<script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div data-role="header" data-position="fixed" class="self-header">
+			<h1>登录瑞光宝盒</h1>
+		</div>
+		<div data-role="main" class="ui-content login-content">
+			<!--手机号第一步-->
+			<div class="phoneOne">
+				<div class="login-title">手机号登录</div>
+				<div class="login-box clearBox">
+					<i class="lineBox"></i>
+					<div class="fl areaBox" data-name="0">
+						<span>中国</span>
+						<span>+</span>
+						<span>86</span>
+					</div>
+					<ul class="countryBox">
+						<li>中国</li>
+						<li>美国</li>
+						<li>俄罗斯</li>
+					</ul>
+					<input type="number" class="login-input fr" placeholder="手机号"/>
+				</div>
+				<div class="login-btn">
+					<button class="ui-btn phoneNext">下一步</button>
+				</div>
+				<p class="tipInfo">*如果您没有注册过瑞光宝盒账号,我们将为您创建一个账号</p>
+			</div>
+			<!--手机号登录第二步-->
+			<div class="phoneTwo hide">
+				<div class="login-title">请输入密码</div>
+				<div class="phone-pwd">
+					<input type="text" class="surePswd" placeholder="请输入不少于6位数的密码"/>
+				</div>
+				<div class="login-btn">
+					<button class="ui-btn phone-login">登录</button>
+				</div>
+			</div>
+		</div>
+		<!--找回密码弹窗-->
+		<div data-role="popup" id="zhPaswd" class="ui-content zhMm-box">
+	      	<a class="zhTitle">选择找回密码的方式</a>
+	      	<a class="byYx" href="byEmaelLogin.html" data-ajax='false'>通过邮箱找回</a>
+	      	<a class="bySj" href="phoneLogin.html" data-ajax='false'>通过手机号找回</a>
+	    </div>
+		<div data-role="footer" data-position="fixed" class="self-footer">
+			<div class="login-type">
+				<a class="uwLogin sameNot" href="zhmmLogin.html" data-ajax='false' data-transition="slidefade">账号密码登录</a>
+				<span>|</span>
+				<a href="#zhPaswd" class="zhPaswd"  data-rel="popup" data-transition="pop" data-overlay-theme="c" data-name='0' data-position-to="window">找回密码</a>
+			</div>
+			<p class="bqInfo">
+				@copy2018-2022 by Grt
+			</p>
+			<p class="logoImg">
+				<img src="images/growatt.png" />
+			</p>
+		</div>
+		<script>
+			$(document).on("pagecreate","body",function(){
+				//手机登录选 择地区
+				$(".areaBox").on("tap",function(e){
+					e.stopPropagation();
+					if($(this).attr("data-name") == 0){
+						$(this).attr("data-name",1)
+					}else{
+						$(this).attr("data-name",0)
+					}
+				}).siblings(".countryBox").find("li").on("tap",function(e){
+					e.stopPropagation();
+					$(this).addClass("select").siblings("li").removeClass("select");
+					$(".areaBox").attr("data-name",0)
+				});
+				$(document).on("tap",function(){
+					$(".areaBox").attr("data-name",0)
+				})
+			  	$.mobile.loading('show', {
+			        text: '加载中...', //加载器中显示的文字
+			        textVisible: true, //是否显示文字
+			        theme: 'a',        //加载器主题样式a-e
+			        textonly: false,   //是否只显示文字
+			        html: ""           //要显示的html内容，如图片等
+			    });
+			    //下一步
+			    $(".phoneNext").on("tap",function(){
+			    	$(".phoneOne").addClass("hide").siblings(".phoneTwo").removeClass("hide");
+			    });
+			    $(".surePswd").on("input")
+			});
+			//显示加载器
+			function showLoader(){
+			    $.mobile.loading('show',{
+			        text: '加载中...', //加载器中显示的文字
+			        textVisible: true, //是否显示文字
+			        theme: 'a',        //加载器主题样式a-e
+			        textonly: false,   //是否只显示文字
+			        html: ""           //要显示的html内容，如图片等
+			    });
+			}
+			//隐藏加载器
+			function hideLoader(){
+			    $.mobile.loading('hide');
+			}
+		</script>
+	</body>
+</html>

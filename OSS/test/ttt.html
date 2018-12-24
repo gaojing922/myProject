@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function removeStr(str){
+				return parseInt(str.split(":").join(""));
+			};
+			var endTime = ("2018-05-31 19:17:03").slice(10,16);
+			var time = ["19:05","19:10","19:15","19:20","19:25","19:30"]
+			for(var i = 0;i<time.length;i++){
+				if(removeStr(endTime) - removeStr(time[i]) >=0 &&removeStr(endTime) - removeStr(time[i])<5 ){
+					time.splice(i+1);//截取有效时间
+				}
+			}
+			alert(time);//截取有效时间
+		</script>
+	</body>
+</html>

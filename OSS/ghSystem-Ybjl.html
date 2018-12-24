@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link href="easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />	
+		<link href="scrollBar/perfect-scrollbar.css" rel="stylesheet"/><!--滚动条-->
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<script src="js/browser.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="easyui/jquery.easyui.min.js"></script>
+		<script src="scrollBar/jquery.mousewheel.js"></script><!--滚动条-->
+		<script src="scrollBar/perfect-scrollbar.js"></script><!--滚动条-->
+		<script src="js/common.js" type="text/javascript"></script>
+	<title>供货系统-延保记录</title>
+	</head>
+	<body class="easyui-layout">
+		<!--头部开始-->
+		<div class="ossTop" data-options="region:'north',split:false,border:false">
+			<div class="main-right-head">
+				<div class="main-left-logo"></div>
+				<span class="main-right-head-title">古瑞瓦特OSS管理系统</span>
+				<div class="main-right-head-smallT">
+					<span>
+						(晶科家庭)
+					</span>
+					<span>
+						<img src="images/note.png"/>
+						<ul class="show-company">
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+						</ul>
+					</span>
+				</div>
+				<ul class="main-right-head-message floatR">
+					<li class="message-zero">
+						<div class="login-input">登录管理员账号</div>
+					</li>
+					<li class="message-one">
+						<span class="show-MessageC">1</span>
+						<span class="show-MessageT">
+							您有<span class="dgjColor">1</span>条新消息
+						</span>
+					</li>
+					<li class="message-two"></li>
+					<li class="message-three">
+						<span>你好,</span>
+						<span>管理员</span>
+					</li>
+					<li class="message-five">server登录</li>
+					<li class="message-four message-same">
+						<span class="same-show-text">Grt00000</span>
+						<ul class="message-same-content">
+							<li>个人资料</li>
+							<li>退出</li>
+						</ul>
+					</li>
+					<li class="message-six message-same">
+						<span class="same-show-text">中文</span>
+						<ul class="message-same-content">
+							<li>中文</li>
+							<li>english</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+	    </div>
+	    <!--头部结束-->
+	    <div data-options="region:'center',split:false,border:false">
+	    	<!--左侧菜单开始-->
+	    	<div class="main-left" data-name="0">
+	    		<div class="toogleMenu">
+	    			<div class="norS">
+	    				<span></span>
+		    			<span></span>
+		    			<span></span>
+	    			</div>
+	    		</div>
+	    		<ul class="main-left-menu">
+					<li class="main-leftLi main-leftLi-1">
+						<div><i></i>设备管理<em>+</em></div>
+						<ul>
+							<a href="devicemanage-Sbgl.html"><li>设备管理</li></a>
+							<!--<a href="devicemanage-Nbqgl.html"><li>逆变器管理</li></a>
+							<a href="devicemanage-Cnjgl.html"><li>储能机管理</li></a>-->
+							<a href="devicemanage-Dzgl.html"><li>电站管理</li></a>
+							<a href="devicemanage-Yhgl.html"><li>用户管理</li></a>
+							<a href="devicemanage-Dpzs.html"><li>大屏展示</li></a>
+							<a href="devicemanage-Jkzl.html"><li>监控总览</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-2">
+						<div><i></i>服务大厅<em>+</em></div>
+						<ul>
+							<!--<a href="service-Wdwt.html"><li>我的问题</li></a>-->
+							<a href="service-Wtdt.html"><li>问题大厅</li></a>
+							<a href="service-Ksb.html"><li>客诉表</li></a>
+							<a href="service-Gddt.html"><li>工单大厅</li></a>
+							<a href="service-Wttf.html"><li>问题统分</li></a>
+							<a href="service-Wtmb.html"><li>问题模版</li></a>
+							<a href="service-Ltxt.html"><li>聊天系统</li></a>
+							<a href="service-Fwjl.html"><li>服务记录</li></a>
+							<a href="service-Sqfw.html"><li>授权服务</li></a>
+							<a href="service-Dxtz.html"><li>短信通知</li></a>
+							<a href="service-Sqfwsxx.html"><li>授权服务商信息</li></a>
+							<a href="service-Sqgcsxx.html"><li>授权工程师信息</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-3">
+						<div><i></i>数据分析<em>+</em></div>
+						<ul>
+							<a href="dataanalysis-Yxtf.html"><li>运行统分</li></a>
+							<a href="dataanalysis-Txtf.html"><li>特性统分</li></a>
+							<a href="dataanalysis-Yhtjfx.html"><li>用户统计分析</li></a>
+							<a href="dataanalysis-Zdgl.html"><li>诊断管理</li></a>
+							<a href="dataanalysis-gzGj.html"><li>故障告警</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-4">
+						<div>
+							<i></i>
+							<a href="problem-Back.html">问题追溯</a>
+							<em>+</em>
+						</div>
+					</li>
+					<li class="main-leftLi main-leftLi-5">
+						<div><i></i>在线知识<em>+</em></div>
+						<ul>
+							<a href="onlineknowledge-Zsfx.html"><li>知识分享</li></a>
+							<a href="onlineknowledge-Zssc.html"><li>知识手册</li></a>
+							<a href="onlineknowledge-Wtfl.html"><li>问题分流</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-6">
+						<div><i></i>平台日志<em>+</em></div>
+						<ul>
+							<a href="platformLog.html"><li>平台日志</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-7">
+						<div class="main-leftLi-box"><i></i>供货系统<em class="emShow">+</em></div>
+						<ul style="display: block;">
+							<a href="ghSystem-Zbcx.html"><li>质保查询</li></a>
+							<a href="ghSystem-Drxh.html"><li>导入型号</li></a>
+							<!--<a href="ghSystem-Drzb.html"><li>导入质保</li></a>-->
+							<a href="ghSystem-Ghjl.html"><li>供货记录</li></a>
+							<a href="ghSystem-Kcgl.html"><li>库存管理</li></a>
+							<a href="ghSystem-Fhgl.html"><li>发货管理</li></a>
+							<a href="ghSystem-Ybjl.html" class="secondLibg"><li>延保记录</li></a>
+							<a href="ghSystem-Hwsj.html"><li>海外数据</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-13">
+						<div><i></i>积分商城<em>+</em></div>
+						<ul>
+							<a href="IntegralMall-ddjl.html"><li>订单记录</li></a>
+							<a href="IntegralMall-lplb.html"><li>礼品列表</li></a>
+							<a href="IntegralMall-yhjflb.html"><li>用户积分列表</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-11">
+						<div><i></i>流量系统<em>+</em></div>
+						<ul>
+							<a href="flowSystem-Overview.html"><li>流量概览</li></a>
+							<a href="flowSystem.html"><li>流量系统</li></a>
+							<a href="flowSystem-MessageImport.html"><li>信息导入</li></a>
+							<a href="flowSystem-renew.html"><li>续费订单</li></a>
+							<a href="flowSystem-llXf.html"><li>流量续费</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-8">
+						<div><i></i>信息发布<em>+</em></div>
+						<ul>
+							<a href="information-Cpfb.html"><li>产品发布</li></a>
+							<a href="information-Fwfb.html"><li>服务发布</li></a>
+							<a href="information-Ggfb.html"><li>公告发布</li></a>
+							<a href="information-Cjwt.html"><li>常见问题</li></a>
+							<a href="information-Spgl.html"><li>视频管理</li></a>
+							<a href="information-Appxxfb.html"><li>App信息发布</li></a>
+							<a href="information-Tsgl.html"><li>推送管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-9">
+						<div><i></i>用户中心<em>+</em></div>
+						<ul>
+							<a href="usercenter-Dlsgl.html"><li>安装商管理</li></a>
+							<a href="usercenter-Yhgl.html"><li>用户管理</li></a>
+							<!--<a href="usercenter-Fzgl.html"><li>分组管理</li></a>-->
+							<a href="usercenter-Grzl.html"><li>个人资料</li></a>
+							<a href="usercenter-khxxgl.html"><li>客户信息管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-10">
+						<div><i></i>系统设置<em>+</em></div>
+						<ul>
+							<a href="systemset-Fxsgl.html"><li>分销商管理</li></a>
+							<a href="systemset-Qxgl.html"><li>权限管理</li></a>
+							<a href="systemset-Zzjg.html"><li>组织架构</li></a>
+							<a href="systemset-Cssz.html"><li>参数设置</li></a>
+							<a href="systemset-Xtwh.html"><li>系统维护</li></a>
+							<a href="systemset-Sbsj.html"><li>设备升级</li></a>
+							<a href="systemset-Xxfb.html"><li>消息发布</li></a>
+							<!--<a href="systemset-Jcssq.html"><li>分销商申请</li></a>-->
+						</ul>
+					</li>
+				</ul>
+				<!--小菜单-->
+				<ul class="samll-menu">
+					<li>
+						<div class="samll_1"></div>
+						<ul class="samll_box">
+							<li>设备管理</li>
+							<li>电站管理</li>
+							<li>用户管理</li>
+							<li>大屏展示</li>
+							<li>监控总览</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_2"></div>
+						<ul class="samll_box">
+							<li>问题大厅</li>
+							<li>工单大厅</li>
+							<li>问题统分</li>
+							<li>问题模版</li>
+							<li>聊天系统</li>
+							<li>服务记录</li>
+							<li>授权服务</li>
+							<li>短信通知</li>
+							<li>聊天系统</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_3"></div>
+						<ul class="samll_box">
+							<li>运行统分</li>
+							<li>特性统分</li>
+							<li>用户统计分析</li>
+							<li>诊断管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_4"></div>
+						<ul class="samll_box">
+							<li>问题追溯</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_5"></div>
+						<ul class="samll_box">
+							<li>知识分享</li>
+							<li>知识手册</li>
+							<li>问题分流</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_6"></div>
+						<ul class="samll_box">
+							<li>平台日志</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_7"></div>
+						<ul class="samll_box">
+							<li>质保查询</li>
+							<li>导入型号</li>
+							<li>供货记录</li>
+							<li>库存管理</li>
+							<li>发货管理</li>
+							<li>延保记录</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_8"></div>
+						<ul class="samll_box">
+							<li>流量概览</li>
+							<li>浏览系统</li>
+							<li>信息导入</li>
+							<li>续费订单</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_9"></div>
+						<ul class="samll_box">
+							<li>产品发布</li>
+							<li>公告发布</li>
+							<li>常见问题</li>
+							<li>视频管理</li>
+							<li>APP信息发布</li>
+							<li>推送管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_10"></div>
+						<ul class="samll_box">
+							<li>安装商管理</li>
+							<li>用户管理</li>
+							<li>个人资料</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_11"></div>
+						<ul class="samll_box">
+							<li>分销商管理</li>
+							<li>组织架构</li>
+							<li>系统维护</li>
+							<li>设备升级</li>
+						</ul>
+					</li>
+				</ul>
+	    	</div>
+	    	<!--左侧菜单结束-->
+	    	<div class="easyui-layout" data-options="fit:true">
+	    		 <div class="main-right" data-options="region:'center',split:false,border:false">
+	    		 	<!--内容区域开始-->
+	    		 	<div class="main-right-content zblbMinwidth">
+						<div class="main-right-content-title">
+							<span class="main-right-content-title-tip floatL color3">质保查询</span>
+							<span class="main-right-content-sub-tip floatL color8">
+								<span>供货系统</span>
+								<span>><a class="aNotUnderline">延保记录</a></span>
+							</span>
+							<div class="clear"></div>
+						</div>
+						<div class="main-right-content-count">
+							<!--条件搜索-->
+							<div class="zb-search-result">
+								<div class="main-right-count-same-filter main-right-count-border-filter notSelect">
+									
+									<div class="sameSearch-d floatL">
+										<span>展示例:</span>
+										<div class="sd-box">
+											<span>请选择</span>
+											<i class="sd-edge"></i>
+											<div class="sd-content sd-c">
+												<ul class="sd-ul">
+													<li onclick="selectSd(this,event)">
+														<span class="zsBg" data-select="0"></span>
+														<span>区域</span>
+													</li>
+													<li onclick="selectSd(this,event)">
+														<span class="zsBg" data-select="0"></span>
+														<span>型号</span>
+													</li>
+													<li onclick="selectSd(this,event)">
+														<span class="zsBg" data-select="0"></span>
+														<span>序列号</span>
+													</li>
+													<li onclick="selectSd(this,event)">
+														<span class="zsBg" data-select="0"></span>
+														<span>终端名称</span>
+													</li>
+													<li onclick="selectSd(this,event)">
+														<span class="zsBg" data-select="0"></span>
+														<span>安装商采购发票号码</span>
+													</li>
+												</ul>
+												<div class="sd-button">
+													<span class="allSelect-sd" data-name="0">全选</span>
+													<span class="save-sd">保存</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="floatR same-select-marginR">
+										<li>
+											<input placeholder="区域" class="allInputHover"/>
+										</li>
+										<li>
+											<input placeholder="订单日期" class="allInputHover layui-input" onclick="layui.laydate({elem: this, festival: true})"/>
+										</li>
+										<li>
+											<span class="spanBtn allQueryBtn">查询</span>
+										</li>
+									</ul>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<!--表格内容-->
+							<div class="main-right-count-table samePaddingTop">
+								<table class="all-table">
+									<thead>
+										<tr>
+											<td style="width: 5%;">
+												<input type="checkbox" class="hide-allCheckbox" name="check-allBox" id="allCheck" />
+												<label for="allCheck" class="check-all">
+													<img src="images/checkAll_white.png" class="checkAll-img"/>
+													<img src="images/checkAll_white_gou.png" class="cancel-checkAll-img" />
+												</label>
+											</td>
+											<td>NO</td>
+											<td>区域</td>
+											<td>型号</td>
+											<td>序列号</td>
+											<td>终端名称</td>
+											<td>安装商名</td>
+											<td>用户邮箱</td>
+											<td>安装日期</td>
+											<td>备注</td>
+											<td>操作</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="notHide">
+												<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+												<label class="check-one" for="box-1">
+													<img src="images/yuan.png" class="check-img"/>
+													<img src="images/password.png" class="checkd-img" />
+												</label>
+											</td>
+											<td>1</td>
+											<td>中国</td>
+											<td>CGNDH255</td>
+											<td>CGNDH255</td>
+											<td>张三</td>
+											<td>李四</td>
+											<td>adsdfr@163.com</td>
+											<td>2021-08-01</td>
+											<td>出厂十年质保</td>
+											<td class="notHide">
+												<a class="smallDobtn allSeeSmallBtn ybQueryBtn" title="查看"></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="notHide">
+												<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+												<label class="check-one" for="box-1">
+													<img src="images/yuan.png" class="check-img"/>
+													<img src="images/password.png" class="checkd-img" />
+												</label>
+											</td>
+											<td>2</td>
+											<td>中国</td>
+											<td>CGNDH255</td>
+											<td>CGNDH255</td>
+											<td>张三</td>
+											<td>李四</td>
+											<td>adsdfr@163.com</td>
+											<td>2021-08-01</td>
+											<td>出厂十年质保</td>
+											<td class="notHide">
+												<a class="smallDobtn allSeeSmallBtn ybQueryBtn" title="查看"></a>
+												<a class="smallDobtn allSeeSmallBtn" title="查看bbb" onclick="b()"></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!--表格下方按钮+分页-->
+								<div class="count-table-bottom-btn">
+									<!--分页-->
+									<div id="allPage" class="floatR"></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+						<!--质保开关弱框-->
+						<div class="zb-onoffDialog all-dialog">
+							<div class="onoff-box">
+								<form class="layui-form">
+									<div class="layui-form-item">
+								    	<div class="layui-input-block">
+									    	<input type="radio" name="server" value="se" title="开">
+									    	<input type="radio" name="server" value="se" title="关" checked="true">
+								    	</div>
+									</div>
+								</form>
+							</div>			
+							<div class="all-bottom-btn">
+								<span class="all-bottom-btn1">取消</span>
+								<span class="all-bottom-btn0">确定</span>
+							</div>
+						</div>
+					</div>
+					<!--报警-->
+					<div class="allWaring-box">
+						<ul class="waring-ul clearBox">
+							<li class="wu-toggleI" data-name="1"></li>
+							<li class="allRelative hoverMenu">
+								<div class="wu-main clearBox">
+									<div class="wu-yuan">
+										<i></i>
+									</div>
+									<div class="wu-title wuSameH">实时告警:</div>
+									<div class="wu-text wuSameH">
+										<marquee behavior="scroll" scrollamount="5" onMouseOver="this.stop()" onMouseOut="this.start()">过温报警过温报警过温报警过温报警过温报警过温报警</marquee>
+									</div>
+									<!--<div class="wu-top wuSameH"></div>-->
+								</div>
+								<div class="waring-content allAbsolute">
+									<div class="waring-cTitle clearBox">
+										<div class="floatL">
+											<span>告警</span>
+											<span>共(<i>15</i>)条</span>
+										</div>
+										<div class="floatR waringTx-btn" onclick="a();">
+											
+											
+										</div>
+									</div>
+									<div class="waring-Cbox">
+										<div class="waring-row">
+											<p class="clearBox">
+												<span class="floatL">
+													H123456789												
+												</span>
+												<span class="floatR">
+													2017-02-02 12:02:03
+												</span>
+											</p>
+											<p>
+												<a title="">abdadfasfasdfawefasdccfasd</a>
+											</p>
+										</div>
+										<div class="waring-row">
+											<p class="clearBox">
+												<span class="floatL">
+													H123456789												
+												</span>
+												<span class="floatR">
+													2017-02-02 12:02:03
+												</span>
+											</p>
+											<p>
+												<a title="">一种常见的问题,就是一种常见的问题</a>
+											</p>
+										</div>
+										<div class="waring-row">
+											<p class="clearBox">
+												<span class="floatL">
+													H123456789												
+												</span>
+												<span class="floatR">
+													2017-02-02 12:02:03
+												</span>
+											</p>
+											<p>
+												<a title="">一种常见的问题,就是一种常见的问题awefasdfqwefasdfawerfawefawefaweefaw</a>
+											</p>
+										</div>
+										<div class="waring-row">
+											<p class="clearBox">
+												<span class="floatL">
+													H123456789												
+												</span>
+												<span class="floatR">
+													2017-02-02 12:02:03
+												</span>
+											</p>
+											<p>
+												<a title="">一种常见的问题,就是一种常见的问题qwefasdfaerfasdfawefaewsfaefa</a>
+											</p>
+										</div>
+										<div class="waring-row">
+											<p class="clearBox">
+												<span class="floatL">
+													H123456789												
+												</span>
+												<span class="floatR">
+													2017-02-02 12:02:03
+												</span>
+											</p>
+											<p>
+												<a title="">一种常见的问题,就是一种常见的问题</a>
+											</p>
+										</div>
+									</div>
+									
+								
+								</div>
+							</li>
+						</ul>
+					</div>
+	    		 	<!--内容区域结束-->
+	    		 </div>
+	    	</div>
+	    </div>
+		<!--left-->
+		<!--延保详情-->
+		<div class="yBpro-Dialog all-dialog">
+			<table class="ybContent">
+				<tr>
+					<td>区域:</td>
+					<td>中国</td>
+				</tr>
+				<tr>
+					<td>型号:</td>
+					<td>GCNDER2344</td>
+				</tr>
+				<tr>
+					<td>序列号:</td>
+					<td>GCNDER2344</td>
+				</tr>
+				<tr>
+					<td>安装商名:</td>
+					<td>addee</td>
+				</tr>
+				<tr>
+					<td>安装商信息:</td>
+					<td>深圳古瑞</td>
+				</tr>
+				<tr>
+					<td>安装商采购发票号码:</td>
+					<td>1234415452432</td>
+				</tr>
+				<tr>
+					<td>用户名:</td>
+					<td>张三</td>
+				</tr>
+				<tr>
+					<td>安装地址:</td>
+					<td>深圳</td>
+				</tr>
+				<tr>
+					<td>用户电话:</td>
+					<td>0755-1455141</td>
+				</tr>
+				<tr>
+					<td>用户邮箱:</td>
+					<td>235459@qq.com</td>
+				</tr>
+				<tr>
+					<td>安装日期:</td>
+					<td>2018-02-04</td>
+				</tr>
+				<tr>
+					<td>安装商电话:</td>
+					<td>07525844854</td>
+				</tr>
+				<tr>
+					<td>备注:</td>
+					<td>asdfqawerfasd</td>
+				</tr>
+			</table>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--告警提醒-->
+		<div class="waringTx-Dialog all-dialog">
+			<div class="waringTx-box">
+				<div class="waringTime-set">
+					<div class="wd-sameTitle">告警时间设置(单选)</div>
+					<div class="wd-sameBox">
+						<div class="wd-sameRow clearBox wdTimeBox">
+							<div class="floatL">
+								15分钟
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>间隔15分钟检测提醒</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox wdTimeBox">
+							<div class="floatL">
+								30分钟
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>间隔30分钟检测提醒</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox wdTimeBox">
+							<div class="floatL">
+								60分钟
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>间隔60分钟检测提醒</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="waringType-set">
+					<div class="wd-sameTitle">告警方式设置(多选)</div>
+					<div class="wd-sameBox">
+						<div class="wd-sameRow clearBox">
+							<div class="floatL">
+								短信
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>我们将定期发送短信至您的手机</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox">
+							<div class="floatL">
+								邮箱
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>我们将定期发送短信至您的邮箱</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox">
+							<div class="floatL">
+								弹框提醒
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>开户后将会定时检测后弹框提示</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox">
+							<div class="floatL">
+								告警铃
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>开启提醒时会伴有铃声提示</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">保存</span>
+			</div>
+		</div>
+		<!--设备告警提醒框-->
+		<div class="deviceW-Dialog all-dialog">
+			<div class="deviceW-box">
+				<audio id="myAudio" controls autoplay="autoplay" loop="loop" style="display: none;">
+				  <source src="audio/horse.ogg" type="audio/ogg">
+				</audio>
+				<div class="deviceW-one"></div>
+				<div class="deviceW-two">
+					您的逆变器4K2515512存在异常状况,请及时检查!
+				</div>
+				<div class="deviceW-three">
+					<p>
+						<span class="rightQuery">立即查看</span>
+					</p>
+					<p>
+						<span class="callSet" onclick="a();">提醒设置</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="layui/layui.js"></script>
+		<script src="js/ossIndex.js"></script>
+		<script src="js/Tdrag.js"></script>
+		<script>
+			//分页
+			layui.use(['laypage','form','layer'], function(){
+				var laypage = layui.laypage,//分页
+				form = layui.form(),
+				layer = layui.layer; //独立版的layer无需执行这一句
+				//分页
+				laypage({
+				   cont: 'allPage',
+				   pages: 100, //总页数
+				   skip: true, //是否开启跳页
+				   groups: 5 //连续显示分页数
+				});
+				form.on('switch(switch_2)',function(obj){
+					if($(obj.elem).is(":checked")){
+						alert("打开")
+						$(obj.elem).parents(".floatL").siblings(".floatL").find("input").attr("checked",false)
+					}else{
+						alert("关闭")
+					}
+					//alert($(obj.elem).val())
+					
+					//layui-form-onswitch
+				})
+				//使用短信模版
+				$(document).on("click",".aa",function(e){
+					alert(1)
+					e.stopPropagation();
+					layer.open({
+						type: 1, //Page层类型
+						title: '延保详情',
+						shade: 0.4, //遮罩透明度
+						shadeClose:false,//点击遮罩关闭弹框
+						anim: 0, //0-6的动画形式，-1不开启
+						content: $('.yBpro-Dialog'),
+						resize:false,
+						cancel: function(){ 
+				  		}
+					});
+					//取消
+					$(".all-bottom-btn1").click(function(){
+						layer.closeAll();
+					});
+					//确定
+					$(".all-bottom-btn0").click(function(){
+						layer.closeAll();
+					});
+				});
+			});
+			function a(){
+				layer.open({
+					type: 1, //Page层类型
+					title: '告警提醒设置',
+					shade: 0.4, //遮罩透明度
+					shadeClose:false,//点击遮罩关闭弹框
+					anim: 0, //0-6的动画形式，-1不开启
+					content: $('.waringTx-Dialog'),
+					resize:false,
+					cancel: function(){ 
+			  		}
+				});
+				//var x = document.getElementById("myAudio")
+				//取消
+				$(".all-bottom-btn1").click(function(){
+					layer.closeAll();
+				});
+				//确定
+				$(".all-bottom-btn0").click(function(){
+					layer.closeAll();
+				});
+			}
+			//告警弹框
+			function b(){
+				layer.open({
+					type: 1, //Page层类型
+					title: '设备告警提醒<span style="color:#ff4200;padding-left:5px;font-size:14px">(告警铃已关闭)</span>',
+					shade: 0.4, //遮罩透明度
+					shadeClose:false,//点击遮罩关闭弹框
+					anim: 0, //0-6的动画形式，-1不开启
+					content: $('.deviceW-Dialog'),
+					resize:false,
+					cancel: function(){ 
+			  		}
+				});
+				//取消
+				$(".all-bottom-btn1").click(function(){
+					layer.closeAll();
+				});
+				//确定
+				$(".all-bottom-btn0").click(function(){
+					layer.closeAll();
+				});
+			}
+			//选择示例
+			var selectText = [];
+			function selectSd(obj,e){
+				e.stopPropagation();
+				if($(obj).find(".zsBg").attr("data-select") == "0"){
+					$(obj).find(".zsBg").attr("data-select","1")
+					/*if($.inArray(selectText,$(obj).find("span:last-child").text()) == -1){
+						selectText.push($(obj).find("span:last-child").text());
+					};
+					$(obj).parents(".sd-content").siblings("span").text(selectText)*/
+				}else{
+					$(obj).find(".zsBg").attr("data-select","0");
+					removeArrayValue(selectText,$(obj).find("span:last-child").text());
+					/*$(obj).parents(".sd-content").siblings("span").text(selectText)
+					if(selectText.length == 0){
+						$(obj).parents(".sd-content").siblings("span").text("请选择");
+					}*/
+				}
+			};
+			$(".sd-box").click(function(e){
+				e.stopPropagation();
+				$(this).toggleClass("selected-search");
+				if($(this).find(".sd-content").is(":hidden")){
+					$(this).find(".sd-content").show();
+				}else{
+					$(this).find(".sd-content").hide();
+				}
+			})
+			$("body").click(function(e){
+				e.stopPropagation();
+				if($(".sd-content").is(":visible")){
+					$(".sd-content").hide();
+					$(".sd-box").removeClass("selected-search");
+				}
+			});
+			//全选
+			$(".allSelect-sd").click(function(e){
+				e.stopPropagation();
+				if($(this).attr("data-name") == 0){
+					$(this).attr("data-name",1).text("取消全选");
+					$(this).parent(".sd-button").siblings("ul").find(".zsBg").attr("data-select",1);
+				}else{
+					$(this).attr("data-name",0).text("全选");
+					$(this).parent(".sd-button").siblings("ul").find(".zsBg").attr("data-select",0);
+				}
+			})
+			//删除数组中指定的元素
+			function removeArrayValue(arr, val) {
+			  for(var i=0; i<arr.length; i++) {
+			    if(arr[i] == val) {
+			      arr.splice(i, 1);
+			      break;
+			    }
+			  }
+			};
+			//开关点击事件
+			$(function(){
+				//增加提示、
+				$.each($(".waring-Cbox .waring-row>p:nth-child(2)>a"), function(i,v) {
+					if($(v).text().match(/^[\u4E00-\u9FA5]{1,}$/)){//是否为中文
+					    if($(v).text().length>=21){
+							$(v).addClass("waring-hidden").attr("title",$(v).text());
+						}
+					}else{
+					    if($(v).text().length>=41){
+							$(v).addClass("waring-hidden").attr("title",$(v).text());
+						}
+					}
+				})	
+				/*自定义开关事件1*/
+				$(".waringTime-set .switch").click(function(){
+					var dt = $(this).attr("data-name");
+					if(dt == 0){
+						$(this).attr("data-name",1);
+						$(this).parent(".floatL").prev().find(".wdState-text").text("已开启");
+						$(this).parents(".wdTimeBox").siblings(".wdTimeBox").find(".switch").attr("data-name",0)
+						$(this).parents(".wdTimeBox").siblings(".wdTimeBox").find(".wdState-text").text("已关闭");
+					}else{
+						$(this).attr("data-name",0);
+						$(this).parent(".floatL").prev().find(".wdState-text").text("已关闭");
+					}
+				})
+				/*自定义开关事件2*/
+				$(".waringType-set .switch").click(function(){
+					var dt = $(this).attr("data-name");
+					if(dt == 0){
+						$(this).parent(".floatL").prev().find(".wdState-text").text("已开启");
+						$(this).attr("data-name",1)
+					}else{
+						$(this).attr("data-name",0)
+						$(this).parent(".floatL").prev().find(".wdState-text").text("已关闭");
+					}
+				})
+				$(".allWaring-box").Tdrag({
+				     scope:".main-right"
+				});
+			})
+		</script>
+	</body>
+</html>

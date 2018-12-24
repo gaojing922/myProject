@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link href="easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />	
+		<link href="scrollBar/perfect-scrollbar.css" rel="stylesheet"/><!--滚动条-->
+		<link rel="stylesheet" type="text/css" href="jqueryStep/jquery.step.css">
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<script src="js/browser.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="easyui/jquery.easyui.min.js"></script>
+		<script src="scrollBar/jquery.mousewheel.js"></script><!--滚动条-->
+		<script src="scrollBar/perfect-scrollbar.js"></script><!--滚动条-->
+		<script src="js/common.js" type="text/javascript"></script>
+		<script src="jqueryStep/jquery.step.js"></script>
+		<script id="selectMap" src="http://ditu.google.cn/maps/api/js?sensor=false"></script><!--谷歌地图,默认cn-->
+	<title>设备管理-设备管理</title>
+	</head>
+	<body class="easyui-layout">
+		<!--头部开始-->
+		<div class="ossTop" data-options="region:'north',split:false,border:false">
+			<div class="main-right-head">
+				<div class="main-left-logo"></div>
+				<span class="main-right-head-title">古瑞瓦特OSS管理系统</span>
+				<div class="main-right-head-smallT">
+					<span>
+						(晶科家庭)
+					</span>
+					<span>
+						<img src="images/note.png"/>
+						<ul class="show-company">
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+						</ul>
+					</span>
+				</div>
+				<ul class="main-right-head-message floatR">
+					<li class="message-zero">
+						<div class="login-input">登录管理员账号</div>
+					</li>
+					<li class="message-one">
+						<span class="show-MessageC">1</span>
+						<span class="show-MessageT">
+							您有<span class="dgjColor">1</span>条新消息
+						</span>
+					</li>
+					<li class="message-two"></li>
+					<li class="message-three">
+						<span>你好,</span>
+						<span>管理员</span>
+					</li>
+					<li class="message-five">server登录</li>
+					<li class="message-four message-same">
+						<span class="same-show-text">Grt00000</span>
+						<ul class="message-same-content">
+							<li>个人资料</li>
+							<li>退出</li>
+						</ul>
+					</li>
+					<li class="message-six message-same">
+						<span class="same-show-text">中文</span>
+						<ul class="message-same-content">
+							<li>中文</li>
+							<li>english</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+	    </div>
+	    <!--头部结束-->
+	    <div data-options="region:'center',split:false,border:false">
+	    	<!--左侧菜单开始-->
+	    	<div class="main-left" data-name="0">
+	    		<div class="toogleMenu">
+	    			<div class="norS">
+	    				<span></span>
+		    			<span></span>
+		    			<span></span>
+	    			</div>
+	    		</div>
+	    		<ul class="main-left-menu">
+					<li class="main-leftLi main-leftLi-1">
+						<div class="main-leftLi-box"><i></i>监控管理<em class="emShow">+</em></div>
+						<ul style="display: block;">
+							<a href="devicemanage-Sbgl.html" class="secondLibg"><li>设备管理</li></a>
+							<!--<a href="devicemanage-Nbqgl.html"><li>逆变器管理</li></a>
+							<a href="devicemanage-Cnjgl.html"><li>储能机管理</li></a>-->
+							<a href="devicemanage-Dzgl.html"><li>电站管理</li></a>
+							<a href="devicemanage-Yhgl.html"><li>用户管理</li></a>
+							<a href="devicemanage-Dpzs.html"><li>大屏展示</li></a>
+							<a href="devicemanage-Jkzl.html"><li>监控总览</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-2">
+						<div><i></i>服务大厅<em>+</em></div>
+						<ul>
+							<!--<a href="service-Wdwt.html"><li>我的问题</li></a>-->
+							<a href="service-Wtdt.html"><li>问题大厅</li></a>
+							<a href="service-Ksb.html"><li>客诉表</li></a>
+							<a href="service-Gddt.html"><li>工单大厅</li></a>
+							<a href="service-Wttf.html"><li>问题统分</li></a>
+							<a href="service-Wtmb.html"><li>问题模版</li></a>
+							<a href="service-Ltxt.html"><li>聊天系统</li></a>
+							<a href="service-Fwjl.html"><li>服务记录</li></a>
+							<a href="service-Sqfw.html"><li>授权服务</li></a>
+							<a href="service-Dxtz.html"><li>短信通知</li></a>
+							<a href="service-Sqfwsxx.html"><li>授权服务商信息</li></a>
+							<a href="service-Sqgcsxx.html"><li>授权工程师信息</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-3">
+						<div><i></i>数据分析<em>+</em></div>
+						<ul>
+							<a href="dataanalysis-Yxtf.html"><li>运行统分</li></a>
+							<a href="dataanalysis-Txtf.html"><li>特性统分</li></a>
+							<a href="dataanalysis-Yhtjfx.html"><li>用户统计分析</li></a>
+							<a href="dataanalysis-Zdgl.html"><li>诊断管理</li></a>
+							<a href="dataanalysis-gzGj.html"><li>故障告警</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-4">
+						<div>
+							<i></i>
+							<a href="problem-Back.html">问题追溯</a>
+							<em>+</em>
+						</div>
+					</li>
+					<li class="main-leftLi main-leftLi-5">
+						<div><i></i>在线知识<em>+</em></div>
+						<ul>
+							<a href="onlineknowledge-Zsfx.html"><li>知识分享</li></a>
+							<a href="onlineknowledge-Zssc.html"><li>知识手册</li></a>
+							<a href="onlineknowledge-Wtfl.html"><li>问题分流</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-6">
+						<div><i></i>平台日志<em>+</em></div>
+						<ul>
+							<a href="platformLog.html"><li>平台日志</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-7">
+						<div><i></i>供货系统<em>+</em></div>
+						<ul>
+							<a href="ghSystem-Zbcx.html"><li>质保查询</li></a>
+							<a href="ghSystem-Drxh.html"><li>导入型号</li></a>
+							<!--<a href="ghSystem-Drzb.html"><li>导入质保</li></a>-->
+							<a href="ghSystem-Ghjl.html"><li>供货记录</li></a>
+							<a href="ghSystem-Kcgl.html"><li>库存管理</li></a>
+							<a href="ghSystem-Fhgl.html"><li>发货管理</li></a>
+							<a href="ghSystem-Ybjl.html"><li>延保记录</li></a>
+							<a href="ghSystem-Hwsj.html"><li>海外数据</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-13">
+						<div><i></i>积分商城<em>+</em></div>
+						<ul>
+							<a href="IntegralMall-ddjl.html"><li>订单记录</li></a>
+							<a href="IntegralMall-lplb.html"><li>礼品列表</li></a>
+							<a href="IntegralMall-yhjflb.html"><li>用户积分列表</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-11">
+						<div><i></i>流量系统<em>+</em></div>
+						<ul>
+							<a href="flowSystem-Overview.html"><li>流量概览</li></a>
+							<a href="flowSystem.html"><li>流量系统</li></a>
+							<a href="flowSystem-MessageImport.html"><li>信息导入</li></a>
+							<a href="flowSystem-renew.html"><li>续费订单</li></a>
+							<a href="flowSystem-llXf.html"><li>流量续费</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-8">
+						<div><i></i>信息发布<em>+</em></div>
+						<ul>
+							<a href="information-Cpfb.html"><li>产品发布</li></a>
+							<a href="information-Fwfb.html"><li>服务发布</li></a>
+							<a href="information-Ggfb.html"><li>公告发布</li></a>
+							<a href="information-Cjwt.html"><li>常见问题</li></a>
+							<a href="information-Spgl.html"><li>视频管理</li></a>
+							<a href="information-Appxxfb.html"><li>App信息发布</li></a>
+							<a href="information-Tsgl.html"><li>推送管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-9">
+						<div><i></i>用户中心<em>+</em></div>
+						<ul>
+							<a href="usercenter-Dlsgl.html"><li>安装商管理</li></a>
+							<a href="usercenter-Yhgl.html"><li>用户管理</li></a>
+							<!--<a href="usercenter-Fzgl.html"><li>分组管理</li></a>-->
+							<a href="usercenter-Grzl.html"><li>个人资料</li></a>
+							<a href="usercenter-khxxgl.html"><li>客户信息管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-10">
+						<div><i></i>系统设置<em>+</em></div>
+						<ul>
+							<a href="systemset-Fxsgl.html"><li>分销商管理</li></a>
+							<a href="systemset-Qxgl.html"><li>权限管理</li></a>
+							<a href="systemset-Zzjg.html"><li>组织架构</li></a>
+							<a href="systemset-Cssz.html"><li>参数设置</li></a>
+							<a href="systemset-Xtwh.html"><li>系统维护</li></a>
+							<a href="systemset-Sbsj.html"><li>设备升级</li></a>
+							<a href="systemset-Xxfb.html"><li>消息发布</li></a>
+							<!--<a href="systemset-Jcssq.html"><li>分销商申请</li></a>-->
+						</ul>
+					</li>
+				</ul>
+				<!--小菜单-->
+				<ul class="samll-menu">
+					<li>
+						<div class="samll_1"></div>
+						<ul class="samll_box">
+							<li>设备管理</li>
+							<li>电站管理</li>
+							<li>用户管理</li>
+							<li>大屏展示</li>
+							<li>监控总览</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_2"></div>
+						<ul class="samll_box">
+							<li>问题大厅</li>
+							<li>工单大厅</li>
+							<li>问题统分</li>
+							<li>问题模版</li>
+							<li>聊天系统</li>
+							<li>服务记录</li>
+							<li>授权服务</li>
+							<li>短信通知</li>
+							<li>聊天系统</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_3"></div>
+						<ul class="samll_box">
+							<li>运行统分</li>
+							<li>特性统分</li>
+							<li>用户统计分析</li>
+							<li>诊断管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_4"></div>
+						<ul class="samll_box">
+							<li>问题追溯</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_5"></div>
+						<ul class="samll_box">
+							<li>知识分享</li>
+							<li>知识手册</li>
+							<li>问题分流</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_6"></div>
+						<ul class="samll_box">
+							<li>平台日志</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_7"></div>
+						<ul class="samll_box">
+							<li>质保查询</li>
+							<li>导入型号</li>
+							<li>供货记录</li>
+							<li>库存管理</li>
+							<li>发货管理</li>
+							<li>延保记录</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_8"></div>
+						<ul class="samll_box">
+							<li>流量概览</li>
+							<li>浏览系统</li>
+							<li>信息导入</li>
+							<li>续费订单</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_9"></div>
+						<ul class="samll_box">
+							<li>产品发布</li>
+							<li>公告发布</li>
+							<li>常见问题</li>
+							<li>视频管理</li>
+							<li>APP信息发布</li>
+							<li>推送管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_10"></div>
+						<ul class="samll_box">
+							<li>安装商管理</li>
+							<li>用户管理</li>
+							<li>个人资料</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_11"></div>
+						<ul class="samll_box">
+							<li>分销商管理</li>
+							<li>组织架构</li>
+							<li>系统维护</li>
+							<li>设备升级</li>
+						</ul>
+					</li>
+				</ul>
+	    	</div>
+	    	<!--左侧菜单结束-->
+	    	<div class="easyui-layout" data-options="fit:true">
+	    		 <div class="main-right" data-options="region:'center',split:false,border:false">
+	    		 	<!--内容区域开始-->
+	    		 	<div class="main-right-content sbglMinwidth">
+						<div class="main-right-content-title clearBox">
+							<span class="main-right-content-title-tip floatL color3">设备管理</span>
+							<span class="main-right-content-sub-tip floatL">
+								<span>监控管理</span>
+								<span>><a>设备管理</a></span>
+							</span>
+							<ul class="main-right-content-filter deviceGl floatR">
+								<li class="areaGl">
+									<span class="colorA">区域选择:</span>
+									<div class="layui-inline layui-form">
+										<select name="quiz">
+								          	<option>中国</option>
+											<option>欧洲</option>
+											<option>非洲</option>
+							        	</select>
+									</div>
+								</li>
+								<li class="allDeviceGl">
+									<div class="layui-inline layui-form">
+										<select name="quiz">
+								          	<option>所有设备</option>
+											<option>储能机</option>
+											<option>逆变器</option>
+							        	</select>
+									</div>
+								</li>
+								<li>
+									<div class="layui-inline layui-form">
+										<select lay-verify="required" lay-search="">
+								          <option value="">城市</option>
+								          <option value="1">深圳</option>
+								          <option value="2">岳阳</option>
+								        </select>
+									</div>
+								</li>
+								<li>
+									<div class="sameInput-group">
+										<div class="selectDrow">
+											<div class="selectDrow-title" data-velue="0">全部</div>
+											<i class="edge"></i>
+										</div>
+										<input class="seleceInput"/>
+										<ul class="selectContent">
+											<li name="0" class="sda">全部</li>
+											<li name="1">规格型号</li>
+											<li name="2">设备序列号</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<span class="spanBtn allQueryBtn">查询</span>
+								</li>
+							</ul>
+						</div>
+						<div class="main-right-content-count" style="background:none;box-shadow: none;">
+							<!--告警-->
+							<div class="agent-waring clearBox">
+								<span class="same-fixed"></span>
+								<div class="same-hideBox">
+									<span class="waring-img">
+										<i></i>
+									</span>
+									<div class="waring-hBox">
+										<div class="clearBox">
+											<div class="floatL">
+												<img src="images/inverter.png" />
+											</div>
+											<div class="floatL">
+												<p><img src="images/warmT.png" />
+													您有<i>3</i>台逆变器可能存在异常状况,请及时检查!</p>
+											</div>
+										</div>
+										<div class="waring-btn clearBox">
+											<span onclick="a()">提醒设置</span>
+											<span onclick="b()">立即查看</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--二维码-->
+							<div class="orcode-box clearBox">
+								<span class="same-fixed"></span>
+								<div class="same-orcode"></div>
+							</div>
+							<!--光伏群英汇-->
+							<div class="gf-box clearbox">
+								<span class="same-fixed"></span>
+								<div class="gf-hideBox">
+									<div></div>
+									<div>
+										<img src="images/phone.png" />
+										<span>App下载</span>
+									</div>
+								</div>
+							</div>
+							<!--tab开始-->
+							<ul class="sameTab clearBox">
+								<li class="same-textS">逆变器<i></i></li>
+								<li>储能机<i></i></li>
+								<li>混储一体机<i></i></li>
+							</ul>
+							<!--tab结束-->
+							<div class="deviceStat">
+								<ul class="clearBox">
+									<li>
+										<div class="ds-title">
+											<span>运行状态</span>
+										</div>
+										<div class="allYprogress">
+											<div class="baseP">
+												
+											</div>
+											<div class="second_1"></div>
+											<span class="ds_text">
+												<i>30</i>
+												<i>%</i>
+											</span>
+										</div>
+										<div  class="yxText">
+											运行效率
+										</div>
+										<div class="yxAll_pro clearBox">
+											<div>
+												<p>当前功率</p>
+												<p>3.3MW</p>
+											</div>
+											<div>
+												<p>总功率</p>
+												<p>7.1MW</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="ds-title clearBox">
+											<span>发电及收益</span>
+											<ul class="ds-time floatR">
+												<li class="dstSelect">日</li>
+												<li>月</li>
+												<li>年</li>
+												<li>全部</li>
+											</ul>
+										</div>
+										<div class="fsPro clearBox">
+											<div class="floatL">
+												<span>当日总发电</span>
+												<span>7704度</span>
+											</div>
+											<div class="floatR">
+												<span>当日总收益</span>
+												<span>7704元</span>
+											</div>
+										</div>
+										<div class="fsCharts">
+											
+											
+										</div>
+									</li>
+									<li>
+										<div class="ds-title clearBox">
+											<span>告警及诊断</span>
+											<div class="floatR gjSet"></div>
+										</div>
+										<div class="waring-y clearBox">
+											<div>
+												<div class="allYprogress">
+													<div class="baseP">
+														
+													</div>
+													<div class="second_2"></div>
+													<span class="ds_text">
+														<i>50</i>
+														<i>%</i>
+													</span>
+												</div>
+												<div  class="yxText">
+													<a href="dataanalysis-gzGj.html"><span>今日告警</span><img src="images/dsWaring.png" /></a>
+												</div>
+												<div class="yxAll_pro clearBox">
+													<div>
+														<p>1小时内</p>
+														<p>8次</p>
+													</div>
+													<div>
+														<p>今日</p>
+														<p>25次</p>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="allYprogress">
+													<div class="baseP">
+														
+													</div>
+													<div class="second_3"></div>
+													<span class="ds_text">
+														<i>78</i>
+														<i>%</i>
+													</span>
+												</div>
+												<div  class="yxText">
+													<a href="dataanalysis-Zdgl.html"><span>今日诊断</span><img src="images/todayZd.png" /></a>
+												</div>
+												<div class="yxAll_pro clearBox">
+													<div>
+														<p>1小时内</p>
+														<p>8次</p>
+													</div>
+													<div>
+														<p>今日</p>
+														<p>25次</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--内容-->
+							<div class="allContent">
+								<!--表格上-->
+								<div class="allContent-title clearBox">
+									<div class="at-text floatL">逆变器列表</div>
+									<ul class="at-other floatL">
+										<li class="at_two">
+											<span>980台</span>
+											<i></i>
+										</li>
+										<li class="at_three">
+											<span>980台</span>
+											<i></i>
+										</li>
+										<li class="at_four">
+											
+											<span>980台</span>
+											<i></i>
+										</li>
+										<li class="at_five">
+											<span>980台</span>
+											<i></i>
+										</li>
+										<li class="at_six selectedA">
+											<span>总数量</span>
+											<span>4146台</span>
+											<i></i>
+										</li>
+									</ul>
+									<div class="floatR">
+										<a class="allTitleCommonBtn downIng">下载中 (<span id="num">0</span>)</a>
+										<a class="allTitleBtn addBtn addDeviceBtn">新增设备</a>
+										<a class="allTitleBtn sjBtn" href="systemset-Sbsj.html">设备升级</a>
+										<div class="layui-inline layui-form deviceE">
+								        	<select name="quiz">
+								        		<option value="">导出</option>
+												<option value="2">导出数据</option>
+												<option value="1">导出故障列表</option>
+								        	</select>
+										</div>
+									</div>
+								</div>
+								<!--数据表格-->
+								<div class="main-right-count-table">
+									<table class="all-table">
+										<thead>
+											<tr>
+												<td>
+													<input type="checkbox" class="hide-allCheckbox" name="check-allBox" id="allCheck" />
+													<label for="allCheck" class="check-all">
+														<img src="images/checkAll_white.png" class="checkAll-img"/>
+														<img src="images/checkAll_white_gou.png" class="cancel-checkAll-img" />
+													</label>
+												</td>
+												<td>序号</td>
+												<td>序列号</td>
+												<td>安装商</td>
+												<td>所属电站</td>
+												<td>所属用户</td>
+												<td>采集器</td>
+												<td>状态<img class="sameSort" src="images/normla.png" /></td>
+												<td>当前功率<img class="sameSort" src="images/normla.png" /></td>
+												<td>今日发电量<img class="sameSort" src="images/normla.png" /></td>
+												<td>月发电量<img class="sameSort" src="images/normla.png" /></td>
+												<td>累计发电量<img class="sameSort" src="images/normla.png" /></td>
+												<td>最近更新</td>
+												<td class="allRelative">操作
+													<div class="sd-box">
+														<span class="setTdimg"></span>
+														<div class="sd-content sd-c">
+															<ul class="sd-ul">
+																<li>
+																	<span class="zsBg" data-show="1" data-select="1"></span><span>类型<!--type--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="2" data-select="1"></span><span>别名<!--别名--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="3" data-select="1"></span><span>安装商<!--安装商--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="4" data-select="1"></span><span>所属电站<!--所属电站--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="5" data-select="1"></span><span>所属用户<!--所属用户--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="6" data-select="1"></span><span>城市<!--城市--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="7" data-select="1"></span><span>采集器<!--采集器--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="8" data-select="1"></span><span>最后更新时间<!--最后更新时间--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="9" data-select="1"></span><span>状态<!--状态--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="10" data-select="1"></span><span>额定功率<!--额定功率--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="11" data-select="1"></span><span>今日发电量<!--今日发电量--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="12" data-select="1"></span><span>累计发电量<!--总发电量--></span>
+																</li>
+																<li>
+																	<span class="zsBg" data-show="13" data-select="1"></span><span>当前功率<!--当前功率--></span>
+																</li>
+															</ul>
+															<div class="sd-button">
+																<span class="allSelect-sd" data-name="0">全选<!-- 全选 --></span>
+																<span class="save-sd">保存<!-- 保存 --></span>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ondblclick="showChart(this)">
+												<td class="notHide">
+													<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+													<label class="check-one" for="box-1">
+														<img src="images/yuan.png" class="check-img"/>
+														<img src="images/password.png" class="checkd-img" />
+													</label>
+												</td>
+												<td>1</td>
+												<td class="tColor">VJKDB5555</td>
+												<td>广东中光能投资发展有限公司</td>
+												<td>深圳最大的电站有多大</td>
+												<td>东莞佳荣电子有限公司</td>
+												<td class="notHide">
+													<div class="shwoCjqInfo">98Z488522</div>
+													<div datalogType class="showSign" onmouseover="showSign(this)" onmouseover="hideSign(this)" data-name="4"></div>
+												</td>
+												<td>
+													在线
+												</td>
+												<td>83.4</td>
+												<td>1522</td>
+												<td>19925</td>
+												<td>385856</td>
+												<td>2018-05-08 18:30:25</td>
+												<td class="notHide">
+													<a class="smallDobtn allEditSmallBtn nbqEditBtn" title="编辑" style=""></a>
+													<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+													<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+													<a class="smallDobtn allSeeSmallBtn" title="查看该电站"></a>
+													<a class="smallDobtn allZnjcSmallBtn znCheckBtn" title="智能检测"></a>
+												</td>
+											</tr>
+											<tr ondblclick="showChart(this)">
+												<td class="notHide">
+													<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+													<label class="check-one" for="box-1">
+														<img src="images/yuan.png" class="check-img"/>
+														<img src="images/password.png" class="checkd-img" />
+													</label>
+												</td>
+												<td>1</td>
+												<td class="tColor">VJKDB5555</td>
+												<td>广东中光能投资发展有限公司</td>
+												<td>深圳最大的电站有多大</td>
+												<td>东莞佳荣电子有限公司</td>
+												<td class="notHide">
+													<div class="shwoCjqInfo">98Z488522</div>
+													<div class="showSign" data-name="3"></div>
+												</td>
+												<td>
+													在线
+												</td>
+												<td>83.4</td>
+												<td>1522</td>
+												<td>19925</td>
+												<td>385856</td>
+												<td>2018-05-08 18:30:25</td>
+												<td class="notHide">
+													<a class="smallDobtn allEditSmallBtn nbqEditBtn" title="编辑" style=""></a>
+													<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+													<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+													<a class="smallDobtn allSeeSmallBtn" title="查看该电站"></a>
+													<a class="smallDobtn allZnjcSmallBtn znCheckBtn" title="智能检测"></a>
+												</td>
+											</tr>
+											<tr ondblclick="showChart(this)">
+												<td class="notHide">
+													<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+													<label class="check-one" for="box-1">
+														<img src="images/yuan.png" class="check-img"/>
+														<img src="images/password.png" class="checkd-img" />
+													</label>
+												</td>
+												<td>1</td>
+												<td class="tColor">VJKDB5555</td>
+												<td>广东中光能投资发展有限公司</td>
+												<td>深圳最大的电站有多大</td>
+												<td>东莞佳荣电子有限公司</td>
+												<td class="notHide">
+													<div class="shwoCjqInfo">98Z488522</div>
+													<div class="showSign" data-name="2"></div>
+												</td>
+												<td>
+													在线
+												</td>
+												<td>83.4</td>
+												<td>1522</td>
+												<td>19925</td>
+												<td>385856</td>
+												<td>2018-05-08 18:30:25</td>
+												<td class="notHide">
+													<a class="smallDobtn allEditSmallBtn nbqEditBtn" title="编辑" style=""></a>
+													<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+													<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+													<a class="smallDobtn allSeeSmallBtn" title="查看该电站"></a>
+													<a class="smallDobtn allZnjcSmallBtn znCheckBtn" title="智能检测"></a>
+												</td>
+											</tr>
+											<tr ondblclick="showChart(this)">
+												<td class="notHide">
+													<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+													<label class="check-one" for="box-1">
+														<img src="images/yuan.png" class="check-img"/>
+														<img src="images/password.png" class="checkd-img" />
+													</label>
+												</td>
+												<td>1</td>
+												<td class="tColor">VJKDB5555</td>
+												<td>广东中光能投资发展有限公司</td>
+												<td>深圳最大的电站有多大</td>
+												<td>东莞佳荣电子有限公司</td>
+												<td class="notHide">
+													<div class="shwoCjqInfo">98Z488522</div>
+													<div class="showSign" data-name="0"></div>
+												</td>
+												<td>
+													在线
+												</td>
+												<td>83.4</td>
+												<td>1522</td>
+												<td>19925</td>
+												<td>385856</td>
+												<td>2018-05-08 18:30:25</td>
+												<td class="notHide">
+													<a class="smallDobtn allEditSmallBtn nbqEditBtn" title="编辑" style=""></a>
+													<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+													<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+													<a class="smallDobtn allSeeSmallBtn" title="查看该电站"></a>
+													<a class="smallDobtn allZnjcSmallBtn znCheckBtn" title="智能检测"></a>
+												</td>
+											</tr>
+											<tr ondblclick="showChart(this)">
+												<td class="notHide">
+													<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+													<label class="check-one" for="box-1">
+														<img src="images/yuan.png" class="check-img"/>
+														<img src="images/password.png" class="checkd-img" />
+													</label>
+												</td>
+												<td>1</td>
+												<td class="tColor">VJKDB5555</td>
+												<td>广东中光能投资发展有限公司</td>
+												<td>深圳最大的电站有多大</td>
+												<td>东莞佳荣电子有限公司</td>
+												<td class="notHide">
+													<div class="shwoCjqInfo">98Z488522</div>
+													<div class="showSign" data-name="-1"></div>
+												</td>
+												<td>
+													在线
+												</td>
+												<td>83.4</td>
+												<td>1522</td>
+												<td>19925</td>
+												<td>385856</td>
+												<td>2018-05-08 18:30:25</td>
+												<td class="notHide">
+													<a class="smallDobtn allEditSmallBtn nbqEditBtn" title="编辑" style=""></a>
+													<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+													<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+													<a class="smallDobtn allSeeSmallBtn" title="查看该电站"></a>
+													<a class="smallDobtn allZnjcSmallBtn znCheckBtn" title="智能检测"></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--表格下方按钮+分页-->
+									<div class="count-table-bottom-btn clearBox">
+										<!--按钮-->
+										<div class="floatL same-btnGroup">
+											<button class="allTableBtn allCheckedBtn">全选</button>
+											<button class="allTableBtn notClickBtn" disabled="disabled">转移</button>
+											<button class="allTableBtn notClickBtn" disabled="disabled">删除</button>
+											<button class="allTableBtn abcd">导出</button>
+										</div>
+										<div id="allPage" class="floatR"></div>
+									</div>
+								</div>
+							</div>
+							<!--告警-->
+							<div class="agent-waring clearBox">
+								<span class="same-fixed"></span>
+								<div class="same-hideBox">
+									<span class="waring-img">
+										<i></i>
+									</span>
+									<div class="waring-hBox">
+										<div class="clearBox">
+											<div class="floatL">
+												<img src="images/inverter.png" />
+											</div>
+											<div class="floatL">
+												<p><img src="images/warmT.png" />
+													您有<i>3</i>台逆变器可能存在异常状况,请及时检查!</p>
+											</div>
+										</div>
+										<div class="waring-btn clearBox">
+											<span onclick="a()">提醒设置</span>
+											<span onclick="b()">立即查看</span>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<!--二维码-->
+							<div class="orcode-box clearBox">
+								<span class="same-fixed"></span>
+								<div class="same-orcode"></div>
+							</div>
+							<!--光伏群英汇-->
+							<div class="gf-box clearbox">
+								<span class="same-fixed"></span>
+								<div class="gf-hideBox">
+									<div></div>
+									<div>
+										<img src="images/phone.png" />
+										<span>App下载</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	    		 	<!--内容区域结束-->
+	    		 </div>
+	    	</div>
+	    </div>
+		<!--逆变器设置-->
+		<div class="nbq-SetDialog all-dialog">
+			<iframe src="nbqSetDialog.html" id="nbq-iframe"></iframe>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--储能机设置-->
+		<div class="cnj-SetDialog all-dialog">
+			<iframe src="cnjSetDialog.html" id="cnj-iframe" style="overflow: hidden;"></iframe>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--逆变器编辑-->
+		<div class="nbq-editDialog all-dialog">
+			<table class="jcs-editDialog-box">
+				<tr>
+					<td>别名</td>
+					<td>
+						<input type="text" class="allInputHover" />
+					</td>
+				</tr>
+			</table>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--智能检测  -->
+		<div class="znBox-tranDialog all-dialog">
+			<iframe src="capacityCheck.html"></iframe>
+			<div class="all-bottom-btn znClick">
+				<span class="start_load">开始</span><span id="zpCount"></span><span class="canle_load"></span>
+				<div class="zp_box"></div>
+			</div>
+		</div>
+		<!--新增设备-->
+		<div class="addDevice-dialog all-dialog">
+			<!--<iframe src="deviceManage-addDevice.html" id="addPlant-box"></iframe>-->
+			<div class="plant-box">
+				<input type="hidden" id="stepValue" value="" />
+				<!--stepTitle-->
+				<div class="step-body" id="addPlantStep">
+					<div class="step-header">
+						<ul>
+							<li><p>添加用户</p></li>
+							<li><p>添加电站</p></li>
+							<li><p>添加采集器</p></li>
+							<div class="clear"></div>
+						</ul>
+					</div>
+				</div>
+				<!--新增设备第一步-->
+				<div class="addDevice-StepOne sameStep-device">
+					<table>
+						<tr>
+							<td><span class="dgjColor">*</span>用户名:</td>
+							<td>
+								<input class="allInputHover" id="aaaa"/>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>密码:</td>
+							<td>
+								<input class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>确认密码:</td>
+							<td>
+								<input class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>公司名称:</td>
+							<td>
+								<input class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>电子邮箱:</td>
+							<td>
+								<input class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>联系电话:</td>
+							<td>
+								<input class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>安装商代码:</td>
+							<td>
+								<input class="allInputHover" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!--新增设备第二步-->
+				<div class="user-plant-edit addDevice-StepTwo sameStep-device">
+					<div class="addDevice-twoTop">
+						<table>
+							<tr>
+								<td><span class="dgjColor">*</span>电站名</td>
+								<td>
+									<input type="text" class="allInputHover" />
+								</td>
+							</tr>
+							<tr>
+								<td><span class="dgjColor">*</span>设计功率(Wp)</td>
+								<td>
+									<input type="text" class="allInputHover" />
+								</td>
+							</tr>
+							<tr>
+								<td><span class="dgjColor">*</span>时区</td>
+								<td>
+									<input type="text" class="allInputHover" />
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<span class="hasbgColorBtn showSioBtn">展开高级信息</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="addDevice-twoBottom">
+						<div class="floatL">
+							<div class="edit-same-title">安装信息</div>
+							<div class="edit-same-row edit-same-input">
+								<span>电站名</span>
+								<span>
+									<input type="text" class="allInputHover" placeholder="电站名" />
+									<label class="dgjColor">*</label>
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>安装日期</span>
+								<span>
+									<input type="text" class="allInputHover color8" placeholder="安装日期" onclick="layui.laydate({elem: this, festival: true})"/>
+									<label class="dgjColor">*</label>
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>设计功率</span>
+								<span>
+									<input type="text" class="allInputHover" placeholder="设计功率" />
+									<label class="dgjColor">*</label>
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>设计厂商</span>
+								<span>
+									<input type="text" class="allInputHover" placeholder="设计厂商" />
+									<label class="dgjColor">*</label>
+								</span>
+							</div>
+							<div class="edit-same-title">地理信息</div>
+							<div class="edit-same-row edit-same-input">
+								<span>国家</span>
+								<span>
+									<input type="text" class="allInputHover" placeholder="国家" />
+									<label class="dgjColor">*</label>
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>城市</span>
+								<span>
+									<input type="text" class="allInputHover" placeholder="城市" />
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>时区</span>
+								<span>
+									<div class="all-select">
+										<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+										<em class="select-img"></em>
+										<select class="inner-select" name="0">
+											<option>时区一</option>
+											<option>时区二</option>
+											<option>时区三</option>
+										</select>
+									</div>
+									<label class="dgjColor">*</label>
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>纬度</span>
+								<span>
+									<input type="text" readonly="readonly" class="allInputHover" placeholder="纬度" id="plantLat"/>
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>经度</span>
+								<span>
+									<input type="text" readonly="readonly" class="allInputHover" placeholder="经度" id="plantLng"/>
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>电站图片</span>
+								<span class="allRelative">
+									<input class="allText" type="text" value="电站图片" id="txt5">
+									<input class="allFile" type="file" onchange="document.getElementById('txt5').value=this.value">
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>位置图片</span>
+								<span class="allRelative">
+									<input class="allText" type="text" value="位置图片" id="txt6">
+									<input class="allFile" type="file" onchange="document.getElementById('txt6').value=this.value">
+								</span>
+							</div>
+						</div>
+						<div class="floatL">
+							<div class="edit-same-title">收益公式（以1kWh发电量为换算标准</div>
+							<div class="edit-same-row edit-same-input">
+								<span>资金收益</span>
+								<span class="get-money">
+									<input type="text" class="allInputHover" placeholder="0" />
+									<div class="all-select">
+										<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+										<em class="select-img"></em>
+										<select class="inner-select" name="0">
+											<option>时区一</option>
+											<option>时区二</option>
+											<option>时区三</option>
+										</select>
+									</div>
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>节约标准煤(kg)</span>
+								<span>
+									<input type="text" class="allInputHover" placeholder="0" />
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>CO2减排</span>
+								<span>
+									<input type="text" class="allInputHover" placeholder="0" />
+								</span>
+							</div>
+							<div class="edit-same-row edit-same-input">
+								<span>CO2减排</span>
+								<span>
+									<input type="text" class="allInputHover" placeholder="0" />
+								</span>
+							</div>
+							<div class="edit-same-title map-select">
+								电站地图(拖动红色标注选择地址)
+								<div class="all-select">
+									<input class="select-input" type="text" readonly="readonly" value="google.cn"/>
+									<em class="select-img"></em>
+									<select class="inner-select" name="0" id="getMapSelect">
+										<option value="cn">google.cn</option>
+										<option value="com">google.com</option>
+									</select>
+								</div>
+							</div>
+							<div class="map-box" id="plantMap"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!--第三步-->
+				<div class="addDevice-StepThree sameStep-device">
+					<table>
+						<tr>
+							<td><span class="dgjColor">*</span>采集器序列号:</td>
+							<td>
+								<input type="text" class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>采集器校验码:</td>
+							<td>
+								<input type="text" class="allInputHover" />
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1 addDevice-cancle">取消</span>
+				<span class="all-bottom-btn0 addDevice-save">下一步</span>
+			</div>
+		</div>
+		<!--mix设置弹框-->
+		<div class="mixDialog-tranDialog all-dialog">
+			<iframe src="mixSetDialog.html"></iframe>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">保存</span>
+			</div>
+		</div>
+		<!--设备告警提醒框-->
+		<div class="deviceW-Dialog all-dialog">
+			<div class="deviceW-box">
+				<audio id="myAudio" controls autoplay="autoplay" loop="loop" style="display: none;">
+				  <source src="audio/horse.ogg" type="audio/ogg">
+				</audio>
+				<div class="deviceW-one"></div>
+				<div class="deviceW-two">
+					您的逆变器4K2515512存在异常状况,请及时检查!
+				</div>
+				<div class="deviceW-three">
+					<p>
+						<span class="rightQuery">立即查看</span>
+					</p>
+					<p>
+						<span class="callSet" onclick="a();">提醒设置</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--告警提醒-->
+		<div class="waringTx-Dialog all-dialog">
+			<div class="waringTx-box">
+				<div class="waringTime-set">
+					<div class="wd-sameTitle">告警时间设置(单选)</div>
+					<div class="wd-sameBox">
+						<div class="wd-sameRow clearBox wdTimeBox">
+							<div class="floatL">
+								15分钟
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>间隔15分钟检测提醒</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox wdTimeBox">
+							<div class="floatL">
+								30分钟
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>间隔30分钟检测提醒</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox wdTimeBox">
+							<div class="floatL">
+								60分钟
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>间隔60分钟检测提醒</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="waringType-set">
+					<div class="wd-sameTitle">告警方式设置(多选)</div>
+					<div class="wd-sameBox">
+						<div class="wd-sameRow clearBox">
+							<div class="floatL">
+								短信
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>我们将定期发送短信至您的手机</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox">
+							<div class="floatL">
+								邮箱
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>我们将定期发送短信至您的邮箱</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox">
+							<div class="floatL">
+								弹框提醒
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>开户后将会定时检测后弹框提示</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+						<div class="wd-sameRow clearBox">
+							<div class="floatL">
+								告警铃
+							</div>
+							<div class="floatL">
+								<p class="wdState-text">已关闭</p>
+								<p>开启提醒时会伴有铃声提示</p>
+							</div>
+							<div class="floatL">
+								<div class="switch" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">保存</span>
+			</div>
+		</div>
+		<!--逆变器查看图表数据-->
+		<div class="invChartg-Dialog all-dialog">
+			<div class="invChart-title clearBox">
+				<span class="floatL">逆变器数据</span>
+				<input class="floatR allInputHover color8" placeholder="结束日期" onclick="layui.laydate({elem: this, festival: true})">
+			</div>
+			<div class="invChart-box"></div>
+		</div>
+		<!--下载列表弹框-->
+		<div class="dwonList-Dialog all-dialog">
+			<div class="downTitle clearBox">
+				<div class="downTime floatL">
+					<input class="allInputHover" placeholder="开始时间" onclick="layui.laydate({elem: this, festival: true})"/>
+					<span>-</span>
+					<input class="allInputHover" placeholder="完成时间" onclick="layui.laydate({elem: this, festival: true})"/>
+					<span class="spanBtn allQueryBtn">查询</span>
+				</div>
+				<div class="downClear floatR">
+					<div class="clearBox">
+						<span class="clearT" data-name="0">清除记录<i></i></span>
+						<ul class="showDlist">
+							<li>所有记录</li>
+							<li>所有记录及文件</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="downBox">
+				<div class="sameDownRow clearBox">
+					<div class="floatL sameFileimg"></div>
+					<div class="floatL">
+						<div class="fileTop">
+							<span>2121.excel</span>
+							<span>开始时间:</span>
+							<span>2018-08-17 15:14</span>
+							<span>结束时间:</span>
+							<span>2018-08-17 15:14</span>
+						</div>
+						<div class="fileBot">
+							<span class="xzz">下载中 -<i class="xzzCount">56</i>%</span>
+						</div>
+					</div>
+					<!--<div class="floatR fileDo">
+						<div class="openFile">打开文件</div>
+						<div class="deleteFile"></div>
+					</div>-->
+					<!--下载中进度条-->
+					<div class="downProgress">
+						<div class="proIng"></div>
+					</div>
+				</div>
+				<div class="sameDownRow clearBox">
+					<div class="floatL sameFileimg"></div>
+					<div class="floatL">
+						<div class="fileTop">
+							<span>2121.excel</span>
+							<span>开始时间:</span>
+							<span>2018-08-17 15:14</span>
+							<span>结束时间:</span>
+							<span>2018-08-17 15:14</span>
+						</div>
+						<div class="fileBot">
+							<span class="xzz">下载中 -<i class="xzzCount">20</i>%</span>
+						</div>
+					</div>
+					<!--<div class="floatR fileDo">
+						<div class="openFile">打开文件</div>
+						<div class="deleteFile"></div>
+					</div>-->
+					<!--下载中进度条-->
+					<div class="downProgress">
+						<div class="proIng"></div>
+					</div>
+				</div>				
+				<div class="sameDownRow clearBox">
+					<div class="floatL sameFileimg"></div>
+					<div class="floatL">
+						<div class="fileTop">
+							<span>2121.excel</span>
+							<span>开始时间:</span>
+							<span>2018-08-17 15:14</span>
+							<span>结束时间:</span>
+							<span>2018-08-17 15:14</span>
+						</div>
+						<div class="fileBot">
+							<span class="ywc">已完成</span>
+						</div>
+					</div>
+					<div class="floatR fileDo">
+						<div class="openFile">打开文件</div>
+						<div class="deleteFile"></div>
+					</div>
+				</div>
+				<!--无数据,无数据的时候显示-->
+				<div class="downNodata">暂无数据</div>
+			</div>
+		</div>
+		<script src="layui/layui.js"></script>
+		<script src="js/ossIndex.js"></script>
+		<script src="js/common.js"></script>
+		<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+		<!--<script src="js/jquery-addShopping.js"></script>
+		<script src="js/jquery.fly.min.js"></script>-->
+		<script>
+			//设备管理状态背景
+			$(".stateSameBtn").unbind("click").bind("click",function(){
+				$(this).addClass("deviceBgColor").children("span").addClass("deviceBgColor");
+				$(this).siblings("span").removeClass("deviceBgColor").children("span").removeClass("deviceBgColor");
+			})
+			//分页
+			layui.use(['laypage','form','layer'], function(){
+				var laypage = layui.laypage,//分页
+				form = layui.form(),
+				layer = layui.layer; //独立版的layer无需执行这一句
+				//分页
+				laypage({
+				   cont: 'allPage',
+				   pages: 100, //总页数
+				   skip: true, //是否开启跳页
+				   groups: 5 //连续显示分页数
+				});
+			});
+			function showChart(obj){
+				layer.open({
+					type: 1, //Page层类型
+					title: null,
+					shade: 0.4, //遮罩透明度
+					shadeClose:false,//点击遮罩关闭弹框
+					anim: 0, //0-6的动画形式，-1不开启
+					content: $('.invChartg-Dialog'),
+					resize:false,
+					cancel: function(){
+						
+			  		},
+			  		success:function(){
+			  			loadInvChart()
+			  		}
+				});
+			}
+			function a(){
+				layer.open({
+					type: 1, //Page层类型
+					title: '告警提醒设置',
+					shade: 0.4, //遮罩透明度
+					shadeClose:false,//点击遮罩关闭弹框
+					anim: 0, //0-6的动画形式，-1不开启
+					content: $('.waringTx-Dialog'),
+					resize:false,
+					cancel: function(){ 
+			  		}
+				});
+				//var x = document.getElementById("myAudio")
+				//取消
+				$(".all-bottom-btn1").click(function(){
+					layer.closeAll();
+				});
+				//确定
+				$(".all-bottom-btn0").click(function(){
+					layer.closeAll();
+				});
+			}
+			//告警弹框
+			function b(){
+				layer.open({
+					type: 1, //Page层类型
+					title: '设备告警提醒<span style="color:#ff4200;padding-left:5px;font-size:14px">(告警铃已关闭)</span>',
+					shade: 0.4, //遮罩透明度
+					shadeClose:false,//点击遮罩关闭弹框
+					anim: 0, //0-6的动画形式，-1不开启
+					content: $('.deviceW-Dialog'),
+					resize:false,
+					cancel: function(){ 
+			  		}
+				});
+				//取消
+				$(".all-bottom-btn1").click(function(){
+					layer.closeAll();
+				});
+				//确定
+				$(".all-bottom-btn0").click(function(){
+					layer.closeAll();
+				});
+			}
+			//显示高级信息
+			$(".showSioBtn").unbind("click").bind("click",function(){
+				if($(".addDevice-twoBottom").is(":hidden")){
+					$(this).text("收起高级信息");
+					$(".addDevice-twoBottom").slideDown();
+					initialize()
+				}else{
+					$(this).text("展开高级信息");
+					$(".addDevice-twoBottom").slideUp();
+				}
+			});
+			$("#getMapSelect").unbind("change").bind("change",function(){
+				var value = $(this).val();
+				if(value == "cn"){
+					initialize();
+					$("#aaaa").attr("src","http://ditu.google.cn/maps/api/js?sensor=false")
+				}else{
+					initialize();
+					$("#aaaa").attr("src","http://maps.google.com/maps/api/js?sensor=false")
+				}
+			})
+			var loadFun=null;
+			var pregress = 0;
+			//加入购物车效果
+			function add(startObj,endObj,obj,num){
+			    var x = startObj.offset().left + startObj.width();//从哪里开始的元素
+				var y = startObj.offset().top + startObj.height()/2;
+				var X = endObj.offset().left+endObj.width()/2.5;
+				var Y = endObj.offset().top+endObj.height()/2;
+				var icon = '<div id="cartIcon" style="display:none;width:50px;height:50px;padding:2px;background:#fff;overflow:hidden;position:absolute;z-index:890;"><img src="images/excel.png" width="50" height="50" /></div>';
+				$('body').append(icon);
+				var imgObj=$('#cartIcon');
+				if(!imgObj.is(':animated')){
+					imgObj.css({'left': x,'top': y,'display':'block'}).animate({'left': X,'top': Y+50},300,function(){
+						imgObj.stop(false, false).animate({'top': Y,'opacity':0},300,function(){
+							imgObj.remove();
+							endObj.find(obj).text(parseInt(endObj.find(obj).text())+num);
+						});
+					});	
+				}else{
+					return false;
+				}
+			}
+			$(function() {
+				//下载中
+				$(".downIng").click(function(){
+					layer.open({
+						type: 1, //Page层类型
+						title: '下载列表',
+						shade: 0.4, //遮罩透明度
+						shadeClose:false,//点击遮罩关闭弹框
+						anim: 0, //0-6的动画形式，-1不开启
+						content: $('.dwonList-Dialog'),
+						resize:false,
+						cancel: function(){ 
+				  		}
+					});
+					//取消
+					$(".all-bottom-btn1").click(function(){
+						layer.closeAll();
+					});
+					//确定
+					$(".all-bottom-btn0").click(function(){
+						layer.closeAll();
+					});
+				})
+				//清除信息
+				$(".clearT").click(function(){
+					if($(this).attr("data-name") == 0){
+						$(this).attr("data-name",1)
+					}else{
+						$(this).attr("data-name",0)
+					}
+				});
+				$(".sameDownRow").hover(function(){
+					$(this).addClass("select");
+				},function(){
+					$(this).removeClass("select");
+				})
+				//进度条
+				var widthC = $(".xzzCount");
+				$.each(widthC, function(i,v) {
+					$(v).parents(".sameDownRow").find(".proIng").css({"width":$(v).text()+"%"})   
+				});
+				//动画效果
+				$(".abcd").click(function(){
+					add($(this),$(".downIng"),"#num",1);				
+				})
+				/*$('.abcd').shoping({
+					endElement:".downIng",
+					iconCSS:"",
+					iconImg:"images/excel.png",
+					endFunction:function(element){//执行完回调
+						$("#num").html(parseInt($("#num").text())+1);
+						return false;
+					}
+				})*/
+				
+				
+				/*var offset = $(".downIng").offset();
+				$(".abcd").click(function(event){
+					var addcar = $(this);
+					var img = 'images/excel.png';
+					var flyer = $('<img class="u-flyer" src="'+img+'">');
+					flyer.fly({
+						start: {
+							left: event.pageX,
+							top: event.pageY
+						},
+						end: {
+							left: offset.left+10,
+							top: offset.top+10,
+							width: 0,
+							height: 0
+						},
+						onEnd: function(){
+							$("#num").html(parseInt($("#num").text())+1);
+							this.destory();
+						}
+					});
+				});*/
+				
+				
+				
+				
+				
+	    		var step= $("#addPlantStep").step();
+	    		var sValue = 1;
+	    		if(sValue == 1){
+	    			showOne();
+	    		}else if(sValue == 2){
+	    			showTwo();
+	    		}else{
+	    			showThree();
+	    		}
+	    		//showOne();
+	    		//显示第一步
+				function showOne(){
+					$(".addDevice-StepOne").addClass("sameStep-ShowD");//.siblings(".sameStep-device").removeClass("sameStep-ShowD");
+					$(".addDevice-StepTwo,.addDevice-StepThree").removeClass("sameStep-ShowD");
+					step.goStep(1);
+					$("#stepValue").val(1);
+				}
+				//showTwo();
+				//显示第二步
+				function showTwo(){
+					$(".addDevice-StepTwo").addClass("sameStep-ShowD");//.siblings(".sameStep-device").removeClass("sameStep-ShowD");
+					$(".addDevice-StepOne,.addDevice-StepThree").removeClass("sameStep-ShowD");
+					step.goStep(2);
+					$("#stepValue").val(2);
+				}
+				//showThree();
+				//显示第三步
+				function showThree(){
+					$(".addDevice-StepThree").addClass("sameStep-ShowD");//.siblings(".sameStep-device").removeClass("sameStep-ShowD");
+					$(".addDevice-StepOne,.addDevice-StepTwo").removeClass("sameStep-ShowD");
+					step.goStep(3);
+					$("#stepValue").val(3);
+				}
+				//确定
+				parent.top.$(".addDevice-save").unbind("click").bind("click",function(){
+					var stepValue = $("#stepValue").val();
+					if(stepValue == 1){
+						showTwo();
+						$(this).text("下一步")
+					}else if(stepValue == 2){
+						showThree();
+						$(this).text("完成")
+					}else{
+						$(this).text("下一步")
+						parent.top.layer.closeAll();
+					}
+				});
+				
+				
+				//图表
+				$('.fsCharts').highcharts({
+					credits: {//禁用版权信息
+				        enabled:false
+				    },
+			        chart: {
+			            type: 'areaspline'
+			        },
+			        title: {
+			            text: null
+			        },
+			        xAxis: {
+			            allowDecimals: false,
+			            labels: {
+			                formatter: function () {
+			                    return this.value; // clean, unformatted number for year
+			                }
+			            }
+			        },
+			        yAxis: {
+			            title: {
+			                text: null
+			            },
+			            labels: {
+			                enabled: false
+			            }        
+			        },
+			        tooltip: {
+			            shared: true,
+			            useHTML: true
+			        },
+			        legend: {
+			            enabled: false
+			        },
+			        series: [{
+			            name: '当日发电',
+			            color:'#009cff',
+			            tooltip: {
+			                valueSuffix: '度'
+			            },
+			            data: [null, null, null, null, null, 6, 11, 32, 110, 235, 369, 640,
+			                   1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
+			                   27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
+			                   26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
+			                   24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
+			                   22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
+			                   10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
+			        }, {
+			            name: '当日总收益',
+			            color:'#d9f0ff',
+			            tooltip: {
+			                valueSuffix: '元'
+			            },
+			            data: [null, null, null, null, null, null, null, null, null, null,
+			                   5, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
+			                   4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
+			                   15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
+			                   33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
+			                   35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
+			                   21000, 20000, 19000, 18000, 18000, 17000, 16000]
+			        }]
+			    });
+			    //切换显示告警框
+			    $(".same-fixed").click(function(){
+			    	if($(this).siblings("div").is(":hidden")){
+			    		$(this).css("background-image","url(./images/rightD.png)").siblings("div").show();
+			    	}else{
+			    		$(this).css("background-image","url(./images/leftD.png)").siblings("div").hide();
+			    	}
+			    });
+			    //增加提示、
+				$.each($(".waring-Cbox .waring-row>p:nth-child(2)>a"), function(i,v) {
+					if($(v).text().match(/^[\u4E00-\u9FA5]{1,}$/)){//是否为中文
+					    if($(v).text().length>=21){
+							$(v).addClass("waring-hidden").attr("title",$(v).text());
+						}
+					}else{
+					    if($(v).text().length>=41){
+							$(v).addClass("waring-hidden").attr("title",$(v).text());
+						}
+					}
+				})	
+				/*自定义开关事件1*/
+				$(".waringTime-set .switch").click(function(){
+					var dt = $(this).attr("data-name");
+					if(dt == 0){
+						$(this).attr("data-name",1);
+						$(this).parent(".floatL").prev().find(".wdState-text").text("已开启");
+						$(this).parents(".wdTimeBox").siblings(".wdTimeBox").find(".switch").attr("data-name",0)
+						$(this).parents(".wdTimeBox").siblings(".wdTimeBox").find(".wdState-text").text("已关闭");
+					}else{
+						$(this).attr("data-name",0);
+						$(this).parent(".floatL").prev().find(".wdState-text").text("已关闭");
+					}
+				})
+				/*自定义开关事件2*/
+				$(".waringType-set .switch").click(function(){
+					var dt = $(this).attr("data-name");
+					if(dt == 0){
+						$(this).parent(".floatL").prev().find(".wdState-text").text("已开启");
+						$(this).attr("data-name",1)
+					}else{
+						$(this).attr("data-name",0)
+						$(this).parent(".floatL").prev().find(".wdState-text").text("已关闭");
+					}
+				})
+			})
+			//地图
+			//根据城市名获取经纬度
+			/*function getLocation(){
+				var geocoder = new google.maps.Geocoder();
+				var address = document.getElementById("aa").value;
+				geocoder.geocode({'address':address},function(results,status){
+					if(status == google.maps.GeocoderStatus.OK){
+						var latitude = results[0].geometry.location.lat();//经度
+						var longitude = results[0].geometry.location.lng();//纬度
+						alert("经度"+latitude + ","+"纬度"+longitude);
+					}else{
+						alert("没有找到相应的地址");
+					}
+				})
+			}*/
+			var lat = 29.188236436283365;
+			var lng = 113.43515043410173;
+			$("#plantLat").val(lat);
+	        $("#plantLng").val(lng);
+			var myCenter=new google.maps.LatLng(lat,lng);
+			function initialize(){
+				var mapProp = {
+				  center:myCenter,
+				  zoom:13,
+				  scaleControl:false,
+				  mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				//var map=new google.maps.Map(document.getElementById("plantMap"),mapProp);
+				var map=new google.maps.Map(document.getElementById("plantMap"),mapProp);
+				//创建标记点
+				var marker=new google.maps.Marker({
+				  position:myCenter,
+				  animation:google.maps.Animation.BOUNCE,
+				  draggable: true
+				});
+				marker.setMap(map);
+				//在标记上显示信息窗口
+				var infowindow = new google.maps.InfoWindow({
+				  content:"深圳市"
+				});
+				/*google.maps.event.addListener(marker, 'click', function() {
+					alert(1)
+			  		infowindow.open(map,marker);
+			    });*/
+			    google.maps.event.addListener(marker, 'dragend', function(MouseEvent) {
+				  // alert(MouseEvent.latLng);
+				   //alert(marker.getPosition().lat())
+				   $("#plantLat").val(marker.getPosition().lat());
+	               $("#plantLng").val(marker.getPosition().lng());
+				});
+			}
+			//采集器鼠标移动创建元素
+			$(".shwoCjqInfo").hover(function(){
+				if($(this).find(".cjqInfoBox").length==0){
+					createElement($(this));
+					var height = $(".cjqInfoBox").height();
+					$(this).find(".cjqInfoBox").css({"left":$(this).width()-10,top:-(height+10)})
+				}else{
+					$(this).find(".cjqInfoBox").show();
+				}
+			},function(){
+				$(this).find(".cjqInfoBox").hide();
+			})
+			function createElement(obj){
+				var template = `
+					<div class="cjqInfoBox">
+						<i class="infoToLeft"></i>
+						<div class="sameRowinfo clearBox">
+							<div class="floatL">
+								<span>序列号:</span>
+								<span>IUB1728336</span>
+							</div>
+							<div class="floatL">
+								<span>别名:</span>
+								<span>IUB1728336</span>
+							</div>
+						</div>
+						<div class="sameRowinfo clearBox">
+							<div class="floatL">
+								<span>最后更新时间:</span>
+								<span>2018-08-08 08:08:08</span>
+							</div>
+							<div class="floatL">
+								<span>固件版本:</span>
+								<span>1.1.24</span>
+							</div>
+						</div>
+					</div>
+				`;
+				obj.append(template)
+			}
+			
+			
+			//google.maps.event.addDomListener(window, 'load', initialize);
+			//逆变器弹框图表
+			function loadInvChart(){
+				$('.invChart-box').highcharts({
+					credits: {//禁用版权信息
+				        enabled:false
+				    },
+			        chart: {
+			            type: 'areaspline'
+			        },
+			        title: {
+			            text: null
+			        },
+			        xAxis: {
+			            allowDecimals: false,
+			            labels: {
+			                formatter: function () {
+			                    return this.value; // clean, unformatted number for year
+			                }
+			            }
+			        },
+			        plotOptions: {
+					    series: {
+					        marker: {
+					            enabled: false
+					        }
+					     }
+					},
+			        yAxis: {
+			            title: {
+			                text: '功率(W)',
+			                style:{
+			                	fontSize:'14px',
+			                	color:'#222222'
+			                }
+			            },
+			            labels: {
+			                enabled: false
+			            }        
+			        },
+			        tooltip: {
+			            shared: true,
+			            useHTML: true
+			        },
+			        series: [{
+			            name: 'AKCD1255',
+			            color:'#009cff',
+			            tooltip: {
+			                valueSuffix: 'W'
+			            },
+			            data: [null, null, null, null, null, 6, 11, 32, 110, 235, 369, 640,
+			                   1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
+			                   27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
+			                   26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
+			                   24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
+			                   22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
+			                   10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
+			        }]
+			    });
+			
+			}
+		</script>
+	</body>
+</html>

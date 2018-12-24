@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.switch-close-text,.switch-open-text{display: none;}
+			.switch{position: relative;height: 22px;line-height: 22px;width: 42px;padding: 0 5px;margin-top: 8px;border: 1px solid #d2d2d2;border-radius: 20px;
+			    cursor: pointer;background-color: #fff;-webkit-transition: .1s linear;transition: .1s linear;display: inline-block;vertical-align: middle;
+			}
+			.switch em{
+			    position: absolute;
+			    width: 25px;
+			    padding: 0!important;
+			    text-align: center!important;
+			    font-style: normal!important;
+			    font-size: 12px;
+			}
+			.switch[data-name='0'] .switch-close-text{
+				display: inline-block;
+				color: #999!important;
+			    right: 5px;
+			    top: 0;
+			}
+			.switch i {
+			    position: absolute;
+			    top: 3px;
+			    width: 16px;
+			    height: 16px;
+			    border-radius: 20px;
+			    -webkit-transition: .1s linear;
+			    transition: .1s linear;
+			}
+			.switch[data-name='0'] i {
+			    left: 5px;
+			    background-color: #d2d2d2;
+			}
+			.switch[data-name='1'] {
+			    border-color: #6987ab;
+			    background-color: #6987ab;
+			}
+			.switch[data-name='1'] .switch-open-text {
+				display: inline-block;
+			    left: 5px;
+			    right: auto;
+			    color: #fff!important;
+			}
+			.switch[data-name='1'] i {
+			    left: 32px;
+			    background-color: #fff!important;
+			}
+			i,em{font-style: normal;}
+		</style>
+		
+	</style>
+	</head>
+	<body>
+		<div class="switch" data-name="0">
+			<em class="switch-close-text">关</em>
+			<em class="switch-open-text">开</em>
+			<i></i>
+		</div>
+		<script>
+			$(function(){
+				$(".switch").click(function(){
+					var dt = $(this).attr("data-name");
+					if(dt == 0){
+						$(this).attr("data-name",1)
+					}else{
+						$(this).attr("data-name",0)
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

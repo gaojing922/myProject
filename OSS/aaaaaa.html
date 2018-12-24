@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery.min.js"></script>
+		<style>
+			*{
+				padding: 0;margin: 0;outline: none;
+			}
+			ul{list-style: none;}
+			.sameFilterBox{display: inline-block;vertical-align: middle;margin: 150px;}
+		</style>
+	</head>
+	<body>
+		
+		
+		
+		
+		
+		
+		<div class="sameFilterBox">
+			<input type="text" />
+		</div>
+		<div id="pagination"/></div>
+		<script>
+			
+			//得到标准时区的时间的函数
+		    function getLocalTime(i) {
+		        //参数i为时区值数字，比如北京为东八区则输进8,西5输入-5
+		        if (typeof i !== 'number') return;
+		        var d = new Date();
+		        //得到1970年一月一日到现在的秒数
+		        var len = d.getTime();
+		        //本地时间与GMT时间的时间偏移差
+		        var offset = d.getTimezoneOffset() * 60000;
+		        //得到现在的格林尼治时间
+		        var utcTime = len + offset;
+		        return new Date(utcTime + 3600000 * i);
+		    }
+		    
+		    
+		    
+		    
+		    
+		    console.log("*******************东区时间************************************");
+		    console.log("零时区-伦敦时间：" + getLocalTime(0));
+		    console.log("东一区-柏林时间：" + getLocalTime(1));
+		    console.log("东二区-雅典时间：" + getLocalTime(2));
+		    console.log("东三区-莫斯科时间：" + getLocalTime(3));
+		    console.log("东四区-时间：" + getLocalTime(4));
+		    console.log("东五区-伊斯兰堡时间：" + getLocalTime(5));
+		    console.log("东六区-科伦坡时间：" + getLocalTime(6));
+		    console.log("东七区-曼谷时间：" + getLocalTime(7));
+		    console.log("东八区-北京时间：" + getLocalTime(8));
+		    console.log("东九区-东京时间：" + getLocalTime(9));
+		    console.log("东十区-悉尼时间：" + getLocalTime(10));
+		    console.log("东十二区-斐济时间：" + getLocalTime(12));
+		    console.log("*******************西区时间************************************");
+		    console.log("西十区-斐济时间：" + getLocalTime(-10));
+		    console.log("西九区-阿拉斯加时间：" + getLocalTime(-9));
+		    console.log("西八区-太平洋时间（美国和加拿大）：" + getLocalTime(-8));
+		    console.log("西七区-山地时间（美国和加拿大）：" + getLocalTime(-7));
+		    console.log("西六区-中部时间（美国和加拿大）：" + getLocalTime(-6));
+		    console.log("西五区-东部时间（美国和加拿大）：" + getLocalTime(-5));
+		    console.log("西四区-大西洋时间（加拿大）：" + getLocalTime(-4));
+		    console.log("西三区-巴西利亚时间：" + getLocalTime(-3));
+			
+			
+			var country = [
+							"Other", 
+							"China",
+							"Taiwan",
+							"Singapore",
+							"Thailand",
+							"Indonesia",
+							"Malaysia",
+							"Vietnam",
+							"Japan",
+							"Russia",
+							"USA", 
+							"Afghanistan", 
+							"Albania",
+							"Algeria",
+							"American Samoa",
+							"Andorra",
+							"Angola",
+							"Anguilla",
+							"Antigua and Barbuda",
+							"Argentina",
+							"Armenia",
+							"Aruba",
+							"Australia",
+							"Austria",
+							"Azerbaijan",
+							"Bahamas",
+							"Bahrain",
+							"Bangladesh",
+							"Barbados",
+							"Belarus",
+							"Belgium",
+							"Belize",
+							"Benin",
+							"Bermuda",
+							"Bhutan",
+							"Bolivia",
+							"Bosniaand Herzegovina",
+							"Botswana",
+							"Brazil", 
+							"British Virgin Islands",
+							"Brunei Darussalam",
+							"Bulgaria",
+							"BurkinaFaso",
+							"Burundi",
+							"Cambodia",
+							"Cameroon",
+							"Canada",
+							"CapeVerde",
+							"Cayman Islands",
+							"Central African Republic",
+							"Chad",
+							"Chile",
+							"Colombia",
+							"Comoros",
+							"Congo",
+							"Congo Democratic Republic", 
+							"Cook Islands",
+							"Costa Rica",
+							"Croatia",
+							"Cuba",
+							"Cyprus",
+							"Czech Republic",
+							"Denmark",
+							"Djibouti",
+							"Dominica",
+							"Dominican Republic", 
+							"EastTimor",
+							"Ecuador",
+							"Egypt", 
+							"ElSalvador",
+							"Equatorial Guinea",
+							"Eritrea", 
+							"Estonia", 
+							"Ethiopia",
+							"FalklandIslands", 
+							"Faroe Islands",
+							"Fiji",
+							"Finland",
+							"France",
+							"French Guiana",
+							"French Polynesia",
+							"Gabon",
+							"Gambia",
+							"Georgia",
+							"Germany",
+							"Ghana",
+							"Gibraltar",
+							"Greece",
+							"Greenland",
+							"Grenada",
+							"Guadeloupe",
+							"Guam",
+							"Guatemala",
+							"Guinea",
+							"Guinea Bissau",
+							"Guyana",
+							"Haiti",
+							"Honduras",
+							"HongKong",
+							"Hungary",
+							"Iceland",
+							"India",
+							"Iran",
+							"Iraq",
+							"Ireland",
+							"Isle of Man",
+							"Israel",
+							"Italy",
+							"Jamaica",
+							"Jordan",
+							"Kazakhstan",
+							"Kenya",
+							"Kiribati",
+							"Kuwait",
+							"Kyrgyzstan",
+							"Laos",
+							"Latvia",
+							"Lebanon",
+							"Lesotho",  
+							"Liberia",  
+							"Libya", 
+							"Liechtenstein",  
+							"Lithuania",
+							"Luxembourg", 
+							"Macau",  
+							"Macedonia", 
+							"Madagascar",  
+							"Malawi",
+							"Maldives", 
+							"Mali", 
+							"Malta",  
+							"Marshall Islands",  
+							"Martinique",
+							"Mauritania",  
+							"Mauritius", 
+							"Mexico",  
+							"Micronesia",
+							"Moldova",  
+							"Monaco",
+							"Mongolia",  
+							"Montenegro", 
+							"Montserrat",  
+							"Morocco",
+							"Mozambique",  
+							"Myanmar",
+							"Namibia",  
+							"Nauru",  
+							"Nepal", 
+							"Netherlands",  
+							"NewCaledonia", 
+							"NewZealand",  
+							"Nicaragua", 
+							"Niger", 
+							"Nigeria", 
+							"Niue",  
+							"Norfolk Island", 
+							"NorthKorea",
+							"Northern Mariana Islands",  
+							"Norway", 
+							"Oman", 
+							"Pakistan", 
+							"Palau", 
+							"Palestine",
+							"Panama",  
+							"Papua New Guinea",
+							"Paraguay", 
+							"Peru",  
+							"Philippines",  
+							"Pitcairn Islands",  
+							"Poland", 
+							"Portugal",  
+							"Puerto Rico", 
+							"Qatar",
+							"Romania",  
+							"Rwanda",  
+							"SaintHelena",  
+							"SaintKittsandNevis",  
+							"SaintLucia",
+							"SaintPierreandMiquelon",  
+							"SaintVincentandtheGrenadines",  
+							"Samoa",  
+							"SanMarino",  
+							"SaudiArabia", 
+							"Senegal", 
+							"Serbia", 
+							"Seychelles", 
+							"SierraLeone",
+							"SintMaarten", 
+							"Slovakia",  
+							"Slovenia", 
+							"SolomonIslands",  
+							"Somalia",
+							"SouthAfrica",  
+							"SouthKorea", 
+							"SouthSudan", 
+							"Spain",  
+							"SriLanka",  
+							"Sudan",
+							"Suriname",  
+							"SvalbardandJanMayen",
+							"Swaziland",
+							"Sweden", 
+							"Switzerland", 
+							"Syria",
+							"Tajikistan", 
+							"Tanzania", 
+							"Togo", 
+							"Tokelau",  
+							"Tonga",
+							"TrinidadandTobago",  
+							"Tunisia", 
+							"Turkey", 
+							"Turkmenistan",  
+							"Turks and Caicos Islands",  
+							"Tuvalu", 
+							"US Virgin Islands", 
+							"Uganda",  
+							"Ukraine",  
+							"United Arab Emirates",  
+							"United Kingdom", 
+							"Uruguay", 
+							"Uzbekistan", 
+							"Vanuatu", 
+							"Venezuela", 
+							"Wallis and Futuna",  
+							"Yemen",
+							"Zambia",
+							"Zimbabwe"];
+			for(var i = 0;i<country.length;i++){
+				console.log(country[i])
+			}
+			var url = "http://data1.solarmanpv.com:8000/upload/growatt/inverter/info";
+			var parse_url = /^(?:([A-Za-z]+):)(\/{2})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+			if(!parse_url.test(url)){
+				alert("错误")
+			}else{
+				alert('正确')
+			}
+			$.fn.filterUl=function(options){
+				
+			}
+			
+			
+			$.fn.pagination=function(options){
+			  var defaults = {
+			    'currentPage': 1,
+			    'totalPage': 5,
+			    'pageSize': 10,
+			    'url':""
+			   };
+			   var settings = $.extend(defaults, options);
+			   this.append('<span class="pagination" value="1">首页</span>');
+			   for(var i=1;i<=settings.totalPage;i++){
+			     if(settings.currentPage==i){
+			       this.append('<span class="pagination" value="'+i+'" style="color:#2986db">'+i+'</span>');
+			     }else{
+			        this.append('<span class="pagination" value="'+i+'">'+i+'</span>');
+			     }
+			   }
+			
+			   this.append('<span class="pagination" value="'+settings.totalPage+'”">末页</span>');
+			
+			   //注册样式
+			   var buttoncss={
+			     'padding':' 2px 8px',
+			     'margin': '2px',
+			     'cursor': 'pointer',
+			     'border': 'solid 1px #e3e3e3',
+			     'border-radius':'4px'
+			   };
+			   this.find(".pagination").css(buttoncss);
+			
+			   //注册事件
+			   this.find(".pagination")
+			    .on("click",function(e){
+			       window.location.href=settings.url+'?pageSize=10&currentPage=' + $(e.target).attr("value");
+			     })
+			     .on("mouseenter",function(){
+			       $(this).css("background-color","#e2ecff");
+			     })
+			     .on("mouseleave",function(){
+			       $(this).css("background-color","white");
+			   });
+			   return this;
+			};
+			$(function(){
+				var o=$("#pagination").pagination({"url":"./other.jsp"});
+			})
+		</script>
+	</body>
+</html>

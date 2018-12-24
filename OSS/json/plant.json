@@ -1,0 +1,25 @@
+{"time":"2018-02-02",
+ "data":[
+ 			{"type":"1","children":[{"SN":"2754653486","param":"ppv1,ppv2"},
+ 									{"SN":"dKB2719002","param":"ppv1,ppv2"}]//逆变器
+ 			},
+ 			{"type":"2","children":[{"SN":"eKB2719003","param":"ppv1,ppv2"},
+ 									{"SN":"cKB2719004","param":"ppv1,ppv2"}]//储能机 
+ 			},
+ 			{"type":"3","children":[{"SN":"bKB2719005","param":"ppv1,ppv2"},
+ 									{"SN":"aKB2719006","param":"ppv1,ppv2"}]//混储一体机
+ 			},
+ 			{"type":"4","children":[{"SN":"iKB2719007","param":"ppv1,ppv2"},
+ 									{"SN":"lKB2719008","param":"ppv1,ppv2"}]//Max  
+ 			},
+ 			{"type":"5","children":[{"SN":"8754653700","param":"ppv1,ppv2"},
+ 									{"SN":"9754653800","param":"ppv1,ppv2"}]//汇流箱 
+ 			},
+ 			{"type":"6","children":[{"SN":"6754653500","param":"ppv1,ppv2"},
+ 									{"SN":"7754653600","param":"ppv1,ppv2"}]//智能电表 
+ 			},
+ 			{"type":"7","children":[{"SN":"KKB2719009","param":"ppv1,ppv2"},
+ 									{"SN":"5754653400","param":"ppv1,ppv2"}]//环境检测仪 
+ 			}
+ 		]
+ }

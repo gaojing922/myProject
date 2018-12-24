@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		    <input id="file" style="display: none;" class="filepath" onchange="changepic(this)" type="file" accept="image/png, image/jpeg, image/gif, image/jpg"><br>
+		    <label for="file">点我</label>
+		    <img src="" id="show" width="200">
+		    <button onclick="a()">删除</button>
+		<script>
+		    function changepic(obj) {
+		        var reads= new FileReader();
+		        f=document.getElementById('file').files[0];
+		        reads.readAsDataURL(f);
+		        reads.onload=function (e) {
+		            document.getElementById('show').src=this.result;
+		        };
+		    }
+		    function a(){
+				var obj = document.getElementById("file") ; 
+				obj.value = ''; 
+				obj.outerHTML = file.outerHTML;
+				alert(obj.value)
+		    }
+		</script>
+	</body>
+</html>

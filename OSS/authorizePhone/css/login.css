@@ -1,0 +1,175 @@
+@charset "utf-8";
+*{padding: 0;margin: 0;}
+ul{list-style: none;}
+html{font-size: 16px;}
+input{outline: none!important;border: none!important;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+input::-webkit-input-placeholder{color:#bbbbbb!important;font-size: 12px!important;}
+input::-moz-placeholder{color:#bbbbbb!important;font-size: 12px!important;}
+input:-moz-placeholder{color:#bbbbbb!important;font-size: 12px!important;}
+input:-ms-input-placeholder{color:#bbbbbb!important;font-size: 12px!important;}
+input:input-placeholder{color:#bbbbbb!important;font-size: 12px!important;}
+body{background: #f2f2f2!important;font-family: "微软雅黑";}
+.phone-pwd input:-webkit-autofill{background-color: red !important;}
+.hide{display: none;}
+.self-footer{background: #f2f2f2!important;border-color: #f2f2f2!important;}
+.self-footer{text-align: center;}
+.login-type{height: 2rem;}
+.login-type a{cursor: pointer;display: inline-block;color: #3b3fde!important;font-size: 0.937rem;display: inline-block;}
+.uwLogin{margin-right: 0.277rem;text-decoration: none!important;}
+.zhPaswd{margin-left: 0.277rem;cursor: pointer;text-decoration: none!important;}
+.fl{float: left;}
+.fr{float: right;}
+.clearBox:after{display: block;content: '';clear: both;}
+.bqInfo{color: #999999;font-size: 0.7rem;margin-bottom: 0.625rem;}
+.login-content{overflow-x: visible!important;}
+.login-title{text-align: center;font-size: 1.5rem;color: #333333;font-weight: bold;margin-top:3.2rem;}
+.login-box{position: relative;height: 2.187rem;line-height: 2.187rem;margin-top:4rem;border-bottom: 0.062rem solid #dddddd;}
+.login-box>div.areaBox{transition: all .2s ease;position: relative; z-index: 5;background-repeat: no-repeat;background-position: right center;background-size: 1rem 0.562rem;background-color: #f2f2f2;cursor: pointer;height: 100%;color: #333333;font-size: 1rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.login-box>input.fr{color: #222222;padding-left: 4%;border: none;outline: none;height: 100%;background-color: #f2f2f2;}
+.lineBox{display: block;position: absolute;width: 0.062rem;height: 60%;top: 20%;position: absolute;background: #888888;}
+.countryBox{z-index: 4;border: 0.062rem solid #999999;position: absolute;top: 2.4rem;border-radius: 0.312rem;
+			-webkit-animation-duration: .3s;
+		    animation-duration: .3s;
+		    -webkit-animation-fill-mode: both;
+		    animation-fill-mode: both;
+		    -webkit-animation-name: bigMenu;
+		    animation-name: bigMenu;
+		    background: #f2f2f2;
+		    color: #888888;
+		    font-size: 0.875rem;
+		    display: none;
+}
+.areaBox[data-name = '0']{background-image: url(../images/changeLogin.png);}
+.areaBox[data-name = '1']{background-image: url(../images/changeLogin_2.png);}
+.areaBox[data-name = '0'] +ul.countryBox{display: none;}
+.areaBox[data-name = '1'] +ul.countryBox{display: block;}
+@keyframes bigMenu{
+	from{transform:translate3d(0,-1.8rem,0);}
+	to{transform:translate3d(0,0,0);}
+}
+.countryBox li{transition: all .3s linear;font-size: 0.937rem;height: 1.75rem;line-height: 1.75rem;}
+.countryBox li:hover,.select{background: #878be7;color: #ffffff;}
+.login-btn{margin-top: 4rem;}
+.login-btn button,.same-row-btn button{border-radius: 1.25rem!important;background-color: #878be7!important;color: #ffffff!important;font-size: 1rem;}
+
+
+
+
+
+.login-type span{color: #666666;}
+.zhMm-box{padding: 0!important;text-align: center;}
+.zhMm-box>a{display: block;height:3.5rem;line-height: 3.5rem;padding: 0!important;margin: 0!important;text-decoration: none;}
+.zhMm-box a.zhTitle{font-size: 0.875rem;color: #999999;}
+.zhMm-box a.byYx,.zhMm-box a.bySj{font-size: 1rem;color: #3b3fde;border-top: 1px solid #dddddd;}
+.tipInfo{font-size: 0.875rem;color: #999999;margin-top: 0.625rem;}
+.phone-pwd{margin-top: 4rem;}
+.phone-pwd input{width: 100%;height: 2.187rem;text-align: center;font-size: 1rem;background: #f2f2f2;border-bottom: 0.062rem solid #dddddd!important;}
+/*账号密码登录*/
+.zhmm-box{padding:0.8rem 1rem;height: 17rem;background: #FFFFFF;border-radius: 0.625rem;margin-top: 2rem;}
+.same-row-login{height: 6.25rem;}
+.same-title{background-size: 0.75rem 0.875rem;padding-left: 1.5rem;height: 1.5rem;line-height: 1.5rem;font-size: 0.937rem;color: #888888;}
+.userImg{background: url(../images/userName.png) no-repeat left center;}
+.pwdImg{background: url(../images/passWord.png) no-repeat left center;}
+.same-input{position: relative;}
+.same-input input{position: relative;
+    z-index: 55;
+    background: #ffffff;border-radius: 0!important;transition: all .3s linear;padding-right:3.5rem;height: 2.7rem;width: 100%;border-bottom: 0.062rem solid #dddddd!important;}
+.same-input input:focus{border-color: #878be7;}
+.same-input i{cursor: pointer;display: block;position: absolute;}
+.same-input i.down{top: 0.812rem;background: url(../images/changeLogin.png) no-repeat center;right: 2rem;width: 0.937rem;height: 1.125rem;}
+.same-input i.delete{top: 1rem;width: 0.8rem;height: 0.8rem;background: url(../images/userDelete.png) no-repeat center;right: 0;background-size: 0.8rem 0.8rem;}
+.userList{box-sizing: border-box;position: absolute;left: 0;top: 2.8rem;padding-left: 0.625rem;width: 100%;background: #f2f2f2;color: #888888;font-size: 0.812rem;border-radius: 0.312rem;z-index: 2;
+			-webkit-animation-duration: .3s;
+		    animation-duration: .3s;
+		    -webkit-animation-fill-mode: both;
+		    animation-fill-mode: both;
+		    -webkit-animation-name: bigMenu;
+		    animation-name: bigMenu;
+		    display: none;
+}
+.userList li{height: 1.75rem;line-height: 1.75rem;transition: all .3s linear;}
+.userList li:hover{color: #3b3fde;}
+.showError{font-size: 0.75rem;color: #c83535;font-weight: bold;position: absolute;top: 3rem;left: 0rem;
+	-webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: error;
+    animation-name: error;
+    display: none;
+}
+@keyframes error{from{transform:translate3d(0,-3rem,0);}to{transform:translate3d(0,0,0);}}
+/*手机号码首次登录*/
+.valadate-info{color: #999999;text-align: center;height: 1.875rem;line-height: 1.875rem;font-size: 0.875rem;}
+.valadate-info p{-webkit-animation-duration: .3s;animation-duration: .3s;-webkit-animation-fill-mode: both;animation-fill-mode: both;-webkit-animation-name: info;animation-name: info;display: none;}
+@keyframes info{from{transform:translate3d(-5rem,0,0);}to{transform:translate3d(0,0,0);}}
+.firstPhone-box{position: relative;margin-top: 2.5rem;}
+.firstPhone-box input{background: #f2f2f2;border-bottom: 0.062rem solid #dddddd!important;width: 100%;height: 1.875rem;padding-left: 0.312rem;padding-right: 6.5rem;}
+.firstPhone-box .lineS{z-index: 2;position: absolute;width: 1px;background: #dddddd;height: 70%;top: 15%;right: 6.25rem;}
+.valid_info{outline: none;border: none;width: 6.25rem;background:#f2f2f2;font-size: 0.812rem;text-align: center;height: 1.875rem;line-height: 1.875rem;position: absolute;right: 0;top:-0.062rem;}
+.valid_info[data-name = '0']{color: #999999;}
+.valid_info[data-name = '1']{color: #3b3fde;}
+/*邮箱找回密码*/
+.login-tab{margin-top: 4rem;}
+.login-tab>div{text-align: center;font-size: 1.5rem;font-weight: bold;}
+.login-tab>div[data-a = '0']{color: #333333;}
+.login-tab>div[data-a = '1']{color: #999999;}
+.userBox{margin-top: 4rem;}
+.userBox input{background: #f2f2f2;height: 1.875rem;width: 100%;text-align: center;border-bottom: 0.062rem solid #dddddd!important;}
+@-webkit-keyframes shake{
+     0%{-webkit-transform:translate(0,0);}
+     25%{-webkit-transform:translate(-0.312rem, 0.312rem);}
+     50%{-webkit-transform:translate(0.625rem, 0.625rem);}
+     75%{-webkit-transform:translate(0.312rem, -0.312rem);}
+     100%{-webkit-transform:translate(0,0);}
+}
+@keyframes shake {
+     0%{-webkit-transform:translate(0,0);}
+     25%{-webkit-transform:translate(-0.312rem, 0.312rem);}
+     50%{-webkit-transform:translate(0.625rem, 0.625rem);}
+     75%{-webkit-transform:translate(0.312rem, -0.312rem);}
+     100%{-webkit-transform:translate(0,0);}
+}
+.login-tab>div:hover{
+     -webkit-animation:shake 0.2s linear;
+     animation:shake 0.2s linear;
+}
+.xlhBox{margin-top: 1rem;}
+.fsOne{margin-top: 1.875rem;}
+.fsOne,.fsTwo{background: #ffffff; border-radius: 0.625rem;}
+.fsOne .fsTitle,.fsTwo .fsTitle{height: 2.4rem;line-height: 2.4rem;text-align: center;font-size: 1rem;color: #444444;}
+.sameFs-row label{padding-left: 0.312rem;margin: 0!important;display: block;float: left;height: 3rem;line-height: 3rem;color: #999999;font-size: 0.875rem;}
+.sameFs-row input{float: left;height: 3rem;vertical-align: middle;padding-left: 0.312rem;}
+.fsRow-two{border-top:0.062rem solid #dddddd;}
+.fsTwo{margin-top: 0.625rem;padding-bottom: 0.625rem;}
+.smBox{border-radius: 1.25rem;width: 80%;margin: 0.625rem auto 0 auto;height: 2.187rem;line-height: 2.187rem;text-align: center;border: 0.062rem solid #3b3fde;color: #3b3fde;font-size: 0.937rem;}
+.smBox img{height: 1.562rem;width: 1.562rem;vertical-align: middle;margin-right: 0.312rem;margin-bottom:0.125rem;}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+	/*ipad以上*/
+	.login-box>div.areaBox,.countryBox{width: 30%;}
+	.login-box>input.fr{width: 66%;}
+	.lineBox{left: 32%;}
+	.zhMm-box{min-width: 20rem;}
+}
+@media screen and (min-width: 360px) and (max-width: 767px){
+	/*iphone6-6P*/
+	.login-box>div.areaBox,.countryBox{width: 30%;}
+	.login-box>input.fr{width: 66%;}
+	.lineBox{left: 32%;}
+	.zhMm-box{min-width: 20rem;}
+}
+@media screen and (max-width: 359px){
+	/*iphone-5*/
+	.login-box>div.areaBox,.countryBox{width: 33%;}
+	.login-box>input.fr{width: 63%;}
+	.lineBox{left: 35%;}
+	.zhMm-box{min-width: 18rem;}
+}

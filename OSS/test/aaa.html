@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<style>
+		*{margin: 0;padding: 0;}
+		input{outline: none;vertical-align: middle;}
+		input[type=range] {
+		    -webkit-appearance: none;
+		    width: 300px;
+		    height: 15px;
+		    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+		    cursor: pointer;
+		    background:#e5e5e5;
+		    /*background: -webkit-linear-gradient(#d24d28, #d24d28) no-repeat, #e5e5e5;*//*设置左边颜色为#61bd12，右边颜色为#ddd*/
+  			/*background-size: 75% 100%;*//*设置左右宽度比例*/
+		}
+		input[type=range]::-webkit-slider-thumb {
+		    -webkit-appearance: none;
+		    height: 18px;
+		    width: 18px;
+		    margin-top: -2px; /*使滑块超出轨道部分的偏移量相等*/
+		    background: #ffffff; 
+		    border-radius: 50%; /*外观设置为圆形*/
+		    box-shadow: 0 0 2px #d24d28; /*添加底部阴影*/
+		} 
+		.sameFile{display: inline-block;cursor: pointer;}
+		.sameFile label{display: block;height: 28px;width: 120px;text-align: center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 13px;color: #666666;line-height: 28px;border: 1px solid #DDDDDD;border-radius: 3px;cursor: pointer;}
+		.sameFile input{display: none;}
+	</style>
+<body>
+	
+	
+	
+	
+	
+	
+		<button onclick="zoomout()">放大</button>
+		<button onclick="zoomin()">缩小</button>
+		<div style="width: 500px;height: 500px;overflow: auto;border: 1px solid red;">
+			<div id="a" style="width: 200px;height: 200px;border: 1px solid red;margin: 0 auto;cursor: crosshair;"></div>
+		</div>
+		<p style="border-width:0px; padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:8px; list-style:none; text-indent:2em"><label for="wheelDelta"> 滚动值:</label>(IE/Opera)<input type="text" id="wheelDelta" style="border-width:0px; padding-top:0px; padding-bottom:0px; margin:0px; list-style:none"></p> 
+		<p style="border-width:0px; padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:8px; list-style:none; text-indent:2em"><label for="detail"> 滚动值:(Firefox)</label><input type="text" id="detail" style="border-width:0px; padding-top:0px; padding-bottom:0px; margin:0px; list-style:none"></p>
+	
+	
+		<div class="sameFile">
+			<label for="file">请选择文件</label>
+			<input type="file" id="file" onchange=""/>
+		</div>
+	
+	<script type="text/javascript">
+		var size = 1.0;  
+		function zoomout() {  
+			size = size + 0.1;  
+			set("a"); 
+		}  
+		function zoomin() { 
+			if(size == "1.0") return false;
+			size = size - 0.1;  
+			set("a");  
+		}  
+		function set(obj) {  
+			document.getElementById(obj).style.zoom = size;
+		} 
+	  	var scrollFunc = function (e) {
+	  		e.stopPropagation()
+		    var direct = 0; 
+		    var ee = e || window.event; 
+		    if(ee.wheelDelta) {//IE/Opera/Chrome  
+		    	scrollD(ee.wheelDelta);
+		    }else if (ee.detail) {//Firefox  
+		    	scrollD(ee.detail);
+		    } 
+	  	} 
+		/*注册事件*/
+		var dom = document.getElementById("a")
+		if(document.addEventListener) { 
+		    dom.addEventListener('DOMMouseScroll', scrollFunc, false); 
+		}
+		dom.onmousewheel = scrollFunc; //IE/Opera/Chrome/Safari  
+		function scrollD(num){
+		  	if(num == 120 || num == -3 || num == 360){//向上滚动
+		    	zoomout();//放大
+		    }else{
+		    	zoomin();//缩小
+		    }
+	  	}
+	</script>
+</body>
+</html>

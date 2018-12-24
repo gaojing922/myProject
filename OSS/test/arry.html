@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arry = ["2018-07-05 00:00=null", "2018-07-05 00:05=null", "2018-07-05 00:10=null"];
+			var b = [];
+			for(var i = 0;i<arry.length;i++){
+				b.push(arry[i].substring(arry[i].lastIndexOf('=')+1,arry[i].length)) //数据
+			}
+			alert(typeof b[0])
+			for(var i = 0;i<b.length;i++){
+				if(b[i] = "null"){
+					b[i] = null
+				}
+			}
+			alert(typeof b[0])
+		</script>
+	</body>
+</html>

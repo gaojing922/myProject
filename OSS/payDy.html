@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>支付成功页</title>
+		<style>
+			*{padding: 0;margin: 0;}
+			body{font-family: arial,"微软雅黑";background: #edf3f7;}
+			.head{height: 55px;background: #4c6b8a url(images/main-logo.png) no-repeat center; position: relative;}
+			.payStep{height: 80px;width: 90%;margin: 50px auto 40px auto;}
+			.bgStep{height: 4px;background-color: #466FAA;width: 100%;top: 50%;margin-top: -2px;position: absolute;}
+			.countStep{position: absolute;left: 50%;margin-left: -11px;top: 50%;margin-top: -11px;z-index: 2;width: 22px;display: block;color: #ffffff;font-size: 14px;background-color: #466FAA;line-height: 22px;text-align: center;border-radius: 15px;}
+			.stepOne,.stepTwo,.stepThree{position: relative;float: left;height: 80px;text-align: center;}
+			.stepOne{width: 33%;}
+			.stepTwo{width: 34%;}
+			.stepThree{width: 33%;}
+			.titleStep{color: #466FAA;font-size: 14px;}
+			.paySuccess{text-align: center;}
+			.paySuccess .cg{margin-bottom: 40px;color: #466FAA;font-weight: bold;font-size: 16px;}
+			.paySuccess button{padding: 8px 10px;width: 200px;text-align: center;border: 1px solid #466FAA;color: #ffffff;background-color: #466FAA;transition: all .3s linear;outline: none;border-radius: 5px;cursor: pointer;}
+			.paySuccess button:hover{box-shadow: 0px 0px 10px #466FAA;}
+			.paySuccess .or{margin: 40px auto;color: #AAAAAA;font-size: 16px;letter-spacing: 2px;}
+			.paySuccess a{color: #466FAA;cursor: pointer;font-size: 16px;}
+			.paySuccess a:hover{text-decoration: underline;}
+		</style>
+	</head>
+	<body>
+		<div class="head">
+		</div>
+		<div class="payStep">
+			<div class="stepOne">
+				<p class="titleStep">确认订单信息</p>
+				<p class="bgStep"></p>
+				<span class="countStep">1</span>
+			</div>
+			<div class="stepTwo">
+				<p class="titleStep">支付</p>
+				<p class="bgStep"></p>
+				<span class="countStep">2</span>
+			</div>
+			<div class="stepThree">
+				<p class="titleStep">支付完成</p>
+				<p class="bgStep"></p>
+				<span class="countStep">3</span>
+			</div>
+		</div>
+		<div class="paySuccess">
+			<p class="cg">支付成功</p>
+			<button>关闭</button>
+			<p class="or">-或-</p>
+			<a>点击返回首页</a>
+		</div>
+	</body>
+</html>

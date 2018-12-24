@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.5.css">
+		<script src="../js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/login.css" />
+		<title>邮箱找回密码</title>
+		<script>
+			$(function(){
+				$(".sameNot").attr('data-role','none');//清除默认样式  
+			})
+		</script>
+		<script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div data-role="header" data-position="fixed" class="self-header">
+			<a onClick="javascript:window.history.back();return false;" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left">返回</a>
+			<h1>找回密码</h1>
+		</div>
+		<div data-role="main" class="ui-content login-content">
+			<div class="ui-grid-a login-tab">
+			    <div class="ui-block-a" data-a='1'>用户名</div>
+			    <div class="ui-block-b" data-a='0'>序列号</div>
+		    </div>
+		    <!--用户名盒子-->
+		    <div class="toggleBox">
+			    <div class="userBox hide">
+			    	<input class="sameNot" placeholder="请输入用户名"/>
+			    </div>
+			    <!--序列号盒子-->
+			    <div class="xlhBox">
+			    	<div class="fsOne">
+			    		<p class="fsTitle">方式一:手动输入添加</p>
+			    		<div class="sameFs-row clearBox">
+			    			<label for="cjqId">*采集器序列号:</label>
+			    			<input class="sameNot" id="cjqId"/>
+			    		</div>
+			    		<div class="sameFs-row fsRow-two clearBox">
+			    			<label>*采集器验证码:</label>
+			    			<input class="sameNot" />
+			    		</div>
+			    	</div>
+			    	<div class="fsTwo">
+			    		<p class="fsTitle">方式二:扫码添加</p>
+			    		<div class="smBox">
+			    			<img src="images/scan.png"/>点击扫描条形码
+			    		</div>
+			    	</div>
+			    </div>
+		    </div>
+			<div class="login-btn">
+				<button class="ui-btn next_one">确定</button>
+			</div>
+			<p class="tipInfo">*新密码会发送至您的注册邮箱,请注意查收</p>
+		</div>
+		<!--找回密码弹窗-->
+		<div data-role="popup" id="zhPaswd" class="ui-content zhMm-box">
+	      	<a class="zhTitle">选择找回密码的方式</a>
+	      	<a class="byYx" href="byEmaelLogin.html" data-ajax='false'>通过邮箱找回</a>
+	      	<a class="bySj" href="phoneLogin.html" data-ajax='false'>通过手机号找回</a>
+	    </div>
+		<div data-role="footer" class="self-footer">
+			<div class="login-type">
+				<a class="uwLogin sameNot" href="zhmmLogin.html" data-ajax='false' data-transition="slidefade">账号密码登录</a>
+				<span>|</span>
+				<a href="#zhPaswd" class="zhPaswd"  data-rel="popup" data-transition="pop" data-overlay-theme="c" data-name='0' data-position-to="window">找回密码</a>
+			</div>
+			<p class="bqInfo">
+				@copy2018-2022 by Grt
+			</p>
+			<p class="logoImg">
+				<img src="images/growatt.png" />
+			</p>
+		</div>
+		<script>
+			$(document).on("pagecreate","body",function(){
+				//tab切换
+				$(".login-tab>div").on("tap",function(){
+					var index = $(this).index();
+					$(".toggleBox>div").eq(index).removeClass("hide").siblings("div").addClass("hide");
+					$(this).attr("data-a",0).siblings("div").attr("data-a",1);
+				})
+			});
+		</script>
+	</body>
+</html>

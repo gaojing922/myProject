@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link href="easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />	
+		<link href="scrollBar/perfect-scrollbar.css" rel="stylesheet"/><!--滚动条-->
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<script src="js/browser.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="easyui/jquery.easyui.min.js"></script>
+		<script src="scrollBar/jquery.mousewheel.js"></script><!--滚动条-->
+		<script src="scrollBar/perfect-scrollbar.js"></script><!--滚动条-->
+		<script src="js/common.js" type="text/javascript"></script>
+		<script src="js/myDate.js"></script>
+	<title>客服系统-问题统分</title>
+	</head>
+	<body class="easyui-layout">
+		<!--头部开始-->
+		<div class="ossTop" data-options="region:'north',split:false,border:false">
+			<div class="main-right-head">
+				<div class="main-left-logo"></div>
+				<span class="main-right-head-title">古瑞瓦特OSS管理系统</span>
+				<div class="main-right-head-smallT">
+					<span>
+						(晶科家庭)
+					</span>
+					<span>
+						<img src="images/note.png"/>
+						<ul class="show-company">
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+						</ul>
+					</span>
+				</div>
+				<ul class="main-right-head-message floatR">
+					<li class="message-zero">
+						<div class="login-input">登录管理员账号</div>
+					</li>
+					<li class="message-one">
+						<span class="show-MessageC">1</span>
+						<span class="show-MessageT">
+							您有<span class="dgjColor">1</span>条新消息
+						</span>
+					</li>
+					<li class="message-two"></li>
+					<li class="message-three">
+						<span>你好,</span>
+						<span>管理员</span>
+					</li>
+					<li class="message-five">server登录</li>
+					<li class="message-four message-same">
+						<span class="same-show-text">Grt00000</span>
+						<ul class="message-same-content">
+							<li>个人资料</li>
+							<li>退出</li>
+						</ul>
+					</li>
+					<li class="message-six message-same">
+						<span class="same-show-text">中文</span>
+						<ul class="message-same-content">
+							<li>中文</li>
+							<li>english</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+	    </div>
+	    <!--头部结束-->
+	    <div data-options="region:'center',split:false,border:false">
+	    	<!--左侧菜单开始-->
+	    	<div class="main-left" data-name="0">
+	    		<div class="toogleMenu">
+	    			<div class="norS">
+	    				<span></span>
+		    			<span></span>
+		    			<span></span>
+	    			</div>
+	    		</div>
+	    		<ul class="main-left-menu">
+					<li class="main-leftLi main-leftLi-1">
+						<div><i></i>设备管理<em>+</em></div>
+						<ul>
+							<a href="devicemanage-Sbgl.html"><li>设备管理</li></a>
+							<!--<a href="devicemanage-Nbqgl.html"><li>逆变器管理</li></a>
+							<a href="devicemanage-Cnjgl.html"><li>储能机管理</li></a>-->
+							<a href="devicemanage-Dzgl.html"><li>电站管理</li></a>
+							<a href="devicemanage-Yhgl.html"><li>用户管理</li></a>
+							<a href="devicemanage-Dpzs.html"><li>大屏展示</li></a>
+							<a href="devicemanage-Jkzl.html"><li>监控总览</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-2">
+						<div class="main-leftLi-box"><i></i>服务大厅<em class="emShow">+</em></div>
+						<ul style="display: block">
+							<!--<a href="service-Wdwt.html"><li>我的问题</li></a>-->
+							<a href="service-Wtdt.html"><li>问题大厅</li></a>
+							<a href="service-Ksb.html"><li>客诉表</li></a>
+							<a href="service-Gddt.html"><li>工单大厅</li></a>
+							<a href="service-Wttf.html" class="secondLibg"><li>问题统分</li></a>
+							<a href="service-Wtmb.html"><li>问题模版</li></a>
+							<a href="service-Ltxt.html"><li>聊天系统</li></a>
+							<a href="service-Fwjl.html"><li>服务记录</li></a>
+							<a href="service-Sqfw.html"><li>授权服务</li></a>
+							<a href="service-Dxtz.html"><li>短信通知</li></a>
+							<a href="service-Sqfwsxx.html"><li>授权服务商信息</li></a>
+							<a href="service-Sqgcsxx.html"><li>授权工程师信息</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-3">
+						<div><i></i>数据分析<em>+</em></div>
+						<ul>
+							<a href="dataanalysis-Yxtf.html"><li>运行统分</li></a>
+							<a href="dataanalysis-Txtf.html"><li>特性统分</li></a>
+							<a href="dataanalysis-Yhtjfx.html"><li>用户统计分析</li></a>
+							<a href="dataanalysis-Zdgl.html"><li>诊断管理</li></a>
+							<a href="dataanalysis-gzGj.html"><li>故障告警</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-4">
+						<div>
+							<i></i>
+							<a href="problem-Back.html">问题追溯</a>
+							<em>+</em>
+						</div>
+					</li>
+					<li class="main-leftLi main-leftLi-5">
+						<div><i></i>在线知识<em>+</em></div>
+						<ul>
+							<a href="onlineknowledge-Zsfx.html"><li>知识分享</li></a>
+							<a href="onlineknowledge-Zssc.html"><li>知识手册</li></a>
+							<a href="onlineknowledge-Wtfl.html"><li>问题分流</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-6">
+						<div><i></i>平台日志<em>+</em></div>
+						<ul>
+							<a href="platformLog.html"><li>平台日志</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-7">
+						<div><i></i>供货系统<em>+</em></div>
+						<ul>
+							<a href="ghSystem-Zbcx.html"><li>质保查询</li></a>
+							<a href="ghSystem-Drxh.html"><li>导入型号</li></a>
+							<!--<a href="ghSystem-Drzb.html"><li>导入质保</li></a>-->
+							<a href="ghSystem-Ghjl.html"><li>供货记录</li></a>
+							<a href="ghSystem-Kcgl.html"><li>库存管理</li></a>
+							<a href="ghSystem-Fhgl.html"><li>发货管理</li></a>
+							<a href="ghSystem-Ybjl.html"><li>延保记录</li></a>
+							<a href="ghSystem-Hwsj.html"><li>海外数据</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-13">
+						<div><i></i>积分商城<em>+</em></div>
+						<ul>
+							<a href="IntegralMall-ddjl.html"><li>订单记录</li></a>
+							<a href="IntegralMall-lplb.html"><li>礼品列表</li></a>
+							<a href="IntegralMall-yhjflb.html"><li>用户积分列表</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-11">
+						<div><i></i>流量系统<em>+</em></div>
+						<ul>
+							<a href="flowSystem-Overview.html"><li>流量概览</li></a>
+							<a href="flowSystem.html"><li>流量系统</li></a>
+							<a href="flowSystem-MessageImport.html"><li>信息导入</li></a>
+							<a href="flowSystem-renew.html"><li>续费订单</li></a>
+							<a href="flowSystem-llXf.html"><li>流量续费</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-8">
+						<div><i></i>信息发布<em>+</em></div>
+						<ul>
+							<a href="information-Cpfb.html"><li>产品发布</li></a>
+							<a href="information-Fwfb.html"><li>服务发布</li></a>
+							<a href="information-Ggfb.html"><li>公告发布</li></a>
+							<a href="information-Cjwt.html"><li>常见问题</li></a>
+							<a href="information-Spgl.html"><li>视频管理</li></a>
+							<a href="information-Appxxfb.html"><li>App信息发布</li></a>
+							<a href="information-Tsgl.html"><li>推送管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-9">
+						<div><i></i>用户中心<em>+</em></div>
+						<ul>
+							<a href="usercenter-Dlsgl.html"><li>安装商管理</li></a>
+							<a href="usercenter-Yhgl.html"><li>用户管理</li></a>
+							<!--<a href="usercenter-Fzgl.html"><li>分组管理</li></a>-->
+							<a href="usercenter-Grzl.html"><li>个人资料</li></a>
+							<a href="usercenter-khxxgl.html"><li>客户信息管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-10">
+						<div><i></i>系统设置<em>+</em></div>
+						<ul>
+							<a href="systemset-Fxsgl.html"><li>分销商管理</li></a>
+							<a href="systemset-Qxgl.html"><li>权限管理</li></a>
+							<a href="systemset-Zzjg.html"><li>组织架构</li></a>
+							<a href="systemset-Cssz.html"><li>参数设置</li></a>
+							<a href="systemset-Xtwh.html"><li>系统维护</li></a>
+							<a href="systemset-Sbsj.html"><li>设备升级</li></a>
+							<a href="systemset-Xxfb.html"><li>消息发布</li></a>
+							<!--<a href="systemset-Jcssq.html"><li>分销商申请</li></a>-->
+						</ul>
+					</li>
+				</ul>
+				<!--小菜单-->
+				<ul class="samll-menu">
+					<li>
+						<div class="samll_1"></div>
+						<ul class="samll_box">
+							<li>设备管理</li>
+							<li>电站管理</li>
+							<li>用户管理</li>
+							<li>大屏展示</li>
+							<li>监控总览</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_2"></div>
+						<ul class="samll_box">
+							<li>问题大厅</li>
+							<li>工单大厅</li>
+							<li>问题统分</li>
+							<li>问题模版</li>
+							<li>聊天系统</li>
+							<li>服务记录</li>
+							<li>授权服务</li>
+							<li>短信通知</li>
+							<li>聊天系统</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_3"></div>
+						<ul class="samll_box">
+							<li>运行统分</li>
+							<li>特性统分</li>
+							<li>用户统计分析</li>
+							<li>诊断管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_4"></div>
+						<ul class="samll_box">
+							<li>问题追溯</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_5"></div>
+						<ul class="samll_box">
+							<li>知识分享</li>
+							<li>知识手册</li>
+							<li>问题分流</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_6"></div>
+						<ul class="samll_box">
+							<li>平台日志</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_7"></div>
+						<ul class="samll_box">
+							<li>质保查询</li>
+							<li>导入型号</li>
+							<li>供货记录</li>
+							<li>库存管理</li>
+							<li>发货管理</li>
+							<li>延保记录</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_8"></div>
+						<ul class="samll_box">
+							<li>流量概览</li>
+							<li>浏览系统</li>
+							<li>信息导入</li>
+							<li>续费订单</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_9"></div>
+						<ul class="samll_box">
+							<li>产品发布</li>
+							<li>公告发布</li>
+							<li>常见问题</li>
+							<li>视频管理</li>
+							<li>APP信息发布</li>
+							<li>推送管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_10"></div>
+						<ul class="samll_box">
+							<li>安装商管理</li>
+							<li>用户管理</li>
+							<li>个人资料</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_11"></div>
+						<ul class="samll_box">
+							<li>分销商管理</li>
+							<li>组织架构</li>
+							<li>系统维护</li>
+							<li>设备升级</li>
+						</ul>
+					</li>
+				</ul>
+	    	</div>
+	    	<!--左侧菜单结束-->
+	    	<!--左侧菜单结束-->
+	    	<div class="easyui-layout" data-options="fit:true">
+	    		 <div class="main-right" data-options="region:'center',split:false,border:false">
+	    		 	<!--内容区域开始-->
+	    		 	<div class="main-right-content wttfMinwidth">
+						<div class="main-right-content-title clearBox">
+							<span class="main-right-content-title-tip floatL color3">问题统分</span>
+							<span class="main-right-content-sub-tip floatL color8">
+								<span>客服系统</span>
+								<span>><a class="aNotUnderline">问题统分</a></span>
+							</span>
+						</div>
+						<div class="main-right-content-count marginTop" style="background: none;box-shadow: none;">
+							<div class="wtTop">
+								<div class="sameWtile clearBox">
+									<div class="floatL">
+										<span>问题类型概览</span>
+									</div>
+									<ul class="floatR clearBox">
+										<li>
+											<select class="sameFs">
+												<option>问题类型</option>
+												<option>逆变器故障</option>
+												<option>储能机故障</option>
+												<option>监控系统问题</option>
+												<option>功能建议</option>
+												<option>问题咨询</option>
+												<option>其它问题</option>
+											</select>
+										</li>
+										<li>
+											<div class="allTime-box clearBox">
+												<i class="prvTime" onclick="doTime(-1,this)"></i>
+												<input type="text" readonly="readonly" id="problemTime" onclick="layui.laydate({elem: this, festival: true})">
+												<i class="nextTime" onclick="doTime(1,this)"></i>
+											</div>
+										</li>
+										<li>
+											<select class="sameFs" id="selectP">
+												<option value="1">日</option>
+												<option value="2">月</option>
+												<option value="3">年</option>
+											</select>
+										</li>
+									</ul>
+								</div>
+								<!--<div class="problemCharts" id="problemCharts"></div>-->
+								<table style="width: 100%;">
+									<tr style="height: 400px;">
+										<td id="a"></td>
+									</tr>
+								</table>
+							</div> 
+							<div class="clearBox wtBottom">
+								<div class="floatL">
+									<div class="sameWtile clearBox">
+										<div class="floatL">
+											<span>本月设备故障比例</span>
+										</div>
+										<div class="floatR clearBox">
+											<select class="sameFs">
+												<option>逆变器</option>
+												<option>储能机</option>
+												<option>MIX</option>
+											</select>
+											<div class="sameDrowS">
+												<select>
+													<option>亚洲</option>
+													<option>欧洲</option>
+													<option>非洲</option>
+												</select>
+												<select>
+													<option>中国</option>
+													<option>美国</option>
+													<option>南非</option>
+												</select>
+												<select>
+													<option>深圳</option>
+													<option>岳阳</option>
+													<option>北京</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="problemT clearBox">
+										<div class="floatL wtAreaChart">
+											<table style="width: 100%;">
+												<tr style="height: 380px;">
+													<td id="wtAreaChart"></td>
+												</tr>
+											</table>
+										</div>
+										
+										<div class="floatR">
+											<div class="wtText wtText_1">
+												<p>150台</p>
+												<p>发电量低</p>
+											</div>
+											<div class="wtText wtText_2">
+												<p>360台</p>
+												<p>漏电流故障</p>
+											</div>
+											<div class="wtText wtText_3">
+												<p>500台</p>
+												<p>电压过网</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="floatR">
+									<div class="sameWtile clearBox">
+										<div class="floatL">
+											<span>故障数量同比</span>
+										</div>
+										<div class="floatR clearBox">
+											<select class="sameFs">
+												<option>逆变器</option>
+												<option>储能机</option>
+												<option>MIX</option>
+											</select>
+											<div class="sameDrowS">
+												<select>
+													<option>亚洲</option>
+													<option>欧洲</option>
+													<option>非洲</option>
+												</select>
+												<select>
+													<option>中国</option>
+													<option>美国</option>
+													<option>南非</option>
+												</select>
+												<select>
+													<option>深圳</option>
+													<option>岳阳</option>
+													<option>北京</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="clearBox wtChartT">
+										<span class="floatL">次数(次)</span>
+										<span class="floatR">百分比(%)</span>
+									</div>
+									<!--<div class="problemF">
+										 
+									</div>-->
+									<table style="width: 100%;">
+										<tr style="height: 350px;">
+											<td id="problemF"></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+	    		 	<!--内容区域结束-->
+	    		 </div>
+	    	</div>
+	    </div>
+		<script src="layui/layui.js"></script>
+		<script src="js/ossIndex.js"></script>
+		<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+		<script src="https://img.hcharts.cn/highcharts/modules/no-data-to-display.js"></script>
+		<script>
+			//状态背景
+			$(document).on("click",".sameLibgcolor",function(){
+				$(this).addClass("libtnsameBg").parent("li").siblings("li").children(".sameLibgcolor").removeClass("libtnsameBg")
+			})
+			var chart_1 = null;
+			var chart_2 = null;
+			var chart_3 = null;
+			$(window).resize(function(){
+				//chart_1.setSize($(".problemCharts").width(),400);
+				//alert($(".problemCharts").width())
+				//chart_2.reflow();
+				//chart_3.reflow();
+			})
+			chart_1 = Highcharts.chart('a', {
+		    //$('.problemCharts').highcharts({
+		    	credits: {//禁用版权信息
+		            enabled:false
+		        },
+		        chart: {
+		            type: 'column',
+		            height:'400'
+		        },
+		        title: {
+					text:null,
+		        },
+		        xAxis: {
+		            categories: [
+		                '亚洲',
+		                '欧洲',
+		                '非洲',
+		                '其它',
+		                '澳洲',
+		                '泰国',
+		                '英国',
+		                '中国',
+		                '美洲'
+		            ],
+		            crosshair: true,
+		            tickLength: 0//坐标轴刻度线的长度
+		        },
+		        yAxis: {
+		            min: 0,
+		            title: {
+		                text:null
+		            }
+		        },
+		        tooltip: {
+		            headerFormat: '<span style="font-size:14px;color:#333333;">{point.key}</span><table>',
+		            pointFormat: '<tr><td style="color:{series.color};font-size:12px;padding:0">{series.name}: </td>' +
+		            '<td style="padding:0;color:#333333;font-size:12px;"><b>{point.y:.1f} mm</b></td></tr>',
+		            footerFormat: '</table>',
+		            shared: true,
+		            useHTML: true
+		        },
+		        plotOptions: {
+		            column: {
+		                pointPadding: 0.2,
+		                borderWidth: 0
+		            },
+		            series: {
+			            borderRadius: 7
+			        }
+		        },
+		        legend : {
+				    itemStyle : {
+				        'fontSize' : '12px',
+				        'color':'#888888'
+				    }
+				},
+		        series: [{
+		            name: '逆变器故障',
+		            color:'#62a7e9',
+		            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4,]
+		        }, {
+		            name: '储能机故障',
+		            color:'#55d73a',
+		            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2]
+		        }, {
+		            name: '监控系统问题',
+		            color:'#7479df',
+		            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4]
+		        }, {
+		            name: '功能建议',
+		            color:'#cca93e',
+		            data: [39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+		        },{
+		            name: '问题咨询',
+		            color:'#444444',
+		            data: [42.4, 33.2, 34.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+		        },{
+		            name: '其它问题',
+		            color:'#aaaaaa',
+		            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4,46.8, 51.1]
+		        }],
+		         lang: {
+		            noData: '亲,暂无数据哦...',
+		        },
+		        noData:{
+		        	style:{
+		        		fontWeight:'bold',
+		        		fontSize:'50px',
+		        		color:'#dedede'
+		        	}
+		        }
+		    });
+		    chart_2 = Highcharts.chart('wtAreaChart', {
+		    //$('.wtAreaChart').highcharts({
+		    	credits: {//禁用版权信息
+		            enabled:false
+		        },
+			    title: {
+						text: null
+				},
+				tooltip: {
+						headerFormat: '{series.name}<br>',
+						pointFormat: '{point.name}: <b>{point.y:.0f}台</b>'
+				},
+				plotOptions: {
+						pie: {
+								allowPointSelect: true,  // 可以被选择
+								cursor: 'pointer',       // 鼠标样式
+								dataLabels: {
+										enabled: true,
+										formatter: function() {
+					                        if (this.percentage > 0)
+					                            return '<b>' + twoDecimal(this.percentage) + ' %</b>'; // 这里进行判断
+					                    },
+					                    distance: -60,
+							            color: 'white',
+							            style:{
+							                fontSize: '15px',
+							                fontWeight:'bold'
+							            }
+								},
+						}
+				},
+				series: [{
+						type: 'pie',
+						name: '本月设备故障比例',
+						data: [
+								{
+									name: '发电量低',
+									y: 150,
+									color:'#cca93e',
+									sliced: true,  // 默认突出
+									selected: true // 默认选中 
+								},
+								{
+									name: '漏题故障',
+									color:'#6664de',
+									y: 360,
+								},
+								{
+									name: '电压过网',
+									color:'#d35c5c',
+									y: 500,
+								}
+						]
+				}]
+			});
+			chart_3 = Highcharts.chart('problemF', {
+		    //$('.problemF').highcharts({
+		    	credits: {//禁用版权信息
+		            enabled:false
+		        },
+		        chart: {
+						zoomType: 'xy'
+				},
+				title: {
+						text: null
+				},
+				xAxis: [{
+						categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+						crosshair: true
+				}],
+				yAxis: [{ // Primary yAxis
+						labels: {
+								format: '{value}',
+								style: {
+										color: '#888888',
+										fontSize:'12px'
+								}
+						},
+						title: {
+								text: null,
+								
+						}
+				}, {
+						title: {
+								text: null,
+						},
+						labels: {
+								format: '{value}',
+								style: {
+										color: '#888888',
+										fontSize:'12px'
+								}
+						},
+						opposite: true
+				}],
+				tooltip: {
+						shared: true
+				},
+				plotOptions: {
+		            column: {
+		                pointPadding: 0.2,
+		                borderWidth: 0
+		            },
+		            series: {
+			            borderRadius: 7
+			        }
+		        },
+				series: [{
+						name: '上月',
+						type: 'column',
+						color:'#cca93e',
+						yAxis: 1,
+						data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+						tooltip: {
+								valueSuffix: ' 次'
+						}
+				}, {
+						name: '本月',
+						type: 'column',
+						color:'#5250de',
+						data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+						tooltip: {
+								valueSuffix: '次'
+						}
+				}, {
+						name: '同比',
+						type: 'spline',
+						color:'#d35c5c',
+						data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+						tooltip: {
+								valueSuffix: '%'
+						}
+				}],
+		         lang: {
+		            noData: '亲,暂无数据哦...',
+		        },
+		        noData:{
+		        	style:{
+		        		fontWeight:'bold',
+		        		fontSize:'50px',
+		        		color:'#dedede'
+		        	}
+		        }
+		    });
+			$(function () {
+				$("#problemTime").val(showTime(1));
+				//故障选择
+				$("#selectP").change(function(){
+					if($(this).find("option:selected").val() == 1){//当日
+						//alert(1)
+					}else if($(this).find("option:selected").val() == 2){//当月
+						//alert(2)
+					}else{//当年
+						//alert(3)
+					}
+				})
+			});
+			function twoDecimal(x){
+				var f_x = parseInt(x);
+				if(isNaN(f_x)) return false;
+				var f_x = Math.round(x * 100) / 100;
+				var s_x = f_x.toString();
+				var pos_dec = s_x.indexOf(".");
+				if(pos_dec<0){
+					pos_dec = s_x.length;
+					s_x+=".";
+				}
+				while(s_x.length <= pos_dec+2){
+					s_x+="0";
+				}
+				return s_x;
+			}
+		</script>
+	</body>
+</html>

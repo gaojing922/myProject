@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script> 
+		<style>
+			*{padding: 0;margin: 0;list-style: none;}
+			.sameMiselect{display: inline-block;height: 28px;position: relative;margin: 150px 500px;cursor: pointer;}
+			.showMitext{cursor: pointer;height: 28px;background: #f2f2f2;border-radius: 3px;position: relative;}
+			.showMitext i {
+			    display: inline-block;
+			    width: 0;
+			    height: 0;
+			    border-width: 6px;
+			    border-style: dashed;
+			    position: absolute;    
+			    border-color: transparent;
+			    overflow: hidden;
+			    right: 8px;
+			    top: 50%;
+			    margin-top: -3px;
+			    border-top-color: #c2c2c2;
+			    border-top-style: solid;
+			    transition: all .3s;
+			    -webkit-transition: all .3s;
+			}
+			.showMitext[data-name='1'] i{
+			    margin-top: -9px;
+			    -webkit-transform: rotate(180deg);
+			    transform: rotate(180deg);
+			    margin-top: -3px\9;
+			}
+			:root .showMitext i {
+			    margin-top: -9px\0/IE9;
+			}
+			.showProText{cursor: pointer;border: none;background:#f2f2f2;padding-left: 5px;outline: none;display: block;height: 28px;width: 180px;padding-right: 25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+			.miUl{padding-top: 3px;position: absolute;background:#f2f2f2;width: 100%;border-radius: 3px;top: 30px;color: #444444;font-size: 14px;
+				-webkit-animation-duration: .3s;
+				animation-duration: .3s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+				-webkit-animation-name: selectF;
+   	 			animation-name: selectF;
+				display: none;
+			}
+			.showMitext[data-name='1'] +ul.miUl{display: block;}
+			@-webkit-keyframes selectF{
+				from{-webkit-transform:translate3d(0,-30px,0);opacity:0}
+				to{-webkit-transform:translate3d(0,0,0);opacity:1}
+			}
+			@keyframes selectF{
+				from{transform:translate3d(0,30px,0);opacity:.3}
+				to{transform:translate3d(0,0,0);opacity:1};
+			}
+			.miUl li{margin-bottom: 3px;height: 28px;line-height: 28px;transition: all .3s linear;padding-left: 5px;}
+			.miUl li:hover,.miUl li.select{padding-left: 15px;background: #efecec;}
+		</style>
+	</head>
+	<body>
+		
+		<script>
+			//当日x轴坐标
+			function loadXtime(dayType){
+				var dayxArray = ["00:00"];
+				var str = "2017-08-08 00:00";//自定义时间
+				var d = new Date(Date.parse(str.replace(/-/g, "/")));//将字条串转成date对象兼容IE 火狐
+				var nowD = new Date();//获取当前时间
+				var nowH = nowD.getHours();//获取当前小时
+				var nowM = nowD.getMinutes();//获取当前分钟
+				var count = 0;
+				var a;
+				if(dayType == "0" || dayType == "" || dayType == undefined){
+					a = (nowH*60+nowM)/5;
+				}else{
+					a = 288;
+				}
+				while(count<a){
+					d.setMinutes(d.getMinutes()+5);
+					var m = d.getMinutes()<10?"0"+d.getMinutes():d.getMinutes();//分钟
+					var h = d.getHours()<10?"0"+d.getHours():d.getHours();//小时
+					var allTime = h+":"+m;
+					dayxArray.push(allTime);
+					count++;
+				}
+				dayxArray.splice(dayxArray.length-1,1);
+				return dayxArray;
+			}  
+			//当月x轴坐标
+			function loadMontxTime(date){
+				var monthxArry = [];
+				var myDate;
+				if(date == undefined){
+					myDate = new Date();
+				}else{
+					myDate = new Date(date);
+				}
+				var isYear = myDate.getFullYear();//获取当前年份
+				var isMonth = myDate.getMonth()+1;//获取当前月份
+				var days;
+				if(isMonth == 2){//闰年闰月
+			        days= isYear % 4 == 0 ? 29 : 28;
+			    }
+			    else if(isMonth == 1 || isMonth == 3 || isMonth == 5 || isMonth == 7 || isMonth == 8 || isMonth == 10 || isMonth == 12){
+			        days= 31;
+			    }
+			    else{
+			        days= 30;
+			    }
+				for(var i = 1;i<=days;i++){
+					monthxArry.push(i);
+				}
+				return monthxArry;
+			}
+			//当年x轴坐标
+			function loadYearxTime(){
+				return [1,2,3,4,5,6,7,8,9,10,11,12];
+			} 
+		</script>
+	</body>
+</html>

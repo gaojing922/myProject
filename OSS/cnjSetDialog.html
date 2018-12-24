@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<title>储能机设置</title>
+		<!--<style>
+			body{overflow-x: hidden;}
+		</style>-->
+	</head>
+	<body>
+		<div class="cnj-setContent-box">
+			<div class="cjq-set-title">储能机</div>
+			<table class="cjq-table-one">
+				<tr>
+					<td>
+						<span>序列号:</span>
+						<span>5656565656</span>
+					</td>
+					<td>
+						<span>别  名:</span>
+						<span>5656565656</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>端　口:</span>
+						<span>2017-03-25 11:12:47</span>
+					</td>
+					<td>
+						<span>属　性:</span>
+						<span>FA1.0//A0B0D0T0P0U0M0S0</span>
+					</td>
+				</tr>
+			</table>
+			<div class="cjq-set-title">命令</div>
+			<div class="cnj-pasd-box" style="display: block;">
+				<div class="cnj-input-pasd">
+					<span class="color3">请输入要保存的密钥</span>
+					<input class="allInputHover" placeholder="需要保存的密钥" />
+				</div>
+			</div>
+			<div class="cnj-set-ul layui-form">
+				<fieldset>
+					<legend>Basic Settings</legend>
+					<table class="cnj-table-one">
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="开关自动启动储能机" lay-filter="cnj-radio">
+							</td>
+							<td>
+					        	<select name="quiz" disabled="disabled">
+						          	<option>关机</option>
+									<option>开机</option>
+					        	</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="系统模式" lay-filter="cnj-radio">
+							</td>
+							<td>
+					        	<select name="quiz">
+						          	<option>自由模式</option>
+									<option>标准模式</option>
+					        	</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="锂电池SOC下限设定" lay-filter="cnj-radio">
+							</td>
+							<td>
+								<input type="text" class="allInputHover" readonly="readonly" />%(0-10)
+							</td>
+						</tr>
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="设置储能机时间" lay-filter="cnj-radio">
+							</td>
+							<td>
+								<input type="text" class="allInputHover" readonly="readonly" onclick="layui.laydate({elem: this, festival: true})"/>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>FDT Settings</legend>
+					<table class="cnj-table-two">
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="强制放电使能" lay-filter="cnj-radio">
+							</td>
+							<td>
+					        	<select name="quiz" disabled="disabled">
+						          	<option>使能</option>
+									<option>禁止</option>
+					        	</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="强制放电时间段" lay-filter="cnj-radio">
+							</td>
+							<td class="cnj-smallInput">
+								<input type="text" class="allInputHover" />:<input type="text" class="allInputHover" />
+								<span>~</span>
+								<input type="text" class="allInputHover" />:<input type="text" class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="设置输入SP的组串电压" lay-filter="cnj-radio">
+							</td>
+							<td class="cnj-dyInput">
+								<p><span>开路电压</span><input type="text" class="allInputHover"/><span>300V-500V</span></p>
+								<p><span>开路电压</span><input type="text" class="allInputHover"/><span>300V-500V</span></p>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>AC charge setting</legend>
+					<table class="cnj-table-two">
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="充电使能" lay-filter="cnj-radio">
+							</td>
+							<td>
+					        	<select name="quiz" disabled="disabled">
+						          	<option>使能</option>
+									<option>禁止</option>
+					        	</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="充电时间段" lay-filter="cnj-radio">
+							</td>
+							<td class="cnj-smallInput">
+								<input type="text" class="allInputHover" />:<input type="text" class="allInputHover" />
+								<span>~</span>
+								<input type="text" class="allInputHover" />:<input type="text" class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+						    	<input type="radio" name="cnjSet" title="充电电池SOC设置" lay-filter="cnj-radio">
+							</td>
+							<td>
+								<input type="text" class="allInputHover" readonly="readonly" />%(0-10)
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>
+		</div>
+	</body>
+	<script src="layui/layui.js"></script>
+	<script src="js/ossIndex.js"></script>
+	<script>
+		window.onload=function(){
+			alert(1);
+		}
+	</script>
+</html>

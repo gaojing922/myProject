@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<style>
+			*{margin: 0;padding: 0;list-style: none;}
+			body{background: #f2f2f2;}
+			.ss{display: inline-block;vertical-align: middle;margin: 150px;position: relative;}
+			.ss .ssInput>input.showVal{background-color: #ffffff;position: relative;z-index: 5;padding-right: 30px;cursor: pointer;padding-left: 5px;outline: none;transition: all .3s linear;border:1px solid #dddddd;border-radius: 5px;width: 150px;height: 28px;}
+			.ss .ssInput{z-index: 6;position: relative;display: inline-block;}
+			.ss .ssInput>i{z-index: 6;transition: all .3s linear;position: absolute;display: block;width: 10px;height: 10px;top: 50%;margin-top: -5px;right: 10px;background-repeat: no-repeat;background-position:center;background-image: url(../images/select-down.png);}
+			.ss .ssInput[data-name="1"] i{transform: rotate(180deg);}
+			.ss .listVal{overflow-x: hidden;font-size: 14px;color: #666666;padding-bottom: 28px;position: absolute;border: 1px solid darkslategray;width: 100%;background-color: #ffffff;border-radius: 5px;margin-top: 2px;
+				-webkit-animation-duration: .5s;
+			    animation-duration: .5s;
+			    -webkit-animation-fill-mode: both;
+			    animation-fill-mode: both;
+			    -webkit-animation-name: bigMenu;
+			    animation-name: bigMenu;
+			    display: none;
+			}
+			@keyframes bigMenu{
+				from{transform:translate3d(0,-20px,0);opacity: 0;}
+				to{transform:translate3d(0,0,0);opacity: 1;}
+			}
+			.ss .ssInput[data-name="0"] +div.listVal{display: none;}
+			.ss .ssInput[data-name="1"] +div.listVal{display: block;}
+			.ss .listVal ul{max-height: 150px;overflow-y: auto;}
+			.ss .listVal ul li{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;transition: all .3s linear;height: 26px;line-height: 26px;padding-left: 5px;cursor: pointer;border-radius: 5px;}
+			.ss .listVal ul li:hover,.ss .listVal .otherL:hover{background-color: #F1F1F1;}
+			.ss .listVal .otherL{cursor: pointer;padding-left: 5px;transition: all .3s linear;position: absolute;bottom: 0;display: block;width: 100%;height: 28px;line-height: 28px;border-radius: 0 0 5px 5px;}
+		</style>
+	</head>
+	<body>
+		<div class="ss">
+			<div class="ssInput" data-name="0">
+				<input class="showVal" readonly="readonly"/>
+				<i></i>
+			</div>
+			<div class="listVal">
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>1</li>
+					<li>2</li>
+				</ul>
+				<span class="otherL">其它</span>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$(".ssInput").click(function(e){
+					e.stopPropagation()
+					if($(this).attr("data-name") == "0"){
+						$(this).attr("data-name",1)
+					}else{
+						$(this).attr("data-name",0)
+					}
+				})
+				$(".listVal ul li").click(function(e){
+					e.stopPropagation();
+					$(this).parents(".ss").find(".showVal").val($(this).text());
+					$(this).parents(".listVal").siblings(".ssInput").attr("data-name",0);
+					$(this).parents(".ss").find(".showVal").attr("readonly",true).blur();
+				});
+				//其它
+				$(".ss .otherL").click(function(e){
+					e.stopPropagation();
+					$(this).parents(".listVal").siblings(".ssInput").attr("data-name",0);
+					$(this).parents(".ss").find(".showVal").removeAttr("readonly").focus().val("").attr("placeholder","请输入");
+				})
+				$(document).click(function(){
+					$(".ssInput").attr("data-name",0).children("input").attr("readonly",true)
+				})
+			})
+		</script>
+	</body>
+</html>

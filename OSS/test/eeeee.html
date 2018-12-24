@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;list-style: none;}
+			.box7{
+			  height: 150px;
+			  width: 150px;
+			  border: 1px solid red;
+			  position: relative;
+			}
+			.box .a{transform: translate(-50%,-50%);position: absolute;top: 50%;left: 50%;}
+			.box:after{display: inline-block;content: '';width: 0;height: 100%;vertical-align: middle;}
+		</style>
+	</head>
+	<body>
+		<div class="box box7">
+			<div class="a">asdfa</div>
+		</div>
+	</body>
+</html>

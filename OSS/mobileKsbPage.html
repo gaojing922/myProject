@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+		<link href="css/mobileKsb.css" rel="stylesheet" />
+		<script src="js/jquery.min.js"></script>
+		<title>申请客诉表</title>
+	</head>
+	<body>
+		<header class="head"></header>
+		<div class="all-title">
+			<span class="fs4">申请替换机</span>
+		</div>
+		<div class="content-box">
+			<div class="content clearfix">
+				<div class="left fl">
+					<ul class="step-ul">
+						<li class="showOne sameLi">
+							<div class="fs1 same-normal">1</div>
+							<div class="fs2 same-selected hide-step">1</div>
+						</li>
+						<li class="showTwo sameLi">
+							<div class="fs1 same-normal">2</div>
+							<div class="fs2 same-selected hide-step">2</div>
+						</li>
+						<li class="showThree sameLi">
+							<div class="fs1 same-normal">3</div>
+							<div class="fs2 same-selected hide-step">3</div>
+						</li>
+						<li class="showFour sameLi">
+							<div class="fs1 same-normal">4</div>
+							<div class="fs2 same-selected hide-step">4</div>
+						</li>
+					</ul>
+					<div class="linear-s"></div>
+				</div>
+				<div class="right fl">
+					<div class="step-one sameStep hide-step">
+						<div class="step-title fs2">
+							请填写申请资料
+						</div>
+						<div class="small-title fs3">
+							<span>基本信息</span>
+						</div>
+						<div class="same-row">
+							<p><span>*</span><span>问题标题</span>	</p>
+							<p><input type="text" /></p>
+						</div>
+						<div class="same-row">
+							<p><span>*</span><span>接收人</span>	</p>
+							<p><input type="text" /></p>
+						</div>
+						<div class="small-title marginTitle fs3">
+							<span>输入&输出信息</span>
+						</div>
+						<div class="same-row">
+							<p><span>*</span><span>问题标题</span>	</p>
+							<p><input type="text" /></p>
+						</div>
+						<div class="same-row">
+							<p><span>*</span><span>接收人</span>	</p>
+							<p><input type="text" /></p>
+						</div>
+						<div class="small-title marginTitle fs3">
+							<span>故障描述</span>
+						</div>
+						<div class="same-row">
+							<p><span>*</span><span>问题标题</span>	</p>
+							<p><input type="text" /></p>
+						</div>
+						<div class="fs2 certigier">
+							<span>授权人签字</span>
+							<p>
+								<input />	
+							</p>
+						</div>
+						<div class="btn fs3">
+							<span class="submitBtn">提交客诉表</span>
+							<!--<span class="cancel">取消</span>-->
+						</div>
+					</div>
+					<div class="step-two hide-step sameStep">
+						<div class="step-title fs2">
+							等待审核(已通过,替换机已发出)
+						</div>
+						<div class="content-pro fs6">
+							替换机已发出,三个工作日左右会送达,请您耐心等待...
+						</div>
+					</div>
+					<div class="step-three hide-step sameStep">
+						<div class="step-title fs2">
+							相关人员提取旧机
+						</div>
+						<div class="content-pro fs6">
+							正在确认是否收到旧机,期间新机器如有任何故障问题,您可及时与我们工作人员进行反馈.
+						</div>
+					</div>
+					<div class="step-four hide-step sameStep">
+						<div class="step-title fs2">
+							工单结束
+						</div>
+						<div class="content-pro fs6">
+							感谢您支持以及对Growatt的肯定,我们会更加努力把更好更快的服务反馈给您,也期待您为我们的发展提出您宝贵的建议.祝您生活愉快,万事如意。
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		setContentMinheight()
+		//设定内容区域最小高度
+		function setContentMinheight(){
+			var h = $(window).height();//获取页面可视频区域的高
+			var a = $(".content").offset().top;//元素距离页面顶部的距离
+			$(".content").css('minHeight',h-a-10);
+		}
+		$(function(){
+			var tep = 1;
+			if(tep == 1){
+				stepOne();
+			}else if(tep == 2){
+				stepTwo();
+			}else if(tep == 3){
+				stepThree();
+			}else{
+				stepFour();
+			}
+		})
+		//显示第一步
+		function stepOne(){
+			$(".step-one").show().siblings(".sameStep").hide();
+			$(".showOne").find(".same-selected").show();
+		}
+		//显示第二步
+		function stepTwo(){
+			$(".step-two").show().siblings(".sameStep").hide();
+			$(".showTwo").find(".same-selected").show();
+		}
+		//显示第三步
+		function stepThree(){
+			$(".step-three").show().siblings(".sameStep").hide();
+			$(".showThree").find(".same-selected").show();
+		}
+		//显示第四步
+		function stepFour(){
+			$(".step-four").show().siblings(".sameStep").hide();
+			$(".showFour").find(".same-selected").show();
+		}
+		
+		
+		
+	</script>
+</html>

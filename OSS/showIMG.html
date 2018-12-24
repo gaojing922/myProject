@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<style>
+			body{padding: 0;margin: 0;background: black;}
+			.showImg{margin: 0 auto;display: inline-block;}
+			.showImg img{border:none;border-radius: 5px;margin: 0 auto;}
+		</style>
+	</head>
+	<body>
+		<div class="showImg">
+			<img src="" />
+		</div>
+		<script>
+			$(function(){
+				$(window).resize();
+			})
+			//获取Url参数
+			function GetQueryString(name){
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null){
+			     	return  unescape(r[2]);
+			     }
+			     return null;
+			}
+			var imgURL = GetQueryString('urlImg');
+			$(".showImg img").attr("src",imgURL);
+			//显示图片窗口居中
+			$(window).resize(function(){
+				$(".showImg").css({		
+				   	 position: 'absolute',  
+				   	 top:($(window).height() - $(".showImg").outerHeight())/2,
+					 left:($(window).width() - $(".showImg").outerWidth())/2
+				});
+			});
+		</script>
+	</body>
+</html>

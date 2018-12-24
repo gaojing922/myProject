@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="../easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />	
+		<script type="text/javascript" src="../js/jquery.min.js"></script> 
+		<script src="../easyui/jquery.easyui.min.js"></script>
+		<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+		<script src="https://img.hcharts.cn/highcharts/modules/no-data-to-display.js"></script>
+		<style>
+			*{margin: 0;padding: 0;}
+		</style>
+	</head>
+	<body>
+		<body class="easyui-layout">
+			<div data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:10px">north region</div>
+			<div data-options="region:'west',split:true,title:'West'" style="width:150px;padding:10px;">west content</div>
+			<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">east region</div>
+			<div data-options="region:'center',title:'Center'">
+				<!--<div style="padding: 0 20px;min-width: 1320px;">
+					<div id="dd" style="height: 400px;margin: 50px auto;">
+						
+					</div>
+				</div>-->
+				<div style="padding: 0 20px;">
+					<table style="width: 80%;margin: 50px auto;">
+						<tr style="height: 400px;">
+							<td id="dd"></td>
+						</tr>
+					</table>
+				</div>
+				<select id="jia" onchange="ChangeExampleSelect(this.selectedIndex)">
+ 				
+			    </select>
+			    <select id="example">
+			 
+			    </select>
+			</div>
+		</body>
+	</body>
+		<script>
+	        //这个 请选择 选项 加的很好。
+	        var jiaArr = ["请选择","亚洲", "非洲", "欧洲"];
+	        var exampleArr = [
+	                ["请选择"],
+	                ["中国", "日本", "印度"],
+	                ["南非", "坦桑尼亚"],
+	                ["英国", "德国", "波兰"]
+	        ];
+	        window.onload = function () {
+	            var selJia = document.getElementById("jia");
+	            //申请空间
+	            selJia.length = jiaArr.length;
+	            //添加元素
+	            for (var i = 0; i < jiaArr.length; i++) {
+	                selJia.options[i].text = jiaArr[i];
+	                selJia.options[i].value = jiaArr[i];
+	            }
+	        }
+	 
+	        function ChangeExampleSelect(index)
+	        {
+	            var selExa = document.getElementById("example");
+	 
+	            selExa.length = exampleArr[index].length;
+	 
+	            for (var i = 0; i < exampleArr[index].length; i++)
+	            {
+	                selExa.options[i].text = exampleArr[index][i];
+	                selExa.options[i].value = exampleArr[index][i];
+	            }
+	        }
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			var chart_1 = null;
+			/*$(window).resize(function(){
+				chart_1.setSize($('#dd').width(), 400);
+			});*/
+			chart_1 = Highcharts.chart('dd',{
+		    //$('.problemCharts').highcharts({
+		    	credits: {//禁用版权信息
+		            enabled:false
+		        },
+		        chart: {
+		            type: 'column'
+		        },
+		        title: {
+					text:null,
+		        },
+		        xAxis: {
+		            categories: [
+		                '亚洲',
+		                '欧洲',
+		                '非洲',
+		                '其它',
+		                '澳洲',
+		                '泰国',
+		                '英国',
+		                '中国',
+		                '美洲'
+		            ],
+		            crosshair: true,
+		            tickLength: 0//坐标轴刻度线的长度
+		        },
+		        yAxis: {
+		            min: 0,
+		            title: {
+		                text:null
+		            }
+		        },
+		        tooltip: {
+		            headerFormat: '<span style="font-size:14px;color:#333333;">{point.key}</span><table>',
+		            pointFormat: '<tr><td style="color:{series.color};font-size:12px;padding:0">{series.name}: </td>' +
+		            '<td style="padding:0;color:#333333;font-size:12px;"><b>{point.y:.1f} mm</b></td></tr>',
+		            footerFormat: '</table>',
+		            shared: true,
+		            useHTML: true
+		        },
+		        plotOptions: {
+		            column: {
+		                pointPadding: 0.2,
+		                borderWidth: 0
+		            },
+		            series: {
+			            borderRadius: 7
+			        }
+		        },
+		        legend : {
+				    itemStyle : {
+				        'fontSize' : '12px',
+				        'color':'#888888'
+				    }
+				},
+		        series: [{
+		            name: '逆变器故障',
+		            color:'#62a7e9',
+		            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4,]
+		        }, {
+		            name: '储能机故障',
+		            color:'#55d73a',
+		            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2]
+		        }, {
+		            name: '监控系统问题',
+		            color:'#7479df',
+		            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4]
+		        }, {
+		            name: '功能建议',
+		            color:'#cca93e',
+		            data: [39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+		        },{
+		            name: '问题咨询',
+		            color:'#444444',
+		            data: [42.4, 33.2, 34.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+		        },{
+		            name: '其它问题',
+		            color:'#aaaaaa',
+		            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4,46.8, 51.1]
+		        }],
+		         lang: {
+		            noData: '亲,暂无数据哦...',
+		        },
+		        noData:{
+		        	style:{
+		        		fontWeight:'bold',
+		        		fontSize:'50px',
+		        		color:'#dedede'
+		        	}
+		        }
+		    });
+		</script>
+</html>

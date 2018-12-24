@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link href="easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />	
+		<link href="scrollBar/perfect-scrollbar.css" rel="stylesheet"/><!--滚动条-->
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<script src="js/browser.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="easyui/jquery.easyui.min.js"></script>
+		<script src="scrollBar/jquery.mousewheel.js"></script><!--滚动条-->
+		<script src="scrollBar/perfect-scrollbar.js"></script><!--滚动条-->
+		<script src="js/common.js" type="text/javascript"></script>
+	<title>供货系统-质保查询</title>
+	</head>
+	<body class="easyui-layout">
+		<!--头部开始-->
+		<div class="ossTop" data-options="region:'north',split:false,border:false">
+			<div class="main-right-head">
+				<div class="main-left-logo"></div>
+				<span class="main-right-head-title">古瑞瓦特OSS管理系统</span>
+				<div class="main-right-head-smallT">
+					<span>
+						(晶科家庭)
+					</span>
+					<span>
+						<img src="images/note.png"/>
+						<ul class="show-company">
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+						</ul>
+					</span>
+				</div>
+				<ul class="main-right-head-message floatR">
+					<li class="message-zero">
+						<div class="login-input">登录管理员账号</div>
+					</li>
+					<li class="message-one">
+						<span class="show-MessageC">1</span>
+						<span class="show-MessageT">
+							您有<span class="dgjColor">1</span>条新消息
+						</span>
+					</li>
+					<li class="message-two"></li>
+					<li class="message-three">
+						<span>你好,</span>
+						<span>管理员</span>
+					</li>
+					<li class="message-five">server登录</li>
+					<li class="message-four message-same">
+						<span class="same-show-text">Grt00000</span>
+						<ul class="message-same-content">
+							<li>个人资料</li>
+							<li>退出</li>
+						</ul>
+					</li>
+					<li class="message-six message-same">
+						<span class="same-show-text">中文</span>
+						<ul class="message-same-content">
+							<li>中文</li>
+							<li>english</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+	    </div>
+	    <!--头部结束-->
+	    <div data-options="region:'center',split:false,border:false">
+	    	<!--左侧菜单开始-->
+	    	<div class="main-left" data-name="0">
+	    		<div class="toogleMenu">
+	    			<div class="norS">
+	    				<span></span>
+		    			<span></span>
+		    			<span></span>
+	    			</div>
+	    		</div>
+	    		<ul class="main-left-menu">
+					<li class="main-leftLi main-leftLi-1">
+						<div><i></i>设备管理<em>+</em></div>
+						<ul>
+							<a href="devicemanage-Sbgl.html"><li>设备管理</li></a>
+							<!--<a href="devicemanage-Nbqgl.html"><li>逆变器管理</li></a>
+							<a href="devicemanage-Cnjgl.html"><li>储能机管理</li></a>-->
+							<a href="devicemanage-Dzgl.html"><li>电站管理</li></a>
+							<a href="devicemanage-Yhgl.html"><li>用户管理</li></a>
+							<a href="devicemanage-Dpzs.html"><li>大屏展示</li></a>
+							<a href="devicemanage-Jkzl.html"><li>监控总览</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-2">
+						<div><i></i>服务大厅<em>+</em></div>
+						<ul>
+							<!--<a href="service-Wdwt.html"><li>我的问题</li></a>-->
+							<a href="service-Wtdt.html"><li>问题大厅</li></a>
+							<a href="service-Ksb.html"><li>客诉表</li></a>
+							<a href="service-Gddt.html"><li>工单大厅</li></a>
+							<a href="service-Wttf.html"><li>问题统分</li></a>
+							<a href="service-Wtmb.html"><li>问题模版</li></a>
+							<a href="service-Ltxt.html"><li>聊天系统</li></a>
+							<a href="service-Fwjl.html"><li>服务记录</li></a>
+							<a href="service-Sqfw.html"><li>授权服务</li></a>
+							<a href="service-Dxtz.html"><li>短信通知</li></a>
+							<a href="service-Sqfwsxx.html"><li>授权服务商信息</li></a>
+							<a href="service-Sqgcsxx.html"><li>授权工程师信息</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-3">
+						<div><i></i>数据分析<em>+</em></div>
+						<ul>
+							<a href="dataanalysis-Yxtf.html"><li>运行统分</li></a>
+							<a href="dataanalysis-Txtf.html"><li>特性统分</li></a>
+							<a href="dataanalysis-Yhtjfx.html"><li>用户统计分析</li></a>
+							<a href="dataanalysis-Zdgl.html"><li>诊断管理</li></a>
+							<a href="dataanalysis-gzGj.html"><li>故障告警</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-4">
+						<div>
+							<i></i>
+							<a href="problem-Back.html">问题追溯</a>
+							<em>+</em>
+						</div>
+					</li>
+					<li class="main-leftLi main-leftLi-5">
+						<div><i></i>在线知识<em>+</em></div>
+						<ul>
+							<a href="onlineknowledge-Zsfx.html"><li>知识分享</li></a>
+							<a href="onlineknowledge-Zssc.html"><li>知识手册</li></a>
+							<a href="onlineknowledge-Wtfl.html"><li>问题分流</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-6">
+						<div><i></i>平台日志<em>+</em></div>
+						<ul>
+							<a href="platformLog.html"><li>平台日志</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-7">
+						<div class="main-leftLi-box"><i></i>供货系统<em class="emShow">+</em></div>
+						<ul style="display: block;">
+							<a href="ghSystem-Zbcx.html" class="secondLibg"><li>质保查询</li></a>
+							<a href="ghSystem-Drxh.html"><li>导入型号</li></a>
+							<!--<a href="ghSystem-Drzb.html"><li>导入质保</li></a>-->
+							<a href="ghSystem-Ghjl.html"><li>供货记录</li></a>
+							<a href="ghSystem-Kcgl.html"><li>库存管理</li></a>
+							<a href="ghSystem-Fhgl.html"><li>发货管理</li></a>
+							<a href="ghSystem-Ybjl.html"><li>延保记录</li></a>
+							<a href="ghSystem-Hwsj.html"><li>海外数据</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-13">
+						<div><i></i>积分商城<em>+</em></div>
+						<ul>
+							<a href="IntegralMall-ddjl.html"><li>订单记录</li></a>
+							<a href="IntegralMall-lplb.html"><li>礼品列表</li></a>
+							<a href="IntegralMall-yhjflb.html"><li>用户积分列表</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-11">
+						<div><i></i>流量系统<em>+</em></div>
+						<ul>
+							<a href="flowSystem-Overview.html"><li>流量概览</li></a>
+							<a href="flowSystem.html"><li>流量系统</li></a>
+							<a href="flowSystem-MessageImport.html"><li>信息导入</li></a>
+							<a href="flowSystem-renew.html"><li>续费订单</li></a>
+							<a href="flowSystem-llXf.html"><li>流量续费</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-8">
+						<div><i></i>信息发布<em>+</em></div>
+						<ul>
+							<a href="information-Cpfb.html"><li>产品发布</li></a>
+							<a href="information-Fwfb.html"><li>服务发布</li></a>
+							<a href="information-Ggfb.html"><li>公告发布</li></a>
+							<a href="information-Cjwt.html"><li>常见问题</li></a>
+							<a href="information-Spgl.html"><li>视频管理</li></a>
+							<a href="information-Appxxfb.html"><li>App信息发布</li></a>
+							<a href="information-Tsgl.html"><li>推送管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-9">
+						<div><i></i>用户中心<em>+</em></div>
+						<ul>
+							<a href="usercenter-Dlsgl.html"><li>安装商管理</li></a>
+							<a href="usercenter-Yhgl.html"><li>用户管理</li></a>
+							<!--<a href="usercenter-Fzgl.html"><li>分组管理</li></a>-->
+							<a href="usercenter-Grzl.html"><li>个人资料</li></a>
+							<a href="usercenter-khxxgl.html"><li>客户信息管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-10">
+						<div><i></i>系统设置<em>+</em></div>
+						<ul>
+							<a href="systemset-Fxsgl.html"><li>分销商管理</li></a>
+							<a href="systemset-Qxgl.html"><li>权限管理</li></a>
+							<a href="systemset-Zzjg.html"><li>组织架构</li></a>
+							<a href="systemset-Cssz.html"><li>参数设置</li></a>
+							<a href="systemset-Xtwh.html"><li>系统维护</li></a>
+							<a href="systemset-Sbsj.html"><li>设备升级</li></a>
+							<a href="systemset-Xxfb.html"><li>消息发布</li></a>
+							<!--<a href="systemset-Jcssq.html"><li>分销商申请</li></a>-->
+						</ul>
+					</li>
+				</ul>
+				<!--小菜单-->
+				<ul class="samll-menu">
+					<li>
+						<div class="samll_1"></div>
+						<ul class="samll_box">
+							<li>设备管理</li>
+							<li>电站管理</li>
+							<li>用户管理</li>
+							<li>大屏展示</li>
+							<li>监控总览</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_2"></div>
+						<ul class="samll_box">
+							<li>问题大厅</li>
+							<li>工单大厅</li>
+							<li>问题统分</li>
+							<li>问题模版</li>
+							<li>聊天系统</li>
+							<li>服务记录</li>
+							<li>授权服务</li>
+							<li>短信通知</li>
+							<li>聊天系统</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_3"></div>
+						<ul class="samll_box">
+							<li>运行统分</li>
+							<li>特性统分</li>
+							<li>用户统计分析</li>
+							<li>诊断管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_4"></div>
+						<ul class="samll_box">
+							<li>问题追溯</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_5"></div>
+						<ul class="samll_box">
+							<li>知识分享</li>
+							<li>知识手册</li>
+							<li>问题分流</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_6"></div>
+						<ul class="samll_box">
+							<li>平台日志</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_7"></div>
+						<ul class="samll_box">
+							<li>质保查询</li>
+							<li>导入型号</li>
+							<li>供货记录</li>
+							<li>库存管理</li>
+							<li>发货管理</li>
+							<li>延保记录</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_8"></div>
+						<ul class="samll_box">
+							<li>流量概览</li>
+							<li>浏览系统</li>
+							<li>信息导入</li>
+							<li>续费订单</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_9"></div>
+						<ul class="samll_box">
+							<li>产品发布</li>
+							<li>公告发布</li>
+							<li>常见问题</li>
+							<li>视频管理</li>
+							<li>APP信息发布</li>
+							<li>推送管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_10"></div>
+						<ul class="samll_box">
+							<li>安装商管理</li>
+							<li>用户管理</li>
+							<li>个人资料</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_11"></div>
+						<ul class="samll_box">
+							<li>分销商管理</li>
+							<li>组织架构</li>
+							<li>系统维护</li>
+							<li>设备升级</li>
+						</ul>
+					</li>
+				</ul>
+	    	</div>
+	    	<!--左侧菜单结束-->
+	    	<div class="easyui-layout" data-options="fit:true">
+	    		 <div class="main-right" data-options="region:'center',split:false,border:false">
+	    		 	<!--内容区域开始-->
+	    		 	<div class="main-right-content zblbMinwidth">
+						<div class="main-right-content-title clearBox">
+							<span class="main-right-content-title-tip floatL color3">质保查询</span>
+							<span class="main-right-content-sub-tip floatL color8">
+								<span>供货系统</span>
+								<span>><a class="aNotUnderline">质保查询</a></span>
+							</span>
+							<ul class="main-right-content-filter deviceGl floatR">
+								<li>
+									<input class="allInputHover" placeholder="序列号" />
+								</li>
+								<li>
+									<input class="allInputHover" placeholder="订单号" />
+								</li>
+								<li>
+									<input class="allInputHover" placeholder="客户名称" />
+								</li>
+								<li>
+									<input class="allInputHover" placeholder="设备型号" />
+								</li>
+								<li>
+									<input class="allInputHover" placeholder="发货日期" />
+								</li>
+								<li>
+									<input class="allInputHover" placeholder="发货截止日期" />
+								</li>								
+								<li>
+									<span class="spanBtn allQueryBtn">查询</span>
+								</li>
+								<li>
+									<span class="allCommonBtn allexportBtn sameNotbgSpan dcBtn">导出</span>
+								</li>
+							</ul>
+						</div>
+						<div class="main-right-content-count marginTop">
+							<!--表格内容-->
+							<div class="main-right-count-table samePaddingTop">
+								<table class="all-table">
+									<thead>
+										<tr>
+											<td style="width: 5%;">
+												<input type="checkbox" class="hide-allCheckbox" name="check-allBox" id="allCheck" />
+												<label for="allCheck" class="check-all">
+													<img src="images/checkAll_white.png" class="checkAll-img"/>
+													<img src="images/checkAll_white_gou.png" class="cancel-checkAll-img" />
+												</label>
+											</td>
+											<td style="width: 5%;">NO</td>
+											<td style="width: 7%;">订单号</td>
+											<td style="width:20%;max-width: 250px;">客户名称</td>
+											<td style="width: 15%;max-width: 200px;">型号</td>
+											<td style="width: 7%;">序列号</td>
+											<td style="width: 13%;">发货时间</td>
+											<td style="width: 5%;">质保时长</td>
+											<td style="width: 13%;">过期时间</td>
+											<td style="width: 10%;">操作</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="width: 5%;" class="notHide">
+												<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+												<label class="check-one" for="box-1">
+													<img src="images/yuan.png" class="check-img"/>
+													<img src="images/password.png" class="checkd-img" />
+												</label>
+											</td>
+											<td style="width: 5%;">1</td>
+											<td style="width: 7%;">FC2016112501</td>
+											<td style="width:20%;max-width: 250px;">SHENZHEN GROWATT NEW ENERGY CO.,LTD</td>
+											<td style="width: 15%;max-width: 200px;">通用机 4200MTL-S</td>
+											<td style="width: 7%;">4VZ362801B-S</td>
+											<td style="width: 13%;">2017-04-19</td>
+											<td style="width: 5%;" class="notHide">
+												5年
+												<img src="images/blueTip.png" class="zbTip"/>
+											</td>
+											<td style="width: 13%;">2021-08-01</td>
+											<td style="width: 10%;" class="notHide">
+												<!--<span class="allCommonnotBgBtn zbQuery-thBtn">替换机</span>-->
+												<a class="smallDobtn allthjBtn zbQuery-thBtn" title="替换机"></a>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 5%;" class="notHide">
+												<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+												<label class="check-one" for="box-1">
+													<img src="images/yuan.png" class="check-img"/>
+													<img src="images/password.png" class="checkd-img" />
+												</label>
+											</td>
+											<td style="width: 5%;">1</td>
+											<td style="width: 7%;">FC2016112501</td>
+											<td style="width:20%;max-width: 250px;">SHENZHEN GROWATT NEW ENERGY CO.,LTD</td>
+											<td style="width: 15%;max-width: 200px;">通用机 4200MTL-S</td>
+											<td style="width: 7%;">4VZ362801B-S</td>
+											<td style="width: 13%;">2017-04-19</td>
+											<td style="width: 5%;" class="notHide">
+												5年
+												<img src="images/blueTip.png" class="zbTip"/>
+											</td>
+											<td style="width: 13%;">2021-08-01</td>
+											<td style="width: 10%;" class="notHide">
+												<a class="smallDobtn allthjBtn zbQuery-thBtn" title="替换机"></a>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 5%;" class="notHide">
+												<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+												<label class="check-one" for="box-1">
+													<img src="images/yuan.png" class="check-img"/>
+													<img src="images/password.png" class="checkd-img" />
+												</label>
+											</td>
+											<td style="width: 5%;">1</td>
+											<td style="width: 7%;">FC2016112501</td>
+											<td style="width:20%;max-width: 250px;">SHENZHEN GROWATT NEW ENERGY CO.,LTD</td>
+											<td style="width: 15%;max-width: 200px;">通用机 4200MTL-S</td>
+											<td style="width: 7%;">4VZ362801B-S</td>
+											<td style="width: 13%;">2017-04-19</td>
+											<td style="width: 5%;" class="notHide">
+												5年
+												<img src="images/blueTip.png" class="zbTip"/>
+											</td>
+											<td style="width: 13%;">2021-08-01</td>
+											<td style="width: 10%;" class="notHide">
+												<a class="smallDobtn allthjBtn zbQuery-thBtn" title="替换机"></a>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 5%;" class="notHide">
+												<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+												<label class="check-one" for="box-1">
+													<img src="images/yuan.png" class="check-img"/>
+													<img src="images/password.png" class="checkd-img" />
+												</label>
+											</td>
+											<td style="width: 5%;">1</td>
+											<td style="width: 7%;">FC2016112501</td>
+											<td style="width:20%;max-width: 250px;">SHENZHEN GROWATT NEW ENERGY CO.,LTD</td>
+											<td style="width: 15%;max-width: 200px;">通用机 4200MTL-S</td>
+											<td style="width: 7%;">4VZ362801B-S</td>
+											<td style="width: 13%;">2017-04-19</td>
+											<td style="width: 5%;" class="notHide">
+												5年
+												<img src="images/blueTip.png" class="zbTip"/>
+											</td>
+											<td style="width: 13%;">2021-08-01</td>
+											<td style="width: 10%;" class="notHide">
+												<a class="smallDobtn allthjBtn zbQuery-thBtn" title="替换机"></a>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 5%;" class="notHide">
+												<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+												<label class="check-one" for="box-1">
+													<img src="images/yuan.png" class="check-img"/>
+													<img src="images/password.png" class="checkd-img" />
+												</label>
+											</td>
+											<td style="width: 5%;">1</td>
+											<td style="width: 7%;">FC2016112501</td>
+											<td style="width:20%;max-width: 250px;">SHENZHEN GROWATT NEW ENERGY CO.,LTD</td>
+											<td style="width: 15%;max-width: 200px;">通用机 4200MTL-S</td>
+											<td style="width: 7%;">4VZ362801B-S</td>
+											<td style="width: 13%;">2017-04-19</td>
+											<td style="width: 5%;" class="notHide">
+												5年
+												<img src="images/blueTip.png" class="zbTip"/>
+											</td>
+											<td style="width: 13%;">2021-08-01</td>
+											<td style="width: 10%;" class="notHide">
+												<a class="smallDobtn allthjBtn zbQuery-thBtn" title="替换机"></a>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 5%;" class="notHide">
+												<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+												<label class="check-one" for="box-1">
+													<img src="images/yuan.png" class="check-img"/>
+													<img src="images/password.png" class="checkd-img" />
+												</label>
+											</td>
+											<td style="width: 5%;">1</td>
+											<td style="width: 7%;">FC2016112501</td>
+											<td style="width:20%;max-width: 250px;">SHENZHEN GROWATT NEW ENERGY CO.,LTD</td>
+											<td style="width: 15%;max-width: 200px;">通用机 4200MTL-S</td>
+											<td style="width: 7%;">4VZ362801B-S</td>
+											<td style="width: 13%;">2017-04-19</td>
+											<td style="width: 5%;" class="notHide">
+												5年
+												<img src="images/blueTip.png" class="zbTip notHide"/>
+											</td>
+											<td style="width: 13%;">2021-08-01</td>
+											<td style="width: 10%;" class="notHide">
+												<a class="smallDobtn allthjBtn zbQuery-thBtn" title="替换机"></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!--表格下方按钮+分页-->
+								<div class="count-table-bottom-btn">
+									<!--按钮-->
+									<div class="floatL same-btnGroup">
+										<button class="allTableBtn allCheckedBtn">全选</button>
+										<button class="allTableBtn notClickBtn" disabled="disabled">删除</button>
+									</div>
+									<div id="allPage" class="floatR"></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+						<!--质保开关弱框-->
+						<div class="zb-onoffDialog all-dialog">
+							<div class="onoff-box">
+								<form class="layui-form">
+									<div class="layui-form-item">
+								    	<div class="layui-input-block">
+									    	<input type="radio" name="server" value="se" title="开">
+									    	<input type="radio" name="server" value="se" title="关" checked="true">
+								    	</div>
+									</div>
+								</form>
+							</div>			
+							<div class="all-bottom-btn">
+								<span class="all-bottom-btn1">取消</span>
+								<span class="all-bottom-btn0">确定</span>
+							</div>
+						</div>
+					</div>
+	    		 	<!--内容区域结束-->
+	    		 </div>
+	    	</div>
+	    </div>
+		<!--质保查询替换机-->
+		<div class="zbQuery-thDialog all-dialog">
+			<table class="width">
+				<tr>
+					<td>当前设备序列号:</td>
+					<td>
+						<div>54646846846ASD</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						替换机:
+					</td>
+					<td>
+						<input class="allInputHover" placeholder="请输入替换机序列号" />
+					</td>
+				</tr>
+			</table>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--导出-->
+		<div class="zbDc-Dialog all-dialog">
+			<div class="dcBox">
+				<span>导出内容:</span>
+				<select class="allInputHover">
+					<option>第一页</option>
+					<option>第二页</option>
+					<option>第三页</option>
+				</select>
+			</div>
+			
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<script src="layui/layui.js"></script>
+		<script src="js/ossIndex.js"></script>
+		<script>
+			//分页
+			layui.use('laypage', function(){ //独立版的layer无需执行这一句  
+				var laypage = layui.laypage,//分页
+				layer = layui.layer; //独立版的layer无需执行这一句
+				//分页
+				laypage({
+				   cont: 'allPage',
+				   pages: 100, //总页数
+				   skip: true, //是否开启跳页
+				   groups: 5 //连续显示分页数
+				});
+				//代理商tips
+				$(document).on("mouseover",".zbTip",function(){
+				  	layer.tips('出厂十年质保',$(this), {
+						  tips: [2, 'white'],
+						  time: 0
+					});
+				});
+				$(document).on("mouseout",".zbTip",function(){
+				  	layer.tips();
+				});
+			});
+			$(function(){
+				$(".dcBtn").click(function(){
+					//转移问题弹框
+					layer.open({
+						type: 1, //Page层类型
+						title: '导出',
+						shade: 0.4, //遮罩透明度
+						shadeClose:false,//点击遮罩关闭弹框
+						anim: 0, //0-6的动画形式，-1不开启
+						content: $('.zbDc-Dialog'),
+						resize:false,
+						cancel: function(){ 
+				  		}
+					});
+					//取消
+					$(".all-bottom-btn1").click(function(){
+						layer.closeAll();
+					});
+					//确定
+					$(".all-bottom-btn0").click(function(){
+						layer.closeAll();
+					});
+				});
+			})
+		</script>
+	</body>
+</html>

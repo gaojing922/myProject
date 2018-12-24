@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="jqueryStep/jquery.step.css">
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/customerPage.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+		<link href="webuploader/webuploader.css" rel="stylesheet"/>
+		<script src="js/browser.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="layui/layui.js"></script>
+		<script src="webuploader/webuploader.min.js"></script>
+		<script src="jqueryStep/jquery.step.js"></script>
+		<title>客诉表-客户展示页</title>
+		<script>
+			layui.use(['layer','form','laydate'], function(){ //独立版的layer无需执行这一句
+				var form = layui.form(),//form表单模块
+			  	layer = layui.layer, //独立版的layer无需执行这一句			
+			  	laydate = layui.laydate//时间日期模块			  
+			});
+		</script>
+	</head>
+	<body>
+		<div class="head">
+			<!--切换语言-->
+			<div class="all-lang">
+				<span class="same-show-text">中文</span>
+				<ul>
+					<li>中文</li>
+					<li>英文</li>
+				</ul>
+			</div>
+		</div>
+		<div class="title">
+			<span class="titlePro">申请客诉表</span>
+		</div>
+		<div class="container">
+			<!--数据页面开始-->
+			<div class="dataTable-box">
+				<div class="dataSearch clearBox">
+					<ul class="floatR">
+						<li>
+							<input class="allInputHover" placeholder="订单号" />
+						</li>
+						<li>
+							<input class="allInputHover" placeholder="订单号" />
+						</li>
+						<li>
+							<span class="spanBtn allQueryBtn">查询</span>
+						</li>
+					</ul>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<td>
+								<input type="checkbox" class="hide-allCheckbox" name="check-allBox" id="allCheck" />
+								<label for="allCheck" class="check-all">
+									<img src="images/checkAll_white.png" class="checkAll-img"/>
+									<img src="images/checkAll_white_gou.png" class="cancel-checkAll-img" />
+								</label>
+							</td>
+							<td>序号</td>
+							<td>工单编号</td>
+							<td>发送替换机</td>
+							<td>问题标题</td>
+							<td>问题区域</td>
+							<td>客户名称</td>
+							<td>联系方式</td>
+							<td>邮箱</td>
+							<td>创建人</td>
+							<td>申请时间</td>
+							<td>处理时间</td>
+							<td>备注</td>
+							<td>操作</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="notHide">
+								<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+								<label class="check-one" for="box-1">
+									<img src="images/yuan.png" class="check-img"/>
+									<img src="images/password.png" class="checkd-img" />
+								</label>
+							</td>
+							<td>1</td>
+							<td>VJKDB5555</td>
+							<td>发送替换机</td>
+							<td>显示器不不菜</td>
+							<td>澳洲</td>
+							<td>Ax</td>
+							<td>13556254656</td>
+							<td>asd@qq.com</td>
+							<td>李四</td>
+							<td>2018-09-06 18:03:03</td>
+							<td>2018-09-06 18:03:03</td>
+							<td>这里是备注</td>
+							<td class="notHide">
+								<a class="smallDobtn allSeeSmallBtn" title="查看进度"></a>
+							</td>
+						</tr>
+						<tr>
+							<td class="notHide">
+								<input type="checkbox" class="hide-allCheckbox" name="same-checkBox" id="box-1"/>
+								<label class="check-one" for="box-1">
+									<img src="images/yuan.png" class="check-img"/>
+									<img src="images/password.png" class="checkd-img" />
+								</label>
+							</td>
+							<td>1</td>
+							<td>VJKDB5555</td>
+							<td>发送替换机</td>
+							<td>显示器不不菜</td>
+							<td>澳洲</td>
+							<td>Ax</td>
+							<td>13556254656</td>
+							<td>asd@qq.com</td>
+							<td>李四</td>
+							<td>2018-09-06 18:03:03</td>
+							<td>2018-09-06 18:03:03</td>
+							<td>这里是备注</td>
+							<td class="notHide">
+								<a class="smallDobtn allSeeSmallBtn" title="查看进度"></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--数据页面结束-->
+			<div class="container-step">
+				<!--步骤-->
+				<div class="step-body" id="myStep">
+					<div class="step-header">
+						<ul>
+							<li><p>请填写申请资料</p></li>
+							<li><p>等待审核(已通过,替换机已发出)</p></li>
+							<li><p>相关人员提取旧机</p></li>
+							<li><p>工单结束</p></li>
+							<div class="clear"></div>
+						</ul>
+					</div>
+				</div>
+				<div class="step-time">
+					<span>最近更新时间</span>
+					<span>2017-08-18 10:06</span>
+				</div>
+			</div>
+			<!--具体步骤-->
+			<div class="addKsb-content">
+				<div class="customer-setpOne stepSame">
+					<table class="width">
+						<tr class="addKsb-tr">
+							<td colspan="2">
+								<div class="addKsb-title">
+									<span>基本信息</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>终端用户</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>问题标题</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>终端用户/邮箱</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>请选择问题区域</p>
+								<div class="addKsb-select layui-form">
+						        	<select name="quiz">
+							          	<option>中国</option>
+										<option>欧洲</option>
+										<option>非洲</option>
+						        	</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>接收人</p>
+								<div class="layui-form addKsb-select">
+							        <select name="modules" lay-verify="required" lay-search="">
+							          <option value="">直接选择或搜索选择</option>
+							          <option value="1">layer</option>
+							          <option value="2">form</option>
+							          <option value="3">layim</option>
+							        </select>
+								</div>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>安装日期</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>产品型号/序列号</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>公司地址</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>公司名称</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>联系人</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>替换机发货地址</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>联系方式</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>备注</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr class="addKsb-tr">
+							<td colspan="2">
+								<div class="addKsb-title">
+									<span>输入&输出信息</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>组件规格</p>
+								<ul class="input-ul">
+									<li>
+										<span>Voc.(V):</span><input type="text" class="allInputHover"/>
+									</li>
+									<li>
+										<span>Vmp.(V):</span><input type="text" class="allInputHover"/>
+									</li>
+									<li>
+										<span>Pmax.(W):</span><input type="text" class="allInputHover"/>
+									</li>
+									<div class="clear"></div>
+								</ul>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>每路MPPT的组串数</p>
+								<p>
+									<span class="input-tB input-width1">
+										<input type="text" />
+										<input type="text" />
+										(A/B)
+									</span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>每个组串组件的数量</p>
+								<p>
+									<span class="input-tB input-width2">
+										<input type="text" />
+										<input type="text" />
+										<input type="text" />
+										<input type="text" />
+										<input type="text" />
+										<input type="text" />
+										(1/2/3/4/5/6)
+									</span>
+								</p>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>实际电网电压(V)</p>
+								<p>
+									<span class="input-tB input-width3">
+										<input type="text" />
+										<input type="text" />
+										<input type="text" />
+										(R/S/T)
+									</span>
+								</p>
+							</td>
+						</tr>
+						<tr class="addKsb-tr">
+							<td colspan="2">
+								<div class="addKsb-title">
+									<span>故障描述</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>LCD显示屏读取数据</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>LCD状态(颜色)</p>
+								<p><input type="text" class="allInputHover"/></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span class="dgjColor">*</span>详细描述</p>
+								<p>
+									<textarea class="allInputHover"></textarea>
+								</p>
+							</td>
+							<td>
+								<p><span class="dgjColor">*</span>上传照片</p>
+								<div class="ksbUpload-box">
+									<div id="selectUpload-img" class="addKsb-upload floatL"></div>
+									<!--<img src="images/addpic.png" />-->
+									<!--存放选中的图片-->
+									<div class="showSelectImg floatL">
+										
+										
+									</div>
+									<div class="clear"></div>
+								</div>
+							</td>
+						</tr>
+						<tr class="sign">
+							<td colspan="2">
+								授权人签字:<input type="text" />
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<span class="hasbgColorBtn submitKsb">提交客诉表</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!--step two-->
+				<div class="customer-setpTwo stepSame">
+					替换机已发出,3个工作日左右会送达,请您耐心等待...
+				</div>
+				<!--step two-->
+				<div class="customer-setpThree stepSame">
+					正在确认是否收到旧机,期间新机器如有任何故障问题,您可及时与我们工作人员进行反馈.
+				</div>
+				<!--step two-->
+				<div class="customer-setpFour stepSame">
+					感谢您支持以及对Growatt的肯定,我们会更加努力把更好更快的服务反馈给您,也期待您为我们的发展提出您宝贵的建议.祝您生活愉快,万事如意。
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){ 
+	    		var step= $("#myStep").step();
+	    		setContentMinheight();
+	    		var t = 1;
+	    		if(t == 1){
+	    			showOne()
+	    		}else if(t == 2){
+	    			showTwo();
+	    		}else if(t == 3){
+	    			showThree();
+	    		}else{
+	    			showFour();
+	    		}
+	    		$(".submitKsb").unbind("click").bind("click",function(){
+	    			showTwo();
+	    		})
+	    		//显示第一步
+				function showOne(){
+					step.goStep(1);
+	    			$(".customer-setpOne").show().siblings(".stepSame").hide();
+				}
+				//显示第二步
+				function showTwo(){
+					step.goStep(2);
+	    			$(".customer-setpTwo").show().siblings(".stepSame").hide();
+				}
+				//显示第三步
+				function showThree(){
+					step.goStep(3);
+	    			$(".customer-setpThree").show().siblings(".stepSame").hide();
+				}
+				//显示第四步
+				function showFour(){
+					step.goStep(4);
+	    			$(".customer-setpFour").show().siblings(".stepSame").hide();
+				}
+	    	})
+			
+			//设定内容区域最小高度
+			function setContentMinheight(){
+				var h = $(window).height();//获取页面可视频区域的高
+				var a = $(".container").offset().top;//元素距离页面顶部的距离
+				$(".container").css('minHeight',h-a-20);
+			}
+			//上传照片
+			uploadImgFn('#selectUpload-img',$('.showSelectImg'),'server.php')
+			function uploadImgFn(Idcontainer,imgContainer,server){
+				var uploader = WebUploader.create({ 
+					 auto: false, // 选完文件后，是否自动上传 
+					 swf: 'js/Uploader.swf', // swf文件路径 
+					 server: server, // 文件接收服务端 
+					 pick: Idcontainer,// 选择文件的按钮。可选 
+					 // 只允许选择图片文件。 
+					 accept: { 
+					 title: 'Images', 
+					 extensions: 'gif,jpg,jpeg,bmp,png', 
+					 mimeTypes: 'image/*'
+					 }
+				});
+				uploader.on( 'fileQueued', function( file ) { 
+				 var $list = imgContainer, //存放图片容器
+				 $li = $( 
+				 '<div id="' + file.id + '" class="file-item thumbnail">' + 
+				 '<img>' + 
+				 '<div class="info">' + file.name + '</div>' + 
+				 '</div>'
+				 ), 
+				 $img = $li.find('img'); 
+				 // $list为容器jQuery实例 
+				 $list.append( $li ); 
+				  
+				 // 创建缩略图 
+				 uploader.makeThumb( file, function( error, src ) { 
+				 if ( error ) { 
+				 $img.replaceWith('<span>不能预览</span>'); 
+				 return; 
+				 } 
+				  
+				 $img.attr( 'src', src ); 
+				 }, 80, 80 ); //100x100为缩略图尺寸 
+				});				
+				// 文件上传过程中创建进度条实时显示。 
+				uploader.on( 'uploadProgress', function( file, percentage ) { 
+				 var $li = $( '#'+file.id ), 
+				 $percent = $li.find('.progress span'); 
+				  
+				 // 避免重复创建 
+				 if ( !$percent.length ) { 
+				 $percent = $('<p class="progress"><span></span></p>') 
+				 .appendTo( $li ) 
+				 .find('span'); 
+				 } 
+				  
+				 $percent.css( 'width', percentage * 100 + '%' ); 
+				}); 
+				  
+				// 文件上传成功，给item添加成功class, 用样式标记上传成功。 
+				uploader.on( 'uploadSuccess', function( file, res ) { 
+				 console.log(res.filePath);//这里可以得到上传后的文件路径 
+				 $( '#'+file.id ).addClass('upload-state-done'); 
+				}); 
+				  
+				// 文件上传失败，显示上传出错。 
+				uploader.on( 'uploadError', function( file ) { 
+				 var $li = $( '#'+file.id ), 
+				 $error = $li.find('div.error'); 
+				  
+				 // 避免重复创建 
+				 if ( !$error.length ) { 
+				 $error = $('<div class="error"></div>').appendTo( $li ); 
+				 } 
+				 $error.text('上传失败'); 
+				}); 
+				// 完成上传完了，成功或者失败，先删除进度条。 
+				uploader.on( 'uploadComplete', function( file ) { 
+				 $( '#'+file.id ).find('.progress').remove(); 
+				});
+			}
+		</script>
+	</body>
+</html>

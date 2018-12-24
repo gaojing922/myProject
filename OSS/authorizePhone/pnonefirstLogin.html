@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.5.css">
+		<script src="../js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/login.css" />
+		<title>手机号首次登录</title>
+		<script>
+			$(function(){
+				$(".sameNot").attr('data-role','none');//清除默认样式  
+			})
+		</script>
+		<script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div data-role="header" data-position="fixed" class="self-header">
+			<a onClick="javascript:window.history.back();return false;" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left">返回</a>
+			<h1>登录瑞光宝盒</h1>
+		</div>
+		<div data-role="main" class="ui-content login-content">
+			<div class="login-title">输入手机验证码</div>
+			<div class="valadate-info">
+				<p>短信已发送至13888888888</p>
+			</div>
+			
+			<div class="firstPhone-box">
+				<input class="sameNot" placeholder="短信验证码" maxlength="4"/>
+				<i class="lineS"></i>
+				<div class="valid_info" data-name='1'>
+					<span>获取验证码</span>
+				</div>
+			</div>
+			<div class="login-btn">
+				<button class="ui-btn next_one">下一步</button>
+			</div>
+			<p class="tipInfo">*此手机号还未注册,我们将为您注册一个瑞光宝盒账号</p>
+		</div>
+		<!--找回密码弹窗-->
+		<div data-role="popup" id="zhPaswd" class="ui-content zhMm-box">
+	      	<a class="zhTitle">选择找回密码的方式</a>
+	      	<a class="byYx" href="byEmaelLogin.html" data-ajax='false'>通过邮箱找回</a>
+	      	<a class="bySj" href="phoneLogin.html" data-ajax='false'>通过手机号找回</a>
+	    </div>
+		<div data-role="footer" data-position="fixed" class="self-footer">
+			<div class="login-type">
+				<a class="uwLogin sameNot" href="zhmmLogin.html" data-ajax='false' data-transition="slidefade">账号密码登录</a>
+				<span>|</span>
+				<a href="#zhPaswd" class="zhPaswd"  data-rel="popup" data-transition="pop" data-overlay-theme="c" data-name='0' data-position-to="window">找回密码</a>
+			</div>
+			<p class="bqInfo">
+				@copy2018-2022 by Grt
+			</p>
+			<p class="logoImg">
+				<img src="images/growatt.png" />
+			</p>
+		</div>
+		<script>
+			$(document).on("pagecreate","body",function(){
+			    //获取验证码
+			    var count = 6;
+			    var timmer = null;
+			    $(".valid_info").on("tap",function(){
+			    	if($(this).attr("data-name") == 0) return false;
+			    	$(".valid_info").attr("data-name",0).find("span").text(count+"s后重试");
+			    	timmer = setInterval(function(){
+			    		if(count == 0){
+			    			clearInterval(timmer);
+			    			count = 6;
+			    			$(".valid_info").attr("data-name",1).find("span").text("获取验证码");
+			    		}else{
+			    			count--;
+			    			$(".valid_info").attr("data-name",0).find("span").text(count+"s后重试");
+			    			$(".valadate-info p").show();
+			    		}
+			    	},1000)
+			    });
+			    //下一步
+			    $(".next_one").on("tap",function(){
+			    	window.location.href='setPawdLogin.html'
+			    })
+			});
+		</script>
+	</body>
+</html>

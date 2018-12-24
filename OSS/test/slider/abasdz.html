@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>range实例</title>
+<style>
+#frmTmp {
+    height: 300px;
+    width: 350px;
+    float: none;
+}
+#spnColor {
+ width:150px;
+ height:auto;
+ margin:3px;
+ float:left;
+}
+ #spnPrev {
+ height: 100px;
+ width: 100px;
+ margin:3px 20px;
+ border: #CCC thin;
+ float: left;
+}
+#pColor {
+    width:300px;
+    text-align:center;
+ float:left;
+}
+input {
+    width: 150px;
+    float: left;
+}
+</style>
+</head>
+
+<body>
+<form id="frmTmp">
+  <fieldset>
+    <legend>选择颜色值：</legend>
+    <span id="spnColor">
+    <input id="textR" type="range" value="0" min+"0" max="255" onChange="setSpnColor()"/>
+    <input id="textG" type="range" value="0" min+"0" max="255" onChange="setSpnColor()"/>
+    <input id="textB" type="range" value="0" min+"0" max="255" onChange="setSpnColor()"/>
+    </span> 
+    <span id="spnPrev"></span>
+    <p id="pColor">rgb(0,0,0)</p>
+  </fieldset>
+</form>
+<script type="text/javascript">
+function $$(id){
+	return document.getElementById(id);
+	}
+	//定义变量
+	var intR,intG,intB,strColor;
+	//根据获取变化的值，设置预览方块的背景色
+	function setSpnColor(){
+		intR=$$("textR").value;
+		intG=$$("textG").value;
+		intB=$$("textB").value;
+		strColor="rgb("+intR+","+intG+","+intB+")";
+		$$("pColor").innerHTML=strColor;
+		$$("spnPrev").style.backgroundColor=strColor;
+        }
+    //初始化预览方块的背景色
+    setSpnColor();  
+</script>
+</body>
+</html>

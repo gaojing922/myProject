@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link href="easyui/themes/default/easyui.css" rel="stylesheet" type="text/css" />	
+		<link href="scrollBar/perfect-scrollbar.css" rel="stylesheet"/><!--滚动条-->
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script src="js/browser.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="easyui/jquery.easyui.min.js"></script>
+		<script src="scrollBar/jquery.mousewheel.js"></script><!--滚动条-->
+		<script src="scrollBar/perfect-scrollbar.js"></script><!--滚动条-->
+		<script src="js/common.js" type="text/javascript"></script>
+	<title>问题追溯</title>
+	</head>
+	<body class="easyui-layout">
+		<!--头部开始-->
+		<div class="ossTop" data-options="region:'north',split:false,border:false">
+			<div class="main-right-head">
+				<div class="main-left-logo"></div>
+				<span class="main-right-head-title">古瑞瓦特OSS管理系统</span>
+				<div class="main-right-head-smallT">
+					<span>
+						(晶科家庭)
+					</span>
+					<span>
+						<img src="images/note.png"/>
+						<ul class="show-company">
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+							<li>深圳古瑞瓦特新能源股份有限公司</li>
+						</ul>
+					</span>
+				</div>
+				<ul class="main-right-head-message floatR">
+					<li class="message-zero">
+						<div class="login-input">登录管理员账号</div>
+					</li>
+					<li class="message-one">
+						<span class="show-MessageC">1</span>
+						<span class="show-MessageT">
+							您有<span class="dgjColor">1</span>条新消息
+						</span>
+					</li>
+					<li class="message-two"></li>
+					<li class="message-three">
+						<span>你好,</span>
+						<span>管理员</span>
+					</li>
+					<li class="message-five">server登录</li>
+					<li class="message-four message-same">
+						<span class="same-show-text">Grt00000</span>
+						<ul class="message-same-content">
+							<li>个人资料</li>
+							<li>退出</li>
+						</ul>
+					</li>
+					<li class="message-six message-same">
+						<span class="same-show-text">中文</span>
+						<ul class="message-same-content">
+							<li>中文</li>
+							<li>english</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+	    </div>
+	    <!--头部结束-->
+	    <div data-options="region:'center',split:false,border:false">
+	    	<!--左侧菜单开始-->
+	    	<div class="main-left" data-name="0">
+	    		<div class="toogleMenu">
+	    			<div class="norS">
+	    				<span></span>
+		    			<span></span>
+		    			<span></span>
+	    			</div>
+	    		</div>
+	    		<ul class="main-left-menu">
+					<li class="main-leftLi main-leftLi-1">
+						<div><i></i>设备管理<em>+</em></div>
+						<ul>
+							<a href="devicemanage-Sbgl.html"><li>设备管理</li></a>
+							<!--<a href="devicemanage-Nbqgl.html"><li>逆变器管理</li></a>
+							<a href="devicemanage-Cnjgl.html"><li>储能机管理</li></a>-->
+							<a href="devicemanage-Dzgl.html"><li>电站管理</li></a>
+							<a href="devicemanage-Yhgl.html"><li>用户管理</li></a>
+							<a href="devicemanage-Dpzs.html"><li>大屏展示</li></a>
+							<a href="devicemanage-Jkzl.html"><li>监控总览</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-2">
+						<div><i></i>服务大厅<em>+</em></div>
+						<ul>
+							<!--<a href="service-Wdwt.html"><li>我的问题</li></a>-->
+							<a href="service-Wtdt.html"><li>问题大厅</li></a>
+							<a href="service-Ksb.html"><li>客诉表</li></a>
+							<a href="service-Gddt.html"><li>工单大厅</li></a>
+							<a href="service-Wttf.html"><li>问题统分</li></a>
+							<a href="service-Wtmb.html"><li>问题模版</li></a>
+							<a href="service-Ltxt.html"><li>聊天系统</li></a>
+							<a href="service-Fwjl.html"><li>服务记录</li></a>
+							<a href="service-Sqfw.html"><li>授权服务</li></a>
+							<a href="service-Dxtz.html"><li>短信通知</li></a>
+							<a href="service-Sqfwsxx.html"><li>授权服务商信息</li></a>
+							<a href="service-Sqgcsxx.html"><li>授权工程师信息</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-3">
+						<div><i></i>数据分析<em>+</em></div>
+						<ul>
+							<a href="dataanalysis-Yxtf.html"><li>运行统分</li></a>
+							<a href="dataanalysis-Txtf.html"><li>特性统分</li></a>
+							<a href="dataanalysis-Yhtjfx.html"><li>用户统计分析</li></a>
+							<a href="dataanalysis-Zdgl.html"><li>诊断管理</li></a>
+							<a href="dataanalysis-gzGj.html"><li>故障告警</li></a>
+						</ul>
+					</li>
+					<!--<li class="main-leftLi main-leftLi-4">
+						<div class="main-leftLi-box"><i></i>问题追溯<em class="emShow">+</em></div>
+						<ul style="display: block;">
+							<a href="problem-Back.html" class="secondLibg"><li>问题追溯</li></a>
+						</ul>
+					</li>-->
+					<li class="main-leftLi main-leftLi-4">
+						<div class="main-leftLi-box">
+							<i></i>
+							<a href="problem-Back.html">问题追溯</a>
+							<em class="emShow">+</em>
+						</div>
+					</li>
+					<li class="main-leftLi main-leftLi-5">
+						<div><i></i>在线知识<em>+</em></div>
+						<ul>
+							<a href="onlineknowledge-Zsfx.html"><li>知识分享</li></a>
+							<a href="onlineknowledge-Zssc.html"><li>知识手册</li></a>
+							<a href="onlineknowledge-Wtfl.html"><li>问题分流</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-6">
+						<div><i></i>平台日志<em>+</em></div>
+						<ul>
+							<a href="platformLog.html"><li>平台日志</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-7">
+						<div><i></i>供货系统<em>+</em></div>
+						<ul>
+							<a href="ghSystem-Zbcx.html"><li>质保查询</li></a>
+							<a href="ghSystem-Drxh.html"><li>导入型号</li></a>
+							<!--<a href="ghSystem-Drzb.html"><li>导入质保</li></a>-->
+							<a href="ghSystem-Ghjl.html"><li>供货记录</li></a>
+							<a href="ghSystem-Kcgl.html"><li>库存管理</li></a>
+							<a href="ghSystem-Fhgl.html"><li>发货管理</li></a>
+							<a href="ghSystem-Ybjl.html"><li>延保记录</li></a>
+							<a href="ghSystem-Hwsj.html"><li>海外数据</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-13">
+						<div><i></i>积分商城<em>+</em></div>
+						<ul>
+							<a href="IntegralMall-ddjl.html"><li>订单记录</li></a>
+							<a href="IntegralMall-lplb.html"><li>礼品列表</li></a>
+							<a href="IntegralMall-yhjflb.html"><li>用户积分列表</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-11">
+						<div><i></i>流量系统<em>+</em></div>
+						<ul>
+							<a href="flowSystem-Overview.html"><li>流量概览</li></a>
+							<a href="flowSystem.html"><li>流量系统</li></a>
+							<a href="flowSystem-MessageImport.html"><li>信息导入</li></a>
+							<a href="flowSystem-renew.html"><li>续费订单</li></a>
+							<a href="flowSystem-llXf.html"><li>流量续费</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-8">
+						<div><i></i>信息发布<em>+</em></div>
+						<ul>
+							<a href="information-Cpfb.html"><li>产品发布</li></a>
+							<a href="information-Fwfb.html"><li>服务发布</li></a>
+							<a href="information-Ggfb.html"><li>公告发布</li></a>
+							<a href="information-Cjwt.html"><li>常见问题</li></a>
+							<a href="information-Spgl.html"><li>视频管理</li></a>
+							<a href="information-Appxxfb.html"><li>App信息发布</li></a>
+							<a href="information-Tsgl.html"><li>推送管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-9">
+						<div><i></i>用户中心<em>+</em></div>
+						<ul>
+							<a href="usercenter-Dlsgl.html"><li>安装商管理</li></a>
+							<a href="usercenter-Yhgl.html"><li>用户管理</li></a>
+							<!--<a href="usercenter-Fzgl.html"><li>分组管理</li></a>-->
+							<a href="usercenter-Grzl.html"><li>个人资料</li></a>
+							<a href="usercenter-khxxgl.html"><li>客户信息管理</li></a>
+						</ul>
+					</li>
+					<li class="main-leftLi main-leftLi-10">
+						<div><i></i>系统设置<em>+</em></div>
+						<ul>
+							<a href="systemset-Fxsgl.html"><li>分销商管理</li></a>
+							<a href="systemset-Qxgl.html"><li>权限管理</li></a>
+							<a href="systemset-Zzjg.html"><li>组织架构</li></a>
+							<a href="systemset-Cssz.html"><li>参数设置</li></a>
+							<a href="systemset-Xtwh.html"><li>系统维护</li></a>
+							<a href="systemset-Sbsj.html"><li>设备升级</li></a>
+							<a href="systemset-Xxfb.html"><li>消息发布</li></a>
+							<!--<a href="systemset-Jcssq.html"><li>分销商申请</li></a>-->
+						</ul>
+					</li>
+				</ul>
+				<!--小菜单-->
+				<ul class="samll-menu">
+					<li>
+						<div class="samll_1"></div>
+						<ul class="samll_box">
+							<li>设备管理</li>
+							<li>电站管理</li>
+							<li>用户管理</li>
+							<li>大屏展示</li>
+							<li>监控总览</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_2"></div>
+						<ul class="samll_box">
+							<li>问题大厅</li>
+							<li>工单大厅</li>
+							<li>问题统分</li>
+							<li>问题模版</li>
+							<li>聊天系统</li>
+							<li>服务记录</li>
+							<li>授权服务</li>
+							<li>短信通知</li>
+							<li>聊天系统</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_3"></div>
+						<ul class="samll_box">
+							<li>运行统分</li>
+							<li>特性统分</li>
+							<li>用户统计分析</li>
+							<li>诊断管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_4"></div>
+						<ul class="samll_box">
+							<li>问题追溯</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_5"></div>
+						<ul class="samll_box">
+							<li>知识分享</li>
+							<li>知识手册</li>
+							<li>问题分流</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_6"></div>
+						<ul class="samll_box">
+							<li>平台日志</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_7"></div>
+						<ul class="samll_box">
+							<li>质保查询</li>
+							<li>导入型号</li>
+							<li>供货记录</li>
+							<li>库存管理</li>
+							<li>发货管理</li>
+							<li>延保记录</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_8"></div>
+						<ul class="samll_box">
+							<li>流量概览</li>
+							<li>浏览系统</li>
+							<li>信息导入</li>
+							<li>续费订单</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_9"></div>
+						<ul class="samll_box">
+							<li>产品发布</li>
+							<li>公告发布</li>
+							<li>常见问题</li>
+							<li>视频管理</li>
+							<li>APP信息发布</li>
+							<li>推送管理</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_10"></div>
+						<ul class="samll_box">
+							<li>安装商管理</li>
+							<li>用户管理</li>
+							<li>个人资料</li>
+						</ul>
+					</li>
+					<li>
+						<div class="samll_11"></div>
+						<ul class="samll_box">
+							<li>分销商管理</li>
+							<li>组织架构</li>
+							<li>系统维护</li>
+							<li>设备升级</li>
+						</ul>
+					</li>
+				</ul>
+	    	</div>
+	    	<!--左侧菜单结束-->
+	    	<div class="easyui-layout" data-options="fit:true">
+	    		 <div class="main-right" data-options="region:'center',split:false,border:false">
+	    		 	<!--内容区域开始-->
+	    		 	<div class="main-right-content wtzsMinwidth">
+						<div class="main-right-content-title">
+							<span class="main-right-content-title-tip floatL color3">问题追溯</span>
+							<div class="clear"></div>
+						</div>
+						<div class="main-right-content-count samePaddingTop">
+							<div class="main-right-count-border-filter main-right-count-yxtf-f">
+								<ul class="main-right-count-yxtf color8 wtzs-all-ul">
+									<li class="marginRightS wtzs-title">请选择服务器:</li	>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">海外(server.growatt.com)</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">中国(server-cn.growatt.com)</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">思迈特(server-sment.com)</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">晴天(m-solarqt.com:8080)</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">正泰(zt.growatt.com)</span></li>
+									<li>
+										<span>尝试自动确定服务器</span>
+										<img src="images/ques.png" class="show-tips-img"/>
+										<img src="images/set_icon_extend_nor.png" class="show-pro-zsBox"/>
+									</li>
+									<li class="server-box-pro layui-form">
+							      		<div class="layui-input-inline">
+								        	<select name="quiz">
+									          	<option value="1">用户名</option>
+									          	<option value="2">逆变器</option>
+									          	<option value="3">储能机</option>
+									          	<option value="3">采集器</option>
+								        	</select>
+							      		</div>
+										<input type="text" class="allInputHover" placeholder=""/>
+										<span class="spanBtn allQueryBtn">查询</span>
+									</li>
+									<li><input type="hidden" id="server-value" value="0"/></li>
+									<div class="clear"></div>
+								</ul>
+								<ul class="main-right-count-yxtf color8 wtzs-all-ul">
+									<li class="marginRightS wtzs-title">请选择搜索目标:</li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">用户</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">电站</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">采集器</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">逆变器</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">储能机</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">在线客服</span></li>
+									<li><input type="hidden" id="target-value" value="0"/></li>
+									<div class="clear"></div>
+								</ul>
+								<ul class="main-right-count-yxtf color8 wtzs-all-ul">
+									<li class="marginRightS wtzs-title">请选择搜索条件:</li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">用户名</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">邮箱</span></li>
+									<li><span class="allCommonnotBgBtn sameLibgcolor">电话</span></li>
+									<li><input type="hidden" id="filter-value" value="0"/></li>
+									<div class="clear"></div>
+								</ul>
+								<ul class="main-right-count-yxtf color8 wtzs-btn">
+									<li class="marginRightS">搜索关键词:</li>
+									<li><input type="text" class="allInputHover" placeholder="输入关键词进行搜索"/></li>
+									<li><span class="spanBtn allQueryBtn wtzs-search-btn">搜索</span></li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+							<div class="all-wtzs-content-box">
+								<div>
+									<div class="problem--box-title">用户信息<img src="images/xiala-wtmb.png"/></div>
+									<div class="main-right-count-table main-right-wtzs-table">
+					    				<table class="all-table">
+											<thead>
+												<tr>
+													<td>用户ID</td>
+													<td>用户名</td>
+													<td>用户类型</td>
+													<td>电子邮箱</td>
+													<td>公司名称</td>
+													<td>联系电话</td>
+													<td>账户状态</td>
+													<td>最后登录时间</td>
+													<td>操作</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>106</td>
+													<td>demoplant</td>
+													<td>普通管理员</td>
+													<td>qwerfasd@163.com</td>
+													<td>深圳珈伟光伏照明股份有限公司</td>
+													<td>13510754630</td>
+													<td>启用</td>
+													<td>2013-05-15 16:10:10	</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn proeditBtn" title="修改"></a>
+														<a class="smallDobtn allEnableSmallBtn enabledBtn" title="启用/禁用"></a>
+														<a class="smallDobtn allResetSmallBtn resetBtn" title="重置密码"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>106</td>
+													<td>demoplant</td>
+													<td>普通管理员</td>
+													<td>qwerfasd@163.com</td>
+													<td>深圳珈伟光伏照明股份有限公司</td>
+													<td>13510754630</td>
+													<td>启用</td>
+													<td>2013-05-15 16:10:10	</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn proeditBtn" title="修改"></a>
+														<a class="smallDobtn allEnableSmallBtn enabledBtn" title="启用/禁用"></a>
+														<a class="smallDobtn allResetSmallBtn resetBtn" title="重置密码"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>106</td>
+													<td>demoplant</td>
+													<td>普通管理员</td>
+													<td>qwerfasd@163.com</td>
+													<td>深圳珈伟光伏照明股份有限公司</td>
+													<td>13510754630</td>
+													<td>启用</td>
+													<td>2013-05-15 16:10:10	</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn proeditBtn" title="修改"></a>
+														<a class="smallDobtn allEnableSmallBtn enabledBtn" title="启用/禁用"></a>
+														<a class="smallDobtn allResetSmallBtn resetBtn" title="重置密码"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>106</td>
+													<td>demoplant</td>
+													<td>普通管理员</td>
+													<td>qwerfasd@163.com</td>
+													<td>深圳珈伟光伏照明股份有限公司</td>
+													<td>13510754630</td>
+													<td>启用</td>
+													<td>2013-05-15 16:10:10	</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn proeditBtn" title="修改"></a>
+														<a class="smallDobtn allEnableSmallBtn enabledBtn" title="启用/禁用"></a>
+														<a class="smallDobtn allResetSmallBtn resetBtn" title="重置密码"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+					    			</div>
+								</div>
+				    			<div>
+									<div class="problem--box-title">用户电站<img src="images/xiala-wtmb.png"/></div>
+									<div class="main-right-count-table main-right-wtzs-table">
+					    				<table class="all-table">
+											<thead>
+												<tr>
+													<td>电站ID</td>
+													<td>电站名称</td>
+													<td>国家</td>
+													<td>城市</td>
+													<td>设计功率(Wp)</td>
+													<td>安装时间</td>
+													<td>操作</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>106</td>
+													<td>demoplant</td>
+													<td>中国</td>
+													<td>深圳</td>
+													<td>26541651</td>
+													<td>2013-03-11</td>
+													<td class="notHide">
+														<a class="smallDobtn allTranSmallBtn planttranBtn" title="转移"></a>
+														<a class="smallDobtn allEditSmallBtn plantEditBtn" title="修改"></a>
+														<a class="smallDobtn alldeletSmallBtn plantdeleteBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>106</td>
+													<td>demoplant</td>
+													<td>中国</td>
+													<td>深圳</td>
+													<td>26541651</td>
+													<td>2013-03-11</td>
+													<td class="notHide">
+														<a class="smallDobtn allTranSmallBtn planttranBtn" title="转移"></a>
+														<a class="smallDobtn allEditSmallBtn plantEditBtn" title="修改"></a>
+														<a class="smallDobtn alldeletSmallBtn plantdeleteBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>106</td>
+													<td>demoplant</td>
+													<td>中国</td>
+													<td>深圳</td>
+													<td>26541651</td>
+													<td>2013-03-11</td>
+													<td class="notHide">
+														<a class="smallDobtn allTranSmallBtn planttranBtn" title="转移"></a>
+														<a class="smallDobtn allEditSmallBtn plantEditBtn" title="修改"></a>
+														<a class="smallDobtn alldeletSmallBtn plantdeleteBtn" title="删除"></a>
+														<a class="smallDobtn allEditSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>106</td>
+													<td>demoplant</td>
+													<td>中国</td>
+													<td>深圳</td>
+													<td>26541651</td>
+													<td>2013-03-11</td>
+													<td class="notHide">
+														<a class="smallDobtn allTranSmallBtn planttranBtn" title="转移"></a>
+														<a class="smallDobtn allEditSmallBtn plantEditBtn" title="修改"></a>
+														<a class="smallDobtn alldeletSmallBtn plantdeleteBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+					    			</div>
+								</div>
+								<div>
+									<div class="problem--box-title">采集器<img src="images/xiala-wtmb.png"/></div>
+									<div class="main-right-count-table main-right-wtzs-table">
+					    				<table class="all-table">
+											<thead>
+												<tr>
+													<td>No</td>
+													<td>序列号</td>
+													<td>别名</td>
+													<td>类型</td>
+													<td>用户名</td>
+													<td>连接状态</td>
+													<td>Ip地址和端口</td>
+													<td>数据更新间隔</td>
+													<td>当前服务器Ip</td>
+													<td>固件版本</td>
+													<td>操作</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>AH30811849</td>
+													<td>asd132</td>
+													<td>类型一</td>
+													<td>Verseveld</td>
+													<td>已断开</td>
+													<td>192.168.3.26:8080</td>
+													<td>1500s</td>
+													<td>192.168.3.26</td>
+													<td>版本一</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn cjqZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn cjqSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>AH30811849</td>
+													<td>asd132</td>
+													<td>类型一</td>
+													<td>Verseveld</td>
+													<td>已断开</td>
+													<td>192.168.3.26:8080</td>
+													<td>1500s</td>
+													<td>192.168.3.26</td>
+													<td>版本一</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn cjqZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn cjqSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>AH30811849</td>
+													<td>asd132</td>
+													<td>类型一</td>
+													<td>Verseveld</td>
+													<td>已断开</td>
+													<td>192.168.3.26:8080</td>
+													<td>1500s</td>
+													<td>192.168.3.26</td>
+													<td>版本一</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn cjqZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn cjqSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>AH30811849</td>
+													<td>asd132</td>
+													<td>类型一</td>
+													<td>Verseveld</td>
+													<td>已断开</td>
+													<td>192.168.3.26:8080</td>
+													<td>1500s</td>
+													<td>192.168.3.26</td>
+													<td>版本一</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn cjqZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn cjqSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+					    			</div>
+								</div>
+								<div>
+									<div class="problem--box-title">逆变器<img src="images/xiala-wtmb.png"/></div>
+									<div class="main-right-count-table main-right-wtzs-table">
+					    				<table class="all-table">
+											<thead>
+												<tr>
+													<td>No</td>
+													<td>序号</td>
+													<td>别名</td>
+													<td>数据采集器</td>
+													<td>连接状态</td>
+													<td>额定功率(W)</td>
+													<td>当前功率(W)</td>
+													<td>当前功率(W)</td>
+													<td>今日发电(kwh)</td>
+													<td>当月发电(kwh)</td>
+													<td>累计发电(kwh)</td>
+													<td>最后更新时间</td>
+													<td>操作</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>INV010D005</td>
+													<td>INV010D005</td>
+													<td>QWQWQWQWQW</td>
+													<td>断开</td>
+													<td>20000</td>
+													<td>0.0</td>
+													<td>0.0</td>
+													<td>0.0</td>
+													<td>24</td>
+													<td>31</td>
+													<td>2015-10-19 12:34:33</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn nbqZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>INV010D005</td>
+													<td>INV010D005</td>
+													<td>QWQWQWQWQW</td>
+													<td>断开</td>
+													<td>20000</td>
+													<td>0.0</td>
+													<td>0.0</td>
+													<td>0.0</td>
+													<td>24</td>
+													<td>31</td>
+													<td>2015-10-19 12:34:33</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn nbqZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>INV010D005</td>
+													<td>INV010D005</td>
+													<td>QWQWQWQWQW</td>
+													<td>断开</td>
+													<td>20000</td>
+													<td>0.0</td>
+													<td>0.0</td>
+													<td>0.0</td>
+													<td>24</td>
+													<td>31</td>
+													<td>2015-10-19 12:34:33</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn nbqZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>INV010D005</td>
+													<td>INV010D005</td>
+													<td>QWQWQWQWQW</td>
+													<td>断开</td>
+													<td>20000</td>
+													<td>0.0</td>
+													<td>0.0</td>
+													<td>0.0</td>
+													<td>24</td>
+													<td>31</td>
+													<td>2015-10-19 12:34:33</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn nbqZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn nbqZsSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+					    			</div>
+								</div>
+								<div>
+									<div class="problem--box-title">储能机<img src="images/xiala-wtmb.png"/></div>
+									<div class="main-right-count-table main-right-wtzs-table">
+					    				<table class="all-table">
+											<thead>
+												<tr>
+													<td>No</td>
+													<td>序号</td>
+													<td>别名</td>
+													<td>数据采集器</td>
+													<td>位置</td>
+													<td>连接状态</td>
+													<td>充电</td>
+													<td>放电</td>
+													<td>最后登录/更新时间</td>
+													<td>操作</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>0123456789</td>
+													<td>0123456789</td>
+													<td>5656565656</td>
+													<td>1</td>
+													<td>lost</td>
+													<td>0.0W</td>
+													<td>0.0W</td>
+													<td>2017-03-14 12:22:21</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn cnjZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn cnjZsSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>0123456789</td>
+													<td>0123456789</td>
+													<td>5656565656</td>
+													<td>1</td>
+													<td>lost</td>
+													<td>0.0W</td>
+													<td>0.0W</td>
+													<td>2017-03-14 12:22:21</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn cnjZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn cnjZsSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>0123456789</td>
+													<td>0123456789</td>
+													<td>5656565656</td>
+													<td>1</td>
+													<td>lost</td>
+													<td>0.0W</td>
+													<td>0.0W</td>
+													<td>2017-03-14 12:22:21</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn cnjZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn cnjZsSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>0123456789</td>
+													<td>0123456789</td>
+													<td>5656565656</td>
+													<td>1</td>
+													<td>lost</td>
+													<td>0.0W</td>
+													<td>0.0W</td>
+													<td>2017-03-14 12:22:21</td>
+													<td class="notHide">
+														<a class="smallDobtn allEditSmallBtn cnjZsEditBtn" title="修改"></a>
+														<a class="smallDobtn allSetSmallBtn cnjZsSetBtn" title="设置"></a>
+														<a class="smallDobtn alldeletSmallBtn" title="删除"></a>
+														<a class="smallDobtn allXgxxSmallBtn proeditBtn" title="相关信息"></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+					    			</div>
+								</div>
+				    			<div>
+									<div class="problem--box-title">在线客服<img src="images/xiala-wtmb.png"/></div>
+									<div class="main-right-wtzs-table user-problem-content-box">
+					    				<p><span class="problem-wtzs-title">标题:</span><span>AC voltage out of range</span></p>
+					    				<p>
+					    					<span class="problem-wtzs-title">提交时间:</span><span class="problem-wtzs-c">2017-05-21 12:33:08</span>
+					    					<span class="problem-wtzs-title">当前状态:</span>
+					    					<span class="zzclColor problem-wtzs-c">正在处理</span>
+					    					<span class="problem-wtzs-title">电站:</span>
+					    					<span class="problem-wtzs-c">徐志良</span>
+					    					<span class="problem-wtzs-title">采集器:</span>
+					    					<span class="problem-wtzs-c">CNA2714633</span>
+					    					<span class="problem-wtzs-title">设备:</span>
+					    					<span class="problem-wtzs-c">PXZA715093</span></p>
+					    				<p>为什么老是上午11点到下午2点跳闸呢</p>
+									</div>
+								</div>
+				    		</div>
+						</div>
+					</div>
+	    		 	<!--内容区域结束-->
+	    		 </div>
+	    	</div>
+	    </div>
+		<!--启用禁用(提示信息通用框)-->
+		<div class="wtzs-enabledDialog all-dialog">
+			<div class="delete-dialog-box">
+				<div class="floatL"></div>
+				<div class="floatL delete-tip-message"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--用户信息修改-->
+		<div class="wtzs-editDialog all-dialog">
+			<div class="userInfo-edit">
+				<div class="floatL">
+					<div class="userInfo-edit-row">
+						<span>用户名</span>
+						<span><input type="text" class="allInputHover" placeholder="用户名"/></span>
+					</div>
+					<div class="userInfo-edit-row">
+						<span>电子邮箱</span>
+						<span><input type="text" class="allInputHover" placeholder="电子邮箱"/><label class="dgjColor">*</label></span>
+					</div>
+					<div class="userInfo-edit-row">
+						<span>时区</span>
+						<span>
+							<div class="all-select">
+								<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+								<em class="select-img"></em>
+								<select class="inner-select" name="0">
+									<option>时区一</option>
+									<option>时区二</option>
+									<option>时区三</option>
+									<option>时区四</option>
+								</select>
+							</div>
+						</span>
+					</div>
+					<div class="userInfo-edit-row">
+						<span>语言</span>
+						<span>
+							<div class="all-select">
+								<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+								<em class="select-img"></em>
+								<select class="inner-select" name="0">
+									<option>中文</option>
+									<option>英文</option>
+									<option>日语</option>
+								</select>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="floatL">
+					<div class="userInfo-edit-row">
+						<span>真实姓名</span>
+						<span><input type="text" class="allInputHover" placeholder="真实姓名"/></span>
+					</div>
+					<div class="userInfo-edit-row">
+						<span>公司名称</span>
+						<span><input type="text" class="allInputHover" placeholder="公司名称"/></span>
+					</div>
+					<div class="userInfo-edit-row">
+						<span>手机号</span>
+						<span><input type="text" class="allInputHover" placeholder="手机号"/></span>
+					</div>
+					<div class="layui-form">
+				    	<input type="radio" name="server" value="se" title="是否重置密码">
+				    	<input type="radio" name="server" value="se" title="发送新密码到客户邮箱" checked="true">
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--用户电站转移-->
+		<div class="wtzs-planttranDialog all-dialog">
+			<div class="user-plant-tran">
+				<p class="color3">用户名</p>
+				<p><input class="allInputHover" placeholder="用户名"/></p>
+			</div>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--用户电站修改-->
+		<div class="wtzs-plantEditDialog all-dialog">
+			<iframe src="editPlantDialog.html"></iframe>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--采集器修改-->
+		<div class="cjq-sameDialog cnc-sameDialog all-dialog">
+			<table>
+				<tr>
+					<td>SN</td>
+					<td>
+						<input class="allInputHover" type="text" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Alias</td>
+					<td>
+						<input class="allInputHover" type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>组别</td>
+					<td>
+						<input class="allInputHover" type="text" placeholder="采集器级别"/>
+					</td>
+				</tr>
+			</table>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--逆变器修改-->
+		<div class="nbq-sameDialog cnc-sameDialog all-dialog">
+			<table>
+				<tr>
+					<td>SN</td>
+					<td>
+						<input class="allInputHover" type="text" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Alias</td>
+					<td>
+						<input class="allInputHover" type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>位置</td>
+					<td>
+						<input class="allInputHover" type="text"/>
+					</td>
+				</tr>
+			</table>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--储能机修改-->
+		<div class="cnj-sameDialog cnc-sameDialog all-dialog">
+			<table>
+				<tr>
+					<td>SN</td>
+					<td>
+						<input class="allInputHover" type="text" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Alias</td>
+					<td>
+						<input class="allInputHover" type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>位置</td>
+					<td>
+						<input class="allInputHover" type="text" placeholder="采集器级别"/>
+					</td>
+				</tr>
+			</table>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--采集器设置-->
+		<div class="cjq-SetDialog all-dialog">
+			<iframe src="cjqSetDialog.html" id="cjq-iframe"></iframe>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--逆变器设置-->
+		<div class="nbq-SetDialog all-dialog">
+			<iframe src="nbqSetDialog.html" id="nbq-iframe"></iframe>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<!--储能机设置-->
+		<div class="cnj-SetDialog all-dialog">
+			<iframe src="cnjSetDialog.html" id="cnj-iframe" style="overflow: hidden;"></iframe>
+			<div class="all-bottom-btn">
+				<span class="all-bottom-btn1">取消</span>
+				<span class="all-bottom-btn0">确定</span>
+			</div>
+		</div>
+		<script src="layui/layui.js"></script>
+		<script src="js/ossIndex.js"></script>
+		<script>
+			//状态背景
+			$(document).on("click",".sameLibgcolor",function(){
+				$(this).addClass("libtnsameBg").parent("li").siblings("li").children(".sameLibgcolor").removeClass("libtnsameBg")
+			})
+			$(".wtzs-search-btn").unbind("click").bind("click",function(){
+				var sv = parseInt($("#server-value").val()),tv = parseInt($("#target-value").val()),fv = parseInt($("#filter-value").val());
+				var totalV = sv+tv+fv;
+				if(totalV==3){
+					showLodding(true,"搜索完成!",300);
+				}else{
+					if(sv==0){
+						showLodding(true,"请选择服务器!",1200);
+					}else if(tv == 0){
+						showLodding(true,"请选择搜索目标!",1200);
+					}else if(fv == 0){
+						showLodding(true,"请选择搜索条件!",1200);
+					}
+				}
+			});
+			$(".wtzs-all-ul li span.allCommonnotBgBtn").unbind("click").bind("click",function(){
+				$(this).parent("li").siblings("li").children("input").val(1);
+			});
+			$(".show-pro-zsBox").unbind("click").bind("click",function(){
+				if($(".server-box-pro").is(":hidden")){
+					$(this).attr("src","./images/set_icon_extend_click.png")
+					$(".server-box-pro").show();
+				}else{
+					$(this).attr("src","./images/set_icon_extend_nor.png")
+					$(".server-box-pro").hide();
+				}
+			});
+			//显示隐藏详情
+			$(".problem--box-title").bind("click",function(){
+				if($(this).siblings().is(":hidden")){
+					$(this).children("img").attr("src","./images/shangla-wtmb.png");
+					$(this).siblings().show();
+				}else{
+					$(this).children("img").attr("src","./images/xiala-wtmb.png");
+					$(this).siblings().hide();
+				}
+			});
+		</script>
+	</body>
+</html>

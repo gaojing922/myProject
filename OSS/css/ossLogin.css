@@ -1,0 +1,210 @@
+@charset "utf-8";
+body{background-color: rgb(70,78,114);}
+.login-bg{width: 100%;background: url(../images/allBg.jpg) no-repeat; background-position: center center;background-attachment: fixed; -webkit-background-size: contain; background-size: cover;}
+/*login*/
+.login-box{position: relative;z-index:555;width:350px ;height: 620px;background: url(../images/login_frame.png) no-repeat center;float: right;margin-right: 10%;background-position:100% 100% ;}
+.login-box-content{width: 317px;margin-top: 209px;margin-left: 15px;height: 395px;}
+.login-box-row{width: 100%;text-align: center; }
+.login-box-content-title{color: #333333; font-size: 24px; letter-spacing: 3px;    height: 60px;line-height: 60px;}
+.login-box-content-img{height: 50px;background: url(../images/logo.png) no-repeat center;}
+.show-login-error{visibility: hidden;width: 264px;height: 30px;color: #F00;background-color: #FCC;border-radius: 8px;border: 1px solid #FCC;font-size: 14px;margin: 5px auto 0px auto;text-indent: 1em;line-height: 31px;}
+.login-box-user,.login-box-password{position: relative;}
+.login-box-password{margin-top: 25px;}
+.login-box-forgetP{height: 50px;line-height: 50px;}
+.login-box-user input,.login-box-password input{top: 4px;outline: none; width: 244px;height: 40px;text-indent: 1em; line-height: 40px; font-size: 15px;padding-left: 22px;}
+.login-box-user i,.login-box-password i{top: 6px;cursor: pointer;background-repeat: no-repeat;background-position: center;background-size: 50% 50%;width: 28px;height: 30px;position: absolute;left: 29px;border-radius: 3px 0px 0px 3px;border-right: 1px solid #d4d4d4;-webkit-transition: 0.4s all linear;transition: all 0.4s linear;}
+.login-box-user i{background-image: url(../images/username_bg.png);}
+.login-box-password i{background-image: url(../images/password_bg.png);}
+.login-box-row-btn{margin-top: 2px;}
+.login-box-user input:hover+i,.login-box-password input:hover+i{border-right-color: #999999;}
+.all-lang{right: 2.5%;top: 13px;position: absolute;background-color: #6987ab;border: 1px solid #405d80;width: 100px;cursor: pointer;text-align: center; border-radius: 5px; overflow: hidden;}
+.all-lang ul li,.all-lang{color: #FFFFFF;height: 28px;line-height: 28px;-webkit-transition: all .3s linear; transition: all .3s linear;}
+.all-lang:hover{height: 84px;background-color: #6987ab;}
+.all-lang ul li:hover{background-color: #2e4055;}
+.all-lang ul li>a{color:#ffffff!important;}
+.loginOSS-box{position: fixed;bottom: 20px;width: 100%;text-align: center;color: #FFFFFF;}
+.loginOSS-t{height: 60px;line-height: 60px;font-size: 25px;cursor: pointer;}
+.loginOSS-c{display: inline-block;border-radius: 5px;height: 30px;line-height: 30px;text-align: center;padding: 0px 20px;font-size: 12px;border:1px solid rgba(255,255,255,0.3);}
+.loginOSS-t a{color: #FFFFFF!important;transition: all .4s linear;display: inline-block;}
+.loginOSS-t a img{margin-bottom: 3px;position: relative;right: 10px;}
+.loginOSS-t a:hover{color: #E74918!important;text-decoration: underline;}
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .loginOSS-c{
+        background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: masked-animation 4s infinite linear;
+    }
+}
+@-webkit-keyframes masked-animation {
+    0%  { background-position: 0 0;}
+    100% { background-position: -100% 0;}
+}
+.scrollLogin{
+   animation-name: login;
+    -webkit-animation-name: login;  
+    animation-duration: 1.5s;   
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+@keyframes login{
+	0%{
+		right: 10px;	
+	}
+    10%   {
+    	right:12px; 
+    }
+    20%   {
+    	right:14px; 
+    }
+    30%   {
+    	right:16px; 
+    }
+    40%   {
+    	right:18px;
+    }
+    50%   {
+    	right:20px;
+    }
+    60%   {
+    	right:18px;
+    }
+    70%   {
+    	right:16px;
+    }
+    80%   {
+    	right:14px;
+    }
+    90%   {
+    	right:12px;
+    }
+    100%   {
+    	right:10px; 
+    }
+}
+ 
+@-webkit-keyframes login{
+   0%{
+		right: 10px;	
+	}
+    10%   {
+    	right:12px; 
+    }
+    20%   {
+    	right:14px; 
+    }
+    30%   {
+    	right:16px; 
+    }
+    40%   {
+    	right:18px;
+    }
+    50%   {
+    	right:20px;
+    }
+    60%   {
+    	right:18px;
+    }
+    70%   {
+    	right:16px;
+    }
+    80%   {
+    	right:14px;
+    }
+    90%   {
+    	right:12px;
+    }
+    100%   {
+    	right:10px; 
+    }
+}
+
+
+/*记住密码*/
+.service_options{cursor: pointer;   height: 25px;line-height: 21px;margin-left: 25px; margin-top: 15px; font-size: 14px; vertical-align: super; float: left; position: relative;}
+.imageSave,.imageneverSave{display: inline-block;width: 135px;height: 20px;position: absolute;left: 0px;background-color: transparent;background-position: left;background-repeat: no-repeat;}
+.imageSave{background-image: url(../images/yuan.png);}
+.imageneverSave{display: none;background-image: url(../images/password.png);}
+.service_options span{padding-left: 20px;}
+.forget_pw{margin-right: 25px;float: right;cursor: pointer;}
+.forget_pw a{ font-size: 14px; -webkit-transition: all .3s linear; transition: all .3s linear;}
+.login-box-row-btn input{cursor: pointer;width: 268px;height: 44px;color: #FFF;background-color: #6987ab;border: 1px solid #6987ab;border-radius: 5px;font-weight: bold;letter-spacing: 3px;font-size: 16px;-webkit-transition: all .3s linear;transition: all .3s linear;}
+.login-box-reg {height: 25px;margin-top: 10px; font-size: 14px; line-height: 25px;text-align: center;}
+.login-box-reg a{color: #666666; cursor: pointer;}
+/*验证码*/
+.input-getPhone{width: 100px!important;border-radius: 3px;left: 209px;top: 6px;font-size: 12px;border:none;border-left: 1px solid #DEDEDE;cursor: pointer;background: #FFFFFF;color: #888888;transition: all 0.3s linear}
+.input-getPhone:hover{color: #333333;}
+.regist-same-dialog em{color: #e74918;}
+.regist-same-dialog .layui-form{display: inline-block!important;}
+.integrator-box,.employee-box{display: none;}
+/*系统更新 2018-06-12*/
+.systemUpdate{position: fixed;width: 600px;background: #edeef1;
+	box-shadow: 0px 8px 40px 0px 
+	rgba(51, 56, 80, 0.9);
+	border-radius: 5px 5px 0 0;
+	left: 50%;
+	margin-left: -250px;
+	top: 25px;
+	z-index: 19891015;
+	transition: all .3s linear;
+	animation:sysBg 1s ease;
+	padding: 0 30px 20px 30px;
+}
+@-moz-keyframes sysBg{
+	0%{top:0px;}
+	10%{top:50px;}
+	20%{top:5px;}
+	30%{top:45px;}
+	40%{top:10px;}
+	50%{top:40px;}
+	60%{top:15px;}
+	70%{top:35px;}
+	80%{top:20px;}
+	90%{top:30px;}
+	100%{top:25px;}
+}
+@-ms-keyframes sysBg{
+	0%{top:0px;}
+	10%{top:50px;}
+	20%{top:5px;}
+	30%{top:45px;}
+	40%{top:10px;}
+	50%{top:40px;}
+	60%{top:15px;}
+	70%{top:35px;}
+	80%{top:20px;}
+	90%{top:30px;}
+	100%{top:25px;}
+}
+@-webkit-keyframes sysBg{
+	0%{top:0px;}
+	10%{top:50px;}
+	20%{top:5px;}
+	30%{top:45px;}
+	40%{top:10px;}
+	50%{top:40px;}
+	60%{top:15px;}
+	70%{top:35px;}
+	80%{top:20px;}
+	90%{top:30px;}
+	100%{top:25px;}
+}
+@keyframes sysBg{
+	0%{top:0px;}
+	10%{top:50px;}
+	20%{top:5px;}
+	30%{top:45px;}
+	40%{top:10px;}
+	50%{top:40px;}
+	60%{top:15px;}
+	70%{top:35px;}
+	80%{top:20px;}
+	90%{top:30px;}
+	100%{top:25px;}
+}
+.sysContent p{font-weight: bold;color: #222222;font-size: 14px;margin-bottom: 5px;}
+.sysContent .sysText{color: #555555;font-size: 14px;text-indent:30px;line-height: 25px;letter-spacing: 1px;}
+.sysContent .sysText span{color: #222222;font-weight: bold;letter-spacing: 0;padding: 0 3px;}
+.sysBg,.systemUpdate{display: none;}

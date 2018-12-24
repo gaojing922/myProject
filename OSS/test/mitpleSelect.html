@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery.min.js"></script>
+		<style>
+			*{padding: 0;margin: 0;list-style: none;}
+			input{outline: none;border: none;}
+			.sameSelect{margin-left: 300px;margin-top: 200px;display: inline-block;position: relative;width: 300px;}
+			.selectText{position: relative;z-index: 3;}
+			.selectText input{box-sizing: border-box;width: 100%;padding-right: 35px;padding-left: 5px;height: 30px;border: 1px solid #DDDDDD;border-radius: 5px;cursor: pointer;}
+			.selectText i{border-radius: 0 5px 5px 0;display: block;position: absolute;z-index: 2;right: 0;top: 0;height: 30px;width: 30px;text-align: center;line-height: 30px;background: #6987ab;color: #ffffff;cursor: pointer;}
+			.selectBox{border: 1px solid #dddddd;position: absolute;top: 32px;border-radius: 5px;padding: 5px;width: 100%;box-sizing: border-box;
+						-webkit-animation-duration: .5s;
+					    animation-duration: .5s;
+					    -webkit-animation-fill-mode: both;
+					    animation-fill-mode: both;
+					    -webkit-animation-name: showFs;
+					    animation-name: showFs;
+					    display: none;
+			}
+			.selectBox input{box-sizing: border-box;width: 100%;height: 28px;border: 1px solid #999999;border-radius: 5px;padding-left: 5px;}
+			.selectBox ul{margin-top: 5px;max-height: 300px;overflow-x: hidden;overflow-y: auto;}
+			.selectBox ul li{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 14px;color: #888888;padding-left: 25px;height: 30px;line-height: 30px;position: relative;cursor: pointer;transition: all .3s linear;}
+			.selectBox ul li i{transition: all .3s linear;border: 1px solid #6987ab;border-radius: 5px;display: inline-block;height: 16px;top: 5px;width: 16px;position: absolute;left: 0px;}
+			.selectBox ul li.select{color:#6987ab;}
+			.selectBox ul li.select i{background-color: #6987ab;}
+			.notFilter{height: 50px;line-height: 50px;color: #999999;font-size: 18px;text-align: center;display: none;}
+			@keyframes showFs{
+				from{transform:translate3d(0px,-30px,0);opacity:0}
+				to{transform:translate3d(0,0,0);opacity:1}
+			}
+		</style>
+	</head>
+	<body>
+		<input value="a" />
+		<select id="select">
+			<option value="1">工程师</option>
+			<option value="2">服务商</option>
+		</select>
+		<div class="sameSelect aa">
+			<div class="selectText">
+				<input type="text" class="showText" readonly="readonly" placeholder="请选择"/>
+				<i>x</i>
+			</div>
+			<div class="selectBox">
+				<input type="text" id="aa" oninput="searchList($(this).val(),'#list li')"/>
+				<ul id="list" data-num="1">
+					<li id="1" onclick="selectObj(this,event)"><i></i>FGafdaadf</li>
+					<li id="2" onclick="selectObj(this,event)"><i></i>15646453456465</li>
+					<li id="3" onclick="selectObj(this,event)"><i></i>中国人刀李大</li>
+				</ul>
+				<div class="notFilter">
+					暂无匹配项!
+				</div>
+			</div>
+		</div>
+		<div class="sameSelect bb" style="display: none;">
+			<div class="selectText">
+				<input type="text" class="showText" readonly="readonly" placeholder="请选择"/>
+				<i>x</i>
+			</div>
+			<div class="selectBox">
+				<input type="text" id="aa" oninput="searchList($(this).val(),'#list_2 li')"/>
+				<ul id="list_2" data-num="2">
+					<li id="1" onclick="selectObj(this,event)"><i></i>FGafdaadf</li>
+					<li id="2" onclick="selectObj(this,event)"><i></i>15646453456465</li>
+					<li id="3" onclick="selectObj(this,event)"><i></i>中国人刀李大</li>
+				</ul>
+				<div class="notFilter">
+					暂无匹配项!
+				</div>
+			</div>
+		</div>
+		<button id="cc">adfasd</button>
+		<script>
+			$(function(){
+				//var idArr = [];
+				//mutlipSelect(1,idArr);//1为多选,其它为单选 
+				//模糊查询s
+				$("#select").change(function(){
+					idArr=[];
+					if($(this).find("option:selected").val() == 1){
+						$(".aa").show();
+						$(".bb").hide();
+					}else{
+						$(".bb").show();
+						$(".aa").hide();
+					}
+				})
+			})
+			function removeArrayValue(arr, val){
+			  for(var i=0; i<arr.length; i++) {
+			    if(arr[i] == val) {
+			      arr.splice(i, 1);
+			      break;
+			    }
+			  }
+			}
+			$(".selectText").click(function(e){
+				$(this).siblings(".selectBox").show();
+				e.stopPropagation();
+			});
+			$(".selectBox").click(function(e){
+				e.stopPropagation();
+			})
+			$(document).click(function(){
+				$(".selectBox").hide();
+			});
+			var arr = [];//保存选中的值
+			var saveIndex = [];//保存下标
+			var idArr = [];
+			function selectObj(obj,event){
+				event.stopPropagation();
+				if($(obj).parents("ul").attr("data-num") == 1){//单选 
+					if($(obj).hasClass("select")){
+						$(obj).removeClass("select");
+						$(obj).parents(".sameSelect").find(".showText").val("").attr("data-value","");
+					}else{
+						$(obj).parents(".sameSelect").find(".showText").val($(obj).text()).attr("data-value",$(obj).attr("id"));
+						$(obj).addClass("select").siblings("li").removeClass("select");
+					}
+				}else{//多选 
+					if($(obj).hasClass("select")){
+						removeArrayValue(arr,$(obj).text())
+						removeArrayValue(saveIndex,$(obj).index());
+						removeArrayValue(idArr,$(obj).attr("id"));
+					}else{
+						arr.push($(obj).text());
+						saveIndex.push($(obj).index());
+						idArr.push($(obj).attr("id"));
+					}
+					$(obj).toggleClass("select");
+					$(obj).parents(".sameSelect").find(".showText").val(arr);
+				}
+			}
+			//删除选中的
+			$(".selectText i").click(function(){
+				if($(this).parents(".sameSelect").find("ul").attr("data-num") == 1){//单选
+					$(this).siblings(".showText").val("").attr("data-value","");
+					$(this).parents(".sameSelect").find(".selectBox ul li").removeClass("select");
+				}else{
+					arr.pop();
+					idArr.pop();
+					$(this).siblings(".showText").val(arr);
+					$(this).parents(".sameSelect").find(".selectBox ul li").eq(saveIndex[saveIndex.length-1]).removeClass("select");
+					saveIndex.pop();
+				}
+			});
+			//模糊查询
+			function searchList(strValue,obj){
+				if(strValue != "") {
+					$(obj).each(function(i,v) {
+						if ($(v).text().toLowerCase().indexOf(strValue.toLowerCase()) < 0) {
+							$(v).hide();
+							if($(obj).parents("ul").height()<10){
+								$(obj).parents("ul").siblings(".notFilter").show();
+							}
+						}else{
+							$(v).show();
+							$(obj).parents("ul").siblings(".notFilter").hide();
+						}
+					});
+				}else{
+					$(obj).each(function(i,v) {
+						$(v).show();
+						$(obj).parents("ul").siblings(".notFilter").hide();
+					});
+				}
+			}
+		</script>
+	</body>
+</html>

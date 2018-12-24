@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<title>查看流量</title>
+	</head>
+	<body>
+		<div class="queryLl-box">
+			<div class="queryLl-one">
+				<h3><img src="images/base-info.png" />基本信息</h3>
+				<table>
+					<tr>
+						<td>
+							<span>用户名称:</span>
+							<span>张在</span>
+						</td>
+						<td>
+							<span>用户电话/邮箱:</span>
+							<span>4K15641561@qq.com</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>ICCID:</span>
+							<span>0201205520415</span>
+						</td>
+						<td>
+							<span>采集器:</span>
+							<span>4K15641561</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>状态:</span>
+							<span>正常</span>
+						</td>
+						<td>
+							<span>服务器:</span>
+							<span>海外服务器</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>本月流量:</span>
+							<span>2541M</span>
+						</td>
+						<td>
+							<span>采集器</span>
+							<span>4K235321654</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>余额:</span>
+							<span class="moneyColor">26562$</span>
+						</td>
+						<!--<td>
+							<span>IP:</span>
+							<span>192.168.3.26</span>
+						</td>-->
+						<td>
+							<span>所属流量地:</span>
+							<span>深圳</span>
+						</td>
+					</tr>
+					<!--<tr>
+						<td>
+							<span>当前连接:</span>
+							<span>4k5456135156</span>
+						</td>
+						<td>
+							<span>接入方式</span>
+							<span>2G/3G/4G</span>
+						</td>
+					</tr>-->
+					<!--<tr>
+						<td>
+							<span>入网方式</span>
+							<span>2G/3G/4G</span>
+						</td>
+						<td>
+							<span>所属流量地:</span>
+							<span>深圳</span>
+						</td>
+					</tr>-->
+					<tr>
+						<td>
+							<span>所在城市:</span>
+							<span>深圳</span>
+						</td>
+						<td>
+							<span>供应商:</span>
+							<span>古瑞瓦特</span>
+						</td>
+					</tr>
+				</table>
+			</div>	
+			<div class="queryLl-two">
+				<h3><img src="images/data_icon.png" />日期阶段</h3>
+				<table>
+					<tr>
+						<td>
+							<span>当前过期时间:</span>
+							<span>2017-07-06 19:49</span>
+						</td>
+						<td>
+							<span>产品过期时间:</span>
+							<span>2017-07-06 19:49</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>测试期:</span>
+							<span>2017-07-06 19:49</span>
+						</td>
+						<td>
+							<span>沉默期:</span>
+							<span>2017-07-06 19:49</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span>激活日期:</span>
+							<span>2017-07-06 19:49</span>
+						</td>
+						<td>
+							<span>最后更新时间</span>
+							<span>2017-07-06 19:49</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="queryLl-three">
+				<h3><img src="images/trend_icon.png" />流量走势</h3>
+				<div class="qt-time">
+					<span>时间:</span>
+					<input class="layui-input allInputHover color8 tC" onclick="layui.laydate({elem: this,istime: false,format:'YYYY'})">
+					<button class="allCommonnotBgBtn">年</button>
+					<button class="allCommonnotBgBtn">月</button>
+				</div>
+				<div class="qt-charts">
+					<div class="qt-charts-title color8">流量(M)</div>		
+					<div class="show-QueryCharts"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="layui/layui.js"></script>
+	<script src="js/ossIndex.js"></script>
+	<script src="highcharts/js/highcharts.js"></script>
+	<script>
+		layui.use(['layer','laydate'], function(){ //独立版的layer无需执行这一句
+			var layer = layui.layer, //独立版的layer无需执行这一句
+			laydate = layui.laydate//时间日期模块
+		});
+		$(function(){
+			$('.show-QueryCharts').highcharts({
+		    	credits: {//禁用版权信息
+		            enabled:false
+		        },
+		        chart: {
+		            type: 'column',
+		            marginTop:'20'
+		        },
+		        title: {
+					text:null
+		        },
+		        xAxis: {	
+		            categories: [
+		                '1月',
+		                '2月',
+		                '3月',
+		                '4月',
+		                '5月',
+		                '6月',
+		                '7月',
+		                '8月',
+		                '9月',
+		                '10月',
+		                '11月',
+		                '12月'
+		            ],
+		            crosshair: true,
+		            tickLength: 0,//坐标轴刻度线的长度,
+		            labels: {
+		                style: {
+		                    color: '#888888',
+		                    fontSize:'12px'
+		                }
+		            },
+		        },
+		        yAxis: {
+		            min: 0,
+		            title: {
+		                text:null
+		            },
+		            labels: {
+		                style: {
+		                    color: '#888888',
+		                    fontSize:'12px'
+		                }
+		            },
+		        },
+		        tooltip: {
+		            headerFormat: '<span style="font-size:14px;color:#333333;">{point.key}</span><table style="width:100px;">',
+		            pointFormat: '<tr><td style="color:{series.color};font-size:12px;padding:0">{series.name}: </td>' +
+		            '<td style="padding:0;color:#333333;font-size:12px;"><b>{point.y:.1f}M</b></td></tr>',
+		            footerFormat: '</table>',
+		            shared: true,
+		            useHTML: true
+		        },
+		        plotOptions: {
+		            column: {
+		                pointPadding: 0.2,
+		                borderWidth: 0
+		            }
+		        },
+		        legend : {
+				    enabled:false
+				},
+		        series: [{
+		            name: '流量',
+		            color:'rgb(218,199,94)',
+		            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6,11,233,12,134,11]
+		        }]
+		    });
+		})
+	</script>
+</html>

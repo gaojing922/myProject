@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script> 
+		<style>
+			*{padding:0px;border:0px;margin:0px;}
+			ul{list-style:none;}
+			.slideBox{border: 1px solid red;margin:150px auto;width:480px;height:300px; box-shadow:2px 2px 10px #C38DD4;border-radius:20px;position:relative; overflow:hidden;}
+			.slideBox ul {position:relative;width:200000px;left: -480px;}
+			.slideBox ul li {float:left; width:480px;height:300px;position:relative;}
+			.spanBox {position:absolute; width:300px;height:20px;bottom:10px;left:80px;}
+			.spanBox span {width:18px;height:18px;margin-left:5px;background-color:rgba(201,178,207,1.00);display: block;cursor: pointer;
+			    float:left;line-height:16px;text-align:center;text-shadow:2px 2px 2px #C5EBF0;font-family:cabin-sketch;font-size:15px;}
+			.slideBox .spanBox .active {background-color:rgba(155,83,244,0.79);border:solid 1px #BEEBEC;border-radius:4px;}
+			.prev {position:absolute;left:0px;top:50%;height: 30px;width: 20px;margin-top: -15px;background: deepskyblue;z-index: 2;cursor: pointer;}
+			.next {position:absolute;right:0px;top:50%;height: 30px;width: 20px;margin-top: -15px;background: deepskyblue;z-index: 2;cursor: pointer;}
+		</style>
+	</head>
+	<body>
+		<div class="slideBox">
+		    <ul>
+			    <li><img src="../images/bigDt.jpg" alt="" width="480" height="300"/></li>
+			    <li><img src="../images/bigDz.jpg" alt="" width="480" height="300"/></li>
+			    <li><img src="../images/bigSp.jpg" alt="" width="480" height="300"/></li>
+			    <li><img src="../images/bigSb.jpg" alt="" width="480" height="300"/></li>
+			    <li><img src="../images/bigTj.jpg" alt="" width="480" height="300"/></li>
+			    <li><img src="../images/bigYh.jpg" alt="" width="480" height="300"/></li>
+		    </ul>
+		   <div class="spanBox">
+			    <span class="active">q</span>
+			    <span>a</span>
+			    <span>z</span>
+			    <span>w</span>
+			    <span>s</span>
+			    <span>x</span>
+		    </div>
+		    <div class="prev"></div>
+		    <div class="next"></div>
+		</div>
+		<script>
+			$(function(){
+				var slideBox = $(".slideBox");
+				var ul = slideBox.find("ul");
+				var oneWidth = slideBox.find("ul li").eq(0).width();
+				var number = slideBox.find(".spanBox span");
+				var time = null;
+				var i = 0;
+				//每个span绑定click事件，完成切换颜色和动画，以及读取参数值
+				number.on("click",function(){
+					$(this).addClass("active").siblings("span").removeClass("active");
+					i = $(this).index();
+					ul.animate({
+						"right":oneWidth*i
+					})
+				})
+				//上下切换张
+				$(".next").on("click",function(){
+					if(i == number.length) i=-1;
+					i++
+					number.eq(i).addClass("active").siblings("span").removeClass("active");
+					ul.stop().animate({"left":-oneWidth*i})
+				});
+				$(".prev").on("click",function(){
+					if(i == 0) i=number.length;
+					i--;
+					number.eq(i).addClass("active").siblings("span").removeClass("active");
+					ul.stop().animate({"left":-oneWidth*i})
+				});
+			})
+		</script>
+	</body>
+</html>

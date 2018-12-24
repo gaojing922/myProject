@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>评价</title>
+		<meta content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0;" name="viewport"/>
+		<link href="css/authorize.css" rel="stylesheet" />
+		<script src="../js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="sameBack">
+			<img src="images/back.png" onclick="javascript:window.history.go(-1)"/>
+			工单评价
+		</div>
+		<div class="eteBox">
+			<div class="eteTitle">
+				基本信息
+			</div>
+			<table class="eteInfo">
+				<tr>
+					<td>工单标题</td>
+					<td>逆变器不稳定</td>
+				</tr>
+				<tr>
+					<td>电站名称</td>
+					<td>我的电站</td>
+				</tr>
+				<tr>
+					<td>授权服务商</td>
+					<td>浙江电能</td>
+				</tr>
+				<tr>
+					<td>授权工程师</td>
+					<td>张三</td>
+				</tr>
+			</table>
+			<p class="pfTitle">工程师服务评分</p>
+			<ul class="pfBox clearBox">
+				<li data-name="1">1.0</li>
+				<li data-name="1">2.0</li>
+				<li data-name="1">3.0</li>
+				<li data-name="0">4.0</li>
+				<li data-name="0">5.0</li>
+			</ul>
+			<div class="pjText">
+				<textarea></textarea>
+			</div>
+			<div class="pjText">
+				<button>发表</button>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$(".pfBox li").click(function(){
+					if($(this).attr("data-name") == "1"){
+						$(this).attr("data-name",0).nextAll().attr("data-name",0)
+					}else{
+						$(this).attr("data-name",1).prevAll().attr("data-name",1)
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

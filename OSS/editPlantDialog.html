@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<title>编辑电站</title>
+	</head>
+	<body>
+		<div class="user-plant-edit">
+			<div class="floatL">
+				<div class="edit-same-title">安装信息</div>
+				<div class="edit-same-row edit-same-input">
+					<span>电站名</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="电站名" />
+						<label class="dgjColor">*</label>
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>安装日期</span>
+					<span>
+						<input type="text" class="allInputHover color8" placeholder="安装日期" onclick="layui.laydate({elem: this, festival: true})"/>
+						<label class="dgjColor">*</label>
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>设计功率</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="设计功率" />
+						<label class="dgjColor">*</label>
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>设计厂商</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="设计厂商" />
+						<label class="dgjColor">*</label>
+					</span>
+				</div>
+				<div class="edit-same-title">地理信息</div>
+				<div class="edit-same-row edit-same-input">
+					<span>国家</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="国家" />
+						<label class="dgjColor">*</label>
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>城市</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="城市" />
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>时区</span>
+					<span>
+						<div class="all-select">
+							<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+							<em class="select-img"></em>
+							<select class="inner-select" name="0">
+								<option>时区一</option>
+								<option>时区二</option>
+								<option>时区三</option>
+							</select>
+						</div>
+						<label class="dgjColor">*</label>
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>纬度</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="纬度" />
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>经度</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="经度" />
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>电站图片</span>
+					<span class="allRelative">
+						<input class="allText" type="text" value="电站图片" id="txt5">
+						<input class="allFile" type="file" onchange="document.getElementById('txt5').value=this.value">
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>位置图片</span>
+					<span class="allRelative">
+						<input class="allText" type="text" value="位置图片" id="txt6">
+						<input class="allFile" type="file" onchange="document.getElementById('txt6').value=this.value">
+					</span>
+				</div>
+			</div>
+			<div class="floatL">
+				<div class="edit-same-title">收益公式（以1kWh发电量为换算标准</div>
+				<div class="edit-same-row edit-same-input">
+					<span>资金收益</span>
+					<span class="get-money">
+						<input type="text" class="allInputHover" placeholder="0" />
+						<div class="all-select">
+							<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+							<em class="select-img"></em>
+							<select class="inner-select" name="0">
+								<option>时区一</option>
+								<option>时区二</option>
+								<option>时区三</option>
+							</select>
+						</div>
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>节约标准煤(kg)</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="0" />
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>CO2减排</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="0" />
+					</span>
+				</div>
+				<div class="edit-same-row edit-same-input">
+					<span>CO2减排</span>
+					<span>
+						<input type="text" class="allInputHover" placeholder="0" />
+					</span>
+				</div>
+				<div class="edit-same-title map-select">
+					电站地图(拖动红色标注选择地址)
+					<div class="all-select">
+						<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+						<em class="select-img"></em>
+						<select class="inner-select" name="0">
+							<option>google.cn</option>
+							<option>google.com</option>
+						</select>
+					</div>
+				</div>
+				<div class="map-box"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</body>
+</html>

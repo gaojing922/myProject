@@ -1,0 +1,101 @@
+@charset "utf-8";
+body,div,span,strong,p,a,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dd,dt,dd,table,tr,th,td,i,em,form,label,input,textarea,select{margin:0;padding:0;}
+article,section,aside,header,nav,footer,figure,figcaption,menu,hgroup{display:block;padding: 0;margin: 0;}
+html,body{font-family:"微软雅黑";}
+ul,li{ list-style:none;}
+i,b,em{font-style: normal;}
+a{font-weight:normal;text-decoration:none;}
+img{border:none; max-width: 100%;}
+button,input,select,option{outline: none;border:none;background:none;}
+/*文本位置显示样式*/
+.tl{text-align: left;}
+.tc{text-align: center;}
+.tr{text-align: right;}
+/*垂直位置显示样式*/
+.vm{vertical-align: middle;}
+.vt{vertical-align: top;}
+.vb{vertical-align: bottom;}
+/*float*/
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after{content:'.';height: 0;display: block;overflow: hidden;clear: both;visibility: hidden;}
+.clearfix { *zoom:1;_zoom:1;}
+/*弹性盒子*/
+.flexbox{display:-webkit-box;display:-moz-box;display:box;display:-ms-flexbox;display:flex;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.flex{-webkit-box-flex:1;-moz-box-flex:1;-ms-flex:1;flex:1;-webkit-flex:1; width: 0;}
+/*弹性盒子*/
+body{max-width:10.0rem;margin:0 auto;background: rgb(242,242,242);}
+.null{content:'.'; display: block;overflow: hidden;clear: both;visibility: hidden;}
+
+/*iphone上的Safari解析input[typw="submit"]和input[type="submit"]按钮会以苹果浏览器默认的UI进行渲染，解决发放如下*/
+input,input[type="button"],input[type="submit"]，input[type="reset"]{-webkit-appearance:none;} 
+/*:after{ content: '';position:absolute; top:0; left:-1px; z-index:9; height:100%; width:0 ;border-bottom:1px solid #dbdbdb;}*/
+
+/*字体大小*/
+/*[data-dpr='2'] ps:苹果手机*/
+/*[data-dpr='3'] ps:苹果Plus手机*/
+.fs0{font-size: 10px;}
+[data-dpr='2'] .fs1{font-size:20px;}
+[data-dpr='3'] .fs1{font-size:30px;}
+.fs1{font-size: 11px;}
+[data-dpr='2'] .fs1{font-size:22px;}
+[data-dpr='3'] .fs1{font-size:33px;}
+.fs2{font-size: 12px;}
+[data-dpr='2'] .fs2{font-size:24px;}
+[data-dpr='3'] .fs2{font-size:36px;}
+.fs3{font-size: 13px;}
+[data-dpr='2'] .fs3{font-size:26px;}
+[data-dpr='3'] .fs3{font-size:39px;}
+.fs4{font-size: 14px;}
+[data-dpr='2'] .fs4{font-size:28px;}
+[data-dpr='3'] .fs4{font-size:42px;}
+.fs5{font-size: 15px;}
+[data-dpr='2'] .fs5{font-size:30px;}
+[data-dpr='3'] .fs5{font-size:45px;}
+.fs6{font-size: 16px;}
+[data-dpr='2'] .fs6{font-size:32px;}
+[data-dpr='3'] .fs6{font-size:48px;}
+.fs7{font-size: 17px;}
+[data-dpr='2'] .fs7{font-size:34px;}
+[data-dpr='3'] .fs7{font-size:51px;}
+.fs8{font-size: 18px;}
+[data-dpr='2'] .fs8{font-size:36px;}
+[data-dpr='3'] .fs8{font-size:54px;}
+.fs9{font-size: 19px;}
+[data-dpr='2'] .fs9{font-size:36px;}
+[data-dpr='3'] .fs9{font-size:54px;}
+.fs10{font-size: 20px;}
+[data-dpr='2'] .fs10{font-size:40px;}
+[data-dpr='3'] .fs10{font-size:60px;}
+/*字体大小_end*/
+
+.head{width: 100%;height:1.066rem;background: #4c6b8a url(../images/main-logo.png) no-repeat center;}
+.all-title{text-align: center;height: 0.933rem;border-bottom: 0.013rem solid #DEDEDE;background: #FFFFFF;}
+.all-title>span{display: inline-block;padding: 0 10px; border-bottom: 3px solid #4c6b8a;color: #222222;height: 0.933rem;line-height: 0.933rem;text-align: center;}
+.content-box{padding: 0.266rem 0;}
+.content{width:9.333rem;margin: 0 auto;box-shadow: 0rem 0.013rem 0.08rem -0.013rem #c6d3e2;border-radius: 3px; background: #FFFFFF;}
+.content .left{width: 2rem;position: relative;margin-top: 0.8rem;}
+.content .right{width: 7rem;padding-left: 0.333rem;margin-top: 0.8rem;}
+.linear-s{width: 0.026rem;background-color:#DEDEDE;height: 82%;position: absolute;left: 50%;top: 0;}
+.step-ul li{height: 2rem;line-height: 2rem;text-align: center;position: relative;}
+.same-normal{height:0.666rem;width: 0.666rem;line-height: 0.666rem;text-align: center;border-radius: 0.666rem;background-color: #dedede;color: #444444;position: absolute;left: 33%;
+    z-index: 20;top: -0.005rem;}
+.same-selected{height: 1.066rem;width: 1.066rem;line-height: 1.066rem;border-radius: 0.666rem;text-align: center;background-color: #4c6b8a;color: #FFFFFF;position: absolute;z-index: 21;left: 23%;top: -0.005rem;}
+.hide-step{display: none;}
+.step-title{height: 0.8rem;text-align: center;line-height: 0.8rem;color: #466faa;}
+.same-row input[type='text']{height: 100%;padding-left: 0.1rem;width:100%;}
+.same-row{margin-top: 0.266rem;}
+.same-row>p:nth-child(2){margin-top: 0.133rem;height: 0.55rem;line-height: 0.55rem;border: 0.013rem solid #dedede;width: 6rem;border-radius: 0.133rem;}
+.same-row>p:nth-child(1)>span:nth-child(1){color: #E74918;}
+.same-row>p:nth-child(1)>span:nth-child(2){color: #222222;}
+.small-title{border-bottom: 0.013rem solid #D4D4D4;height: 0.8rem;line-height: 0.8rem;color: #222222;}
+.small-title span{display: inline-block;padding: 0 0.133rem;height: 0.8rem;line-height: 0.8rem; border-bottom: 3px solid #4c6b8a;}
+.marginTitle{margin-top: 0.266rem;}
+.certigier{height: 0.8rem;line-height: 0.8rem;color: #222222;margin-top: 0.266rem;}
+.certigier span{padding-right: 0.133rem;}
+.certigier p{display: inline-block;height: 0.4rem;line-height: 0.4rem;width: 2.5rem;border-bottom: 0.013rem solid #666666;}
+.certigier p input{text-align: center;height: 0.4rem;line-height: 0.4rem;width: 2.5rem;}
+.btn{margin-top: 0.266rem;margin-bottom: 0.133rem;}
+.btn>span{margin-right: 0.133rem;display: inline-block;border:0.013rem solid #DEDEDE;padding: 0 0.2rem;text-align: center;height: 0.666rem;line-height: 0.666rem;border-radius: 0.08rem;}
+.btn>span.submitBtn{background-color: #4c6b8a;color: #FFFFFF;}
+.content-pro{height: 4rem;padding: 1rem 0.666rem;color: rgb(152,152,152);}

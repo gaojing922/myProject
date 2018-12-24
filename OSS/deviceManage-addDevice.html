@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+		<meta name="description" content="古瑞瓦特新能源股份有限公司客服管理系统"/> 
+		<meta name="author" content="18573023008@163.com"> 
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="jqueryStep/jquery.step.css">
+		<link rel="stylesheet" type="text/css" href="css/ossBase.css" />
+		<link rel="stylesheet" type="text/css" href="css/ossIndex.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="jqueryStep/jquery.step.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC2-KBP01sBh98u5evmmP18NlxWjb0RWvY"></script><!--谷歌地图-->
+		<title>编辑电站</title>
+	</head>
+	<body>
+		<div class="plant-box">
+			<input type="hidden" id="stepValue" value="" />
+			<!--stepTitle-->
+			<div class="step-body" id="addPlantStep">
+				<div class="step-header">
+					<ul>
+						<li><p>添加用户</p></li>
+						<li><p>添加电站</p></li>
+						<li><p>添加采集器</p></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+			</div>
+			<!--新增设备第一步-->
+			<div class="addDevice-StepOne sameStep-device">
+				<table>
+					<tr>
+						<td><span class="dgjColor">*</span>用户名:</td>
+						<td>
+							<input class="allInputHover" id="aaaa"/>
+						</td>
+					</tr>
+					<tr>
+						<td><span class="dgjColor">*</span>密码:</td>
+						<td>
+							<input class="allInputHover" />
+						</td>
+					</tr>
+					<tr>
+						<td><span class="dgjColor">*</span>确认密码:</td>
+						<td>
+							<input class="allInputHover" />
+						</td>
+					</tr>
+					<tr>
+						<td><span class="dgjColor">*</span>公司名称:</td>
+						<td>
+							<input class="allInputHover" />
+						</td>
+					</tr>
+					<tr>
+						<td><span class="dgjColor">*</span>电子邮箱:</td>
+						<td>
+							<input class="allInputHover" />
+						</td>
+					</tr>
+					<tr>
+						<td><span class="dgjColor">*</span>联系电话:</td>
+						<td>
+							<input class="allInputHover" />
+						</td>
+					</tr>
+					<tr>
+						<td><span class="dgjColor">*</span>安装商代码:</td>
+						<td>
+							<input class="allInputHover" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--新增设备第二步-->
+			<div class="user-plant-edit addDevice-StepTwo sameStep-device">
+				<div class="addDevice-twoTop">
+					<table>
+						<tr>
+							<td><span class="dgjColor">*</span>电站名</td>
+							<td>
+								<input type="text" class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>设计功率(Wp)</td>
+							<td>
+								<input type="text" class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dgjColor">*</span>时区</td>
+							<td>
+								<input type="text" class="allInputHover" />
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span class="hasbgColorBtn">高级信息</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="addDevice-twoBottom">
+					<div class="floatL">
+						<div class="edit-same-title">安装信息</div>
+						<div class="edit-same-row edit-same-input">
+							<span>电站名</span>
+							<span>
+								<input type="text" class="allInputHover" placeholder="电站名" />
+								<label class="dgjColor">*</label>
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>安装日期</span>
+							<span>
+								<input type="text" class="allInputHover color8" placeholder="安装日期" onclick="layui.laydate({elem: this, festival: true})"/>
+								<label class="dgjColor">*</label>
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>设计功率</span>
+							<span>
+								<input type="text" class="allInputHover" placeholder="设计功率" />
+								<label class="dgjColor">*</label>
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>设计厂商</span>
+							<span>
+								<input type="text" class="allInputHover" placeholder="设计厂商" />
+								<label class="dgjColor">*</label>
+							</span>
+						</div>
+						<div class="edit-same-title">地理信息</div>
+						<div class="edit-same-row edit-same-input">
+							<span>国家</span>
+							<span>
+								<input type="text" class="allInputHover" placeholder="国家" />
+								<label class="dgjColor">*</label>
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>城市</span>
+							<span>
+								<input type="text" class="allInputHover" placeholder="城市" />
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>时区</span>
+							<span>
+								<div class="all-select">
+									<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+									<em class="select-img"></em>
+									<select class="inner-select" name="0">
+										<option>时区一</option>
+										<option>时区二</option>
+										<option>时区三</option>
+									</select>
+								</div>
+								<label class="dgjColor">*</label>
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>纬度</span>
+							<span>
+								<input type="text" readonly="readonly" class="allInputHover" placeholder="纬度" id="plantLat"/>
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>经度</span>
+							<span>
+								<input type="text" readonly="readonly" class="allInputHover" placeholder="经度" id="plantLng"/>
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>电站图片</span>
+							<span class="allRelative">
+								<input class="allText" type="text" value="电站图片" id="txt5">
+								<input class="allFile" type="file" onchange="document.getElementById('txt5').value=this.value">
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>位置图片</span>
+							<span class="allRelative">
+								<input class="allText" type="text" value="位置图片" id="txt6">
+								<input class="allFile" type="file" onchange="document.getElementById('txt6').value=this.value">
+							</span>
+						</div>
+					</div>
+					<div class="floatL">
+						<div class="edit-same-title">收益公式（以1kWh发电量为换算标准</div>
+						<div class="edit-same-row edit-same-input">
+							<span>资金收益</span>
+							<span class="get-money">
+								<input type="text" class="allInputHover" placeholder="0" />
+								<div class="all-select">
+									<input class="select-input" type="text" readonly="readonly" value="asdfawefasefqwefasdfqerfasrfasdvwaerfqwefqse"/>
+									<em class="select-img"></em>
+									<select class="inner-select" name="0">
+										<option>时区一</option>
+										<option>时区二</option>
+										<option>时区三</option>
+									</select>
+								</div>
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>节约标准煤(kg)</span>
+							<span>
+								<input type="text" class="allInputHover" placeholder="0" />
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>CO2减排</span>
+							<span>
+								<input type="text" class="allInputHover" placeholder="0" />
+							</span>
+						</div>
+						<div class="edit-same-row edit-same-input">
+							<span>CO2减排</span>
+							<span>
+								<input type="text" class="allInputHover" placeholder="0" />
+							</span>
+						</div>
+						<div class="edit-same-title map-select">
+							电站地图(拖动红色标注选择地址)
+							<div class="all-select">
+								<input class="select-input" type="text" readonly="readonly" value="google.cn"/>
+								<em class="select-img"></em>
+								<select class="inner-select" name="0" id="getMapSelect">
+									<option>google.cn</option>
+									<option>google.com</option>
+								</select>
+							</div>
+						</div>
+						<div class="map-box" id="plantMap"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!--第三步-->
+			<div class="addDevice-StepThree sameStep-device">
+				<table>
+					<tr>
+						<td><span class="dgjColor">*</span>采集器序列号:</td>
+						<td>
+							<input type="text" class="allInputHover" />
+						</td>
+					</tr>
+					<tr>
+						<td><span class="dgjColor">*</span>采集器校验码:</td>
+						<td>
+							<input type="text" class="allInputHover" />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script>
+		//自定义select事件
+		$(".inner-select").click(function(){
+			if($(this).attr("name")=="0"){
+				$(this).attr("name","1");
+				$(this).siblings("em").addClass("up").removeClass("down");
+			}else{
+				$(this).attr("name","0");
+				$(this).siblings("em").addClass("down").removeClass("up");
+			}
+		}).blur(function(){
+			$(this).attr("name","0");
+			$(this).siblings("em").addClass("down").removeClass("up");
+		}).change(function(){
+			$(this).siblings("input").val($(this).find("option:selected").text());
+			
+		});
+		$(function() {
+    		var step= $("#addPlantStep").step();
+    		var sValue = 2;
+    		if(sValue == 1){
+    			showOne();
+    		}else if(sValue == 2){
+    			showTwo();
+    		}else{
+    			showThree();
+    		}
+    		//showOne();
+    		//显示第一步
+			function showOne(){
+				$(".addDevice-StepOne").addClass("sameStep-ShowD");//.siblings(".sameStep-device").removeClass("sameStep-ShowD");
+				$(".addDevice-StepTwo,.addDevice-StepThree").removeClass("sameStep-ShowD");
+				step.goStep(1);
+				$("#stepValue").val(1);
+			}
+			//showTwo();
+			//显示第二步
+			function showTwo(){
+				$(".addDevice-StepTwo").addClass("sameStep-ShowD");//.siblings(".sameStep-device").removeClass("sameStep-ShowD");
+				$(".addDevice-StepOne,.addDevice-StepThree").removeClass("sameStep-ShowD");
+				step.goStep(2);
+				$("#stepValue").val(2);
+			}
+			//showThree();
+			//显示第三步
+			function showThree(){
+				$(".addDevice-StepThree").addClass("sameStep-ShowD");//.siblings(".sameStep-device").removeClass("sameStep-ShowD");
+				$(".addDevice-StepOne,.addDevice-StepTwo").removeClass("sameStep-ShowD");
+				step.goStep(3);
+				$("#stepValue").val(3);
+			}
+			//确定
+			parent.top.$(".addDevice-save").unbind("click").bind("click",function(){
+				var stepValue = $("#stepValue").val();
+				if(stepValue == 1){
+					showTwo();
+					$(this).text("下一步")
+				}else if(stepValue == 2){
+					showThree();
+					$(this).text("完成")
+				}else{
+					$(this).text("下一步")
+					parent.top.layer.closeAll();
+				}
+			})
+		})
+		//地图
+		//根据城市名获取经纬度
+		/*function getLocation(){
+			var geocoder = new google.maps.Geocoder();
+			var address = document.getElementById("aa").value;
+			geocoder.geocode({'address':address},function(results,status){
+				if(status == google.maps.GeocoderStatus.OK){
+					var latitude = results[0].geometry.location.lat();//经度
+					var longitude = results[0].geometry.location.lng();//纬度
+					alert("经度"+latitude + ","+"纬度"+longitude);
+				}else{
+					alert("没有找到相应的地址");
+				}
+			})
+		}*/
+		var lat = 22.6876402383;
+		var lng = 113.9259866372;
+		$("#plantLat").val(lat);
+        $("#plantLng").val(lng);
+		var myCenter=new google.maps.LatLng(lat,lng);
+		function initialize(){
+			var mapProp = {
+			  center:myCenter,
+			  zoom:13,
+			  scaleControl:false,
+			  mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			//var map=new google.maps.Map(document.getElementById("plantMap"),mapProp);
+			var map=new google.maps.Map(document.getElementById("plantMap"),mapProp);
+			//创建标记点
+			var marker=new google.maps.Marker({
+			  position:myCenter,
+			  animation:google.maps.Animation.BOUNCE,
+			  draggable: true
+			});
+			marker.setMap(map);
+			//在标记上显示信息窗口
+			var infowindow = new google.maps.InfoWindow({
+			  content:"深圳市"
+			});
+			/*google.maps.event.addListener(marker, 'click', function() {
+				alert(1)
+		  		infowindow.open(map,marker);
+		    });*/
+		    google.maps.event.addListener(marker, 'dragend', function(MouseEvent) {
+			  // alert(MouseEvent.latLng);
+			   //alert(marker.getPosition().lat())
+			   $("#plantLat").val(marker.getPosition().lat());
+               $("#plantLng").val(marker.getPosition().lng());
+			});
+		}
+		initialize()
+		//google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</html>

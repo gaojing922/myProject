@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>jquery轮播效果图 </title> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+	<style>
+		* {margin: 0;padding: 0;}
+		#igs{margin: 100px auto;width: 700px;height: 320px; position: relative;border: 1px solid red;} 
+		#igs img{width: 700px;height: 320px;}
+		.ig{position: absolute;} 
+		#tabs{position: absolute;list-style: none;background-color: rgba(255,255,255,.5);
+		  left: 300px;bottom: 10px;border-radius: 10px; padding: 5px 0 5px 5px;} 
+		.tab{float: left;text-align: center;line-height: 20px;width: 20px;height: 20px;cursor: pointer;overflow: hidden;
+		  margin-right: 4px;border-radius: 100%;background-color: rgb(200,100,150);} 
+		.btn{position: absolute;color: #fff;top: 110px;width: 40px;height: 100px;transition: all .3s linear;
+		  font-size: 40px;font-weight: bold;text-align: center;line-height: 100px;border-radius: 5px;margin: 0 5px;} 
+		.btn2{position: absolute;right: 0px;} 
+		.btn:hover{background-color: rgba(255,255,255,.3);cursor: pointer;}
+	</style>
+</head> 
+<body> 
+ 	<div id="igs">
+	    <a class="ig" href="#"><img src="../images/bigDt.jpg"/></a>
+	    <a class="ig" href="#"><img src="../images/bigDz.jpg"/></a>
+	       
+	    <div class="btn btn1"><</div>
+	    <div class="btn btn2">></div>
+	       
+	    <ul id="tabs">
+		    <li class="tab">1</li>
+		    <li class="tab">2</li>
+	    </ul>
+    </div>
+	<script type="text/javascript"> 
+		//定义全局变量和定时器
+		var i = 0 ;
+		var timer;
+		$(function(){
+			$('.ig').eq(0).show().siblings('.ig').hide();
+			//向左
+			$(".btn1").click(function(){
+				if(i==0) i=2;
+				i--;
+				show();
+			});
+			//向右
+			$(".btn2").click(function(){
+				if(i == 1) i=-1;
+				i++;
+				show();
+			});
+			function show(){
+				$('.ig').eq(i).fadeIn(300).siblings('.ig').fadeOut(300);
+			}
+		})
+	</script> 
+</body> 
+</html>

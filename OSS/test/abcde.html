@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery.min.js"></script>
+		<style>
+			*{margin: 0;padding: 0;list-style: none;}
+			.a{width: 278px;margin: 100px auto 25px auto;}
+			.a:after{clear: both;display: block;content: '';}
+			.a li{float: left;margin-left: 20px;height: 30px;width: 30px;border-radius: 15px;color: #ffffff;text-align: center;line-height: 30px;}
+			.b{margin: 0 auto;text-align: center;}
+			.b button{background-color: #ffffff;font-size: 16px;color: #222222;margin-left: 25px;border: none;outline: none;padding: 7px 25px;border-radius: 5px;cursor: pointer;transition: all .3s linear;}
+			.b button.c{border: 1px solid #009cff;}
+			.b button.d{border: 1px solid darkcyan;}
+			li[data-v='7']{background-color: #13b5b1;}
+			li[data-v='13']{background-color: #00a1e9;}
+			li[data-v='15']{background-color: #fc6700;}
+			li[data-v='22']{background-color: #878bcc;}
+			li[data-v='99']{background-color: #c81522;}
+		</style>
+	</head>
+	<body>
+		<ul class="a">
+		</ul>
+		<div class="b">
+			<button class="c">正序</button>
+			<button class="d">逆序</button>
+		</div>
+		<p contenteditable="true" style="border: 1px solid #dddddd;border-radius: 5px;display: inline-block;width: 350px;height: 35px;line-height: 35px;cursor: pointer;outline: none;">asdfasdfasdf</p>
+		
+		<diV id="x" style="width: 80px;height: 80px;border: 1px solid red;position: relative;display: inline-block;">
+			<span id="y" style="display: block;border: 1px solid red;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">asdfasd</span>
+		</diV>
+		
+		<div style="width: 300px;height: 50px;border: 1px solid red;margin: 50px auto;position: relative;">
+			<input type="file" id="aa" title="" onchange="javascript:document.getElementById('txt2').value=this.value" style="opacity: 0;position: absolute;height: 28px;width: 200px;border: 1px solid #dddddd;border-radius: 5px;outline: none;z-index: 2;left: 0;top: 0;cursor: pointer;" />
+			<input type="text" id="txt2" placeholder="请选择" style="position: absolute;height: 28px;width: 200px;border: 1px solid red;border-radius: 5px;outline: none;left: 0;top: 0;cursor: pointer;"/>
+		</div>
+		
+		<div style="width: 300px;height: 50px;border: 1px solid red;margin: 50px auto;position: relative;">
+			<label for="upload-file" id="txt3">请选择</label>
+  			<input onchange="javascript:document.getElementById('txt3').innerText=this.value" type="file" id="upload-file" title="或者你可以通过这里修改成你要的文字" style="display: none;">
+		</div>
+		<button id="cccc">aa</button>
+		<script>
+			function replaceStr(str){
+				return str.replace(str.slice(3,16),"****");
+			}
+			$(function(){
+				$("#cccc").click(function(){
+					alert($("#upload-file").val())
+				})
+				$("#aa").mouseover(function(){
+					if($(this).val() == "" ){
+						$(this).attr("title","");
+					}
+				})
+				
+				$.ajax({
+					type:"get",
+					url:"js/data.json",
+					async:true,
+					success:function(data){
+						var html="";
+						$.each(data, function(i,v) {
+							html+="<li data-v='"+v+"'><span>"+v+"</span></li>";
+						});
+						$(".a").append(html)
+					}
+				});
+				var arr = [];
+				//正序
+				$(".c").click(function(){
+					arr = [];
+					$.each($(".a li"), function(i,v) {
+						arr.push($(v).text())
+					});
+					arr.sort(sortNumber);
+					$(".a").empty();
+					var html="";
+					$.each(arr, function(x,y) {
+						html+="<li data-v='"+y+"'><span>"+y+"</span></li>";
+					});
+					$(".a").append(html)
+				});
+				//逆序
+				$(".d").click(function(){
+					arr = [];
+					$.each($(".a li"), function(i,v) {
+						arr.push($(v).text())
+					});
+					arr.sort(sortNumbera)
+					$(".a").empty();
+					var html="";
+					$.each(arr, function(x,y) {
+						html+="<li data-v='"+y+"'><span>"+y+"</span></li>";
+					});
+					$(".a").append(html)
+				});
+				//数组排序
+				function sortNumber(a,b){ 
+					return a - b 
+				} 
+				//数组排序
+				function sortNumbera(a,b){ 
+					return b-a 
+				} 
+			})
+		</script>
+	</body>
+</html>

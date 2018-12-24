@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.5.css">
+		<script src="../js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/login.css" />
+		<title>账号密码登录</title>
+		<script>
+			$(function(){
+				$(".sameInput,.sameNot").attr('data-role','none');//清除默认样式  
+			})
+		</script>
+		<script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div data-role="header" data-position="fixed" class="self-header">
+			<h1>登录瑞光宝盒</h1>
+		</div>
+		<div data-role="main" class="ui-content login-content">
+			<div class="login-title">账号密码登录</div>
+			<div class="zhmm-box">
+				<div class="same-row-login">
+					<div class="same-title userImg">账号</div>
+					<div class="same-input">
+						<input class="sameInput" id="userName" autocomplete="off"/>
+						<!--<i class="down"></i>
+						<i class="delete"></i>
+						<ul class="userList">
+							
+						</ul>-->
+						<div class="showError"></div>
+					</div>
+				</div>
+				<div class="same-row-login">
+					<div class="same-title pwdImg">密码</div>
+					<div class="same-input">
+						<input id="pasdW" class="sameInput" type="password" autocomplete="off"/>
+						<div class="showError"></div>
+					</div>
+				</div>
+				<div class="same-row-btn">
+					<button class="zmLogin-btn">登录</button>
+				</div>
+			</div>
+		</div>
+		<!--找回密码弹窗-->
+		<div data-role="popup" id="zhPaswd" class="ui-content zhMm-box">
+	      	<a class="zhTitle">选择找回密码的方式</a>
+	      	<a class="byYx" href="byEmaelLogin.html" data-ajax='false'>通过邮箱找回</a>
+	      	<a class="bySj" href="phoneLogin.html" data-ajax='false'>通过手机号找回</a>
+	    </div>
+		<div data-role="footer" data-position="fixed" class="self-footer">
+			<div class="login-type">
+				<a class="uwLogin sameNot" href="phoneLogin.html" data-ajax='false'>手机号登录</a>
+				<span>|</span>
+				<a href="#zhPaswd" class="zhPaswd"  data-rel="popup" data-transition="pop" data-overlay-theme="c" data-name='0' data-position-to="window">找回密码</a>
+			</div>
+			<p class="bqInfo">
+				@copy2018-2022 by Grt
+			</p>
+			<p class="logoImg">
+				<img src="images/growatt.png" />
+			</p>
+		</div>
+		<script>
+			$(document).on("pagecreate","body",function(){
+				//手机登录选 择地区
+			    $(".phoneNext").on("tap",function(){
+			    	$(".phoneOne").addClass("hide").siblings(".phoneTwo").removeClass("hide");
+			    });
+			    //显示历史用户名
+			    $(".same-input i.down").on("tap",function(){
+			    	if($(".userList").is(":hidden")){
+			    		$(".userList").show();
+			    	}else{
+			    		$(".userList").hide();
+			    	}
+			    });
+			    //清空用户名
+			    $(".same-input i.delete").on("tap",function(){
+			    	$("#userName").val("")
+			    });
+			    //登录按钮
+			    $(".zmLogin-btn").on("tap",function(){
+			    	/*var userName = $("#userName").val();
+			    	var list = $(".userList li");
+			    	var len = list.length;
+			    	if(list.length>0){
+			    		$.each(list, function(i,v) {
+			    			if($(v).text() != userName){
+			    				var html_1 = "<li>"+userName+"</li>";
+			    				$(".userList").append(html_1);
+			    			}
+			    		});
+			    	}else{
+			    		var html_2 = "<li>"+userName+"</li>";
+			    		$(".userList").append(html_2);
+			    	}*/
+			    	var userName = $.trim($("#userName").val());
+			    	var pasdW = $.trim($("#pasdW").val());
+			    	if(userName ==""){
+			    		$("#userName").siblings(".showError").text()
+			    		showError($("#userName"),"用户名不能为空");
+			    		return false;
+			    	}else if(pasdW == "" || pasdW.length!=6){
+			    		showError($("#pasdW"),"密码不正确");
+			    		return false;
+			    	}
+			    });
+			    //用户输入时隐藏错误提示
+			    $('.same-input .sameInput').bind('input propertychange', function() {
+				    $(this).siblings(".showError").text("").hide();
+				});
+			});
+			function showError(obj,text){
+				$(obj).siblings(".showError").text(text).show();
+			}
+		</script>
+	</body>
+</html>

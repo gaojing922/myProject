@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{padding: 0;margin: 0;}
+			html,body{width: 100%;height: 100%;}
+			.footer{height: 45px;background: yellowgreen;position: fixed;width: 100%;line-height: 45px;bottom: 0;}
+			.a{float: left;margin-left: 11px;}
+			.b{float: right;margin-right: 11px;}
+			.ab{display:block;width:6px;height:6px;border-radius:5px;background:#DA542E;animation:a 2s infinite;}
+			@keyframes a{
+				0%{transform: scale(1,1);}
+				50%{transform: scale(1.2,1.2);}
+				100%{transform: scale(1,1);}
+			}
+			@-moz-keyframes name{
+				from{}
+				to{}
+			}
+			@-webkit-keyframes name{
+				from{}
+				to{}
+			}
+			@-ms-keyframes name{
+				from{}
+				to{}
+			}
+		</style>
+	</head>
+	<body>
+		<i class="ab"></i>
+		<script>
+			var a = ["2.3443",23.44,253];
+			function toFixed(arr){
+				for(var i = 0;i<arr.length;i++){
+					arr[i] = parseFloat(arr[i]).toFixed(1)
+				}
+				return arr;
+			}
+			;
+			alert(toFixed(a))
+			//alert(navigator.userAgent.toLowerCase())
+			//checknum(a)
+			function checknum(value) {
+				if (isNaN(value)){
+					alert("请输入数字");
+					return false;
+				}else{
+					alert("输入的是数字")
+				}
+			}
+			function isIE_11(){
+				if(navigator.userAgent.toLowerCase().match(/(trident)\/([\w.]+)/)){
+					var uaMatch = navigator.userAgent.toLowerCase().match(/trident\/([\w.]+)/);
+					if(uaMatch[1] == "7.0"){
+						alert("IE11")
+					}
+				}
+			}
+			function isIE(){  
+			    if(!!window.ActiveXObject || "ActiveXObject" in window) return true;  
+			    else return false;
+			} 
+			if(isIE()){
+				//alert("是IE")
+			}else{
+				//alert("不是IE")
+			}
+		</script>
+	</body>
+</html>
