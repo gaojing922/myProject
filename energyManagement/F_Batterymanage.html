@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+	<meta name="description" content="古瑞瓦特新能源股份有限公司能源监控系统"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>发电监控-电池管理</title>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/font/iconfont.css" />
+	<link href="hzcfile/css/default.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<script src="hzcfile/js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/pems.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bodyH">
+<div class="header clearfix">
+	<div class="header_L clearfix fl">
+		<div class="MainLogo fl"><a href=""><img src="hzcfile/images/Pem_logo.png" alt="能源监控LOGO"></a></div>
+		<div class="MainNav fr">
+			<div class="Navcolumn">
+				<span>能源监控</span>
+				<ul class="DorpNav">
+					<li><a href="N_Home.html">监控概况</a></li>
+					<li><a href="N_Distribution.html">能源分布</a></li>
+					<li><a href="N_Partitionr.html">分区监控</a></li>
+					<li><a href="N_Classify.html">分类监控</a></li>
+					<li><a href="N_Timeinterval.html">时段监控</a></li>
+					<li><a href="N_Powerranking.html">用量排名</a></li>
+					<li><a href="N_Realtime.html">用电参数</a></li>
+					<li><a href="F_Powerconsumption.html">产量能耗</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>发电监控</span>
+				<ul class="DorpNav">
+					<li><a href="F_Photovoltaic.html">光伏监控</a></li>
+					<li><a href="F_Batterymanage.html">电池管理</a></li>
+					<li><a href="F_Dischargeset.html">充放设置</a></li>
+					<li><a href="F_Parammonitor.html">参数监控</a></li>
+					<li><a href="F_Equipcontrol.html">设备管理</a></li>
+					<li><a href="F_Failurediagnosis.html">故障诊断</a></li>
+					<li><a href="F_Scheduling.html">调度统计</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>智慧办公</span>
+				<ul class="DorpNav">
+					<li><a href="ZH_Electricbox.html">电箱管理</a></li>
+					<li><a href="ZH_Airconditionmanage.html">空调管理</a></li>
+					<li><a href="ZH_Socketmanage.html">插座管理</a></li>
+					<li><a href="ZH_Thermostatmanage.html">温控器管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header_L_end -->
+	<div class="header_M fl">
+		<h1 class="MainTitle fs36">古瑞瓦特能源管理系统</h1>
+		<div class="MainNavbtn Big"></div>
+	</div>
+	<!-- header_M_end -->
+	<div class="header_R clearfix fr">
+		<div class="MainNav fl">
+			<div class="Navcolumn">
+				<span>智能分析</span>
+				<ul class="DorpNav">
+					<li><a href="ZN_Datacompare.html">数据对比</a></li>
+					<li><a href="">数据预测(空)</a></li>
+					<li><a href="ZN_Alarmanalysis.html">告警分析</a></li>
+					<li><a href="ZN_Powerquality.html">用电质量</a></li>
+					<li><a href="ZN_Energysaving .html">节能报告</a></li>
+					<li><a href="ZN_Benchmarking.html">对标管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>数据服务</span>
+				<ul class="DorpNav">
+					<li><a href="S_Imageseeker.html">能源网图</a></li>
+					<li><a href="S_Diagnostic.html">通讯诊断</a></li>
+					<li><a href="S_Powergather.html">采集配置</a></li>
+					<li><a href="S_Electricityprice.html">电价配置</a></li>
+					<li><a href="S_Restschedule.html">作息配置</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>报表中心</span>
+				<ul class="DorpNav">
+					<li><a href="">能源产出报表</a></li>
+					<li><a href="">能源消耗报表</a></li>
+					<li><a href="">费用结算报表</a></li>
+					<li><a href="">产量能耗报表</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+		<div class="TimeArea clearfix fl">
+			<div class="division fs28 DIGI fl">10:58:42</div>
+			<div class="years DIGI fl">
+				<span>2017-09-04</span>
+				<p>星期四</p>
+			</div>
+		</div>
+		<div class="UserInfo clearfix">
+			<div class="UserInfo_name">
+				<span class="fs16 t_hide">Admin</span>
+				<ul class="UserInfo_operate">
+					<li>跟人资料</li>
+					<li>退出</li>
+				</ul>
+				<div class="UserInfo_oprbtn"></div>
+			</div>
+			<div class="UserInfo_setup"></div>
+		</div>
+	</div>
+</div>
+<!-- 头部_end -->
+
+<div class="PageLead clearfix">
+	<div class="PageLead_tlarea fl">
+		<h4 class="fs20">电池管理</h4>
+		<p class="fs12"><i>发电监控</i><span>/</span><i>电池管理</i></p>
+	</div>
+	<div class="NewsMsg clearfix fr">
+		<div class="NewsMsg_warn"><em>8</em></div>
+		<div class="NewsMsg_TextArea fs14 t_hide">实时消息：<span>总计异常台数(台):20</span></div>
+		<div class="NewsMsg_more"></div>
+	</div>
+	<!-- 换皮肤 -->
+	<div class="skin fr">
+		<i class="triangle-up"></i>
+		<div class="skintab"></div>
+		<ul class="clearfix">
+			<li id="skin_0">皮肤1</li>
+			<li id="skin_1">皮肤2</li>
+		</ul>
+	</div>
+</div>
+<!-- 页面标题_end -->
+
+<div class="ContLayout clearfix" style="padding-top:1vh" data-sr="enter bottom,over .6s,move 300px ,wait .3s">
+	<div class="Battery_manage ColumnRbg clearfix">
+		<div class="Battery_manage_L sidebarLbg fl">
+			<div class="Battery_status">
+				<h4 class="Battery_status_title">当前状态：<span>充电</span></h4>
+				<div class="Battery_status_cont clearfix">
+					<div class="Battery_vl fl">
+						<div></div>
+						<p>80%</p>
+					</div>
+					<div class="Battery_status_data fr">
+						<ul class="Battery_status_data_iterm">
+							<li>
+								<p>额定电池容量（%）</p>
+								<div class="volume_num"><span>147</span></div>
+							</li>
+							<li>
+								<p>电池总电压（V）</p>
+								<div class="volume_num"><span>147</span></div>
+							</li>
+							<li>
+								<p>电池（充）电流（A）</p>
+								<div class="volume_num"><span>147</span></div>
+							</li>
+							<li>
+								<p>电池温度（℃）</p>
+								<div class="volume_num"><span>147</span></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="physical_condition">
+				<div class="physical_condition_title">
+					<h4>实时SOC（健康状况：正常使用）</h4>
+					<p>已使用：0年2个月，预计寿命：15年</p>
+				</div>
+			</div>
+			<div class="Battery_chart"></div>
+		</div>
+		<div class="Battery_manage_R fr">
+			<div class="Battery_manage_R_top clearfix">
+				<div class="Battery_manage_R_top_title fl">电池矩阵列表（采集时间：2017-04-07 09:50）</div>
+				<ul class="matrix_list fl">
+					<li><i></i>过压</li>
+					<li><i></i>过流</li>
+					<li><i></i>过载</li>
+				</ul>
+			</div>
+			<ul class="scopevolume clearfix">
+				<li><span>最高电压（V）</span><p>500</p></li>
+				<li><span>最低电压（V）</span><p>500</p></li>
+				<li><span>最高温度（℃）</span><p>500</p></li>
+				<li><span>最低温度（℃）</span><p>500</p></li>
+				<li><span>最高电流（A）</span><p>500</p></li>
+				<li><span>最低电流（A）</span><p>500</p></li>
+			</ul>
+			<div class="Battery_manage_itermsLists">
+				<div class="itermsLists_wrap clearfix">
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string1.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string1.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string1.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string1.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string2.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string2.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string3.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string2.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string2.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string4.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string4.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string4.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string4.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Battery_manage_iterm clearfix">
+						<div class="labelmark">电池串</div>
+						<div class="Battery_manage_iterm_l fl">
+							<span>#1电池组</span>
+							<div class="statusImg"><img src="hzcfile/images/battery_string4.png" alt=""></div>
+						</div>
+						<div class="Battery_manage_iterm_R fl">
+							<ul>
+								<li><label for="">电流：</label><span>210A</span></li>
+								<li><label for="">电压：</label><span>210A</span></li>
+								<li><label for="">温度：</label><span>47℃</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="SerialResearch clearfix">
+				<input type="text" placeholder="输入序列号或别名">
+				 <button class="SerialResearchbtn Commombtn">搜索</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<!-- 数据表 -->
+<script src="hzcfile/js/charts/highcharts.js"></script>
+<script src="hzcfile/js/charts/highcharts-more.js"></script>
+<!-- 数据表 -->
+<script src="hzcfile/js/scrollReveal.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//打开加载效果
+scrollanimate();
+//空调伴侣占比
+
+// ========================图表=================================//
+//发电监控-电池管理
+ $('.Battery_chart').highcharts({
+         credits: {//禁用版权信息
+          enabled:false
+        },
+        chart: {
+            zoomType: 'xy',
+             backgroundColor: 'none',
+        },
+        title: {
+            text: ''
+        },
+         tooltip: {
+            shared: true,
+            useHTML: true,
+            headerFormat: '<small>{point.key}</small><table>',
+            pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+            '<td style="text-align: right"><b>{point.y}%</b></td></tr>',
+            footerFormat: '</table>',
+            valueDecimals: 2
+        },
+        xAxis: {
+            lineColor: '#266b8f',//x轴的颜色
+            tickColor: '#21e0f4',//刻度的颜色
+            categories: ['00:00','02:00','04:00','06:00','08:00','10:00','12:00','14:00'],
+             labels: {
+              style: {
+                  color: '#dddddd',
+                  fontSize:'12px'
+              }
+            },
+        },
+        yAxis: [{
+            labels: {
+                format: '{value}A',
+                style: {
+                    color: '#dddddd',
+                    fontSize:'12px'
+                }
+            },
+            gridLineColor: '#266b8f',//网格线
+            gridLineDashStyle: 'longdash',//网格线线条样式
+            title: {
+                text: null,
+            }
+        }],
+        plotOptions: {
+            series: {
+                stacking: 'normal',
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutBounce'
+                },
+                 fillOpacity: 0.2
+            }
+        },
+         legend: {
+             enabled: false
+        },
+        series: [{
+            type: 'area',
+            name: '实时SOC',
+            data: [31, 21.67, 31, 111, 13,31, 12, 13],
+            color:'#20ff5a'
+        }]
+    });
+
+</script>

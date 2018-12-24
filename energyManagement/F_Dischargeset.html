@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+	<meta name="description" content="古瑞瓦特新能源股份有限公司能源监控系统"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>发电监控-充电设置</title>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/font/iconfont.css" />
+	<link href="hzcfile/css/default.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<script src="hzcfile/js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/pems.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bodyH">
+<div class="header clearfix">
+	<div class="header_L clearfix fl">
+		<div class="MainLogo fl"><a href=""><img src="hzcfile/images/Pem_logo.png" alt="能源监控LOGO"></a></div>
+		<div class="MainNav fr">
+			<div class="Navcolumn">
+				<span>能源监控</span>
+				<ul class="DorpNav">
+					<li><a href="N_Home.html">监控概况</a></li>
+					<li><a href="N_Distribution.html">能源分布</a></li>
+					<li><a href="N_Partitionr.html">分区监控</a></li>
+					<li><a href="N_Classify.html">分类监控</a></li>
+					<li><a href="N_Timeinterval.html">时段监控</a></li>
+					<li><a href="N_Powerranking.html">用量排名</a></li>
+					<li><a href="N_Realtime.html">用电参数</a></li>
+					<li><a href="F_Powerconsumption.html">产量能耗</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>发电监控</span>
+				<ul class="DorpNav">
+					<li><a href="F_Photovoltaic.html">光伏监控</a></li>
+					<li><a href="F_Batterymanage.html">电池管理</a></li>
+					<li><a href="F_Dischargeset.html">充放设置</a></li>
+					<li><a href="F_Parammonitor.html">参数监控</a></li>
+					<li><a href="F_Equipcontrol.html">设备管理</a></li>
+					<li><a href="F_Failurediagnosis.html">故障诊断</a></li>
+					<li><a href="F_Scheduling.html">调度统计</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>智慧办公</span>
+				<ul class="DorpNav">
+					<li><a href="ZH_Electricbox.html">电箱管理</a></li>
+					<li><a href="ZH_Airconditionmanage.html">空调管理</a></li>
+					<li><a href="ZH_Socketmanage.html">插座管理</a></li>
+					<li><a href="ZH_Thermostatmanage.html">温控器管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header_L_end -->
+	<div class="header_M fl">
+		<h1 class="MainTitle fs36">古瑞瓦特能源管理系统</h1>
+		<div class="MainNavbtn Big"></div>
+	</div>
+	<!-- header_M_end -->
+	<div class="header_R clearfix fr">
+		<div class="MainNav fl">
+			<div class="Navcolumn">
+				<span>智能分析</span>
+				<ul class="DorpNav">
+					<li><a href="ZN_Datacompare.html">数据对比</a></li>
+					<li><a href="">数据预测(空)</a></li>
+					<li><a href="ZN_Alarmanalysis.html">告警分析</a></li>
+					<li><a href="ZN_Powerquality.html">用电质量</a></li>
+					<li><a href="ZN_Energysaving .html">节能报告</a></li>
+					<li><a href="ZN_Benchmarking.html">对标管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>数据服务</span>
+				<ul class="DorpNav">
+					<li><a href="S_Imageseeker.html">能源网图</a></li>
+					<li><a href="S_Diagnostic.html">通讯诊断</a></li>
+					<li><a href="S_Powergather.html">采集配置</a></li>
+					<li><a href="S_Electricityprice.html">电价配置</a></li>
+					<li><a href="S_Restschedule.html">作息配置</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>报表中心</span>
+				<ul class="DorpNav">
+					<li><a href="">能源产出报表</a></li>
+					<li><a href="">能源消耗报表</a></li>
+					<li><a href="">费用结算报表</a></li>
+					<li><a href="">产量能耗报表</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+		<div class="TimeArea clearfix fl">
+			<div class="division fs28 DIGI fl">10:58:42</div>
+			<div class="years DIGI fl">
+				<span>2017-09-04</span>
+				<p>星期四</p>
+			</div>
+		</div>
+		<div class="UserInfo clearfix">
+			<div class="UserInfo_name">
+				<span class="fs16 t_hide">Admin</span>
+				<ul class="UserInfo_operate">
+					<li>跟人资料</li>
+					<li>退出</li>
+				</ul>
+				<div class="UserInfo_oprbtn"></div>
+			</div>
+			<div class="UserInfo_setup"></div>
+		</div>
+	</div>
+</div>
+<!-- 头部_end -->
+
+<div class="PageLead clearfix">
+	<div class="PageLead_tlarea fl">
+		<h4 class="fs20">充电设置</h4>
+		<p class="fs12"><i>发电监控</i><span>/</span><i>充电设置</i></p>
+	</div>
+	<div class="NewsMsg clearfix fr">
+		<div class="NewsMsg_warn"><em>8</em></div>
+		<div class="NewsMsg_TextArea fs14 t_hide">实时消息：<span>总计异常台数(台):20</span></div>
+		<div class="NewsMsg_more"></div>
+	</div>
+	<!-- 换皮肤 -->
+	<div class="skin fr">
+		<i class="triangle-up"></i>
+		<div class="skintab"></div>
+		<ul class="clearfix">
+			<li id="skin_0">皮肤1</li>
+			<li id="skin_1">皮肤2</li>
+		</ul>
+	</div>
+</div>
+<!-- 页面标题_end -->
+
+<div class="ContLayout clearfix">
+	<div class="Discharge ColumnRbg" data-sr="enter bottom,over .7s,move 300px ,wait .5s">
+		<h4 class="Summary_title"><em class="dc1"></em><span>当前状态：并网模式</span><em class="dc2"></em></h4>
+		<ul class="Dischargetab">
+			<li class="cur">
+				<span>电网优先</span>
+				<a href="javascript:;" class="Detailsbtn oprbtn"></a>
+				<p class="Guide">当混储一体机在Grid-first模式下工作时，PV能量将优先满足最大电网侧的负载功率，用户可以选择在电费高的时段工作在该模式，用户需要设置模式的开启和关闭时间，以及电池SOC的结束时间，用户可以设置低于或等于电池最大输出功率的电量</p>
+				<a href="javascript:;" class="Setbtn oprbtn">
+					<div class="posbtn"></div>
+					<div class="dwsetarea">
+						<ul class="dwsetarea_top">
+							<li>
+								<span>放电功率<i></i></span>
+								<div class="Watts">
+									<input type="text" />
+									<em>%</em>
+								</div>
+							</li>
+							<li>
+								<span>放电停止<i></i></span>
+								<div class="Watts">
+									<input type="text" />
+									<em>%</em>
+								</div>
+							</li>
+						</ul><!-- dwsetarea_top_end -->
+						<ul class="dwsetarea_down">
+							<li>
+								<p>时段一</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+							<li>
+								<p>时段二</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+							<li>
+								<p>时段三</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+						</ul><!-- dwsetarea_down_end -->
+						<div class="setbtnarea">
+							<div class="comfirm"></div>
+							<div class="cancle"></div>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<span>电池优先</span>
+				<a href="javascript:;" class="Detailsbtn oprbtn"></a>
+				<p class="Guide">当混储一体机在Grid-first模式下工作时，PV能量将优先满足最大电网侧的负载功率，用户可以选择在电费高的时段工作在该模式，用户需要设置模式的开启和关闭时间，以及电池SOC的结束时间，用户可以设置低于或等于电池最大输出功率的电量</p>
+				<a href="javascript:;" class="Setbtn oprbtn">
+					<div class="posbtn"></div>
+					<div class="dwsetarea">
+						<ul class="dwsetarea_top">
+							<li>
+								<span>放电功率<i></i></span>
+								<div class="Watts">
+									<input type="text" />
+									<em>%</em>
+								</div>
+							</li>
+							<li>
+								<span>放电停止<i></i></span>
+								<div class="Watts">
+									<input type="text" />
+									<em>%</em>
+								</div>
+							</li>
+						</ul><!-- dwsetarea_top_end -->
+						<ul class="dwsetarea_down">
+							<li>
+								<p>时段一</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+							<li>
+								<p>时段二</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+							<li>
+								<p>时段三</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+						</ul><!-- dwsetarea_down_end -->
+						<div class="setbtnarea">
+							<div class="comfirm"></div>
+							<div class="cancle"></div>
+						</div>
+					</div>
+				</a>
+			</li>
+			<!-- 负载优先暂时隐藏 -->
+			<!-- <li>
+				<span>负载优先</span>
+				<a href="javascript:;" class="Detailsbtn oprbtn"></a>
+				<p class="Guide">当混储一体机在Grid-first模式下工作时，PV能量将优先满足最大电网侧的负载功率，用户可以选择在电费高的时段工作在该模式，用户需要设置模式的开启和关闭时间，以及电池SOC的结束时间，用户可以设置低于或等于电池最大输出功率的电量</p>
+				<a href="javascript:;" class="Setbtn oprbtn">
+					<div class="posbtn"></div>
+					<div class="dwsetarea">
+						<ul class="dwsetarea_top">
+							<li>
+								<span>放电功率<i></i></span>
+								<div class="Watts">
+									<input type="text" />
+									<em>%</em>
+								</div>
+							</li>
+							<li>
+								<span>放电停止<i></i></span>
+								<div class="Watts">
+									<input type="text" />
+									<em>%</em>
+								</div>
+							</li>
+						</ul>dwsetarea_top_end
+						<ul class="dwsetarea_down">
+							<li>
+								<p>时段一</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+							<li>
+								<p>时段二</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+							<li>
+								<p>时段三</p>
+								<div class="Period">
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<span>~</span>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+									<em>:</em>
+									<input type="text" placeholder="00" onkeyup="checknumber(this)"/>
+								</div>
+								<div class="usetab">
+									<span><i></i>使能</span>
+									<span>禁用<i></i></span>
+								</div>
+							</li>
+						</ul>dwsetarea_down_end
+						<div class="setbtnarea">
+							<div class="comfirm"></div>
+							<div class="cancle"></div>
+						</div>
+					</div>
+				</a>
+			</li> -->
+		</ul>
+		<div class="Discharge_trend">
+			<p><i class="trend_icon"></i>当前用电区间时间：<span> 尖：18：00-23：59</span><span>峰：13：00-17：59</span><span>谷：07：00-12：59</span><span>平：00：00-06：59</span></p>
+		</div>
+		<div class="Discharge_cont">
+			<div class="Discharge_chart Discharge_chart1"></div>
+		</div>
+		<div class="explaintips"><span>调整前</span><span>调整后</span></div>
+	</div>
+</div>
+</body>
+</html>
+<!-- 数据表 -->
+<script src="hzcfile/js/charts/highcharts.js"></script>
+<script src="hzcfile/js/charts/highcharts-more.js"></script>
+<!-- 数据表 -->
+<script src="hzcfile/js/scrollReveal.js" type="text/javascript" charset="utf-8"></script>
+<script src="hzcfile/layer/layer.js"></script><!-- layer.js -->
+<script type="text/javascript">
+//打开加载效果
+scrollanimate();
+//并网模式
+$(".Dischargetab li>span").on("click",function(){
+	var otext=$(this).text();
+	var $this=$(this);
+	layer.open({
+	  type: 1 //Page层类型
+	  ,area: ['500px', '250px']//高宽
+	  ,title: '<i class="dcl"></i><span>并网模式</span><i class="dcr"></i>'
+	  ,shade: 0.8 //遮罩透明度
+	  ,maxmin: true //允许全屏最小化
+	  ,anim: 5 //0-6的动画形式，-1不开启
+	  ,content:'<div class="layercontbox"><p class="tipsCont"><i class="ShutdownTips"></i>切换成'+otext+'?</p></div>'
+	  ,btn: ['保存', '取消']
+	  ,yes: function(index, layero){
+	  	$this.parent().addClass("cur").siblings().removeClass("cur");
+	    layer.closeAll();
+	  },btn1: function(index, layero){    
+	          
+	  }         
+	});
+})
+
+// 详情查看
+$(".Detailsbtn").on("mouseover",function(){
+	$(this).next(".Guide").show();
+})
+$(".Detailsbtn").on("mouseout",function(){
+	$(this).next(".Guide").hide();
+})
+// 设置弹框
+$(".posbtn").on("click",function(e){
+	if($(this).next(".dwsetarea").is(":hidden")){
+    	$(this).next(".dwsetarea").show();
+    }else{
+    	$(this).next(".dwsetarea").hide();
+    }
+    e.stopPropagation();
+})
+//使用、禁用
+$(".usetab").on("click",function(){
+	$(this).toggleClass("usetabCur");
+})
+//关闭按钮
+$(".cancle").on("click",function(){
+	$(this).parent().parent().hide();
+})
+
+//检查数字长度、
+function checknumber(obj){
+	var ov=$(obj).val();
+	var olen=ov.length;
+	if(olen>2){//最大长度两位
+		ov = ov.slice(0,2);
+		$(obj).val(ov);
+	}
+	if(isNaN(ov))layer.msg("时间格式有误，请核对！",{time:1000});
+}
+// ========================图表=================================//
+// 发电监控-充放设置
+ $('.Discharge_chart').highcharts({
+         credits: {//禁用版权信息
+          enabled:false
+        },
+        chart: {
+            zoomType: 'xy',
+             backgroundColor: 'none',
+              marginBottom: 65// 底部边距
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            gridLineDashStyle: 'longdash',//网格线线条样式
+            gridLineWidth: 1,//网格线叠层
+            gridZIndex: 4,
+            gridLineColor: '#266b8f',//网格线
+            lineColor: '#266b8f',//x轴的颜色
+            tickColor: '#21e0f4',//刻度的颜色
+            categories: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
+             labels: {
+              style: {
+                  color: '#ffffff',
+                  fontSize:'12px'
+              }
+            }      
+        },
+        tooltip: {
+            shared: true,
+            useHTML: true,
+            headerFormat: '<small>{point.key}</small><table>',
+            pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+            '<td style="text-align: right"><b>{point.y}%</b></td></tr>',
+            footerFormat: '</table>',
+            valueDecimals: 2
+        },
+        yAxis: [{
+            labels: {
+                format: '{value}%',
+                style: {
+                    color: '#ffffff',
+                    fontSize:'12px'
+                }
+            },
+            gridLineColor: '#266b8f',//网格线
+            gridLineDashStyle: 'longdash',//网格线线条样式
+             title: {
+                text: '单位（%）',
+                style: {
+                  color: '#ffffff',
+                  fontSize:'12px'
+              }
+            }
+        }],
+        plotOptions: {
+            series: {
+                stacking: 'normal',
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutBounce'//效果
+                },
+                marker: {
+                    fillColor: '',//标点颜色
+                    lineWidth: 2,
+                    lineColor: '#FFFFFF' // 标点边框颜色
+                },
+                fillOpacity: 0.7//透明度
+            }
+        },
+        legend: {
+             enabled: false
+        },
+        series: [{
+            type: 'area',
+            name:"充电",
+            data: [31, 21.67, 31, 11, 13, 31, 12, 13, 16, 31,44,28],
+            color:'#2f83e4'
+        }, {
+            type: 'area',
+            name:"放电",
+            data: [31, 12, 31, 14, 22,13, 28, 27, 61, 14,8,46],
+            color:'#4bb158'
+        }]
+    });
+</script>

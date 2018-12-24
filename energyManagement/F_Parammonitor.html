@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+	<meta name="description" content="古瑞瓦特新能源股份有限公司能源监控系统"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>发电监控-参数监控</title>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/font/iconfont.css" />
+	<link href="hzcfile/css/default.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<script src="hzcfile/js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/pems.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bodyH">
+<div class="header clearfix">
+	<div class="header_L clearfix fl">
+		<div class="MainLogo fl"><a href=""><img src="hzcfile/images/Pem_logo.png" alt="能源监控LOGO"></a></div>
+		<div class="MainNav fr">
+			<div class="Navcolumn">
+				<span>能源监控</span>
+				<ul class="DorpNav">
+					<li><a href="N_Home.html">监控概况</a></li>
+					<li><a href="N_Distribution.html">能源分布</a></li>
+					<li><a href="N_Partitionr.html">分区监控</a></li>
+					<li><a href="N_Classify.html">分类监控</a></li>
+					<li><a href="N_Timeinterval.html">时段监控</a></li>
+					<li><a href="N_Powerranking.html">用量排名</a></li>
+					<li><a href="N_Realtime.html">用电参数</a></li>
+					<li><a href="F_Powerconsumption.html">产量能耗</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>发电监控</span>
+				<ul class="DorpNav">
+					<li><a href="F_Photovoltaic.html">光伏监控</a></li>
+					<li><a href="F_Batterymanage.html">电池管理</a></li>
+					<li><a href="F_Dischargeset.html">充放设置</a></li>
+					<li><a href="F_Parammonitor.html">参数监控</a></li>
+					<li><a href="F_Equipcontrol.html">设备管理</a></li>
+					<li><a href="F_Failurediagnosis.html">故障诊断</a></li>
+					<li><a href="F_Scheduling.html">调度统计</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>智慧办公</span>
+				<ul class="DorpNav">
+					<li><a href="ZH_Electricbox.html">电箱管理</a></li>
+					<li><a href="ZH_Airconditionmanage.html">空调管理</a></li>
+					<li><a href="ZH_Socketmanage.html">插座管理</a></li>
+					<li><a href="ZH_Thermostatmanage.html">温控器管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header_L_end -->
+	<div class="header_M fl">
+		<h1 class="MainTitle fs36">古瑞瓦特能源管理系统</h1>
+		<div class="MainNavbtn Big"></div>
+	</div>
+	<!-- header_M_end -->
+	<div class="header_R clearfix fr">
+		<div class="MainNav fl">
+			<div class="Navcolumn">
+				<span>智能分析</span>
+				<ul class="DorpNav">
+					<li><a href="ZN_Datacompare.html">数据对比</a></li>
+					<li><a href="">数据预测(空)</a></li>
+					<li><a href="ZN_Alarmanalysis.html">告警分析</a></li>
+					<li><a href="ZN_Powerquality.html">用电质量</a></li>
+					<li><a href="ZN_Energysaving .html">节能报告</a></li>
+					<li><a href="ZN_Benchmarking.html">对标管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>数据服务</span>
+				<ul class="DorpNav">
+					<li><a href="S_Imageseeker.html">能源网图</a></li>
+					<li><a href="S_Diagnostic.html">通讯诊断</a></li>
+					<li><a href="S_Powergather.html">采集配置</a></li>
+					<li><a href="S_Electricityprice.html">电价配置</a></li>
+					<li><a href="S_Restschedule.html">作息配置</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>报表中心</span>
+				<ul class="DorpNav">
+					<li><a href="">能源产出报表</a></li>
+					<li><a href="">能源消耗报表</a></li>
+					<li><a href="">费用结算报表</a></li>
+					<li><a href="">产量能耗报表</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+		<div class="TimeArea clearfix fl">
+			<div class="division fs28 DIGI fl">10:58:42</div>
+			<div class="years DIGI fl">
+				<span>2017-09-04</span>
+				<p>星期四</p>
+			</div>
+		</div>
+		<div class="UserInfo clearfix">
+			<div class="UserInfo_name">
+				<span class="fs16 t_hide">Admin</span>
+				<ul class="UserInfo_operate">
+					<li>跟人资料</li>
+					<li>退出</li>
+				</ul>
+				<div class="UserInfo_oprbtn"></div>
+			</div>
+			<div class="UserInfo_setup"></div>
+		</div>
+	</div>
+</div>
+<!-- 头部_end -->
+<div class="PageLead clearfix">
+	<div class="PageLead_tlarea fl">
+		<h4 class="fs20">参数监控</h4>
+		<p class="fs12"><i>发电监控</i><span>/</span><i>参数监控</i></p>
+	</div>
+	<div class="NewsMsg clearfix fr">
+		<div class="NewsMsg_warn"><em>8</em></div>
+		<div class="NewsMsg_TextArea fs14 t_hide">实时消息：<span>总计异常台数(台):20</span></div>
+		<div class="NewsMsg_more"></div>
+	</div>
+	<!-- 换皮肤 -->
+	<div class="skin fr">
+		<i class="triangle-up"></i>
+		<div class="skintab"></div>
+		<ul class="clearfix">
+			<li id="skin_0">皮肤1</li>
+			<li id="skin_1">皮肤2</li>
+		</ul>
+	</div>
+</div>
+<!-- 页面标题_end -->
+
+<div class="ContLayout clearfix">
+	<div class="Navigationbar ContLayout_L" data-sr="enter left,over .5s,move 500px ,wait .2s">
+		<div class="SearchArea">
+			 <input type="text" class="SearchArea_input" placeholder="搜索区域" />
+			 <button class="SearchAreabtn"></button>
+		</div>
+		<!-- 搜索_end -->
+		<div class="Fac_Par_menu">
+			<div class="Fac_Iterms">
+				<h4><span>逆变器</span> <i></i></h4>
+				<ul>
+					<li><span>AH25412665</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>BH52698977</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>CH25412665</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>DH52698977</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>EH25412665</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>FH52698977</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>GH25412665</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>HH52698977</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+				</ul>
+			</div>
+			<div class="Fac_Iterms">
+				<h4><span>变压器</span> <i></i></h4>
+				<ul>
+					<li><span>AH25412665</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>BH52698977</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>CH25412665</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>DH52698977</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+					<li><span>EH25412665</span><em class="iconfont icon-xuanze-duoxuan" atrrvs="0"></em></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ContLayout_R">
+		<div class="TimeSearchcolumn" data-sr="enter top,over .7s,move 50px ,wait .2s"> 
+			<div class="TimeTab">
+				<span>时</span>
+				<span class="cur">日</span>
+				<span>月</span>
+			</div>
+			<div class="TimeSearchWrap mt1 clearfix fl">
+				<div class="TimeSearchbox"><input placeholder="请输入日期" class="laydate-icon" onclick="LayDatefn()"></div>
+				<em class="Ptsign">-</em>
+				<div class="TimeSearchbox"><input placeholder="请输入日期" class="laydate-icon" onclick="LayDatefn()"></div>
+				<button class="TimeSearchbtn Commombtn">查询</button>
+			</div>
+		</div>
+		<div class="Parammonitor ColumnRbg" data-sr="enter bottom,over .8s,move 500px ,wait .2s">
+			<div id="ParamChart" class="ParamChart"></div>
+			<div class="Fac_series_addbox clearfix">
+				<!-- 设备数据 -->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<!-- 数据表 -->
+<script src="hzcfile/js/charts/highcharts.js"></script>
+<script src="hzcfile/js/charts/highcharts-more.js"></script>
+<!-- 数据表 -->
+<script src="hzcfile/layer/laydate/laydate.js" type="text/javascript" charset="utf-8"></script><!-- 日期js -->
+<script src="hzcfile/js/scrollReveal.js" type="text/javascript" charset="utf-8"></script>
+<script src="hzcfile/layer/layer.js"></script><!-- layer.js -->
+<script type="text/javascript">
+//打开加载效果
+scrollanimate();
+//时、日、月切换（时间搜索）
+LayDateTab();
+
+// ==========================数据表S=================================//
+var chart = new Highcharts.Chart('ParamChart', {
+    plotOptions: {
+        series: {
+            events: {
+                legendItemClick: function () {
+                    return false;
+                }
+            }
+        }
+    },
+    chart: {
+            backgroundColor: 'none',
+    },
+    credits: {//禁用版权信息
+      enabled:false
+    },
+    title: {
+        text: null,
+    },
+    xAxis: {
+        categories: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
+        gridLineDashStyle: 'longdash',//网格线线条样式
+        gridLineWidth: 1,//网格线叠层
+        gridZIndex: 4,
+        gridLineColor: '#266b8f',//网格线
+        lineColor: '#266b8f',//x轴的颜色
+        tickColor: '#21e0f4',//刻度的颜色
+        labels: {
+          style: {
+              color: '#ffffff',
+              fontSize:'12px'
+          }
+        }      
+    },
+    yAxis: {
+        title: {
+            text: '电压 (V)',
+            style: {
+                  color: '#ffffff',
+                  fontSize:'12px'
+            }
+        },
+        gridLineColor: '#266b8f',//网格线
+        gridLineDashStyle: 'longdash',//网格线线条样式
+        plotLines: [{
+            value: 0,
+            width: 1,
+            color: '#ffffff'
+        }],
+        labels: {
+          style: {
+              color: '#ffffff',
+              fontSize:'12px'
+          }
+        }      
+    },
+    tooltip: {
+            shared: true,
+            useHTML: true,
+            headerFormat: '<small>{point.key}</small><table>',
+            pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+            '<td style="text-align: right"><b>{point.y}V</b></td></tr>',
+            footerFormat: '</table>',
+            valueDecimals: 2
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+        borderWidth: 0,
+        itemStyle : {
+	        'fontSize':'11px',
+	         color: '#ffffff'
+	    },
+	    itemHoverStyle:{ //鼠标移上去颜色
+		    color:'#ffffff'    
+		}
+    },
+    series: [{
+        name: 'test1',
+        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+    }, {
+        name: 'test2',
+        data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+    }, {
+        name: 'test3',
+        data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+    }]
+});
+
+// ==========================数据表E=================================//
+
+function addHtml(Dwtype,Dwname){
+	var Ohtml='<div class="FacIterms '+Dwname+'" attrdata="'+Dwname+'">'+//设备名称赋值给attrdata（通过attrdata移除对应数据）
+			'<h4>'+Dwtype+'（'+Dwname+'）<i></i></h4>'+
+			'<ul>'+
+				'<li>'+
+					'<em class="lx1"><img src="hzcfile/images/line1.png" alt=""></em>'+
+					'<div class="DvOprArea">'+
+						'<span><i class="iconfont wx"></i>pac</span>'+
+						'<span><i class="iconfont wx"></i>pv功率</span>'+
+						'<span><i class="iconfont wx"></i>R相功率</span>'+
+						'<span><i class="iconfont wx"></i>S相功率</span>'+
+						'<span><i class="iconfont wx"></i>T相功率</span>'+
+					'</div>'+
+				'</li>'+
+				'<li>'+
+					'<em class="lx2"><img src="hzcfile/images/line2.png" alt=""></em>'+
+					'<div class="DvOprArea">'+
+						'<span><i class="iconfont wx"></i>pv1电压</span>'+
+						'<span><i class="iconfont wx"></i>pv2电压</span>'+
+						'<span><i class="iconfont wx"></i>pv3电压</span>'+
+					'</div>'+
+				'</li>'+
+				'<li>'+
+					'<em class="lx3"><img src="hzcfile/images/line3.png" alt=""></em>'+
+					'<div class="DvOprArea">'+
+						'<span><i class="iconfont wx"></i>pv1电流</span>'+
+						'<span><i class="iconfont wx"></i>pv2电流</span>'+
+						'<span><i class="iconfont wx"></i>pv3电流</span>'+
+					'</div>'+
+				'</li>'+
+			'</ul>'+
+			'<input type="hidden" class="mark" value=""/>'
+		'</div>';
+	return Ohtml;
+}
+
+FacMenu();
+function FacMenu(){
+	var FacUl=$(".Fac_Par_menu ul");
+	var FacLi=$(".Fac_Iterms ul li");
+	var FacEm=FacLi.find("em");
+	var Facbox=$(".Fac_series_addbox");//右侧添加系列框
+	
+	FacLi.on("click",function(){
+		var Itermtext=$(this).find("em");
+		var Dwtype=$(this).parent().prev("h4").find("span").text();//设备类型
+		var Dwname=$(this).find("span").text();//设备名称
+		var Ohtml=addHtml(Dwtype,Dwname);
+		Itermtext.toggleClass("cur");
+		Itermtext.attr("atrrvs",Itermtext.hasClass("cur")?1:0);
+		if(Itermtext.attr("atrrvs")==1){
+			Facbox.append(Ohtml);
+			AddlineChart(Dwname);
+		}else{
+			Facbox.find(".FacIterms[attrdata='"+Dwname+"']").remove();//移除相对应的设备数据
+		}
+	})
+}
+
+function AddlineChart(Dwname){
+	var oprbtn=$("."+Dwname).find(".DvOprArea").find("i");
+	oprbtn.on("click",function(){
+		if($(this).hasClass("wx")){
+			$(this).addClass("xz").removeClass("wx");
+			add(Dwname);//添加线型图标数据
+		}else{
+			$(this).addClass("wx").removeClass("xz");
+			remove(Dwname);//删除线型图标数据
+		}
+	})
+}
+
+//添加线型图标（数据）
+function add(Dwname) {
+	$.ajax({  
+        url:"http://ons.me/tools/dropload/json.php",
+        type: "post",  
+        dataType: "json",  
+        data: null,  
+        cache: false,  
+        success: function(data){ 
+         //仅仅是为了演示变化的内容
+          var data=[];
+          for(var i=0;i<12;i++){
+          	data.push(Math.floor(Math.random()*20));
+          }
+          //仅仅是为了演示变化的内容
+          chart.addSeries({
+		        name: Dwname,//设备名称
+		        data:data
+		   })
+        }  
+    }); 
+}
+//删除线型图标（数据）
+function remove(Dwname) {
+    for( index in chart.series ){
+        if(chart.series[index].name == Dwname){
+            chart.series[index].remove()
+        }
+    }
+}
+</script>

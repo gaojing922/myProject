@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+	<meta name="description" content="古瑞瓦特新能源股份有限公司能源监控系统"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>智慧办公-插座管理</title>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/font/iconfont.css" />
+	<link href="hzcfile/css/default.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<script src="hzcfile/js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/pems.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/timedropper.css" />
+</head>
+<body class="bodyH">
+<div class="header clearfix">
+	<div class="header_L clearfix fl">
+		<div class="MainLogo fl"><a href=""><img src="hzcfile/images/Pem_logo.png" alt="能源监控LOGO"></a></div>
+		<div class="MainNav fr">
+			<div class="Navcolumn">
+				<span>能源监控</span>
+				<ul class="DorpNav">
+					<li><a href="N_Home.html">监控概况</a></li>
+					<li><a href="N_Distribution.html">能源分布</a></li>
+					<li><a href="N_Partitionr.html">分区监控</a></li>
+					<li><a href="N_Classify.html">分类监控</a></li>
+					<li><a href="N_Timeinterval.html">时段监控</a></li>
+					<li><a href="N_Powerranking.html">用量排名</a></li>
+					<li><a href="N_Realtime.html">用电参数</a></li>
+					<li><a href="F_Powerconsumption.html">产量能耗</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>发电监控</span>
+				<ul class="DorpNav">
+					<li><a href="F_Photovoltaic.html">光伏监控</a></li>
+					<li><a href="F_Batterymanage.html">电池管理</a></li>
+					<li><a href="F_Dischargeset.html">充放设置</a></li>
+					<li><a href="F_Parammonitor.html">参数监控</a></li>
+					<li><a href="F_Equipcontrol.html">设备管理</a></li>
+					<li><a href="F_Failurediagnosis.html">故障诊断</a></li>
+					<li><a href="F_Scheduling.html">调度统计</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>智慧办公</span>
+				<ul class="DorpNav">
+					<li><a href="ZH_Electricbox.html">电箱管理</a></li>
+					<li><a href="ZH_Airconditionmanage.html">空调管理</a></li>
+					<li><a href="ZH_Socketmanage.html">插座管理</a></li>
+					<li><a href="ZH_Thermostatmanage.html">温控器管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header_L_end -->
+	<div class="header_M fl">
+		<h1 class="MainTitle fs36">古瑞瓦特能源管理系统</h1>
+		<div class="MainNavbtn Big"></div>
+	</div>
+	<!-- header_M_end -->
+	<div class="header_R clearfix fr">
+		<div class="MainNav fl">
+			<div class="Navcolumn">
+				<span>智能分析</span>
+				<ul class="DorpNav">
+					<li><a href="ZN_Datacompare.html">数据对比</a></li>
+					<li><a href="">数据预测(空)</a></li>
+					<li><a href="ZN_Alarmanalysis.html">告警分析</a></li>
+					<li><a href="ZN_Powerquality.html">用电质量</a></li>
+					<li><a href="ZN_Energysaving .html">节能报告</a></li>
+					<li><a href="ZN_Benchmarking.html">对标管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>数据服务</span>
+				<ul class="DorpNav">
+					<li><a href="S_Imageseeker.html">能源网图</a></li>
+					<li><a href="S_Diagnostic.html">通讯诊断</a></li>
+					<li><a href="S_Powergather.html">采集配置</a></li>
+					<li><a href="S_Electricityprice.html">电价配置</a></li>
+					<li><a href="S_Restschedule.html">作息配置</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>报表中心</span>
+				<ul class="DorpNav">
+					<li><a href="">能源产出报表</a></li>
+					<li><a href="">能源消耗报表</a></li>
+					<li><a href="">费用结算报表</a></li>
+					<li><a href="">产量能耗报表</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+		<div class="TimeArea clearfix fl">
+			<div class="division fs28 DIGI fl">10:58:42</div>
+			<div class="years DIGI fl">
+				<span>2017-09-04</span>
+				<p>星期四</p>
+			</div>
+		</div>
+		<div class="UserInfo clearfix">
+			<div class="UserInfo_name">
+				<span class="fs16 t_hide">Admin</span>
+				<ul class="UserInfo_operate">
+					<li>跟人资料</li>
+					<li>退出</li>
+				</ul>
+				<div class="UserInfo_oprbtn"></div>
+			</div>
+			<div class="UserInfo_setup"></div>
+		</div>
+	</div>
+</div>
+<!-- 头部_end -->
+
+<div class="PageLead clearfix">
+	<div class="PageLead_tlarea fl">
+		<h4 class="fs20">插座管理</h4>
+		<p class="fs12"><i>智慧办公</i><span>/</span><i>插座管理</i></p>
+	</div>
+	<div class="NewsMsg clearfix fr">
+		<div class="NewsMsg_warn"><em>8</em></div>
+		<div class="NewsMsg_TextArea fs14 t_hide">实时消息：<span>总计异常台数(台):20</span></div>
+		<div class="NewsMsg_more"></div>
+	</div>
+	<!-- 换皮肤 -->
+	<div class="skin fr">
+		<i class="triangle-up"></i>
+		<div class="skintab"></div>
+		<ul class="clearfix">
+			<li id="skin_0">皮肤1</li>
+			<li id="skin_1">皮肤2</li>
+		</ul>
+	</div>
+</div>
+<!-- 页面标题_end -->
+
+<div class="ContLayout clearfix" id="Socketmanage">
+	<div class="Aircondition">
+		<div class="Aircondition_top clearfix" data-sr="enter left,over .7s,move 300px ,wait .2s">
+			<div class="district_select fl">
+				<label for="">当前区域：</label>
+				<select class="SelectArea">
+				  <option value ="volvo">全部</option>
+				  <option value ="saab">深圳</option>
+				  <option value="opel">广州</option>
+				  <option value="audi">北京</option>
+				</select>
+			</div>
+			<div class="Keywordresearch fl">
+				<input type="text" class="TextField" placeholder="请输入关键词！"/>
+				<button class="rsbtn Commombtn">查询</button>
+			</div>
+		</div>
+		<div class="Aircondition_cont clearfix" data-sr="enter bottom,over .7s,move 300px ,wait .2s">
+			<div class="Aircondition_cont_R clearfix">
+				<div class="Aircondition_items_operate clearfix" data-sr="enter top,over .7s,move 300px ,wait .4s">
+					<div class="Aircondition_items_operate_l fl"><span>空调矩阵列表（采集时间：<em>2017-04-07 09:50</em>）</span></div>
+					<div class="Aircondition_items_operate_r fr Pems_btn SwitchOn" data="0">
+						批量：
+						<a href="javascript:;" class="offbtn">关机</a><em>/</em>
+						<a href="javascript:;" class="onbtn">开机</a>
+					</div>
+					<ul class="SwitchBtn">
+						<li style="display:block"><a href="javascript:;" class="Pems_btn btn1" onclick="shutdownFn()">关机</a><a href="javascript:;" class="Pems_btn btn2">取消</a></li>
+						<li><a href="javascript:;" class="Pems_btn btn1" onclick="shutonFn()">开机</a><a href="javascript:;" class="Pems_btn btn2">取消</a></li>
+					</ul>
+				</div>
+				<div class="Aircondition_items_lists clearfix">
+					<div class="Aircondition_items clearfix" name="1">
+						<a href="javascript:;" class="Aircondition_items_selectbtn"></a>
+						<a href="javascript:;" class="Aircondition_items_seedt"></a>
+						<ul class="Aircondition_setUpbtn">
+							<li onclick="SingleshutonFn(this)"><i></i><span>开机</span></li>
+							<li onclick="SingleShutdownFn(this)"><i></i><span>关机</span></li>
+							<li onclick="ocondition.ocondition_Setting()"><i></i><span>设置</span></li>
+							<li onclick="ocondition.ocondition_Delete()"><i></i><span>删除</span></li>
+						</ul>
+						<div class="Aircondition_items_msg" status="1">
+							<span class="Aircondition_items_msg_name">#1插座</span>
+							<div class="Aircondition_items_msg_img online"></div>
+							<div class="Aircondition_items_msg_status">
+								<p class="njstatus">通讯情况</p>
+								<span class="tus1">正常</span>
+								<p class="yxstatus">当前状态</p>
+								<span class="tus2">开启</span>
+							</div>
+						</div>
+						<div class="Aircondition_items_parameter fr">
+							<ul>
+								<li><label for="">名称：</label><span>超出隐藏超出隐藏超出隐藏超出隐藏</span></li>
+								<li><label for="">位置：</label><span>A栋</span></li>
+								<li><label for="">当前电流：</label><span>41kW</span></li>
+								<li><label for="">当前功率：</label><span>25</span></li>
+								<li><label for="">当前电压：</label><span>25</span></li>
+								<li><label for="">本月用电量：</label><span>255</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Aircondition_items clearfix" name="1">
+						<a href="javascript:;" class="Aircondition_items_selectbtn"></a>
+						<a href="javascript:;" class="Aircondition_items_seedt"></a>
+						<ul class="Aircondition_setUpbtn">
+							<li onclick="SingleshutonFn(this)"><i></i><span>开机</span></li>
+							<li onclick="SingleShutdownFn(this)"><i></i><span>关机</span></li>
+							<li onclick="ocondition.ocondition_Setting()"><i></i><span>设置</span></li>
+							<li onclick="ocondition.ocondition_Delete()"><i></i><span>删除</span></li>
+						</ul>
+						<div class="Aircondition_items_msg" status="0">
+							<span class="Aircondition_items_msg_name">#1插座</span>
+							<div class="Aircondition_items_msg_img outline"></div>
+							<div class="Aircondition_items_msg_status">
+								<p class="njstatus">通讯情况</p>
+								<span class="tus1">离线</span>
+								<p class="yxstatus">当前状态</p>
+								<span class="tus2">关闭</span>
+							</div>
+						</div>
+						<div class="Aircondition_items_parameter fr">
+							<ul>
+								<li><label for="">名称：</label><span>超出隐藏超出隐藏超出隐藏超出隐藏</span></li>
+								<li><label for="">位置：</label><span>A栋</span></li>
+								<li><label for="">当前电流：</label><span>41kW</span></li>
+								<li><label for="">当前功率：</label><span>25</span></li>
+								<li><label for="">当前电压：</label><span>25</span></li>
+								<li><label for="">本月用电量：</label><span>255</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Aircondition_items clearfix" name="1">
+						<a href="javascript:;" class="Aircondition_items_selectbtn"></a>
+						<a href="javascript:;" class="Aircondition_items_seedt"></a>
+						<ul class="Aircondition_setUpbtn">
+							<li onclick="SingleshutonFn(this)"><i></i><span>开机</span></li>
+							<li onclick="SingleShutdownFn(this)"><i></i><span>关机</span></li>
+							<li onclick="ocondition.ocondition_Setting()"><i></i><span>设置</span></li>
+							<li onclick="ocondition.ocondition_Delete()"><i></i><span>删除</span></li>
+						</ul>
+						<div class="Aircondition_items_msg" status="1">
+							<span class="Aircondition_items_msg_name">#1插座</span>
+							<div class="Aircondition_items_msg_img online"></div>
+							<div class="Aircondition_items_msg_status">
+								<p class="njstatus">通讯情况</p>
+								<span class="tus1">正常</span>
+								<p class="yxstatus">当前状态</p>
+								<span class="tus2">开启</span>
+							</div>
+						</div>
+						<div class="Aircondition_items_parameter fr">
+							<ul>
+								<li><label for="">名称：</label><span>超出隐藏超出隐藏超出隐藏超出隐藏</span></li>
+								<li><label for="">位置：</label><span>A栋</span></li>
+								<li><label for="">当前电流：</label><span>41kW</span></li>
+								<li><label for="">当前功率：</label><span>25</span></li>
+								<li><label for="">当前电压：</label><span>25</span></li>
+								<li><label for="">本月用电量：</label><span>255</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Aircondition_items clearfix" name="1">
+						<a href="javascript:;" class="Aircondition_items_selectbtn"></a>
+						<a href="javascript:;" class="Aircondition_items_seedt"></a>
+						<ul class="Aircondition_setUpbtn">
+							<li onclick="SingleshutonFn(this)"><i></i><span>开机</span></li>
+							<li onclick="SingleShutdownFn(this)"><i></i><span>关机</span></li>
+							<li onclick="ocondition.ocondition_Setting()"><i></i><span>设置</span></li>
+							<li onclick="ocondition.ocondition_Delete()"><i></i><span>删除</span></li>
+						</ul>
+						<div class="Aircondition_items_msg" status="0">
+							<span class="Aircondition_items_msg_name">#1插座</span>
+							<div class="Aircondition_items_msg_img outline"></div>
+							<div class="Aircondition_items_msg_status">
+								<p class="njstatus">通讯情况</p>
+								<span class="tus1">离线</span>
+								<p class="yxstatus">当前状态</p>
+								<span class="tus2">关闭</span>
+							</div>
+						</div>
+						<div class="Aircondition_items_parameter fr">
+							<ul>
+								<li><label for="">名称：</label><span>超出隐藏超出隐藏超出隐藏超出隐藏</span></li>
+								<li><label for="">位置：</label><span>A栋</span></li>
+								<li><label for="">当前电流：</label><span>41kW</span></li>
+								<li><label for="">当前功率：</label><span>25</span></li>
+								<li><label for="">当前电压：</label><span>25</span></li>
+								<li><label for="">本月用电量：</label><span>255</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Aircondition_items clearfix" name="1">
+						<a href="javascript:;" class="Aircondition_items_selectbtn"></a>
+						<a href="javascript:;" class="Aircondition_items_seedt"></a>
+						<ul class="Aircondition_setUpbtn">
+							<li onclick="SingleshutonFn(this)"><i></i><span>开机</span></li>
+							<li onclick="SingleShutdownFn(this)"><i></i><span>关机</span></li>
+							<li onclick="ocondition.ocondition_Setting()"><i></i><span>设置</span></li>
+							<li onclick="ocondition.ocondition_Delete()"><i></i><span>删除</span></li>
+						</ul>
+						<div class="Aircondition_items_msg" status="1">
+							<span class="Aircondition_items_msg_name">#1插座</span>
+							<div class="Aircondition_items_msg_img online"></div>
+							<div class="Aircondition_items_msg_status">
+								<p class="njstatus">通讯情况</p>
+								<span class="tus1">正常</span>
+								<p class="yxstatus">当前状态</p>
+								<span class="tus2">开启</span>
+							</div>
+						</div>
+						<div class="Aircondition_items_parameter fr">
+							<ul>
+								<li><label for="">名称：</label><span>超出隐藏超出隐藏超出隐藏超出隐藏</span></li>
+								<li><label for="">位置：</label><span>A栋</span></li>
+								<li><label for="">当前电流：</label><span>41kW</span></li>
+								<li><label for="">当前功率：</label><span>25</span></li>
+								<li><label for="">当前电压：</label><span>25</span></li>
+								<li><label for="">本月用电量：</label><span>255</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="Aircondition_items clearfix" name="1">
+						<a href="javascript:;" class="Aircondition_items_selectbtn"></a>
+						<a href="javascript:;" class="Aircondition_items_seedt"></a>
+						<ul class="Aircondition_setUpbtn">
+							<li onclick="SingleshutonFn(this)"><i></i><span>开机</span></li>
+							<li onclick="SingleShutdownFn(this)"><i></i><span>关机</span></li>
+							<li onclick="ocondition.ocondition_Setting()"><i></i><span>设置</span></li>
+							<li onclick="ocondition.ocondition_Delete()"><i></i><span>删除</span></li>
+						</ul>
+						<div class="Aircondition_items_msg" status="0">
+							<span class="Aircondition_items_msg_name">#1插座</span>
+							<div class="Aircondition_items_msg_img outline"></div>
+							<div class="Aircondition_items_msg_status">
+								<p class="njstatus">通讯情况</p>
+								<span class="tus1">离线</span>
+								<p class="yxstatus">当前状态</p>
+								<span class="tus2">关闭</span>
+							</div>
+						</div>
+						<div class="Aircondition_items_parameter fr">
+							<ul>
+								<li><label for="">名称：</label><span>超出隐藏超出隐藏超出隐藏超出隐藏</span></li>
+								<li><label for="">位置：</label><span>A栋</span></li>
+								<li><label for="">当前电流：</label><span>41kW</span></li>
+								<li><label for="">当前功率：</label><span>25</span></li>
+								<li><label for="">当前电压：</label><span>25</span></li>
+								<li><label for="">本月用电量：</label><span>255</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="loadbox"><img src="hzcfile/images/load.gif" alt="正在加载中。。。" class="loading"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 空调设置 -->
+<div id="mypopId" style="display:none;">
+	<ul class="public_form">
+		<li><label for="">名称：</label><input type="text" value="6666666" /></li>
+		<li>
+			<label for="">划分区域：</label>
+			<select class="zoning">
+			  <option value ="volvo">Volvo</option>
+			  <option value ="saab">Saab</option>
+			  <option value="opel">Opel</option>
+			  <option value="audi">Audi</option>
+			</select>
+		</li>
+		<li><label for="">温度：</label><input type="text" value="6666666" /></li>
+		<li><label for="">开机固定温度：</label><input type="text" value="6666666" /></li>
+		<li><label for="" >定时关机：</label><input type="text" onclick="timer(this)" readonly="" placeholder="输入关机时间！"></li>
+		<li><label for="">定时开机：</label><input type="text" onclick="timer(this)" readonly="" placeholder="输入开机时间！"></li>
+		<li><label for="">风速：</label><input type="text" value="6666666" /></li>
+		<li>
+			<label for="">循环：</label>
+			<span style="margin-right:10px;"><input type="radio" value="bm" name="jizai" checked/>一次</span>
+			<span><input type="radio" value="bm" name="jizai"/>永久</span>
+		</li>
+	</ul>
+	<div class="weekselect">
+		<span onclick="wk(this)">星期一</span>
+		<span onclick="wk(this)">星期二</span>
+		<span onclick="wk(this)">星期三</span>
+		<span onclick="wk(this)">星期四</span>
+		<span onclick="wk(this)">星期五</span>
+		<span onclick="wk(this)">星期六</span>
+		<span onclick="wk(this)">星期七</span>
+	</div>
+</div>
+</body>
+</html>
+<script src="hzcfile/js/scrollReveal.js" type="text/javascript" charset="utf-8"></script>
+<script src="hzcfile/layer/layer.js"></script><!-- layer.js -->
+<script src="hzcfile/js/timedropper.js"></script><!-- timedropper.js -->
+<script type="text/javascript">
+//打开加载效果
+scrollshow();
+scrollanimate();
+//空调矩阵列表展示页面
+function scrollshow(){
+	var otems=$(".Aircondition_items_lists");
+	var anit=["enter bottom,over .7s,move 300px ,wait .4s",
+				"enter bottom,over .7s,move 300px ,wait .5s",
+				"enter bottom,over .7s,move 300px ,wait .6s",
+				"enter bottom,over .7s,move 300px ,wait .7s",
+				"enter bottom,over .7s,move 300px ,wait .8s",
+				"enter bottom,over .7s,move 300px ,wait .9s",
+				"enter bottom,over .7s,move 300px ,wait 1s",
+				"enter bottom,over .7s,move 300px ,wait 1.1s",
+				"enter bottom,over .7s,move 300px ,wait 1.2s",
+				"enter bottom,over .7s,move 300px ,wait 1.3s"
+	        ];
+	for(var i=0;i<9;i++){
+		otems.find(".Aircondition_items").eq(i).attr("data-sr",anit[i]);
+	}
+}
+
+//滚动加载更多
+$(".Aircondition_items_lists").scroll(function(){
+	var $this =$(this),
+	viewH =$(this).height(),//可见高度
+	contentH =$(this).get(0).scrollHeight,//内容高度
+	scrollTop =$(this).scrollTop();//滚动高度
+	if(contentH - viewH - scrollTop <= 10) {
+		$('.loading').show();
+		var cont=$(".Aircondition_items").prop("outerHTML");
+ 		setTimeout(function(){
+ 			for(var i=0;i<8;i++){
+ 				$(".Aircondition_items_lists").append(cont);
+ 				$('.loading').hide();
+ 			}
+ 		},2000);
+	}
+});
+
+//开关机操作
+operateFn();
+function operateFn(){
+	var offbtn=$(".SwitchOn .offbtn");//关机按钮
+	var onbtn=$(".SwitchOn .onbtn");//开机按钮
+	var SwitchBtn=$(".SwitchBtn");//开关机切换操作按钮
+	var items_operatebtn=$(".Aircondition_items_operate_r");//开关机操作按钮框
+	var cancelbtn=SwitchBtn.children("li").find(".btn2");//取消批量开关机
+	var items_selectbtn=$(".Aircondition_items_selectbtn");//选中状态按钮
+	var operationbtn=$(".Aircondition_items_seedt");//单个关机按钮
+	var setUpbtn=$(".Aircondition_setUpbtn");
+	//批量关机
+	offbtn.on("click",function(){
+		$(this).parent().hide();
+		SwitchBtn.show();
+		SwitchBtn.find("li").eq(0).show();
+		SwitchBtn.find("li").eq(1).hide();
+		items_selectbtn.show();
+	})
+	//批量开机
+	onbtn.on("click",function(){
+		$(this).parent().hide();
+		SwitchBtn.show();
+		SwitchBtn.find("li").eq(1).show();
+		SwitchBtn.find("li").eq(0).hide();
+		items_selectbtn.show();
+	})
+	//取消批量开关机
+	cancelbtn.on("click",function(){
+		items_operatebtn.show();
+		SwitchBtn.hide();
+		items_selectbtn.hide();
+	})
+	//取消选中状态
+	items_selectbtn.on("click",function(){
+		$(this).toggleClass("selected");
+		$(this).parent().attr("name",$(this).hasClass("selected")?0:1);
+		//name=>0代表取消状态，1代表选中状态
+	})
+
+	operationbtn.on("click", function(e){
+		var ThisBtnArea=$(this).next(setUpbtn);
+		if(ThisBtnArea.is(":hidden")){
+	    	ThisBtnArea.show();
+	    }else{
+	    	ThisBtnArea.hide();
+	    }
+	    $(document).one("click", function(){
+	        ThisBtnArea.hide();
+	    });
+	    e.stopPropagation();
+	});
+	//选择后不需要关闭菜单栏按钮
+	// BtnArea.on("click", function(e){
+	//     e.stopPropagation();
+	// });
+}
+
+
+
+//恢复默认状态
+function tacitlyFn(){
+	$(".Aircondition_items").attr("name",1);
+	$(".Aircondition_items_selectbtn").removeClass("selected").hide();
+	$(".SwitchBtn").hide();
+	$(".Aircondition_items_operate_r").show();
+}
+
+//批量关机
+function shutdownFn(){
+	var itemAttr=[];
+	$(".Aircondition_items").each(function(){
+		if($(this).attr("name")==1){
+			itemAttr.push($(this).index());//把被选中的push到数组，如果数组为空提示未选中
+			$(this).find(".Aircondition_items_msg").attr("status",0);//status为0代表关机状态，1为开机状态
+		}
+	})
+	itemAttr==""?Selectfn():Selectedfn();
+	//未选中状态
+	function Selectfn(){
+		var oHtml='<div class="layercontbox"><p class="tipsCont"><i class="ShutdownTips"></i>请选择再关机！</p></div>';
+		msgTips(oHtml,"未选中提示");
+	}
+	//已有选中
+	function Selectedfn(){
+		var index="";
+		$.each(itemAttr, function(i){ 
+			index +=itemAttr[i]+"、"
+		});
+		var oHtml='<div class="layercontbox"><p class="tipsCont"><i class="ShutdownTips"></i>关机'+index+'设备</p></div>';
+		msgTips(oHtml,"批量关机");
+		
+	}
+}
+
+//批量开机
+function shutonFn(){
+	var itemAttr=[];
+	$(".Aircondition_items").each(function(){
+		if($(this).attr("name")==1){
+			itemAttr.push($(this).index());//把被选中的push到数组，如果数组为空提示未选中
+			$(this).find(".Aircondition_items_msg").attr("status",1);//status为0代表关机状态，1为开机状态
+		}
+	})
+	itemAttr==""?Selectfn():Selectedfn();
+	//未选中状态
+	function Selectfn(){
+		var oHtml='<div class="layercontbox"><p class="tipsCont"><i class="ShutdownTips"></i>请选择再开机！</p></div>';
+		msgTips(oHtml,"未选中提示");
+	}
+	//已有选中
+	function Selectedfn(){
+		var index="";
+		$.each(itemAttr, function(i){ 
+			index +=itemAttr[i]+"、"
+		});
+		var oHtml='<div class="layercontbox"><p class="tipsCont"><i class="ShutdownTips"></i>开机'+index+'设备</p></div>';
+		msgTips(oHtml,"批量开机");
+		
+	}
+}
+
+
+//单个关机
+function SingleShutdownFn(obj){
+		var index=$(obj).parents(".Aircondition_items").index();
+		var oHtml='<div class="layercontbox"><p class="tipsCont"><i class="ShutdownTips"></i>关机'+index+'设备</p></div>';
+		msgTips(oHtml,"关机设备");
+		$(obj).parent().next(".Aircondition_items_msg").attr("status",0);//status为0代表关机状态，1为开机状态
+   }
+
+//单个开机
+function SingleshutonFn(obj){
+		var index=$(obj).parents(".Aircondition_items").index();
+		var oHtml='<div class="layercontbox"><p class="tipsCont"><i class="ShutdownTips"></i>开机'+index+'设备</p></div>';
+		msgTips(oHtml,"开机设备");
+		$(obj).parent().next(".Aircondition_items_msg").attr("status",1);//status为0代表关机状态，1为开机状态
+}
+
+
+//批量关机弹窗
+function msgTips(oHtml,tt){
+	layer.open({
+      type: 1 //Page层类型
+      ,area: ['550px', '250px']//高宽
+      ,title: '<i class="dcl"></i><span>'+tt+'</span><i class="dcr"></i>'
+      ,shade: 0.8 //遮罩透明度
+      ,maxmin: true //允许全屏最小化
+      ,anim: 5 //0-6的动画形式，-1不开启
+      ,content:oHtml
+      ,btn: ['确定', '取消']
+      ,yes: function(index, layero){
+      	tacitlyFn();//恢复默认状态
+      	statusStyle();//关机状态样式
+        layer.closeAll();
+      },btn1: function(index, layero){    
+              
+      }         
+   });
+}
+
+statusStyle();
+//开、关机状态样式
+function statusStyle(){
+	$(".Aircondition_items_msg").each(function(){
+		var itemsStatus=$(this).attr("status");
+		if(itemsStatus==0){
+			$(this).find(".Aircondition_items_msg_img").removeClass("online").addClass("outline");
+			$(this).find(".Aircondition_items_msg_status").find("span").removeClass("onlinestatus").addClass("outlinestatus");
+			$(this).find(".Aircondition_items_msg_status").find(".tus1").text("离线");
+			$(this).find(".Aircondition_items_msg_status").find(".tus2").text("Off");
+		}
+		if(itemsStatus==1){
+			$(this).find(".Aircondition_items_msg_img").removeClass("outline").addClass("online");
+			$(this).find(".Aircondition_items_msg_status").find("span").removeClass("outlinestatus").addClass("onlinestatus");
+			$(this).find(".Aircondition_items_msg_status").find(".tus1").text("在线");
+			$(this).find(".Aircondition_items_msg_status").find(".tus2").text("On");
+		}
+	})
+}
+//时间选择
+function timer(obj){
+$(".td-wrap").remove();
+$(obj).timeDropper();
+}
+
+//空调操作功能
+var ocondition = {
+		//设置功能
+		ocondition_Setting: function() {
+			var oHtml=$("#mypopId").html();
+			layer.open({
+		      type: 1 //Page层类型
+		      ,area: ['768px', '420px']//高宽
+		      ,title: '<i class="dcl"></i><span>空调设置</span><i class="dcr"></i>'
+		      ,shade: 0.8 //遮罩透明度
+		      ,maxmin: true //允许全屏最小化
+		      ,anim: 5 //0-6的动画形式，-1不开启
+		     ,content:'<div class="layercontbox">'+oHtml+'</div>'
+		      ,btn: ['确定', '取消']
+		      ,yes: function(index, layero){
+		        layer.closeAll();
+		      },btn1: function(index, layero){    
+		              
+		      }         
+		   });
+			$("#test-limit3").click(function(){alert(0)})
+		},
+		//删除功能
+		ocondition_Delete:function(){
+			layer.open({
+		      type: 1 //Page层类型
+		      ,area: ['550px', '250px']//高宽
+		      ,title: '<i class="dcl"></i><span>删除提示</span><i class="dcr"></i>'
+		      ,shade: 0.8 //遮罩透明度
+		      ,maxmin: true //允许全屏最小化
+		      ,anim: 5 //0-6的动画形式，-1不开启
+		      ,content:'<div class="layercontbox"><p class="tipsCont"><i class="deleteicon"></i>是否确定删除此设备？</p></div>'
+		      ,btn: ['确定', '取消']
+		      ,yes: function(index, layero){
+		        layer.closeAll();
+		      },btn1: function(index, layero){    
+		              
+		      }         
+		   });
+		}
+	}
+//选择星期
+function wk(obj){
+	$(obj).toggleClass("cur");
+}
+</script>

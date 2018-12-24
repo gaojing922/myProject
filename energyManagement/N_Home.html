@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="Keywords" content="古瑞瓦特,新能源,能源监控系统"/>
+	<meta name="description" content="古瑞瓦特新能源股份有限公司能源监控系统"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>能源监控</title>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/common.css" />
+	<link href="hzcfile/css/default.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<script src="hzcfile/js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/pems.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bodyH">
+<div class="header clearfix">
+	<div class="header_L clearfix fl">
+		<div class="MainLogo fl"><a href=""><img src="hzcfile/images/Pem_logo.png" alt="能源监控LOGO"></a></div>
+		<div class="MainNav fr">
+			<div class="Navcolumn">
+				<span>能源监控</span>
+				<ul class="DorpNav">
+					<li><a href="N_Home.html">监控概况</a></li>
+					<li><a href="N_Distribution.html">能源分布</a></li>
+					<li><a href="N_Partitionr.html">分区监控</a></li>
+					<li><a href="N_Classify.html">分类监控</a></li>
+					<li><a href="N_Timeinterval.html">时段监控</a></li>
+					<li><a href="N_Powerranking.html">用量排名</a></li>
+					<li><a href="N_Realtime.html">用电参数</a></li>
+					<li><a href="F_Powerconsumption.html">产量能耗</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>发电监控</span>
+				<ul class="DorpNav">
+					<li><a href="F_Photovoltaic.html">光伏监控</a></li>
+					<li><a href="F_Batterymanage.html">电池管理</a></li>
+					<li><a href="F_Dischargeset.html">充放设置</a></li>
+					<li><a href="F_Parammonitor.html">参数监控</a></li>
+					<li><a href="F_Equipcontrol.html">设备管理</a></li>
+					<li><a href="F_Failurediagnosis.html">故障诊断</a></li>
+					<li><a href="F_Scheduling.html">调度统计</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>智慧办公</span>
+				<ul class="DorpNav">
+					<li><a href="ZH_Electricbox.html">电箱管理</a></li>
+					<li><a href="ZH_Airconditionmanage.html">空调管理</a></li>
+					<li><a href="ZH_Socketmanage.html">插座管理</a></li>
+					<li><a href="ZH_Thermostatmanage.html">温控器管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header_L_end -->
+	<div class="header_M fl">
+		<h1 class="MainTitle fs36">古瑞瓦特能源管理系统</h1>
+		<div class="MainNavbtn Big"></div>
+	</div>
+	<!-- header_M_end -->
+	<div class="header_R clearfix fr">
+		<div class="MainNav fl">
+			<div class="Navcolumn">
+				<span>智能分析</span>
+				<ul class="DorpNav">
+					<li><a href="ZN_Datacompare.html">数据对比</a></li>
+					<li><a href="">数据预测(空)</a></li>
+					<li><a href="ZN_Alarmanalysis.html">告警分析</a></li>
+					<li><a href="ZN_Powerquality.html">用电质量</a></li>
+					<li><a href="ZN_Energysaving .html">节能报告</a></li>
+					<li><a href="ZN_Benchmarking.html">对标管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>数据服务</span>
+				<ul class="DorpNav">
+					<li><a href="S_Imageseeker.html">能源网图</a></li>
+					<li><a href="S_Diagnostic.html">通讯诊断</a></li>
+					<li><a href="S_Powergather.html">采集配置</a></li>
+					<li><a href="S_Electricityprice.html">电价配置</a></li>
+					<li><a href="S_Restschedule.html">作息配置</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>报表中心</span>
+				<ul class="DorpNav">
+					<li><a href="">能源产出报表</a></li>
+					<li><a href="">能源消耗报表</a></li>
+					<li><a href="">费用结算报表</a></li>
+					<li><a href="">产量能耗报表</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+		<div class="TimeArea clearfix fl">
+			<div class="division fs28 DIGI fl">10:58:42</div>
+			<div class="years DIGI fl">
+				<span>2017-09-04</span>
+				<p>星期四</p>
+			</div>
+		</div>
+		<div class="UserInfo clearfix">
+			<div class="UserInfo_name">
+				<span class="fs16 t_hide">Admin</span>
+				<ul class="UserInfo_operate">
+					<li>跟人资料</li>
+					<li>退出</li>
+				</ul>
+				<div class="UserInfo_oprbtn"></div>
+			</div>
+			<div class="UserInfo_setup"></div>
+		</div>
+	</div>
+</div>
+<!-- 头部_end -->
+
+<div class="PageLead clearfix">
+	<div class="PageLead_tlarea fl">
+		<h4 class="fs20">能源概况</h4>
+		<p class="fs12"><i>能源监控</i><span>/</span><i>能源概况</i></p>
+	</div>
+	<div class="NewsMsg clearfix fr">
+		<div class="NewsMsg_warn"><em>8</em></div>
+		<div class="NewsMsg_TextArea fs14 t_hide">实时消息：<span>总计异常台数(台):20</span></div>
+		<div class="NewsMsg_more"></div>
+	</div>
+	<!-- 换皮肤 -->
+	<div class="skin fr">
+		<i class="triangle-up"></i>
+		<div class="skintab"></div>
+		<ul class="clearfix">
+			<li id="skin_0">皮肤1</li>
+			<li id="skin_1">皮肤2</li>
+		</ul>
+	</div>
+</div>
+<!-- 页面标题_end -->
+
+<div class="Energy_condition clearfix">
+	<div class="Energy_Iterm" data-sr="enter left,over .8s,move 100px ,wait .1s">
+		<h4 class="fs20"><img src="hzcfile/images/dataIcon01.png" alt="">月用电</h4>
+		<div class="Energy_Iterm_data">
+			<p class="ds_inline Iterm_data_number">
+				<span id="Iterm_dataA">666888.00</span>
+			</p>
+			<span class="ds_inline fs20">kWh</span>
+		</div>
+	</div>
+	<div class="Energy_Iterm" data-sr="enter top,over .8s,move 100px ,wait .1s">
+		<h4 class="fs20"><img src="hzcfile/images/dataIcon02.png" alt="">月费电</h4>
+		<div class="Energy_Iterm_data">
+			<p class="ds_inline Iterm_data_number">
+				<span id="Iterm_dataB">6667.99</span>
+			</p>
+			<span class="ds_inline fs20">元</span>
+		</div>
+	</div>
+	<div class="Energy_Iterm" data-sr="enter bottom,over .8s,move 100px ,wait .1s">
+		<h4 class="fs20"><img src="hzcfile/images/dataIcon03.png" alt="">月发电</h4>
+		<div class="Energy_Iterm_data">
+			<p class="ds_inline Iterm_data_number">
+				<span id="Iterm_dataC">5643.87</span>
+			</p>
+			<span class="ds_inline fs20">kWh</span>
+		</div>
+	</div>
+	<div class="Energy_Iterm" data-sr="enter right,over .8s,move 100px ,wait .1s">
+		<h4 class="fs20"><img src="hzcfile/images/dataIcon04.png" alt="">月收电</h4>
+		<div class="Energy_Iterm_data">
+			<p class="ds_inline Iterm_data_number">
+				<span id="Iterm_dataD">53754.71</span>
+			</p>
+			<span class="ds_inline fs20">元</span>
+		</div>
+	</div>
+</div>
+<!-- 能源月用电显示数据_end -->
+
+<div class="Mainlayout clearfix">
+	<div class="SideBar_L Datasheetshow fl">
+		<div class="stylebox1" data-sr="enter left,over .7s,move 300px ,wait .2s">
+			<h4 class="Datasheettitle tr"><img src="hzcfile/images/dataIcon09.png" alt=""><span class="fs20">用电时段分析</span></h4>
+			<div class="Pen_analysis commonbg">
+				<div class="Analysis_cont">
+					<div class="Chart1"></div>
+				</div>
+			</div>
+		</div>
+		<div class="stylebox2" data-sr="enter left,over .7s,move 300px ,wait .4s">
+			<h4 class="Datasheettitle tr"><img src="hzcfile/images/dataIcon010.png" alt=""><span class="fs20">功率容量</span></h4>
+			<div class="Pen_Power_Capacity commonbg">
+				<div class="Pen_Power_Capacity_con clearfix">
+					<div class="Capacity_chart Capacity_chart1">
+						<div class="Capacity_chart_status">
+							<div class="needle"></div>
+							<p>45%</p>
+						</div>
+						<ul class="Capacity_chart_msg clearfix">
+							<li>
+								<em>光伏运行容量</em>
+								<span>20<i>w</i></span>
+							</li>
+							<li>
+								<em>光伏装机容量</em>
+								<span>20<i>w</i></span>
+							</li>
+						</ul>
+					</div>
+					<div class="Capacity_chart Capacity_chart2">
+						<div class="Capacity_chart_status">
+							<div class="needle"></div>
+							<p>45%</p>
+						</div>
+						<ul class="Capacity_chart_msg clearfix">
+							<li>
+								<em>光伏发电功率</em>
+								<span>20 <i>w</i></span>
+							</li>
+							<li>
+								<em>当前总用功率</em>
+								<span>20<i>w</i></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="stylebox3" data-sr="enter left,over .7s,move 300px ,wait .6s">
+			<h4 class="Datasheettitle tr"><img src="hzcfile/images/dataIcon08.png" alt=""><span class="fs20">能源趋势</span></h4>
+			<div class="Pen_Energy_Trends commonbg">
+				<div class="Pen_Energy_Trends_cont">
+					<div class="charts2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SideBar_L_end -->
+
+	<div class="SideBar_M" data-sr="enter bottom,over .8s,move 300px ,wait .3s">
+		<div class="midcircle"></div>
+		<div class="SubMenu_tab hd">
+			<ul>
+				<li>供电设备</li>
+				<li>用电设备</li>
+			</ul>
+			<div class="overlay"></div>
+		</div>
+		<span class="switchbtn"></span>
+		<ul class="SubMenu">
+			<li class="SubMenu_column1 SubMenu_column rotate1"  style="display:block">
+				<div class="active columnwrap" name="active">
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+			</li>
+			<li class="SubMenu_column2 SubMenu_column rotate1">
+				<div class="cur columnwrap" name="cur">
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+			</li>
+		</ul>
+		<!-- 中间设备菜单栏_end -->
+		<div class="SubMenu_incolumn_info">
+			<div class="incircle rotate"></div>
+			<div class="SubMenu_incolumn_info_cont">
+				<div class="device_number item_message">
+					<span>206</span>
+					<p>设备数(台) <em>></em></p>
+				</div>
+				<div class="online_number item_message">
+					<span>186</span>
+					<p>在线数(台) <em>></em></p>
+				</div>
+				<div class="online_rank item_message">
+					<span>85%</span>
+					<p>在线率 <em>></em></p>
+				</div>
+				<div class="total_rank item_message">
+					<span>5400</span>
+					<p>总功率(W) <em>></em></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SideBar_M_end -->
+
+	<div class="SideBar_R Datasheetshow fr">
+		<div class="stylebox1" data-sr="enter right,over .7s,move 300px ,wait .2s">
+			<h4 class="Datasheettitle tl"><img src="hzcfile/images/dataIcon05.png" alt=""><span class="fs20">环保收益</span></h4>
+			<div class="Pen_Environmental commonbg">
+				<div class="Environmental_con">
+					<ul>
+						<li><label for="">光伏发电：</label><span>35678<em>KWh</em></span></li>
+						<li><label for="">电池放电：</label><span>358<em>KWh</em></span></li>
+						<li><label for="">柴油机发电：</label><span>3678<em>KWh</em></span></li>
+						<li><label for="">发电能源节约(TCE)：</label><span>378<em>吨标煤</em></span></li>
+						<li><label for="">等于植物木：</label><span>78<em>棵</em></span></li>
+						<li><label for="">二氧化碳减排：</label><span>678<em>T</em></span></li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+		<div class="stylebox2" data-sr="enter right,over .7s,move 300px ,wait .4s">
+			<h4 class="Datasheettitle tl"><img src="hzcfile/images/dataIcon06.png" alt=""><span class="fs20">天气</span></h4>
+			<div class="Local_Weather commonbg">
+				<div class="Local_Weather_cont">
+					<div class="orientation"><i></i><span>深圳市</span></div>
+					<div class="RealWd">
+						<!--<span class="RealWd_degree">30°C</span>
+						<span class="RealWd_img"></span>
+						<ul>
+							<li>
+								<em>风速</em>
+								<p>东风5~6级</p>
+							</li>
+							<li>
+								<em>温度</em>
+								<p>75%</p>
+							</li>
+							<li>
+								<em>日照强度</em>
+								<p>1400W/m²</p>
+							</li>
+						</ul>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="stylebox3" data-sr="enter right,over .7s,move 300px ,wait .6s">
+			<h4 class="Datasheettitle tl"><img src="hzcfile/images/dataIcon07.png" alt=""><span class="fs20">本月用能排名(按区域)</span></h4>
+			<div class="Pen_Ranking commonbg">
+				<div class="Ranking_con">
+					<ul>
+						<li>
+							<label for="" class="gradual">1</label>
+							<div class="progress_bar">
+								<p class="bar_state gradual" style="width:50%"></p>
+								<div class="progress_bar_name">小机生产车间</div>
+								<div class="progress_bar_data clearfix">
+									<div class="progress_bar_data_numbers"><span>9156</span><em>KWh</em></div>
+									<div class="progress_bar_data_percentage"><span>占总比</span><em>50%</em></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label for="" class="gradual">2</label>
+							<div class="progress_bar">
+								<p class="bar_state gradual" style="width:90%"></p>
+								<div class="progress_bar_name">大机生产车间</div>
+								<div class="progress_bar_data clearfix">
+									<div class="progress_bar_data_numbers"><span>9156</span><em>KWh</em></div>
+									<div class="progress_bar_data_percentage"><span>占总比</span><em>50%</em></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label for="" class="gradual">3</label>
+							<div class="progress_bar">
+								<p class="bar_state gradual" style="width:70%"></p>
+								<div class="progress_bar_name">实验室</div>
+								<div class="progress_bar_data clearfix">
+									<div class="progress_bar_data_numbers"><span>9156</span><em>KWh</em></div>
+									<div class="progress_bar_data_percentage"><span>占总比</span><em>50%</em></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label for="" class="gradual">4</label>
+							<div class="progress_bar">
+								<p class="bar_state gradual" style="width:30%"></p>
+								<div class="progress_bar_name">A栋楼</div>
+								<div class="progress_bar_data clearfix">
+									<div class="progress_bar_data_numbers"><span>9156</span><em>KWh</em></div>
+									<div class="progress_bar_data_percentage"><span>占总比</span><em>50%</em></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label for="" class="gradual">5</label>
+							<div class="progress_bar">
+								<p class="bar_state gradual" style="width:40%"></p>
+								<div class="progress_bar_name">B栋楼</div>
+								<div class="progress_bar_data clearfix">
+									<div class="progress_bar_data_numbers"><span>9156</span><em>KWh</em></div>
+									<div class="progress_bar_data_percentage"><span>占总比</span><em>50%</em></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SideBar_L_end -->
+</div>
+<!-- 数据表展示_end -->
+
+<!-- 一打开加载图片防止跳动 -->
+<div class="Loadimg Loadimg1">
+	<li class="active0"></li>
+	<li class="active1"></li>
+	<li class="active2"></li>
+	<li class="active3"></li>
+	<li class="active4"></li>
+	<li class="active5"></li>
+</div>
+<div class="Loadimg Loadimg2">
+	<li class="active0"></li>
+	<li class="active1"></li>
+	<li class="active2"></li>
+	<li class="active3"></li>
+</div>
+<!-- 一打开加载图片防止跳动 -->
+</body>
+</html>
+<!-- 数据表 -->
+<script src="hzcfile/js/charts/highcharts.js"></script>
+<script src="hzcfile/js/charts/highcharts-more.js"></script>
+<!-- 数据表 -->
+<script src="hzcfile/js/scrollReveal.js" type="text/javascript" charset="utf-8"></script>
+<script src="hzcfile/js/countUp.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="hzcfile/js/Slide.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//字体特效
+fontFn("Iterm_dataA",$("#Iterm_dataA").text());
+fontFn("Iterm_dataB",$("#Iterm_dataB").text());
+fontFn("Iterm_dataC",$("#Iterm_dataC").text());
+fontFn("Iterm_dataD",$("#Iterm_dataD").text());
+
+//滚动动画
+scrollanimate();
+//菜单栏
+centermenu($(".SubMenu_column1"));
+centermenu($(".SubMenu_column2"));
+
+//菜单栏供电、用电切换
+$(".SideBar_M").slide({mainCell:".SubMenu",autoPlay:true,interTime:25000,nextCell:".SubMenu_tab"});
+$(".SubMenu_tab").hover(function(){
+	$(".SideBar_M .switchbtn").addClass("switchbtnxz");
+},function(){
+	$(".SideBar_M .switchbtn").removeClass("switchbtnxz");
+})
+
+//功率容量
+powervolume();
+function powervolume(){
+	var needle=$(".Capacity_chart .needle");//针
+	var volume=5;//使用容量，假设使用5格,一共20格
+	var rotate='rotate('+volume*5+'deg)';
+	needle.css({
+			"-webkit-transform": rotate,//兼容谷歌浏览器
+			"transform": rotate
+	})
+}
+//===============天气预报================//
+RealWdFn();
+function RealWdFn(){
+	var orientation=$(".orientation span");//当地地址
+	//本地定位
+	$.ajax({
+        type : "get",
+	    url : "http://api.map.baidu.com/location/ip?ak=FW1UxGEREGXZikFRUR4ZDVa0uScNTWs6",
+	    async: false,
+	    dataType: "jsonp",
+	    jsonp:"callback",
+	    jsonpCallback: "jsonhandle",
+	    success : function(res) {
+	    	var city=res.content.address_detail.city;
+	        orientation.text(city);
+	       //获取当地天气
+	       $.ajax({
+                type : "get",
+                url : "http://api.map.baidu.com/telematics/v3/weather?output=json&ak=6tYzTvGZSOpYB5Oc2YGGOKt8",
+                data:{
+                    location:city||"深圳"//默认深圳市
+                },
+                async: false,
+                dataType: "jsonp",
+                jsonp:"callback", 
+                jsonpCallback: "jsonhandle",
+                success : function(res) {
+                   //console.log(res);
+                   if(res.status == 'success'){
+                       var Wdlist =  res.results;
+                       var weatherDataArr = Wdlist[0].weather_data[0];
+	                   var oHtml ="<span class='RealWd_degree'>"+weatherDataArr.temperature+"</span>"+
+						          "<span class='RealWd_img'><img src='"+weatherDataArr.dayPictureUrl+"' alt=''></span>"+
+	                   			  "<ul>"+ 
+									"<li>"+ 
+										"<em>天气</em>"+ 
+										"<p>"+weatherDataArr.weather+"</p>"+ 
+									"</li>"+ 
+									"<li>"+ 
+										"<em>风速</em>"+ 
+										"<p>"+weatherDataArr.wind+"</p>"+ 
+									"</li>"+ 
+									"<li>"+ 
+										"<em>空气质量指数</em>"+ 
+										"<p>"+Wdlist[0].pm25+"</p>"+ 
+									"</li>"+ 
+								"</ul>";
+						$(".RealWd").append(oHtml);
+                   }
+               }
+            });
+        }
+    });
+}
+// =============================================chart图表=====================================================//
+	// 首页-用电时段分析
+ $('.Chart1').highcharts({
+         credits: {//禁用版权信息
+          enabled:false
+        },
+        chart: {
+            zoomType: 'xy',
+            backgroundColor: 'none',
+            marginBottom: 65,// 底部边距
+        },
+        title: {
+            text: ''
+        },
+        tooltip: {
+            shared: true,
+            useHTML: true,
+            headerFormat: '<small>{point.key}</small><table>',
+            pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+            '<td style="text-align: right"><b>{point.y}kWh</b></td></tr>',
+            footerFormat: '</table>',
+            valueDecimals: 2
+        },
+        xAxis: {
+            lineColor: '#266b8f',//x轴的颜色
+            tickColor: '#21e0f4',//刻度的颜色
+            categories: ['尖','峰','平','谷'],
+             labels: {
+              style: {
+                  color: '#dddddd',
+                  fontSize:'12px'
+              }
+            }      
+        },
+        yAxis: [{
+            labels: {
+                format: '{value}%',
+                style: {
+                    color: '#dddddd',
+                    fontSize:'12px'
+                }
+            },
+            gridLineColor: '#266b8f',//网格线
+            gridLineDashStyle: 'longdash',//网格线线条样式
+            title:'null'
+        }],
+        plotOptions: {
+            series: {
+            	borderRadius: 2,//柱形图圆角
+                marker: {
+                    enabled: true, /*数据点是否显示*/
+                    radius: 2,  /*数据点大小px*/
+                },
+                stacking: 'normal',
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutBounce'
+                },
+                fillOpacity: 0.2,//柱形透明度
+                borderColor: ''//柱形边框色
+            },
+        },
+        legend: {
+            itemDistance:110,//series的间距
+            itemStyle: {
+                color: '#bbbbbb',
+            },itemHoverStyle: {
+                color: '#bbbbbb'
+            }
+        },
+        series: [{
+            type: 'column',
+            name: '用电',
+            data: [31, 32, 13, 32],
+            color:'#ffff79',
+            maxPointWidth: 30
+        }, {
+            type: 'column',
+            name: '费电',
+            data: [31, 13, 15, 17],
+            color:'#55ffff',
+            maxPointWidth: 30
+        }]
+    });
+
+//首页-能源趋势
+$('.charts2').highcharts({
+        credits: {//禁用版权信息
+          enabled:false
+        },
+        chart: {
+            zoomType: 'xy',
+            backgroundColor: 'none',
+            marginBottom: 65,// 底部边距
+            marginRight: 40,
+        },
+        title: {text: null},
+       xAxis: {
+            lineColor: '#266b8f',//x轴的颜色
+            tickColor: '#21e0f4',//刻度的颜色
+            categories: [1,2,3,4,5,6,7,8,9,10,11,12],
+             labels: {
+              style: {
+                  color: '#dddddd',
+                  fontSize:'12px'
+              }
+            }      
+        },
+        yAxis: [{
+            labels: {
+                format: '{value}kW',
+                style: {
+                    color: '#dddddd',
+                    fontSize:'12px'
+                }
+            },
+            gridLineColor: '#266b8f',//网格线
+            gridLineDashStyle: 'longdash',//网格线线条样式
+            title:'null'
+        }],
+        tooltip: {
+            shared: true
+        },
+       plotOptions: {
+        series: {
+        	borderRadius: 2,//柱形图圆角
+            marker: {
+                enabled: true, /*数据点是否显示*/
+                radius: 2,  /*数据点大小px*/
+            },
+            stacking: 'normal',
+            animation: {
+                duration: 2000,
+                easing: 'easeOutBounce'
+            },
+            borderColor: ''//柱形边框色
+        },
+        },
+       legend: {
+            itemDistance: 4,//series的间距
+            itemStyle: {
+                color: '#bbbbbb',
+                fontSize:'11px'
+            },itemHoverStyle: {
+                color: '#bbbbbb'
+            }
+        },
+        series: [{
+            type: 'column',
+            name: '光伏发电',
+            data: [31, 32, 13, 32, 43, 53, 31, 32, 43,21, 51],
+            color:'#14b020',
+        }, {
+            type: 'column',
+            name: '柴油发电',
+            data: [31, 13, 15, 17, 63, 23, 12, 31, 43, 22, 12, 31],
+            color:'#14a6ad',
+        }, {
+            type: 'column',
+            name: '电池放电',
+            data: [25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31],
+            color:'#2460dc',
+        }, {
+            type: 'spline',
+            name: '光伏用电',
+            data: [31, 21.67, 31, 11, 13,31, 12, 13, 16, 31,22,33],
+            color:'#009926'
+        }, {
+            type: 'spline',
+            name: '柴油用电',
+            data: [31, 12, 31, 14, 22,13, 28, 27, 61, 14,22,33],
+             color:'#00e4f0'
+        }, {
+            type: 'spline',
+            name: '电网取电',
+            data: [31, 21, 27, 24, 22,32, 18, 77, 54, 44,12,13],
+             color:'#6227da'
+        }]
+    });
+
+</script>

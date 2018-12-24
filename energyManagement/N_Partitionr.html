@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+	<meta name="description" content="古瑞瓦特新能源股份有限公司能源监控系统"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>能源监控-分区监控</title>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/font/iconfont.css" />
+	<link href="hzcfile/css/default.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<script src="hzcfile/js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/pems.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bodyH">
+<div class="header clearfix">
+	<div class="header_L clearfix fl">
+		<div class="MainLogo fl"><a href=""><img src="hzcfile/images/Pem_logo.png" alt="能源监控LOGO"></a></div>
+		<div class="MainNav fr">
+			<div class="Navcolumn">
+				<span>能源监控</span>
+				<ul class="DorpNav">
+					<li><a href="N_Home.html">监控概况</a></li>
+					<li><a href="N_Distribution.html">能源分布</a></li>
+					<li><a href="N_Partitionr.html">分区监控</a></li>
+					<li><a href="N_Classify.html">分类监控</a></li>
+					<li><a href="N_Timeinterval.html">时段监控</a></li>
+					<li><a href="N_Powerranking.html">用量排名</a></li>
+					<li><a href="N_Realtime.html">用电参数</a></li>
+					<li><a href="F_Powerconsumption.html">产量能耗</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>发电监控</span>
+				<ul class="DorpNav">
+					<li><a href="F_Photovoltaic.html">光伏监控</a></li>
+					<li><a href="F_Batterymanage.html">电池管理</a></li>
+					<li><a href="F_Dischargeset.html">充放设置</a></li>
+					<li><a href="F_Parammonitor.html">参数监控</a></li>
+					<li><a href="F_Equipcontrol.html">设备管理</a></li>
+					<li><a href="F_Failurediagnosis.html">故障诊断</a></li>
+					<li><a href="F_Scheduling.html">调度统计</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>智慧办公</span>
+				<ul class="DorpNav">
+					<li><a href="ZH_Electricbox.html">电箱管理</a></li>
+					<li><a href="ZH_Airconditionmanage.html">空调管理</a></li>
+					<li><a href="ZH_Socketmanage.html">插座管理</a></li>
+					<li><a href="ZH_Thermostatmanage.html">温控器管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header_L_end -->
+	<div class="header_M fl">
+		<h1 class="MainTitle fs36">古瑞瓦特能源管理系统</h1>
+		<div class="MainNavbtn Big"></div>
+	</div>
+	<!-- header_M_end -->
+	<div class="header_R clearfix fr">
+		<div class="MainNav fl">
+			<div class="Navcolumn">
+				<span>智能分析</span>
+				<ul class="DorpNav">
+					<li><a href="ZN_Datacompare.html">数据对比</a></li>
+					<li><a href="">数据预测(空)</a></li>
+					<li><a href="ZN_Alarmanalysis.html">告警分析</a></li>
+					<li><a href="ZN_Powerquality.html">用电质量</a></li>
+					<li><a href="ZN_Energysaving .html">节能报告</a></li>
+					<li><a href="ZN_Benchmarking.html">对标管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>数据服务</span>
+				<ul class="DorpNav">
+					<li><a href="S_Imageseeker.html">能源网图</a></li>
+					<li><a href="S_Diagnostic.html">通讯诊断</a></li>
+					<li><a href="S_Powergather.html">采集配置</a></li>
+					<li><a href="S_Electricityprice.html">电价配置</a></li>
+					<li><a href="S_Restschedule.html">作息配置</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>报表中心</span>
+				<ul class="DorpNav">
+					<li><a href="">能源产出报表</a></li>
+					<li><a href="">能源消耗报表</a></li>
+					<li><a href="">费用结算报表</a></li>
+					<li><a href="">产量能耗报表</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+		<div class="TimeArea clearfix fl">
+			<div class="division fs28 DIGI fl">10:58:42</div>
+			<div class="years DIGI fl">
+				<span>2017-09-04</span>
+				<p>星期四</p>
+			</div>
+		</div>
+		<div class="UserInfo clearfix">
+			<div class="UserInfo_name">
+				<span class="fs16 t_hide">Admin</span>
+				<ul class="UserInfo_operate">
+					<li>跟人资料</li>
+					<li>退出</li>
+				</ul>
+				<div class="UserInfo_oprbtn"></div>
+			</div>
+			<div class="UserInfo_setup"></div>
+		</div>
+	</div>
+</div>
+<!-- 头部_end -->
+
+<div class="PageLead clearfix">
+	<div class="PageLead_tlarea fl">
+		<h4 class="fs20">分区监控</h4>
+		<p class="fs12"><i>能源监控</i><span>/</span><i>分区监控</i></p>
+	</div>
+	<div class="NewsMsg clearfix fr">
+		<div class="NewsMsg_warn"><em>8</em></div>
+		<div class="NewsMsg_TextArea fs14 t_hide">实时消息：<span>总计异常台数(台):20</span></div>
+		<div class="NewsMsg_more"></div>
+	</div>
+	<!-- 换皮肤 -->
+	<div class="skin fr">
+		<i class="triangle-up"></i>
+		<div class="skintab"></div>
+		<ul class="clearfix">
+			<li id="skin_0">皮肤1</li>
+			<li id="skin_1">皮肤2</li>
+		</ul>
+	</div>
+</div>
+<!-- 页面标题_end -->
+
+<div class="ContLayout clearfix">
+	<div class="Navigationbar ContLayout_L Vhidden"  data-sr="enter left,over .7s,move 300px ,wait .3s">
+		<div class="SearchArea">
+			 <input type="text" class="SearchArea_input" placeholder="搜索区域" />
+			 <button class="SearchAreabtn"></button>
+		</div>
+		<!-- 搜索_end -->
+		<div class="Navigation_mix">
+			<div class="content_wrap">
+				<div class="zTreeDemoBackground">
+					<ul id="treeDemo" class="treeDemo ztree"></ul>
+				</div>
+			</div>
+		</div>
+		<!-- 左边导航栏_end -->
+	</div>
+	<div class="ContLayout_R">
+		<div class="TimeSearchcolumn Vhidden" data-sr="enter top,over .7s,move 300px ,wait .2s">
+			<div class="TimeTab">
+				<span>时</span>
+				<span class="cur">日</span>
+				<span>月</span>
+			</div>
+			<div class="TimeSearchWrap mt1 clearfix fl">
+				<div class="TimeSearchbox"><input placeholder="请输入日期" class="laydate-icon" onclick="LayDatefn()"></div>
+				<em class="Ptsign">-</em>
+				<div class="TimeSearchbox"><input placeholder="请输入日期" class="laydate-icon" onclick="LayDatefn()"></div>
+				<button class="TimeSearchbtn Commombtn">查询</button>
+			</div>
+		</div>
+		<!-- TimeSearchcolumn_end -->
+		<div class="Partition_cont clearfix">
+			<div class="Partition_iterm Partition_iterm1" data-sr="enter bottom,over .7s,move 300px ,wait .3s">
+				<div class="cost_chart"></div>
+			</div>
+			<div class="Partition_iterm Partition_iterm2" data-sr="enter bottom,over .7s,move 300px ,wait .3s">
+				<div class="Timeelec_chart"></div>
+			</div>
+			<div class="Partition_iterm Partition_iterm3" data-sr="enter bottom,over .7s,move 300px ,wait .5s">
+				<div class="electrovalence_chart"></div>
+			</div>
+			<div class="Partition_iterm Partition_iterm4" data-sr="enter bottom,over .7s,move 300px ,wait .5s">
+				<div class="Partition_iterm_title">
+					<p class="calendartt"><i></i>用电日历</p>
+					<span class="farett">费用日历</span>
+					<em>单位：kWh</em>
+				</div>
+				<!-- 日历表 -->
+				<div class="account-box">
+					<div class="account-title clearfix">
+						<a href="javascript:;" class="f-btn-jian btn"></a>
+						<a href="javascript:;" class="f-btn-jia btn"></a>
+						<div class="f-riqi"><span class="f-year">2017</span>年<span class="f-month">1</span>月</div>
+					</div>
+					<div class="f-rili-table">
+						<div class="f-rili-head celarfix">
+							<span class="f-rili-th fl">Sun</span>
+							<span class="f-rili-th fl">Mon</span>
+							<span class="f-rili-th fl">Tues</span>
+							<span class="f-rili-th fl">Wed</span>
+							<span class="f-rili-th fl">Thur</span>
+							<span class="f-rili-th fl">Fri</span>
+							<span class="f-rili-th fl">Sat</span>
+						</div>
+						<div class="f-tbody clearfix">
+					
+						</div>
+					</div>
+				</div>
+				<!-- 日历表_end -->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<!-- 数据表 -->
+<script src="hzcfile/js/charts/highcharts.js"></script>
+<script src="hzcfile/js/charts/highcharts-more.js"></script>
+<!-- 数据表 -->
+<script src="hzcfile/layer/laydate/laydate.js" type="text/javascript" charset="utf-8"></script><!-- 日期js -->
+<script src="hzcfile/js/scrollReveal.js" type="text/javascript" charset="utf-8"></script>
+<script src="hzcfile/js/jquery.ztree.core.js" type="text/javascript" charset="utf-8"></script><!-- 左边树形导航栏js -->
+<script src="hzcfile/js/jquery.ztree.exedit.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//打开加载效果
+scrollanimate();
+//用电日历
+calendarFn();
+//时、日、月切换（时间搜索）
+LayDateTab();
+
+
+// ========================左边导航栏=================================//
+var curMenu = null, zTree_Menu = null;
+//设置参数
+var setting = {
+	view: {
+		showLine: false,//是否有线
+		showIcon: false,//是否有小图标
+		selectedMulti: false,
+		dblClickExpand: false,
+		addDiyDom: addDiyDom,
+		addHoverDom: addHoverDom
+	},
+	data: {
+		simpleData: {
+			enable: true
+		}
+	},
+	callback: {
+		beforeClick: beforeClick
+	}
+};
+
+var zNodes =[
+	{ id:1, pId:0, name:"文件夹", open:true},
+	{ id:11, pId:1, name:"收件箱"},
+	{ id:111, pId:11, name:"收件箱1"},
+	{ id:112, pId:111, name:"收件箱2"},
+	{ id:113, pId:112, name:"收件箱3"},
+	{ id:114, pId:113, name:"收件箱4"},
+	{ id:12, pId:1, name:"垃圾邮件"},
+	{ id:121, pId:12, name:"收件箱1"},
+	{ id:122, pId:121, name:"收件箱2"},
+	{ id:123, pId:122, name:"收件箱3"},
+	{ id:124, pId:123, name:"收件箱4"},
+	{ id:13, pId:1, name:"草稿"},
+	{ id:14, pId:1, name:"已发送邮件"},
+	{ id:15, pId:1, name:"已删除邮件"},
+	{ id:3, pId:0, name:"快速视图"},
+	{ id:31, pId:3, name:"文档"},
+	{ id:32, pId:3, name:"照片"}
+];
+
+function addDiyDom(treeId, treeNode) {
+	var spaceWidth = 5;
+	var switchObj = $("#" + treeNode.tId + "_switch"),
+	icoObj = $("#" + treeNode.tId + "_ico");
+	switchObj.remove();
+	icoObj.before(switchObj);
+
+	if (treeNode.level > 1) {
+		var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level)+ "px'></span>";
+		switchObj.before(spaceStr);
+	}
+}
+//点击后台请求
+function addHoverDom(treeId, treeNode) {
+		var sObj = $("#" + treeNode.tId + "_span");
+		if (treeNode.editNameFlag || $("#addBtn_"+treeNode.tId).length>0) return;
+		var addStr = "<span id='addBtn_" + treeNode.tId+ "' title='add node'></span>";
+		sObj.wrap(addStr);
+		var btn = $("#addBtn_"+treeNode.tId);
+		if (btn) btn.bind("click", function(){
+
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			var newNodes = [{name:"newNode1"}, {name:"newNode2"}, {name:"newNode3"}];//测试数据
+			$.ajax({  
+		        url:"http://ons.me/tools/dropload/json.php",  //模拟测试
+		        type: "post",  
+		        dataType: "json",  
+		        data: null,  
+		        cache: false,  
+		        success: function(jsonArray){  
+		           newNodes = zTree.addNodes(treeNode, newNodes);
+				   return false;
+	            }  
+	        });  
+		});
+	};
+
+function beforeClick(treeId, treeNode) {
+	if (treeNode.level == 0 ) {
+		var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+		zTree.expandNode(treeNode);
+		return false;
+	}
+	return true;
+}
+$(document).ready(function(){
+	var treeObj = $(".treeDemo");
+	treeObj.addClass("showIcon");
+	$.fn.zTree.init(treeObj, setting, zNodes);
+	zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+});
+
+// ========================左边导航栏=================================//
+
+function calendarFn(){
+	//页面加载初始化年月
+	var mydate = new Date();
+	$(".f-year").html( mydate.getFullYear() );
+	$(".f-month").html( mydate.getMonth()+1 );
+	showDate(mydate.getFullYear(),mydate.getMonth()+1);
+
+	//日历上一月
+	$(".f-btn-jian ").click(function(){
+		var mm = parseInt($(".f-month").html());
+		var yy = parseInt($(".f-year").html());
+		if( mm == 1){//返回12月
+			$(".f-year").html(yy-1);
+			$(".f-month").html(12);
+			showDate(yy-1,12);
+		}else{//上一月
+			$(".f-month").html(mm-1);
+			showDate(yy,mm-1);
+		}
+	})
+	//日历下一月
+	$(".f-btn-jia").click(function(){
+		var mm = parseInt($(".f-month").html());
+		var yy = parseInt($(".f-year").html());
+		if( mm == 12){//返回12月
+			$(".f-year").html(yy+1);
+			$(".f-month").html(1);
+			showDate(yy+1,1);
+		}else{//上一月
+			$(".f-month").html(mm+1);
+			showDate(yy,mm+1);
+		}
+	})
+
+	//读取年月写入日历  重点算法!!!!!!!!!!!
+	function showDate(yyyy,mm){
+		var dd = new Date(parseInt(yyyy),parseInt(mm), 0);   //Wed Mar 31 00:00:00 UTC+0800 2010  
+		var daysCount = dd.getDate();            //本月天数  
+		var mystr ="";//写入代码
+		var icon = "";//图标代码
+		var week = new Date(parseInt(yyyy)+"/"+parseInt(mm)+"/"+1).getDay(); //今天周几
+		var lastMonth; //上一月天数
+		var nextMounth;//下一月天数
+
+		if(  parseInt(mm) ==1 ){
+			lastMonth = new Date(parseInt(yyyy)-1,parseInt(12), 0).getDate();
+		}else{
+			lastMonth = new Date(parseInt(yyyy),parseInt(mm)-1, 0).getDate();
+		}
+		if( parseInt(mm) ==12 ){
+			nextMounth = new Date(parseInt(yyyy)+1,parseInt(1), 0).getDate();
+		}else{
+			nextMounth = new Date(parseInt(yyyy),parseInt(mm)+1, 0).getDate();
+		}
+		for(i=0;i<daysCount;i++){
+			//计算上月空格数
+			if( i%7 == 0){
+				if(i<7){//只执行一次
+					for(j=0;j<week;j++){
+						mystr += "<div class='f-td f-null' style='color:#ccc;'>"+(lastMonth+j-5+week)+"</div>";
+					}
+				}
+			}
+			 //这里为一个单元格，添加内容在此
+			mystr += "<div class='f-td f-number'><span class='f-day'>"+(i+1)+"</span>"
+					+"<div class='f-yuan'></div>"
+					+"<div class='f-table-msg'>今天用电<span class='major'>1，000，000</span>kWh</div>"//这里加判断
+					+"</div>"; 
+		     }
+			//表格不等高，只补充末行不足单元格
+			if(7-(daysCount+week)%7 <7){
+				for(k=0; k<7-(daysCount+week)%7;k++ ){ // week为今天周几 daysCount为本月天数  7-week为本行空格数 7-(daysCount+6-week)%7为最后一行有几个空格
+					mystr += "<div class='f-td f-null' style='color:#ccc;'>"+(k+1)+"</div>";
+				}
+			}
+
+		//写入日历
+		$(".f-rili-table .f-tbody").html(mystr);
+		//给今日加class
+		if( mydate.getFullYear() == yyyy){
+			if( (mydate.getMonth()+1 ) == mm){
+				var today = mydate.getDate();
+				$(".f-rili-table .f-td").eq(today).addClass("f-today");
+				//$(".f-rili-table .f-td").eq(today-1-week+6).addClass("f-today");
+			}
+		}
+		//绑定选择方法
+		$(".f-rili-table .f-number").off("click");
+		$(".f-rili-table .f-number").on("click",function(){
+			$(".f-rili-table .f-number").removeClass("f-on");
+			$(this).addClass("f-on");
+		});
+
+		//绑定查看方法
+		$(".f-yuan").off("mouseover");
+		$(".f-yuan").on("mouseover",function(){
+			$(this).parent().find(".f-table-msg").show();
+		});
+		$(".f-table-msg").off("mouseover");
+		$(".f-table-msg").on("mouseover",function(){
+			$(this).show();
+		});
+		$(".f-yuan").off("mouseleave");
+		$(".f-yuan").on("mouseleave",function(){
+			$(this).parent().find(".f-table-msg").hide();
+		});
+		$(".f-table-msg").off("mouseleave");
+		$(".f-table-msg").on("mouseleave",function(){
+			$(this).hide();
+		});
+	}
+
+}
+
+// =============================================chart图表=====================================================//
+chartFn();
+function chartFn(){
+// 分区监控-用电量及费用图
+$('.Partition_iterm .cost_chart').highcharts({
+         credits: {//禁用版权信息
+          enabled:false
+        },
+        chart: {
+            zoomType: 'xy',
+             backgroundColor: 'none',
+             marginBottom: 68,// 底部边距
+        },
+        title: {
+            text: '用电量及费用图',
+            style: {
+                    color: '#fff',
+                    fontSize:'16px'
+                }
+        },
+         tooltip: {
+            shared: true,
+            useHTML: true,
+            headerFormat: '<small>{point.key}</small><table>',
+            pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+            '<td style="text-align: right"><b>{point.y}kWh</b></td></tr>',
+            footerFormat: '</table>',
+            valueDecimals: 2
+        },
+        xAxis: {
+            lineColor: '#266b8f',//x轴的颜色
+            tickColor: '#21e0f4',//刻度的颜色
+            categories: ["2017/01","2017/02","2017/03","2017/04","2017/05","2017/06","2017/07"],
+             labels: {
+              style: {
+                  color: '#bbbbbb',
+                  fontSize:'12px'
+              }
+            }      
+        },
+        yAxis: [{
+            labels: {
+                format: '{value}kWh',
+                style: {
+                    color: '#ffffff',
+                    fontSize:'12px'
+                }
+            },
+            gridLineColor: '#266b8f',//网格线
+            gridLineDashStyle: 'longdash',//网格线线条样式
+            title:'null'
+        }],
+        plotOptions: {
+            series: {
+                stacking: 'normal',
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutBounce'
+                },
+                fillOpacity: 0.2,
+                borderColor: '',//柱形边框色
+                borderRadius: 5//柱形图圆角
+            }
+        },
+        legend: {
+            itemDistance: 100,//series的间距
+            itemStyle: {
+                color: '#bbbbbb',
+            },itemHoverStyle: {
+                color: '#bbbbbb'
+            }
+        },
+        series: [{
+            type: 'column',
+            name: '电量',
+            data: [231, 332, 213, 432, 343, 253, 131],
+            color:'#50ff60',
+            maxPointWidth: 26//柱形条的宽度
+        },{
+            type: 'spline',
+            name: '费电',
+            data: [231, 221.67, 131, 211, 213,231, 112],
+            color:'#f4d500'
+        }]
+    });
+ 
+// 分区监控-时段用电表
+$('.Partition_iterm .Timeelec_chart').highcharts({
+        credits: {//禁用版权信息
+          enabled:false
+        },
+        chart: {
+            type: 'column',
+             backgroundColor: 'none'
+        },
+        title: {
+            text: '时段用电（KWh）',
+            style: {
+                    color: '#ffffff',
+                    fontSize:'16px'
+                }
+        },
+        xAxis: {
+            categories: [
+                '2017/01',
+                '2017/02',
+                '2017/03',
+                '2017/04',
+                '2017/05',
+                '2017/06',
+                '2017/07'
+            ],
+            lineColor: '#266b8f',//x轴的颜色
+            tickColor: '#21e0f4',//刻度的颜色
+            labels: {
+              style: {
+                  color: '#bbbbbb',
+                  fontSize:'12px'
+              }
+            },     
+            crosshair: true
+        },
+        yAxis: {
+            labels: {
+                format: '{value}kWh',
+                style: {
+                    color: '#ffffff',
+                    fontSize:'12px'
+                }
+            },
+            gridLineColor: '#266b8f',//网格线
+            gridLineDashStyle: 'longdash',//网格线线条样式
+            title:'null'
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} kWh</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            },
+            series: {
+                borderRadius:5,//柱形图圆角
+                marker: {
+                    enabled: true, /*数据点是否显示*/
+                    radius: 4,  /*数据点大小px*/
+                }
+            }
+        },
+        legend: {
+            itemDistance: 50,//series的间距
+            itemStyle: {
+                color: '#bbbbbb',
+            },itemHoverStyle: {
+                color: '#bbbbbb'
+            }
+        },
+        series: [{
+            name: '平',
+            color:"#00ff0a",
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6]
+        }, {
+            name: '尖',
+            color:"#ff5c0a",
+            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0]
+        }, {
+            name: '峰',
+            color:"#f4d500",
+            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0]
+        }, {
+            name: '谷',
+            color:"#2ba4ff",
+            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4]
+        }]
+    });
+
+// 分区监控-平均电价表
+$('.Partition_iterm .electrovalence_chart').highcharts({
+        credits: {//禁用版权信息
+          enabled:false
+        },
+        chart: {
+            type: 'column',
+             backgroundColor: 'none',
+             marginBottom: 58,// 底部边距
+        },
+        title: {
+            text: '平均电价（元）',
+            style: {
+                    color: '#ffffff',
+                    fontSize:'16px'
+                }
+        },
+        xAxis: {
+            categories: [
+                '2017/01',
+                '2017/02',
+                '2017/03',
+                '2017/04',
+                '2017/05',
+                '2017/06',
+                '2017/07'
+            ],
+            lineColor: '#266b8f',//x轴的颜色
+            tickColor: '#21e0f4',//刻度的颜色
+            labels: {
+              style: {
+                  color: '#bbbbbb',
+                  fontSize:'12px'
+              }
+            },     
+            crosshair: true
+        },
+        yAxis: {
+            labels: {
+                format: '{value}元',
+                style: {
+                    color: '#ffffff',
+                    fontSize:'12px'
+                }
+            },
+            gridLineColor: '#266b8f',//网格线
+            gridLineDashStyle: 'longdash',//网格线线条样式
+            title:'null'
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:#333333;padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f}元</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            },
+            series: {
+                borderRadius:5,//柱形图圆角
+                marker: {
+                    enabled: true, /*数据点是否显示*/
+                    radius: 6,  /*数据点大小px*/
+                }
+            }
+        },
+        legend: {
+            enabled: false//关闭底部按钮
+        },
+        series: [{
+            color:"#fce413",
+            maxPointWidth: 26,//柱形条的宽度
+            data: [0.2, 0.24, 1.1, .2, 1.55, 1.76, 1.35]
+        }]
+    });
+}
+</script>

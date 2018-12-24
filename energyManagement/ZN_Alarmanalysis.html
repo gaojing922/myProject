@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+	<meta name="description" content="古瑞瓦特新能源股份有限公司能源监控系统"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>智能分析-告警分析</title>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/font/iconfont.css" />
+	<link href="hzcfile/css/default.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<script src="hzcfile/js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/pems.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bodyH">
+<div class="header clearfix">
+	<div class="header_L clearfix fl">
+		<div class="MainLogo fl"><a href=""><img src="hzcfile/images/Pem_logo.png" alt="能源监控LOGO"></a></div>
+		<div class="MainNav fr">
+			<div class="Navcolumn">
+				<span>能源监控</span>
+				<ul class="DorpNav">
+					<li><a href="N_Home.html">监控概况</a></li>
+					<li><a href="N_Distribution.html">能源分布</a></li>
+					<li><a href="N_Partitionr.html">分区监控</a></li>
+					<li><a href="N_Classify.html">分类监控</a></li>
+					<li><a href="N_Timeinterval.html">时段监控</a></li>
+					<li><a href="N_Powerranking.html">用量排名</a></li>
+					<li><a href="N_Realtime.html">用电参数</a></li>
+					<li><a href="F_Powerconsumption.html">产量能耗</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>发电监控</span>
+				<ul class="DorpNav">
+					<li><a href="F_Photovoltaic.html">光伏监控</a></li>
+					<li><a href="F_Batterymanage.html">电池管理</a></li>
+					<li><a href="F_Dischargeset.html">充放设置</a></li>
+					<li><a href="F_Parammonitor.html">参数监控</a></li>
+					<li><a href="F_Equipcontrol.html">设备管理</a></li>
+					<li><a href="F_Failurediagnosis.html">故障诊断</a></li>
+					<li><a href="F_Scheduling.html">调度统计</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>智慧办公</span>
+				<ul class="DorpNav">
+					<li><a href="ZH_Electricbox.html">电箱管理</a></li>
+					<li><a href="ZH_Airconditionmanage.html">空调管理</a></li>
+					<li><a href="ZH_Socketmanage.html">插座管理</a></li>
+					<li><a href="ZH_Thermostatmanage.html">温控器管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header_L_end -->
+	<div class="header_M fl">
+		<h1 class="MainTitle fs36">古瑞瓦特能源管理系统</h1>
+		<div class="MainNavbtn Big"></div>
+	</div>
+	<!-- header_M_end -->
+	<div class="header_R clearfix fr">
+		<div class="MainNav fl">
+			<div class="Navcolumn">
+				<span>智能分析</span>
+				<ul class="DorpNav">
+					<li><a href="ZN_Datacompare.html">数据对比</a></li>
+					<li><a href="">数据预测(空)</a></li>
+					<li><a href="ZN_Alarmanalysis.html">告警分析</a></li>
+					<li><a href="ZN_Powerquality.html">用电质量</a></li>
+					<li><a href="ZN_Energysaving .html">节能报告</a></li>
+					<li><a href="ZN_Benchmarking.html">对标管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>数据服务</span>
+				<ul class="DorpNav">
+					<li><a href="S_Imageseeker.html">能源网图</a></li>
+					<li><a href="S_Diagnostic.html">通讯诊断</a></li>
+					<li><a href="S_Powergather.html">采集配置</a></li>
+					<li><a href="S_Electricityprice.html">电价配置</a></li>
+					<li><a href="S_Restschedule.html">作息配置</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>报表中心</span>
+				<ul class="DorpNav">
+					<li><a href="">能源产出报表</a></li>
+					<li><a href="">能源消耗报表</a></li>
+					<li><a href="">费用结算报表</a></li>
+					<li><a href="">产量能耗报表</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+		<div class="TimeArea clearfix fl">
+			<div class="division fs28 DIGI fl">10:58:42</div>
+			<div class="years DIGI fl">
+				<span>2017-09-04</span>
+				<p>星期四</p>
+			</div>
+		</div>
+		<div class="UserInfo clearfix">
+			<div class="UserInfo_name">
+				<span class="fs16 t_hide">Admin</span>
+				<ul class="UserInfo_operate">
+					<li>跟人资料</li>
+					<li>退出</li>
+				</ul>
+				<div class="UserInfo_oprbtn"></div>
+			</div>
+			<div class="UserInfo_setup"></div>
+		</div>
+	</div>
+</div>
+<!-- 头部_end -->
+
+<div class="PageLead clearfix">
+	<div class="PageLead_tlarea fl">
+		<h4 class="fs20">告警分析</h4>
+		<p class="fs12"><i>智能分析</i><span>/</span><i>告警分析</i></p>
+	</div>
+	<div class="NewsMsg clearfix fr">
+		<div class="NewsMsg_warn"><em>8</em></div>
+		<div class="NewsMsg_TextArea fs14 t_hide">实时消息：<span>总计异常台数(台):20</span></div>
+		<div class="NewsMsg_more"></div>
+	</div>
+	<!-- 换皮肤 -->
+	<div class="skin fr">
+		<i class="triangle-up"></i>
+		<div class="skintab"></div>
+		<ul class="clearfix">
+			<li id="skin_0">皮肤1</li>
+			<li id="skin_1">皮肤2</li>
+		</ul>
+	</div>
+</div>
+<!-- 页面标题_end -->
+<div class="ContLayout Alarm">
+	<div class="TimeSearchcolumn Vhidden" data-sr="enter left,over .7s,move 300px ,wait .2s">
+		<div class="TimeTab">
+			<span>时</span>
+			<span class="cur">日</span>
+			<span>月</span>
+		</div>
+	</div>
+	<div class="Alarm_analysis ColumnRbg clearfix">
+		<div class="Alarm_analysis_l sidebarLbg fl">
+			<div class="Alarm_analysis_iterm Alarm_analysis_iterm1" data-sr="enter left,over .7s,move 300px ,wait .2s">
+				<h4><span>采集中断</span></h4>
+				<div class="iterm_cont">
+					<span>25</span><em>个</em>
+				</div>
+			</div>
+			<div class="Alarm_analysis_iterm Alarm_analysis_iterm2" data-sr="enter left,over .7s,move 300px ,wait .3s">
+				<h4><span>实时数据超限</span></h4>
+				<div class="iterm_cont">
+					<span>25</span><em>个</em>
+				</div>
+			</div>
+			<div class="Alarm_analysis_iterm Alarm_analysis_iterm3" data-sr="enter left,over .7s,move 300px ,wait .4s">
+				<h4><span>日用电超限</span></h4>
+				<div class="iterm_cont">
+					<span>25</span><em>个</em>
+				</div>
+			</div>
+			<div class="Alarm_analysis_iterm Alarm_analysis_iterm4" data-sr="enter left,over .7s,move 300px ,wait .5s">
+				<h4><span>月用电超限</span></h4>
+				<div class="iterm_cont">
+					<span>25</span><em>个</em>
+				</div>
+			</div>
+			<div class="Alarm_analysis_iterm Alarm_analysis_iterm5" data-sr="enter left,over .7s,move 300px ,wait .6s">
+				<h4><span>年用电超限</span></h4>
+				<div class="iterm_cont">
+					<span>25</span><em>个</em>
+				</div>
+			</div>
+		</div>
+
+		<div class="Alarm_analysis_R fr">
+			<h4 class="Summary_title" data-sr="enter top,over .7s,move 300px ,wait .2s" style="visibility: hidden;"><em class="dc1"></em><span>各类型告警数</span><em class="dc2"></em></h4>
+			<div class="Alarm_analysis_chart" data-sr="enter top,over .7s,move 300px ,wait .2s"></div>
+			<div class="Alarm_analysis_table TableColumn" data-sr="enter bottom,over .7s,move 300px ,wait .2s">
+				<table>
+					<thead>
+						<tr> 
+							<th>时间</th>
+							<th>名称</th>
+							<th>报警类型</th>
+							<th>描述</th>
+							<th>当前值</th>
+							<th>报警值</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2017/8/28</td>
+							<td>ajax</td>
+							<td>javascript</td>
+							<td>how are you</td>
+							<td>agular</td>
+							<td>vue</td>
+						</tr>
+						<tr>
+							<td>2017/8/28</td>
+							<td>ajax</td>
+							<td>javascript</td>
+							<td>how are you</td>
+							<td>agular</td>
+							<td>vue</td>
+						</tr>
+						<tr>
+							<td>2017/8/28</td>
+							<td>ajax</td>
+							<td>javascript</td>
+							<td>how are you</td>
+							<td>agular</td>
+							<td>vue</td>
+						</tr>
+						<tr>
+							<td>2017/8/28</td>
+							<td>ajax</td>
+							<td>javascript</td>
+							<td>how are you</td>
+							<td>agular</td>
+							<td>vue</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<!-- 数据表 -->
+<script src="hzcfile/js/charts/highcharts.js"></script>
+<script src="hzcfile/js/charts/highcharts-more.js"></script>
+<!-- 数据表 -->
+<script src="hzcfile/js/scrollReveal.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//打开加载效果
+scrollanimate();
+//时、日、月切换（时间搜索）
+LayDateTab();
+
+
+// ========================图表=================================//
+//智能分析-告警分析
+ $('.Alarm_analysis_chart').highcharts({
+     credits: {//禁用版权信息
+      enabled:false
+    },
+    chart: {
+        zoomType: 'xy',
+         backgroundColor: 'none',
+          marginBottom: 65,// 底部边距
+          marginRight: 45,
+    },
+    title: {
+        text: ''
+    },
+     tooltip: {
+        shared: true,
+        useHTML: true,
+        headerFormat: '<small>{point.key}月份</small><table>',
+        pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+        '<td style="text-align: right"><b>{point.y}次</b></td></tr>',
+        footerFormat: '</table>',
+        valueDecimals: 2
+    },
+    xAxis: {
+        lineColor: '#266b8f',//x轴的颜色
+        tickColor: '#21e0f4',//刻度的颜色
+        categories: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
+         labels: {
+          style: {
+              color: '#dddddd',
+              fontSize:'12px'
+          }
+        }      
+    },
+    yAxis: [{
+        labels: {
+            format: '{value}次',
+            style: {
+                color: '#dddddd',
+                fontSize:'12px'
+            }
+        },
+        gridLineColor: '#266b8f',//网格线
+        title:'null'
+    }],
+    plotOptions: {
+        series: {
+            stacking: 'normal',
+            animation: {
+                duration: 2000,
+                easing: 'easeOutBounce'
+            },
+            fillOpacity: 0.2,//透明度
+            borderRadius:2,//柱形图圆角
+            borderColor:''
+        }
+    },
+    legend: {
+        itemDistance: 60,//series的间距
+        itemMarginBottom: -20,
+        itemStyle: {
+            color: '#bbbbbb',
+        },itemHoverStyle: {
+            color: '#bbbbbb'
+        }
+    },
+    series: [{
+        type: 'column',
+        name: '采集中断告警',
+         maxPointWidth: 20,//柱形条的宽度
+        data: [25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,11, 11, 31, 41, 21, 11, 31],
+        color:'#22c42f'
+    }, {
+        type: 'column',
+        name: '实时数据超限报警',
+         maxPointWidth: 20,//柱形条的宽度
+        data: [25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,11, 11, 31, 41, 21, 11, 31],
+         color:'#2f75e4'
+    }, {
+        type: 'column',
+        name: '日用电报警',
+         maxPointWidth: 20,//柱形条的宽度
+        data: [25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,11, 11, 31, 41, 21, 11, 31],
+        color:'#ffcf3f'
+    }, {
+        type: 'column',
+        name: '月用电报警',
+         maxPointWidth: 20,//柱形条的宽度
+        data: [25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,11, 11, 31, 41, 21, 11, 31],
+        color:'#ee3c48'
+    }, {
+        type: 'column',
+        name: '年用电报警',
+         maxPointWidth: 20,//柱形条的宽度
+        data: [25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,25, 31, 11, 31, 31, 11, 11, 31, 41, 21, 11, 31,11, 11, 31, 41, 21, 11, 31],
+        color:'#2fdde4'
+    }]
+});
+</script>

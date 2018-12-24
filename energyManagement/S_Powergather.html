@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="Keywords" content="古瑞瓦特,新能源,客服管理系统"/>
+	<meta name="description" content="古瑞瓦特新能源股份有限公司能源监控系统"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>数据服务-用电采集</title>
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="hzcfile/font/iconfont.css" />
+	<link href="hzcfile/css/default.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<script src="hzcfile/js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hzcfile/js/pems.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bodyH">
+<div class="header clearfix">
+	<div class="header_L clearfix fl">
+		<div class="MainLogo fl"><a href=""><img src="hzcfile/images/Pem_logo.png" alt="能源监控LOGO"></a></div>
+		<div class="MainNav fr">
+			<div class="Navcolumn">
+				<span>能源监控</span>
+				<ul class="DorpNav">
+					<li><a href="N_Home.html">监控概况</a></li>
+					<li><a href="N_Distribution.html">能源分布</a></li>
+					<li><a href="N_Partitionr.html">分区监控</a></li>
+					<li><a href="N_Classify.html">分类监控</a></li>
+					<li><a href="N_Timeinterval.html">时段监控</a></li>
+					<li><a href="N_Powerranking.html">用量排名</a></li>
+					<li><a href="N_Realtime.html">用电参数</a></li>
+					<li><a href="F_Powerconsumption.html">产量能耗</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>发电监控</span>
+				<ul class="DorpNav">
+					<li><a href="F_Photovoltaic.html">光伏监控</a></li>
+					<li><a href="F_Batterymanage.html">电池管理</a></li>
+					<li><a href="F_Dischargeset.html">充放设置</a></li>
+					<li><a href="F_Parammonitor.html">参数监控</a></li>
+					<li><a href="F_Equipcontrol.html">设备管理</a></li>
+					<li><a href="F_Failurediagnosis.html">故障诊断</a></li>
+					<li><a href="F_Scheduling.html">调度统计</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>智慧办公</span>
+				<ul class="DorpNav">
+					<li><a href="ZH_Electricbox.html">电箱管理</a></li>
+					<li><a href="ZH_Airconditionmanage.html">空调管理</a></li>
+					<li><a href="ZH_Socketmanage.html">插座管理</a></li>
+					<li><a href="ZH_Thermostatmanage.html">温控器管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+	</div>
+	<!-- header_L_end -->
+	<div class="header_M fl">
+		<h1 class="MainTitle fs36">古瑞瓦特能源管理系统</h1>
+		<div class="MainNavbtn Big"></div>
+	</div>
+	<!-- header_M_end -->
+	<div class="header_R clearfix fr">
+		<div class="MainNav fl">
+			<div class="Navcolumn">
+				<span>智能分析</span>
+				<ul class="DorpNav">
+					<li><a href="ZN_Datacompare.html">数据对比</a></li>
+					<li><a href="">数据预测(空)</a></li>
+					<li><a href="ZN_Alarmanalysis.html">告警分析</a></li>
+					<li><a href="ZN_Powerquality.html">用电质量</a></li>
+					<li><a href="ZN_Energysaving .html">节能报告</a></li>
+					<li><a href="ZN_Benchmarking.html">对标管理</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>数据服务</span>
+				<ul class="DorpNav">
+					<li><a href="S_Imageseeker.html">能源网图</a></li>
+					<li><a href="S_Diagnostic.html">通讯诊断</a></li>
+					<li><a href="S_Powergather.html">采集配置</a></li>
+					<li><a href="S_Electricityprice.html">电价配置</a></li>
+					<li><a href="S_Restschedule.html">作息配置</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+			<div class="Navcolumn">
+				<span>报表中心</span>
+				<ul class="DorpNav">
+					<li><a href="">能源产出报表</a></li>
+					<li><a href="">能源消耗报表</a></li>
+					<li><a href="">费用结算报表</a></li>
+					<li><a href="">产量能耗报表</a></li>
+				</ul>
+				<div class="flicker"></div>
+			</div>
+		</div>
+		<div class="TimeArea clearfix fl">
+			<div class="division fs28 DIGI fl">10:58:42</div>
+			<div class="years DIGI fl">
+				<span>2017-09-04</span>
+				<p>星期四</p>
+			</div>
+		</div>
+		<div class="UserInfo clearfix">
+			<div class="UserInfo_name">
+				<span class="fs16 t_hide">Admin</span>
+				<ul class="UserInfo_operate">
+					<li>跟人资料</li>
+					<li>退出</li>
+				</ul>
+				<div class="UserInfo_oprbtn"></div>
+			</div>
+			<div class="UserInfo_setup"></div>
+		</div>
+	</div>
+</div>
+<!-- 头部_end -->
+
+<div class="PageLead clearfix">-
+	<div class="PageLead_tlarea fl">
+		<h4 class="fs20">用电采集</h4>
+		<p class="fs12"><i>数据服务</i><span>/</span><i>用电采集</i></p>
+	</div>
+	<div class="NewsMsg clearfix fr">
+		<div class="NewsMsg_warn"><em>8</em></div>
+		<div class="NewsMsg_TextArea fs14 t_hide">实时消息：<span>总计异常台数(台):20</span></div>
+		<div class="NewsMsg_more"></div>
+	</div>
+	<!-- 换皮肤 -->
+	<div class="skin fr">
+		<i class="triangle-up"></i>
+		<div class="skintab"></div>
+		<ul class="clearfix">
+			<li id="skin_0">皮肤1</li>
+			<li id="skin_1">皮肤2</li>
+		</ul>
+	</div>
+</div>
+<!-- 页面标题_end -->
+
+<div class="ContLayout clearfix">
+	<div class="Electricityprice_set_top clearfix" data-sr="enter bottom,over .7s,move 300px ,wait .3s">
+		<ul class="Electricityprice_setTab fl">
+			<li class="cur">采集器</li>
+			<li>电表</li>
+		</ul>
+		<div class="fr"><a href="javascript:;" class="Added Commombtn" onclick="addedfn()">新增</a></div>
+	</div>
+	<div id="Powergather" class="Electricityprice_setCont" data-sr="enter bottom,over .7s,move 300px ,wait .3s">
+		<div class="Electricityprice_table Electricityprice_table1"  style="display:block">
+			<div class="TableColumn">
+				<table>
+					<thead>
+						<tr>
+							<th>系列号</th>
+							<th>名称</th>
+							<th>区域（分组）</th>
+							<th>设备类型</th>
+							<th>链接状态</th>
+							<th>数据更新时间</th>
+							<th>当前版本</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</div>
+			<div id="acceptance-page" class="layerPage"></div><!-- 分页 -->
+		</div>
+		<div class="Electricityprice_table Electricityprice_table2">电表内容-----</div>
+	</div>
+</div>
+
+<!-- 编辑列表 -->
+<div class="oHtmlbox">
+	<div class="ComcomTable_edit">
+		<ul>
+			<li>
+				<label for="">系列号：</label>
+				<input type="text" />
+			</li>
+			<li>
+				<label for="">名称：</label>
+				<input type="text" />
+			</li>
+			<li>
+				<label for="">区域（分组）：</label>
+				<select>
+				  <option value ="A栋三楼">A栋三楼</option>
+				  <option value ="A栋三楼">A栋三楼</option>
+				  <option value="B栋三楼">B栋三楼</option>
+				  <option value="C栋三楼">C栋三楼</option>
+				</select>
+			</li>
+			<li>
+				<label for="">设备类型：</label>
+				<select>
+				  <option value ="Wifi">Wifi</option>
+				  <option value ="其他1">其他1</option>
+				  <option value ="其他2">其他2</option>
+				  <option value ="其他3">其他3</option>
+				</select>
+			</li>
+			<li>
+				<label for="">数据更新时间：</label>
+				<input type="text"  placeholder="请输入日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})"/>
+			</li>
+			<li>
+				<label for="">当前版本：</label>
+				<input type="text" />
+			</li>
+		</ul>
+	</div>	
+</div>
+<!-- 编辑列表_end -->
+</body>
+</html>
+<script src="hzcfile/js/scrollReveal.js" type="text/javascript" charset="utf-8"></script>
+<script src="hzcfile/layer/layer.js"></script><!-- layer.js -->
+<script src="hzcfile/layer/laypage/laypage.js"></script><!-- layer.js -->
+<script src="hzcfile/layer/laypage/laypage.js"></script><!-- 分页.js -->
+<script src="hzcfile/layer/laydate/laydate.js" type="text/javascript" charset="utf-8"></script><!-- 日期js -->
+
+<script type="text/javascript">
+//打开加载效果
+scrollanimate();
+//并网模式
+Tablefn();
+function Tablefn(){
+	var tabli=$(".Electricityprice_setTab li");
+	var tabcont=$(".Electricityprice_table");
+	
+	tabli.on("click",function(){
+		var n=$(this).index();
+		$(this).addClass("cur").siblings().removeClass("cur");
+		tabcont.eq(n).show().siblings().hide();
+	})
+}
+
+//列表展示
+demo();
+function demo(curr) {
+	var curr = curr || 1;
+	$.get('http://ons.me/tools/dropload/json.php', { //测试连接
+		page: curr || 1 //一页显示的条数
+	}, function(data) {
+		var ohtml=""
+		for(var i = 0; i <10; i++) {
+			ohtml += '<tr>';
+					ohtml += '<td>SJ254117856</td>';
+					ohtml += '<td>SJ254117856</td>';
+					ohtml += '<td>A栋三楼</td>';
+					ohtml += '<td>Wifi</td>';
+					ohtml += '<td>正常</td>';
+					ohtml += '<td>2018-01-12</td>';
+					ohtml += '<td>5.2.06</td>';
+
+					//"<td><span class='"+(data[i].state=='处理'?'index-red':(data[i].state=='待处理' ? 'index-red' : ''))+"'>"+data[i].state+"</span></td>"+
+					ohtml += '<td>';
+						ohtml += '<a href="javascript:;" class="delete" onclick="deletefn(\'delete\')">删除</a>';
+						ohtml += '<a href="javascript:;" class="edit" onclick="editfn(\'edit\')">编辑</a>';
+					ohtml += '</td>';
+			ohtml += '</tr>';
+		}
+		$('.Electricityprice_table1 tbody').append(ohtml);
+		//显示分页
+		laypage({
+			cont: 'acceptance-page', //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>
+			pages: 15, //通过后台拿到的总页数
+			skin: '#999', //加载内置皮肤，也可以直接赋值16进制颜色值，如:#c00
+			groups: 5, //连续显示分页数
+			skip: true, //是否开启跳页
+			curr: curr || 1, //当前页(的样式)
+			jump: function(obj, first) { //触发分页后的回调
+				if(!first) { //点击跳页触发函数自身，并传递当前页：obj.curr
+					//回调函数返回的数据
+					demo(obj.curr);
+					$('.Electricityprice_table1 tbody').html("");
+				}
+			}
+		});
+	});
+};
+//43dc47
+
+//新增功能
+function addedfn(){
+	var oHtml=$(".oHtmlbox").html();
+	layer.open({
+	  type: 1 //Page层类型
+	  ,area: ['800px', '']//高宽
+	  ,title: '<i class="dcl"></i><span>新增列表</span><i class="dcr"></i>'
+	  ,shade: 0.8 //遮罩透明度
+	  ,maxmin: true //允许全屏最小化
+	  ,anim: 5 //0-6的动画形式，-1不开启
+	  ,content:oHtml
+	  ,btn: ['确认', '取消']
+	  ,yes: function(index, layero){
+	    layer.closeAll();
+	  },btn1: function(index, layero){    
+	          
+	  }         
+	});
+}
+
+
+//删除功能
+function deletefn(){
+	layer.open({
+	  type: 1 //Page层类型
+	  ,area: ['500px', '250px']//高宽
+	  ,title:'<i class="dcl"></i><span>删除提示</span><i class="dcr"></i>'
+	  ,shade: 0.8 //遮罩透明度
+	  ,maxmin: true //允许全屏最小化
+	  ,anim: 5 //0-6的动画形式，-1不开启
+	  ,content:'<div class="layercontbox"><p class="tipsCont"><i class="ShutdownTips"></i>确认删除？</p></div>'
+	  ,btn: ['确认', '取消']
+	  ,yes: function(index, layero){
+	    layer.closeAll();
+	  },btn1: function(index, layero){    
+	          
+	  }         
+	});
+}
+
+//编辑功能
+function editfn(){
+	var oHtml=$(".oHtmlbox").html();
+	layer.open({
+	  type: 1 //Page层类型
+	  ,area: ['800px', '']//高宽
+	  ,title: '<i class="dcl"></i><span>编辑列表</span><i class="dcr"></i>'
+	  ,shade: 0.8 //遮罩透明度
+	  ,maxmin: true //允许全屏最小化
+	  ,anim: 5 //0-6的动画形式，-1不开启
+	  ,content:oHtml
+	  ,btn: ['确认', '取消']
+	  ,yes: function(index, layero){
+	    layer.closeAll();
+	  },btn1: function(index, layero){    
+	          
+	  }         
+	});
+}
+</script>
