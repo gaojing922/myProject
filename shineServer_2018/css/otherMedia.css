@@ -1,0 +1,32 @@
+@media screen and (min-width: 1201px) and (max-width: 1380px) {
+	/*内容区域*/
+	/*状态图*/
+	.sameS-box{width: 110px;height: 110px;}
+	.state-left,.state-center,.state-right{margin-top: -55px;}
+	.state-top,.state-bottom,.state-center{margin-left: -55px;}
+	
+	.allState-box{height: 655px;}
+	.toBottom-img>span,.sysTo-top>span{height: 22px;}
+	.sysTo-bottom{top: 186px;}
+	.sysTo-right {left: 114px;}
+	.sysTo-top{top: 404px;}
+	.state-top{top: 56px;}
+	.state-bottom{bottom: 56px;}
+	.state-left-title,.state-right-title{top: 391px;}
+	.state-bottom-title {bottom: 23px;}
+	
+	.system-box li{float: left;width: 50%; height: 685px;}
+	.allState-box{width: 580px;}
+	.sys-count {height: 340px;}
+	.sys-count>div{height: 100%;}
+	.sysTo-right, .sysTo-left{width: 105px;}
+	.same-count-text .sct-one>span:nth-child(1) { font-size: 36px;}
+	/*设备管理*/
+	.device-same-box>div:nth-child(1){width: 20%;background-size: 72px 72px;}
+	.device-same-box>div:nth-child(2){width: 80%;}
+	.device-same-box>div:nth-child(2) table tr td .dsb-count{font-size: 32px;}
+	
+	
+	
+	
+}

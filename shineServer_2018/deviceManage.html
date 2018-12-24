@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>古瑞瓦特光伏电站监控系统</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" /><!--滚动条-->
+		<link href="Carousel/carousel.css" rel="stylesheet" /><!--轮播-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" media="screen"/>
+    	<link rel="stylesheet" type="text/css" href="css/base.css" />
+    	<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+    	<link rel="stylesheet" type="text/css" href="layui-v2.2.5/css/layui.css" />
+    	<link rel="stylesheet" type="text/css" href="css/sameIndex.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_1200.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_980.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_780.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_580.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_579.css" />
+    	<link rel="stylesheet" type="text/css" href="css/otherMedia.css" />
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/scrollReveal.js"></script>
+    	<!--滚动条-->
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/jquery.mCustomScrollbar.min.js"></script>
+		<script>
+    		$(function(){
+    			//页面动画
+    			window.scrollReveal = new scrollReveal();
+    		})
+    	</script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header_m indexHead-bg clearBox">
+			<a class="logoBox floatL" href="dashboard.html">
+				<img src="images/logo.png">
+			</a>
+			<span>电站监控系统</span>
+			<ul class="headMenu floatR">
+				<li class="menuSearch">
+					<div class="menu-searchImg">
+						<div class="openSearch"></div>
+						<div class="closeSearch"></div>
+					</div>
+					<div class="menu-searchBox layui-form">
+						<div class="layui-inline">
+							<select name="modules" lay-verify="required" lay-search="">
+						        <option value="">选择搜索电站或设备</option>
+						        <option value="18">checkbox</option>
+						        <option value="19">switch</option>
+						        <option value="20">radio</option>
+					        </select>
+						</div>
+					</div>
+				</li>
+				<li class="addPlant-box">
+					<div class="addPlant-img"></div>
+					<ul class="addPlant-content">
+						<li class="ac-one">
+							添加电站
+						</li>
+						<li class="ac-two">
+							添加设备
+						</li>
+					</ul>
+				</li>
+				<!--<li class="layui-form choosePlant">
+					<div class="layui-inline">
+						<select name="modules" lay-verify="required" lay-search="">
+					        <option value="">直接选择或搜索电站</option>
+					        <option value="18">checkbox</option>
+					        <option value="19">switch</option>
+					        <option value="20">radio</option>
+				        </select>
+					</div>
+					<span class="addPlant-btn"></span>
+				</li>
+				<li class="chooseDevice">
+					<div class="layui-form inline-block">
+					    <select name="quiz1">
+						    <option value="">选择设备</option>
+						    <option value="1">MIX</option>
+						    <option value="2">储能机</option>
+						    <option value="3">逆变器</option>
+					   	</select>
+				    </div>
+				    <div class="inline-block">
+				    	<input type="text" class="allInput" placeholder="输入设备名称"/>
+				    </div>
+				</li>
+				<li class="headSearch">
+					<span class="commonBtn">搜索</span>
+				</li>-->
+				<li class="loginUser">
+					<span>welcome:</span>
+					<span>guest(管理员)</span>
+				</li>
+			</ul>
+			<div class="logout">
+				<span></span>
+			</div>
+			<!--其它菜单-->
+			<div class="otherMenu">
+				<span class="menuBg-x"></span>
+				<ul class="menuBg-c">
+					<li>
+						<a title="告警" class="mc-1"></a>
+					</li>
+					<li>
+						<a title="告警"  class="mc-2"></a>
+						<div class="same-menuBox same-waring-menuBox">
+							<div class="same-menuBox-title">Fault log</div>
+							<div class="same-menuBox-content">
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+							</div>
+							<div class="same-menuBox-foot">
+								Look at the More>>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a title="分享"  class="mc-3"></a>
+						<div class="same-menuBox same-share-menuBox">
+							<a>微信</a>
+							<a>QQ</a>
+							<a>微博</a>
+						</div>
+					</li>
+					<li>
+						<a title="下载"  class="mc-4"></a>
+					</li>
+					<li>
+						<a title="下载"  class="mc-5"></a>
+					</li>
+					<li>
+						<a title="语言"  class="mc-6"></a>
+						<div class="same-menuBox same-lang-menuBox">
+							<a>中文</a>
+							<a>English</a>
+							<a>Français</a>
+							<a>日本語</a>
+							<a>In Italiano</a>
+							<a>Nederland</a>
+							<a>Türkçe</a>
+							<a>Polish</a>
+							<a>Greek</a>
+							<a>German</a>
+							<a>Português</a>
+							<a>Spanish</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--切换菜单-->
+			<div class="toogleMenue">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!--切换菜单显示之后的菜单,只有手机端显示-->
+			<div class="phone-menu">
+				<div class="phone-menu-box">
+					<div class="layui-form inline-block">
+					    <select name="quiz1">
+						    <option value="">选择设备</option>
+						    <option value="1">MIX</option>
+						    <option value="2">储能机</option>
+						    <option value="3">逆变器</option>
+					   	</select>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!--头部菜单-->
+		<div class="menuBox clearBox">
+			<div class="menuBox-title">
+				<!--设备-->
+				<div>设备</div>
+				<div>
+					<span>当前位置:</span>
+					<span>设备首页</span>
+				</div>
+			</div>
+			<div class="menue-content">
+				<table>
+					<tr>
+						<td>
+							<a class="menueBox" href="dashboard.html">
+								<p class="dash-img"></p>
+								<p>仪表盘</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="energy.html">
+								<p class="charts-img"></p>
+								<p>能源</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox selectedM" href="deviceManage.html">
+								<p class="device-img"></p>
+								<p>设备</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="log.html">
+								<p class="log-img"></p>
+								<p>日志</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="set.html">
+								<p class="set-img"></p>
+								<p>设置</p>
+							</a>
+						</td>
+					</tr>
+				</table>
+		 	</div>
+		 	<div class="clearAfter"></div><!--止DIV不能动-->
+		 	<div class="text-center weatherBox">
+		  		<div class="weather-title">
+		  			<span>30℃</span>	
+		  			<span class="weather-text">
+						<p>
+							<img src="images/Weather.png" />
+						</p>			  				
+						<p>Sunny</p>			  				
+		  			</span>	
+		  		</div>
+		  		<div class="weather-content ft-carousel" id="weather-banner">
+		  			<div class="weather-banner carousel-inner">
+		  				<ul class="banner-text bt-one carousel-item">
+		  					<li>
+		  						<div>
+		  							<p>日出-日落</p>
+		  							<p>06:19-18:38</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>云量</p>
+		  							<p>78454</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>环境温度</p>
+		  							<p>20℃</p>
+		  						</div>
+		  					</li>
+		  				</ul>
+		  				<ul class="banner-text bt-one carousel-item">
+		  					<li>
+		  						<div>
+		  							<p>风向</p>
+		  							<p>189°</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>风速</p>
+		  							<p>204M/s</p>
+		  						</div>
+		  					</li>
+		  				</ul>
+		  			</div>
+		  		</div>
+			</div>
+		</div>
+		<!--以上内容共用-->
+		<!--内容区域开始-->
+		<div class="content-box">
+			<div class="device-dis-box sameMaring clearBox">
+				<div class="device-same-box dsb-one clearBox">
+					<div class="floatL" data-scroll-reveal="enter left and move 20px over 1s"></div>
+					<div class="floatL" data-scroll-reveal="enter right and move 20px over 1s">
+						<table>
+							<tr>
+								<td>
+									<span class="dsb-count">36.1</span>
+									<span>kW</span>
+								</td>
+								<td>
+									<span class="dsb-count">36.1</span>
+									<span>kW</span>
+								</td>
+							</tr>
+							<tr>
+								<td>当前功率</td>
+								<td>装机功率</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="device-same-box dsb-two">
+					<div class="floatL" data-scroll-reveal="enter left and move 20px over 1s"></div>
+					<div class="floatL" data-scroll-reveal="enter right and move 20px over 1s">
+						<table>
+							<tr>
+								<td>
+									<span class="dsb-count">36.1</span>
+									<span>kWh</span>
+								</td>
+								<td>
+									<span class="dsb-count">36.1</span>
+									<span>kWh</span>
+								</td>
+								<td>
+									<span class="dsb-count">36.1</span>
+									<span>GWh</span>
+								</td>
+							</tr>
+							<tr>
+								<td>日发电</td>
+								<td>月发电</td>
+								<td>总发电</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="device-same-box dsb-three">
+					<div class="floatL" data-scroll-reveal="enter left and move 20px over 1s"></div>
+					<div class="floatL" data-scroll-reveal="enter right and move 20px over 1s">
+						<table>
+							<tr>
+								<td>
+									<span class="dsb-count">36.1</span>
+									<span>元</span>
+								</td>
+								<td>
+									<span class="dsb-count">36.1</span>
+									<span>元</span>
+								</td>
+								<td>
+									<span class="dsb-count">36.1</span>
+									<span>万元</span>
+								</td>
+							</tr>
+							<tr>
+								<td>日收益</td>
+								<td>月收益</td>
+								<td>总收益</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="device-dis-content sameMaring">
+				<div class="ddc-select clearBox sameMaring">
+					<ul class="log-text floatL sameTitle-t">
+						<li class="same-textS">用电设备<i></i></li>
+						<li>发电设备<i></i></li>
+					</ul>
+					<ul class="floatR ddc-filter">
+						<li>
+							<span class="ddc-title">设备类型:</span>
+							<div class="layui-form inline-block">
+							    <select name="quiz1">
+								    <option value="">请选择设备</option>
+								    <option value="1">逆变器</option>
+								    <option value="2">储能机</option>
+							   	</select>
+						    </div>
+						</li>
+						<li>
+							<input class="allInput" placeholder="设备"/>
+						</li>
+						<li>
+							<button class="hasColorBtn">搜索</button>
+						</li>
+					</ul>
+				</div>
+				<!--用电设备-->
+				<div class="sameTab-box ddc-boxT usePowerDevice">
+					<div class="ddc-same-row clearBox sameMaring">
+						<div class="ddc-row-one">
+							<p class="ddc-row-title">主卧空调
+								<a class="sameAbtn otherEdit" title="编辑"></a>
+							</p>
+							<div class="clearBox ddc-row-text">
+								<div class="floatL ddc-row-img">
+									<img src="images/Air_conditioner.png" />
+								</div>
+								<div class="floatL ddc-row-table">
+									<table>
+										<tr>
+											<td>
+												<span>序列号:</span>
+												<span>SAG3565632</span>
+											</td>
+											<td>
+												<span>区域:</span>
+												<span>智能控制</span>
+											</td>
+											<td>
+												<span>连接状态:</span>
+												<span class="ylj">已连接</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>当前功率(W):</span>
+												<span>179.445</span>
+											</td>
+											<td>
+												<span>室温(℃):</span>
+												<span>19</span>
+											</td>
+											<td>
+												<span>运行状态:</span>
+												<span>未连接</span>
+												<div class="switch" data-name="0">
+													<em class="switch-close-text"></em>
+													<em class="switch-open-text"></em>
+													<i></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>总电量(度):</span>
+												<span>265</span>
+											</td>
+											<td>
+												<span>空调温度(℃):</span>
+												<span>25</span>
+											</td>
+											<td>
+												<span>房间状态:</span>
+												<span>未采集</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+						<div class="ddc-row-two">
+							<div class="ddc-row-tDo ddc-row-tdO-1 clearBox">
+								<div class="ddc-control">
+									<p></p>
+									<p>设置</p>
+								</div>
+								<div>
+									<p></p>
+									<p>数据</p>
+								</div>
+							</div>
+							<div class="ddc-row-tDo ddc-row-tdO-2 clearBox">
+								<div class="ddc-param">
+									<p></p>
+									<p>参数</p>
+								</div>
+								<div>
+									<p></p>
+									<p>删除</p>
+								</div>
+							</div>
+						</div>
+						<!--置顶图标-->
+						<div class="toTop-img">
+							<span class="toTop-normal"></span>	
+							<span class="toTop-hover"></span>	
+						</div>
+					</div>
+					<div class="ddc-same-row clearBox sameMaring">
+						<div class="ddc-row-one">
+							<p class="ddc-row-title">大厅空调
+								<a class="sameAbtn otherEdit" title="编辑"></a>
+							</p>
+							<div class="clearBox ddc-row-text">
+								<div class="floatL ddc-row-img">
+									<img src="images/Air_conditioner.png" />
+								</div>
+								<div class="floatL ddc-row-table">
+									<table>
+										<tr>
+											<td>
+												<span>序列号:</span>
+												<span>SAG3565632</span>
+											</td>
+											<td>
+												<span>区域:</span>
+												<span>智能控制</span>
+											</td>
+											<td>
+												<span>连接状态:</span>
+												<span class="ylj">已连接</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>当前功率(W):</span>
+												<span>179.445</span>
+											</td>
+											<td>
+												<span>室温(℃):</span>
+												<span>19</span>
+											</td>
+											<td>
+												<span>运行状态:</span>
+												<span class="ylj">连接</span>
+												<div class="switch" data-name="0">
+													<em class="switch-close-text"></em>
+													<em class="switch-open-text"></em>
+													<i></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>总电量(度):</span>
+												<span>265</span>
+											</td>
+											<td>
+												<span>空调温度(℃):</span>
+												<span>25</span>
+											</td>
+											<td>
+												<span>房间状态:</span>
+												<span>未采集</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="ddc-row-two">
+							<div class="ddc-row-tDo ddc-row-tdO-1 clearBox">
+								<div class="ddc-control">
+									<p></p>
+									<p>设置</p>
+								</div>
+								<div>
+									<p></p>
+									<p>数据</p>
+								</div>
+							</div>
+							<div class="ddc-row-tDo ddc-row-tdO-2 clearBox">
+								<div class="ddc-param">
+									<p></p>
+									<p>参数</p>
+								</div>
+								<div>
+									<p></p>
+									<p>删除</p>
+								</div>
+							</div>
+						</div>
+						<!--置顶图标-->
+						<div class="toTop-img">
+							<span class="toTop-normal"></span>	
+							<span class="toTop-hover"></span>	
+						</div>
+					</div>
+					<div class="ddc-same-row clearBox sameMaring">
+						<div class="ddc-row-one">
+							<p class="ddc-row-title">会议室空调
+								<a class="sameAbtn otherEdit" title="编辑"></a>
+							</p>
+							<div class="clearBox ddc-row-text">
+								<div class="floatL ddc-row-img">
+									<img src="images/Air_conditioner.png" />
+								</div>
+								<div class="floatL ddc-row-table">
+									<table>
+										<tr>
+											<td>
+												<span>序列号:</span>
+												<span>SAG3565632</span>
+											</td>
+											<td>
+												<span>区域:</span>
+												<span>智能控制</span>
+											</td>
+											<td>
+												<span>连接状态:</span>
+												<span class="ylj">已连接</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>当前功率(W):</span>
+												<span>179.445</span>
+											</td>
+											<td>
+												<span>室温(℃):</span>
+												<span>19</span>
+											</td>
+											<td>
+												<span>运行状态:</span>
+												<span class="ylj">连接</span>
+												<div class="switch" data-name="0">
+													<em class="switch-close-text"></em>
+													<em class="switch-open-text"></em>
+													<i></i>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>总电量(度):</span>
+												<span>265</span>
+											</td>
+											<td>
+												<span>空调温度(℃):</span>
+												<span>25</span>
+											</td>
+											<td>
+												<span>房间状态:</span>
+												<span>未采集</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+						<div class="ddc-row-two">
+							<div class="ddc-row-tDo ddc-row-tdO-1 clearBox">
+								<div class="ddc-control">
+									<p></p>
+									<p>设置</p>
+								</div>
+								<div>
+									<p></p>
+									<p>数据</p>
+								</div>
+							</div>
+							<div class="ddc-row-tDo ddc-row-tdO-2 clearBox">
+								<div class="ddc-param">
+									<p></p>
+									<p>参数</p>
+								</div>
+								<div>
+									<p></p>
+									<p>删除</p>
+								</div>
+							</div>
+						</div>
+						<!--置顶图标-->
+						<div class="toTop-img">
+							<span class="toTop-normal"></span>	
+							<span class="toTop-hover"></span>	
+						</div>
+					</div>
+				</div>
+				<!--用电设备结束-->
+				<!--发电设备-->
+				<div class="sameTab-box ddc-boxT generateBox hide">
+					<div class="ddc-same-row clearBox sameMaring">
+						<div class="ddc-row-one">
+							<p class="ddc-row-title">张三的逆变器
+								<a class="sameAbtn otherEdit" title="编辑"></a>
+								<a class="sameAbtn otherDelete" title="删除"></a>
+							</p>
+							<div class="clearBox ddc-row-text">
+								<div class="floatL ddc-row-img">
+									<img src="images/testImg-1.png" />
+								</div>
+								<div class="floatL ddc-row-table">
+									<table>
+										<tr>
+											<td>
+												<span>序列号:</span>
+												<span>SAG3565632</span>
+											</td>
+											<td>
+												<span>所属采集器:</span>
+												<span>CM15456456</span>
+											</td>
+											<td>
+												<span>连接状态:</span>
+												<span class="ylj">已连接</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>当前功率(W):</span>
+												<span>179.445</span>
+											</td>
+											<td>
+												<span>额定功率(W):</span>
+												<span>2564565</span>
+											</td>
+											<td>
+												<span>最后登录/更新时间:</span>
+												<span>2018-04-10 21:09:09</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>今日发电(kWh):</span>
+												<span>565444</span>
+											</td>
+											<td>
+												<span>当月发电(kWh):</span>
+												<span>149.6</span>
+											</td>
+											<td>
+												<span>累计发电量(kWh):</span>
+												<span>25465531351</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+						<div class="ddc-row-two">
+							<div class="ddc-row-tDo ddc-row-tdO-1 clearBox">
+								<div class="ddc-control">
+									<p></p>
+									<p>设置</p>
+								</div>
+								<div>
+									<p></p>
+									<p>数据</p>
+								</div>
+							</div>
+							<div class="ddc-row-tDo ddc-row-tdO-2 clearBox">
+								<div class="ddc-param">
+									<p></p>
+									<p>参数</p>
+								</div>
+								<div>
+									<p></p>
+									<p>日志</p>
+								</div>
+							</div>
+						</div>
+						<!--置顶图标-->
+						<div class="toTop-img">
+							<span class="toTop-normal"></span>	
+							<span class="toTop-hover"></span>	
+						</div>
+					</div>
+					<div class="ddc-same-row clearBox sameMaring">
+						<div class="ddc-row-one">
+							<p class="ddc-row-title">李四的逆变器
+								<a class="sameAbtn otherEdit" title="编辑"></a>
+								<a class="sameAbtn otherDelete" title="删除"></a>
+							</p>
+							<div class="clearBox ddc-row-text">
+								<div class="floatL ddc-row-img">
+									<img src="images/testImg-1.png" />
+								</div>
+								<div class="floatL ddc-row-table">
+									<table>
+										<tr>
+											<td>
+												<span>序列号:</span>
+												<span>SAG3565632</span>
+											</td>
+											<td>
+												<span>所属采集器:</span>
+												<span>CM15456456</span>
+											</td>
+											<td>
+												<span>连接状态:</span>
+												<span class="ylj">已连接</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>当前功率(W):</span>
+												<span>179.445</span>
+											</td>
+											<td>
+												<span>额定功率(W):</span>
+												<span>2564565</span>
+											</td>
+											<td>
+												<span>最后登录/更新时间:</span>
+												<span>2018-04-10 21:09:09</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>今日发电(kWh):</span>
+												<span>565444</span>
+											</td>
+											<td>
+												<span>当月发电(kWh):</span>
+												<span>149.6</span>
+											</td>
+											<td>
+												<span>累计发电量(kWh):</span>
+												<span>25465531351</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="ddc-row-two">
+							<div class="ddc-row-tDo ddc-row-tdO-1 clearBox">
+								<div class="ddc-control">
+									<p></p>
+									<p>设置</p>
+								</div>
+								<div>
+									<p></p>
+									<p>数据</p>
+								</div>
+							</div>
+							<div class="ddc-row-tDo ddc-row-tdO-2 clearBox">
+								<div class="ddc-param">
+									<p></p>
+									<p>参数</p>
+								</div>
+								<div>
+									<p></p>
+									<p>日志</p>
+								</div>
+							</div>
+						</div>
+						<!--置顶图标-->
+						<div class="toTop-img">
+							<span class="toTop-normal"></span>	
+							<span class="toTop-hover"></span>	
+						</div>
+					</div>
+					<div class="ddc-same-row clearBox sameMaring">
+						<div class="ddc-row-one">
+							<p class="ddc-row-title">王五的逆变器
+								<a class="sameAbtn otherEdit" title="编辑"></a>
+								<a class="sameAbtn otherDelete" title="删除"></a>
+							</p>
+							<div class="clearBox ddc-row-text">
+								<div class="floatL ddc-row-img">
+									<img src="images/testImg-1.png" />
+								</div>
+								<div class="floatL ddc-row-table">
+									<table>
+										<tr>
+											<td>
+												<span>序列号:</span>
+												<span>SAG3565632</span>
+											</td>
+											<td>
+												<span>所属采集器:</span>
+												<span>CM15456456</span>
+											</td>
+											<td>
+												<span>连接状态:</span>
+												<span class="ylj">已连接</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>当前功率(W):</span>
+												<span>179.445</span>
+											</td>
+											<td>
+												<span>额定功率(W):</span>
+												<span>2564565</span>
+											</td>
+											<td>
+												<span>最后登录/更新时间:</span>
+												<span>2018-04-10 21:09:09</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>今日发电(kWh):</span>
+												<span>565444</span>
+											</td>
+											<td>
+												<span>当月发电(kWh):</span>
+												<span>149.6</span>
+											</td>
+											<td>
+												<span>累计发电量(kWh):</span>
+												<span>25465531351</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+						<div class="ddc-row-two">
+							<div class="ddc-row-tDo ddc-row-tdO-1 clearBox">
+								<div class="ddc-control">
+									<p></p>
+									<p>设置</p>
+								</div>
+								<div>
+									<p></p>
+									<p>数据</p>
+								</div>
+							</div>
+							<div class="ddc-row-tDo ddc-row-tdO-2 clearBox">
+								<div class="ddc-param">
+									<p></p>
+									<p>参数</p>
+								</div>
+								<div>
+									<p></p>
+									<p>日志</p>
+								</div>
+							</div>
+						</div>
+						<!--置顶图标-->
+						<div class="toTop-img">
+							<span class="toTop-normal"></span>	
+							<span class="toTop-hover"></span>	
+						</div>
+					</div>
+				</div>
+				<!--发电设备结束-->
+			</div>
+		</div>
+		<!--内容结束-->
+		<!--页脚版权信息-->
+		<div class="footer">
+			Copyright©2018 - SHENZHEN GROWATT NEW ENERGY TECHNOLOGY Co., Ltd ShineServer-3.6.0.0 
+		</div>
+		<!--------------------------------------弹框内容开始------------------------------------------------->
+		<!--添加电站弹框-->
+		<div class="allDialog addPlant-dialog">
+			<!--内容-->
+			<div class="addPlantdia-box" style="width: 200px;height: 200px;line-height: 200px;text-align: center;">
+				暂无内容
+			</div>
+			<!--按钮-->
+			<div class="dialog-btn">
+				<a class="hasColorBtn">确定</a>
+				<a class="commonBtn">取消</a>
+			</div>
+		</div>
+		<!--添加设备弹框-->
+		<div class="allDialog addDevice-dialog">
+			<!--内容-->
+			<div class="addPlantdia-box">
+				<table>
+					<tr>
+						<td>SN</td>
+						<td><input type="text" class="allInput"/></td>
+					</tr>
+					<tr>
+						<td>属性电站</td>
+						<td class="layui-form">
+							<select name="a">
+						        <option value="18">储能机</option>
+						        <option value="19">逆变器</option>
+						        <option value="20">Max</option>
+					        </select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--按钮-->
+			<div class="dialog-btn">
+				<a class="hasColorBtn">确定</a>
+				<a class="commonBtn">取消</a>
+			</div>
+		</div>
+		<!---->
+		<!--控制-->
+		<div class="allDialog control-dialog">
+			<!--内容-->
+			<div class="controldia-box">
+				<!--密码-->
+				<div class="allPasswd-box">
+					<span>请输入密码:</span>
+					<input class="allInput"/>
+				</div>
+				<div class="control-table layui-form marginLr">
+					<table>
+						<tr>
+							<td>
+								 <input type="radio" name="control" value="1" title="设置逆变器开关机" lay-filter="control">
+							</td>
+							<td>
+								<div class="switch readyInput" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								 <input type="radio" name="control" value="2" title="设置是否存储以下PF命令" lay-filter="control">
+							</td>
+							<td>
+								<div class="switch readyInput" data-name="0">
+									<em class="switch-close-text">关</em>
+									<em class="switch-open-text">开</em>
+									<i></i>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								 <input type="radio" name="control" value="3" title="设置有功功率" lay-filter="control">
+							</td>
+							<td>
+								<input type="text" class="allInput readyInput cInput" disabled="disabled"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								 <input type="radio" name="control" value="4" title="设置无功功率" lay-filter="control">
+							</td>
+							<td>
+								<input type="text" class="allInput readyInput cInput" disabled="disabled"/><span>%</span>
+								<div class="layui-form inline-block">
+								    <select name="quiz1" class="readyInput" disabled="disabled">
+									    <option value="0">容性</option>
+									    <option value="1">感性</option>
+								   	</select>
+							    </div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								 <input type="radio" name="control" value="5" title="设置PF值" lay-filter="control">
+							</td>
+							<td>
+								<input type="text" class="allInput readyInput cInput" disabled="disabled"/>
+								<span>(-0.8--1/0.8-1)</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input id="invTime" type="radio" name="control" value="6" title="设置逆变器时间" lay-filter="control">
+							</td>
+							<td>
+								<input type="text" id="invTime" class="allInput readyInput cInput" readonly="readonly" onclick="laydate.render({elem:this});"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								 <input type="radio" name="control" value="7" title="市电电压上限" lay-filter="control">
+							</td>
+							<td>
+								<input type="text" class="allInput readyInput cInput" disabled="disabled"/>
+								<span>V</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								 <input type="radio" name="control" value="8" title="市电电压下限" lay-filter="control">
+							</td>
+							<td>
+								<input type="text" class="allInput readyInput cInput" disabled="disabled"/>
+								<span>V</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--按钮-->
+			<div class="dialog-btn">
+				<a class="hasColorBtn">确定</a>
+				<a class="commonBtn">取消</a>
+			</div>
+		</div>
+		<!--参数-->
+		<div class="allDialog param-dialog">
+			<div class="param-title clearBox marginLr">
+				<span>张三的逆变器</span>
+				<div class="floatR">
+					<input type="text" class="allInput" placeholder="开始日期" readonly="readonly"/>
+					<input type="text" class="allInput" placeholder="结束日期" readonly="readonly"/>
+					<button class="hasColorBtn">搜索</button>
+					<button class="commonBtn">导出</button>
+				</div>
+			</div>
+			<ul class="param-text clearBox marginLr">
+				<li>
+					<span>序列号:</span>
+					<span>H1154551521</span>
+				</li>
+				<li>
+					<span>别名:</span>
+					<span>H123423212</span>
+				</li>
+				<li>
+					<span>端口:</span>
+					<span>AEDEE5445</span>
+				</li>
+				<li>
+					<span>属性:</span>
+					<span>AHHIJ/AI2434/2333RR</span>
+				</li>
+			</ul>
+			<div class="param-table marginLr">
+				
+				
+			</div>
+			<!--按钮-->
+			<div class="dialog-btn">
+				<a class="hasColorBtn">关闭</a>
+			</div>
+		</div>
+		<!--------------------------------------弹框内容结束------------------------------------------------->
+		<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+		<script src="https://img.hcharts.cn/highcharts/modules/no-data-to-display.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="layui-v2.2.5/layui.all.js"></script>
+		<script src="js/serverCommon.js"></script>
+		<!--轮播-->
+		<script src="Carousel/carousel.min.js"></script>
+		<script>
+			//常规用法
+			$(function(){
+				$(".ddc-row-tDo>div").each(function(i,v){
+					$(v).click(function(){
+						$(v).addClass("sameDdc_"+i)
+					})
+				});
+				//置顶
+				$(".toTop-img").click(function(){
+					var index = $(this).parents(".ddc-same-row").index();
+					var thisBox = $(this).parents(".ddc-same-row");
+					if(index !="0"){
+		            	$(this).parents(".ddc-boxT").prepend(thisBox);
+		            	thisBox.addClass("toTob-color").find(".ddc-row-title").addClass("toTop-textC");
+		            	setTimeout(function(){
+		            		thisBox.removeClass("toTob-color").find(".ddc-row-title").removeClass("toTop-textC");
+		            	},800)
+					}
+				});
+				//控制
+				$(".ddc-control").click(function(){
+					var title = $(this).parents(".ddc-same-row").find(".ddc-row-title").text();
+					dialogContent(".control-dialog",title);
+				});
+				//参数
+				$(".ddc-param").click(function(){
+					//var title = $(this).parents(".ddc-same-row").find(".ddc-row-title").text()+"参数";
+					dialogContent(".param-dialog");
+				});
+				//控制弹框单选事件
+				form.on('radio(control)', function(data){
+					if($(data.elem).is(":checked")){
+						if($(".allPasswd-box").is(":hidden")){
+							$(".allPasswd-box").show().find("input");
+						};
+						$(".switchClick").addClass("readyInput").removeClass("switchClick");
+						$(".cInput").addClass("readyInput").attr("disabled",true);
+						$(this).parents("td").siblings("td").find(".switch").addClass("switchClick").removeClass("readyInput");
+						$(this).parents("td").siblings("td").find(".cInput").removeClass("readyInput").removeAttr("disabled").focus();
+					}
+				}); 
+				//开关
+				$(".switch").click(function(){
+					var dt = $(this).attr("data-name");
+					if(dt == 0){
+						$(this).siblings("")
+						$(this).attr("data-name",1);
+					}else{
+						$(this).attr("data-name",0);
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

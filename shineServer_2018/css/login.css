@@ -1,0 +1,224 @@
+@charset "utf-8";
+.loginTop{background: url(../images/loginBg.png) no-repeat center;background-size: 100% 100%;}
+.loginHeader{height: 50px;line-height: 50px;padding: 0 20px;color: #FFFFFF;}
+.loginL{width: 174px;height: 42px;background: url(../images/logo.png) no-repeat center;background-size: 100% 100%;}
+.loginMenu{margin-top: 11px;}
+.loginMenu>li{border-radius: 20px;border: 1px solid transparent;float: left;cursor: pointer;-webkit-transition: all .3s linear;transition: all .3s linear;height: 26px;line-height: 26px;padding: 0 15px;}
+.loginMenu>li:not(:first-child){margin-left: 15px;}
+.loginMenu>li.exper{border: 1px solid #FFFFFF;}
+.loginMenu>li:hover,.menuLang span:hover,.menuSelected{border: 1px solid #FFFFFF;box-shadow: 0px 0px 2px #ffffff inset;}
+.loginMenu>li.menuLang:hover{border: 1px solid transparent;box-shadow: none;}
+.loginMenu>li.menuLang{position: relative;padding: 0;}
+.langBox{position: absolute;left: 0;top: 32px;min-width: 100%;
+	-webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: showLang;
+    animation-name: showLang;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    display: none;
+}
+@-webkit-keyframes showLang{
+	from{transform:translate3d(0px,-20px,0);opacity:.3}
+	to{transform:translate3d(0,0,0);opacity:1}
+}
+@keyframes showLang{
+	from{transform:translate3d(0px,-20px,0);opacity:.3}
+	to{transform:translate3d(0,0,0);opacity:1}
+}
+.menuLang span{min-width: 80px;text-align: center;padding: 0 5px;display: block;height: 26px;line-height: 26px;border: 1px solid transparent;border-radius: 20px;-webkit-transition: all .3s linear;transition: all .3s linear;}
+.langBox>a{padding-left:15px;color: #FFFFff;display: block;height: 28px;line-height: 28px;-webkit-transition: all .3s linear;transition: all .3s linear;}
+.langBox>a:hover,.langA{background: #322b6b;border-radius: 5px;}
+.loginContent{overflow: hidden;}
+.loginPro-title{text-align: center;color: #FFFFFF;font-size: 26px;height: 30px;line-height: 30px;}
+.loginPro-box{padding-top: 30px;margin-top: 15px;border-radius: 3px;background-color: #FFFFFF;height: 400px;box-shadow: 0px 0px 25px #2f3271;}
+.loginPro{width: 400px;margin: 100px auto 0 auto;}
+.sameLogin-row{width: 360px;height: 70px;border-bottom: 1px solid #e1e1e1;margin: 0 auto;line-height: 70px;}
+.sameLogin-row>span{color: #adadad;font-size: 14px;display: block;float: left;width: 85px;padding-left: 5px;}
+.sameLogin-row input.sameLogin,.sameLogin-row input.loginV{float: left;height: 70px;border: none;}
+.sameLogin-row input.sameLogin{width: 238px;}
+.sameLogin-row input.loginV{width: 210px;}
+.sameLogin-row>i{display: block;float: left;width: 30px;height: 70px;}
+.sameLogin-row>i.userBg{background: url(../images/serverUser.png) no-repeat center;}
+.sameLogin-row>i.pasdBg{background: url(../images/serverPasswd.png) no-repeat center;}
+.sameLogin-row>em{display: block;float: left;cursor: pointer;width: 60px;color: #444444;font-size: 14px;text-align: center;letter-spacing: 1px;}
+.loginBtn{text-align: center;margin-top: 40px;}
+.loginBtn button.hasColorBtn{width: 220px;padding: 5px;text-align: center;height: auto;font-size: 14px;}
+.forgetPasd,.registUser{text-align: center;margin-top: 20px;}
+.forgetPasd a{color: #009CFF;font-size: 14px;cursor: pointer;}
+.registUser a{color: #009CFF;font-size: 18px;cursor: pointer;}
+/*示例电站*/
+.fxPlant{background: #FFFFFF;padding-top: 50px;padding-bottom: 50px;}
+.fxClear,.csClear{display: none;}
+.fx-title{text-align: center;font-size: 24px;color: #454545;}
+.fxImg>div>div{width: 100%;height: 85px;}
+.fxImg>div>p{font-size: 18px;color: #484848;text-align: center;margin-top: 15px;}
+.fxImg>div.curryData>div{background: url(../images/curryData.png) no-repeat center;}
+.fxImg>div.historyChart>div{background: url(../images/historyChart.png) no-repeat center;}
+.fxImg>div.plantData>div{background: url(../images/plantData.png) no-repeat center;}
+.fxImg>div.plantMsa>div{background: url(../images/plantMsa.png) no-repeat center;}
+.fxBtn{text-align: center;}
+.fxBtn button.commonBtn{height: auto;padding: 2px 35px;}
+.sameBd{position: relative;}
+.sameBd:after{display: block;content: '';position: absolute;height: 3px;width: 40px;background-color: #009cff;bottom: -5px;left: 50%;margin-left: -20px;}
+/*客户案例*/
+.customerCase{background: #eef1f2;padding: 50px 0;}
+.cc-img .sameCS{position: relative;border-radius: 3px;background: #ffffff;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.cc-img .sameCS:after{position: absolute;content: '';display: block;height: 1px;background: #e1e1e1;left: 0;top: 200px;width: 100%;}
+.cc-img .sameCS .sameCs_img{height: 130px;margin: 0 auto;}
+.cc-img .sameCS .sameCs_img>img{width: 100%;height: 100%;border-radius: 3px;}
+.sameCs_text{margin-top: 15px;}
+.sameCs_text p{padding-left: 3px;}
+.sameCs_text p:nth-child(1){font-size: 18px;color: #3a3a3a;}
+.sameCs_text p:nth-child(2){font-size: 14px;color: #676767;margin-top: 3px;}
+.sameCs_text p>i{display: inline-block;border-radius: 5px;padding:0 3px;}
+.sameCs_text p>i.zxColor{border: 1px solid #2dd7f0;color: #2dd7f0;font-size: 12px;}
+.sameCs_text p>i.lxColor{border: 1px solid #a0a0a0;color: #a0a0a0;font-size: 12px;}
+.sameCS table{width: 100%;font-size: 12px;text-align: center;margin-top: 10px;}
+.sameCS table tr td{width: 33.3%;padding: 5px 0;}
+.sameCS table tr td p:nth-child(1){color: #676767;}
+.sameCS table tr td p:nth-child(2){color: #969696;}
+/*通知*/
+.notice{background: #f2f6f7;padding: 50px 0 15px 0;}
+.noticeBox{margin: 50px auto;width: 85%;overflow: hidden;}
+.noticeBox .sameNotice{width: 33%;float: left;height: 180px;padding: 30px 28px;border-radius: 3px;background: #ffffff;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.noticeBox>div.sameNotice:not(:first-child){margin-left: 0.5%;}
+.snTitle{color:#1d79e7;font-size: 16px;}
+.snTime{color: #969696;font-size: 14px;margin-top: 15px;}
+.snText{color: #676767;font-size: 14px;margin-top: 15px;height: 57px;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;text-overflow: ellipsis;}
+.snText:hover{text-decoration: underline;cursor: pointer;}
+/*客户端下载*/
+.clinBox{padding: 50px 0 0 0;background: #ffffff;}
+.clDowlond {margin-top: 15px;}
+.phoneImg,.dowText{width: 47%;height: 400px;float: left;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.dowText{padding-top:50px;float: right;}
+.phoneImg{background: url(../images/bigIphone.png) no-repeat right center;background-size: 350px 400px;}
+.sameDo{cursor: pointer;border-bottom: 1px solid #d6dbe0;width: 288px;height: 92px;line-height: 92px;padding-left: 60px;color: #3e3e3e;font-size: 18px;}
+.iosApp{border-top: 1px solid #d6dbe0;background: url(../images/iphoneImg.png) no-repeat left center,url(../images/phoneRight.png) no-repeat right center;}
+.azApp{background: url(../images/androidImg.png) no-repeat left center,url(../images/phoneRight.png) no-repeat right center;}
+.downloadBox{margin-top: 30px;height: 110px;background: url(../images/ewmImg.png) no-repeat left center;}
+.sameDo:hover>span{-webkit-animation:tx 0.6s linear;display: inline-block;
+-ms-animation:tx 0.6ss linear;
+-moz-animation:tx 0.6s linear;
+-o-animation:tx 0.6s linear;
+animation:tx 0.6s linear; 
+-webkit-transform-origin: center;
+-ms-transform-origin: center;
+-moz-transform-origin: center;
+-o-transform-origin: center;
+transform-origin: center;}
+
+/*底部*/
+.loginFooter{background-color:#555859;height: 100px;}
+.lfLeft,.lfRight{float: left;width: 50%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.lfLeft{font-size: 12px;color: #CCCCCC;padding-left: 15%;}
+.lfLeft p:nth-child(1){margin-top: 35px;}
+.lfLeft p:nth-child(2){margin-top: 5px;}
+.lfRight{text-align: center;line-height: 100px;}
+
+
+
+
+@media screen and (min-width:1200px){
+	.loginBanner{width: 50%;height:700px;}
+	.loginLeft-bg{margin: 80px auto 0 auto;width: 600px;height: 520px;background: url(../images/loginBanner.png) no-repeat center;background-size: 100% 100%;}
+	.loginBox{width: 50%;height: 700px;}
+	.fxImg{width: 80%;margin: 50px auto;overflow: hidden;}
+	.fxImg>div{float: left;width: 25%;}
+	.cc-img{width: 85%;margin: 50px auto;overflow: hidden;}
+	.cc-img .sameCS{float: left;width: 22%;}
+	.case_2,.case_3,.case_4{margin-left: 4%;}
+}
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+	.loginBanner{width: 50%;height:700px;}
+	.loginLeft-bg{margin: 125px auto 0 auto;width: 500px;height: 420px;background: url(../images/loginBanner.png) no-repeat center;background-size: 100% 100%;}
+	.loginBox{width: 50%;height: 700px;}
+	.fxImg{width: 100%;margin: 50px auto;overflow: hidden;}
+	.fxImg>div{float: left;width: 25%;}
+	.cc-img{width: 90%;margin: 50px auto;overflow: hidden;}
+	.cc-img .sameCS{float: left;width: 22%;}
+	.case_2,.case_3,.case_4{margin-left: 4%;}
+}
+@media screen and (min-width: 780px) and (max-width: 979px) {
+	.loginMenu>li:not(:first-child){margin-left: 10px;}
+	.loginBanner{width: 50%;height:700px;}
+	.loginLeft-bg{margin: 180px auto 0 auto;width: 370px;height: 320px;background: url(../images/loginBanner.png) no-repeat center;background-size: 100% 100%;}
+	.loginBox{width: 50%;height: 700px;}
+	.fxImg{width: 100%;margin: 50px auto;overflow: hidden;}
+	.fxImg>div{float: left;width: 25%;}
+	.csClear{display: block;clear: both;}
+	.cc-img{width: 90%;margin: 50px auto;overflow: hidden;}
+	.cc-img .sameCS{width: 45%;}
+	.case_3,.case_4{margin-top: 20px;}
+	.case_1,.case_3{float: left;}
+	.case_2,.case_4{float: right;}
+	.notice{background: #f2f6f7;padding: 30px 0 15px 0;}
+	.noticeBox{margin: 30px auto;width: 85%;overflow: hidden;}
+}
+@media only screen and (min-width: 580px) and (max-width: 779px){
+	.loginMenu>li:not(:first-child){margin-left: 0px;}
+	.loginBanner{display: none;}
+	.loginBox {width: 100%;height: 560px;}
+	.loginPro {margin-top: 30px;}
+	.fxImg{width: 100%;margin: 30px auto;overflow: hidden;}
+	.fxPlant{padding-top: 30px;padding-bottom: 30px;}
+	.fxImg>div{float: left;width: 50%;}
+	.plantData,.plantMsa{margin-top: 30px;}
+	.fxClear{display: block;clear: both;}
+	.csClear{display: block;clear: both;}
+	.cc-img{width: 90%;margin: 50px auto;overflow: hidden;}
+	.cc-img .sameCS{width: 45%;}
+	.case_3,.case_4{margin-top: 20px;}
+	.case_1,.case_3{float: left;}
+	.case_2,.case_4{float: right;}
+	.notice{background: #f2f6f7;padding: 20px 0 10px 0;}
+	.noticeBox{margin: 20px auto;width: 85%;overflow: hidden;}
+	
+	.clinBox{padding-top: 35px;}
+	.phoneImg {background-size: 300px 350px;background-position: center;}
+	.phoneImg, .dowText{height: 350px;}
+	.sameDo{width: 100%;padding-left: 0px;text-align: center;}
+	.downloadBox {margin-top: 10px;height: 100px;}
+}
+@media only screen and (max-width: 714px){
+	.loginMenu {display: none;}
+	.toogleMenue{display: block;margin-top: 10px;margin-right: 0;}
+	.fxImg{width: 100%;margin: 50px auto;overflow: hidden;}
+	
+}
+@media only screen and (max-width: 579px) {
+	.loginTop{background: none;background: linear-gradient(to right,#322b6b,#1f5a93);}
+	.loginMenu>li{float: none;}
+	.loginBanner{display: none;}
+	.loginBox {width: 100%;height: 545px;}
+	.loginPro{width: 320px;margin: 25px auto 0 auto;}
+	.sameLogin-row {width: 315px;margin: 0 auto;}
+	.sameLogin-row input.sameLogin {width: 194px;}
+	.sameLogin-row input.loginV {width: 162px;}
+	.fxImg{width: 100%;margin: 30px auto;overflow: hidden;}
+	.fxPlant{padding-top: 30px;padding-bottom: 30px;}
+	.fxImg>div{float: left;width: 50%;}
+	.plantData,.plantMsa{margin-top: 30px;}
+	.fxClear{display: block;clear: both;}
+	.csClear{display: block;clear: both;}
+	.cc-img{width: 90%;margin: 30px auto;overflow: hidden;}
+	.cc-img .sameCS{width: 45%;}
+	.case_3,.case_4{margin-top: 20px;}
+	.case_1,.case_3{float: left;}
+	.case_2,.case_4{float: right;}
+	.notice{background: #f2f6f7;padding: 20px 0 10px 0;}
+	.noticeBox{margin: 20px auto;width: 90%;overflow: hidden;}
+	.noticeBox .sameNotice{height: 160px;padding: 30px 10px;}
+	.snText{height: 35px;-webkit-line-clamp: 2;}
+	.clinBox{padding-top: 25px;}
+	.phoneImg {background-size: 150px 200px;background-position: center;}
+	.phoneImg, .dowText{height: 350px;width: 50%;}
+	.sameDo{width: 100%;padding-left: 0px;text-align: center;height: 70px;line-height: 70px;font-size: 14px;}
+	.downloadBox {margin-top: 10px;height: 100px;}
+}

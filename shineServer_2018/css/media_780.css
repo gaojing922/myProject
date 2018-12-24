@@ -1,0 +1,100 @@
+/*880分辨率（大于768px，小于959px）*/
+@media screen and (min-width: 780px) and (max-width: 979px) {
+	.headMenu{margin-right: 78px;}
+    .logoBox+span {display: none;}
+	.header_m  ul.headMenu>li:not(:nth-child(1)){margin-left: 5px;}
+	.header_m  ul.headMenu>li input.layui-input{width: 248px;}   
+	.header_m  ul.headMenu>li.chooseDevice input.allInput{width: 90px;}
+	/*头部导航*/
+	.menuBox-title,.menue-content,.weatherBox{float: left;}
+    .menuBox{padding-left: 0px;}
+    .menueBox{width: 86px;height: 68px;font-size: 14px;}
+	.menueBox>p:nth-child(1){height: 38px;line-height: 38px;}
+	.menueBox>p:nth-child(2){height: 28px;line-height: 28px;}
+    .menuBox-title{width: 15%;text-align: left;font-size: 20px;}
+    .menue-content{width:60%;}
+    .weatherBox{width: 25%;}
+    .weather-content {
+	   display: none;
+	}
+	.weather-title .weather-text {
+	    display: inline-block;
+	    height: 70px;
+	}
+	.weather-text p:nth-child(1) {
+	    height: 35px;
+	}
+	.weather-text p:nth-child(1) img {
+	    margin-bottom: 0px;
+	}
+	.weather-text p:nth-child(2) {
+	    height: 35px;
+	    line-height: 35px;
+	}
+	.weather-title{height: 105px;line-height: 105px;}
+    .weather-banner .bt-one li:nth-child(1){width: 50%;}
+	.weather-banner .bt-one li:nth-child(2){width: 25%;}
+	.weather-banner .bt-one li:nth-child(3){width: 25%;}
+	/*内容区域*/
+	/*状态图*/
+	.system-box li{height: 470px;float: left;width: 50%;}
+	.allState-box{height: 438px;}
+	.toBottom-img>span,.sysTo-top>span{height: 20px;}
+	.sameS-box {width: 80px;height: 80px;}
+	.allState-box {width: 400px;}
+	.sysTo-bottom{top: 110px;}
+	.sysTo-top{top: 270px;}
+	.state-left-title,.state-right-title{top: 259px;}
+	.select-model{left: 0;}
+	.select-model .layui-select-title input{ width: 80px;}
+	.sysTo-right, .sysTo-left{width: 70px;}
+	.sysTo-right{left: 82px;}
+	.sysTo-left {
+	    right: 82px;
+	}
+	.same-count-text .sct-one>span:nth-child(1){font-size: 24px;}
+	.sys-count {height: 235px;}
+    .sys-count>div{height: 232px;}
+    .same-count-text {height: 232px;}
+	.state-right,.state-left,.state-center{margin-top: -40px;}
+	.state-bottom,.state-top,.state-center{margin-left: -40px;}
+	.same-count-bg {height: 235px;}
+	.sct-one {margin-top: 58px;}
+	.same-count-bg{width: 40%;background-size: 60px 60px;}
+	.same-count-text{width: 60%;}
+	/*battery*/
+	.battery-pre>div{width: 320px;}
+	.bpRight-text>div {min-width: 40px;}
+	.sameBp-text>div>p, .bpRight-text>div>p{font-size: 12px;}
+	/*en*/
+	.Enviro-box>div{height: 191px;}
+	.eb-one,.dsb-one{float: left;}
+	.eb-two,.dsb-two{float: left;margin:0 2%;}
+	.eb-three,.dsb-three{float: right;}
+	.sameEb-bg{height: 191px;width: 33%;background-size: 80px 81px;}
+	.sameEb-text{height: 191px;width: 67%;}
+	.sameEb-text p{height: 53px;line-height: 53px;padding-left: 15px;}
+	.sameEb-text p:nth-child(1){margin-top: 43px;}
+	.sameEb-text p:nth-child(2){font-size: 14px;}
+	.sameEb-text p:nth-child(1) span:nth-child(1){font-size: 30px;}
+	.sameEb-text p:nth-child(1) span:nth-child(2){font-size: 14px;}
+	/*设备管理*/
+	.device-dis-box>div{height: 145px;}
+	.device-same-box>div:nth-child(1){width: 20%;background-size: 48px 48px;}
+	.device-same-box>div:nth-child(2){width: 80%;}
+	.device-same-box>div:nth-child(2) table tr td .dsb-count{font-size: 30px;}
+	
+	
+	.ddc-row-one{height: 160px;padding-left: 20px;}
+	.ddc-row-title{height: 20px;line-height: 20px;font-size: 16px;margin-top: 10px;}	
+	.ddc-row-img{width:15%;height: 130px;line-height: 130px;}
+	.ddc-row-img>img{max-width: 110px;height: auto;max-height: 110px;}
+	.ddc-row-table{height: 130px;margin-left: 2%;width: 83%;}	
+	.ddc-row-table table{height: 130px;font-size: 14px;}
+	.ddc-row-two{box-sizing: border-box;border-top: 1px solid #f2f2f2;}
+	.ddc-row-two:after{display: block;content: '';clear: both;}
+	.ddc-row-tDo{float: left;width: 50%;}
+	.ddc-row-tDo>div{float: left;width: 50%;height: 95px;cursor: pointer;transition: all .2s linear;border: none;}
+	.ddc-row-tDo>div>p:nth-child(1){background-size: 53px 52px;height: 70px;width: 100%;}
+	.log-search li input{width: 130px;}
+}

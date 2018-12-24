@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="jquery.mCustomScrollbar.css" rel="stylesheet" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="jquery.mCustomScrollbar.min.js"></script>
+		<script src="jquery.mousewheel.min.js"></script>
+		<style>
+			.a{border: 1px solid red;width: 300px;margin: 50px auto;overflow: auto;max-height: 300px;display: none;}
+			.b{height: 500px;width: 1200px;margin: 10px auto;border: 1px solid black;}
+			button:hover+div{display: block;}
+		</style>
+	</head>
+	<body>
+		
+		
+		<button>aa</button>
+		<div class="a">
+			<div class="b"></div>
+		</div>
+		
+		
+		<script>
+			$(function(){
+				//销毁滚动条 $(".content").mCustomScrollbar("destroy"); 
+				//重新加载滚动条 $(".content").mCustomScrollbar("update");		
+				
+			})
+			function loadScroll(obj){
+				$(obj).mCustomScrollbar("destroy");
+				$(obj).mCustomScrollbar({
+					scrollButtons:{
+						enable:false
+					},
+					scrollInertia:600,//滚动的速度
+				    theme:"dark",
+				    autoHideScrollbar:false, //设置是否自动隐藏滚动条
+					mouseWheel:{
+						preventDefault:true
+					},
+					axis:"yx"
+				});
+			}
+			loadScroll(".a")
+		</script>
+	</body>
+</html>

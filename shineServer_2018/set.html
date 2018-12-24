@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>古瑞瓦特光伏电站监控系统</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" /><!--滚动条-->
+		<link href="Carousel/carousel.css" rel="stylesheet" /><!--轮播-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" media="screen"/>
+    	<link rel="stylesheet" type="text/css" href="css/base.css" />
+    	<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+    	<link rel="stylesheet" type="text/css" href="layui-v2.2.5/css/layui.css" />
+    	<link rel="stylesheet" type="text/css" href="css/sameIndex.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_1200.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_980.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_780.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_580.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_579.css" />
+    	<link rel="stylesheet" type="text/css" href="css/otherMedia.css" />
+    	<script src="js/jquery.min.js"></script>
+    	<!--滚动条-->
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header_m indexHead-bg clearBox">
+			<a class="logoBox floatL" href="dashboard.html">
+				<img src="images/logo.png">
+			</a>
+			<span>电站监控系统</span>
+			<ul class="headMenu floatR">
+				<li class="menuSearch">
+					<div class="menu-searchImg">
+						<div class="openSearch"></div>
+						<div class="closeSearch"></div>
+					</div>
+					<div class="menu-searchBox layui-form">
+						<div class="layui-inline">
+							<select name="modules" lay-verify="required" lay-search="">
+						        <option value="">选择搜索电站或设备</option>
+						        <option value="18">checkbox</option>
+						        <option value="19">switch</option>
+						        <option value="20">radio</option>
+					        </select>
+						</div>
+					</div>
+				</li>
+				<li class="addPlant-box">
+					<div class="addPlant-img"></div>
+					<ul class="addPlant-content">
+						<li class="ac-one">
+							添加电站
+						</li>
+						<li class="ac-two">
+							添加设备
+						</li>
+					</ul>
+				</li>
+				<li class="loginUser">
+					<span>welcome:</span>
+					<span>guest(管理员)</span>
+				</li>
+			</ul>
+			<div class="logout">
+				<span></span>
+			</div>
+			<!--其它菜单-->
+			<div class="otherMenu">
+				<span class="menuBg-x"></span>
+				<ul class="menuBg-c">
+					<li>
+						<a title="告警" class="mc-1"></a>
+					</li>
+					<li>
+						<a title="告警"  class="mc-2"></a>
+						<div class="same-menuBox same-waring-menuBox">
+							<div class="same-menuBox-title">Fault log</div>
+							<div class="same-menuBox-content">
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+							</div>
+							<div class="same-menuBox-foot">
+								Look at the More>>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a title="分享"  class="mc-3"></a>
+						<div class="same-menuBox same-share-menuBox">
+							<a>微信</a>
+							<a>QQ</a>
+							<a>微博</a>
+						</div>
+					</li>
+					<li>
+						<a title="下载"  class="mc-4"></a>
+					</li>
+					<li>
+						<a title="下载"  class="mc-5"></a>
+					</li>
+					<li>
+						<a title="语言"  class="mc-6"></a>
+						<div class="same-menuBox same-lang-menuBox">
+							<a>中文</a>
+							<a>English</a>
+							<a>Français</a>
+							<a>日本語</a>
+							<a>In Italiano</a>
+							<a>Nederland</a>
+							<a>Türkçe</a>
+							<a>Polish</a>
+							<a>Greek</a>
+							<a>German</a>
+							<a>Português</a>
+							<a>Spanish</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--切换菜单-->
+			<div class="toogleMenue">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!--切换菜单显示之后的菜单,只有手机端显示-->
+			<div class="phone-menu">
+				<div class="phone-menu-box">
+					<div class="layui-form inline-block">
+					    <select name="quiz1">
+						    <option value="">选择设备</option>
+						    <option value="1">MIX</option>
+						    <option value="2">储能机</option>
+						    <option value="3">逆变器</option>
+					   	</select>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!--头部菜单-->
+		<div class="menuBox clearBox">
+			<div class="menuBox-title">
+				<div>设置</div>
+				<div>
+					<span>当前位置:</span>
+					<span>账号管理</span>
+				</div>
+			</div>
+			<div class="menue-content">
+				<table>
+					<tr>
+						<td>
+							<a class="menueBox" href="dashboard.html">
+								<p class="dash-img"></p>
+								<p>仪表盘</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="energy.html">
+								<p class="charts-img"></p>
+								<p>能源</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="deviceManage.html">
+								<p class="device-img"></p>
+								<p>设备</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="log.html"> 
+								<p class="log-img"></p>
+								<p>日志</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox selectedM" href="set.html">
+								<p class="set-img"></p>
+								<p>设置</p>
+							</a>
+						</td>
+					</tr>
+				</table>
+		 	</div>
+		 	<div class="clearAfter"></div><!--止DIV不能动-->
+		 	<div class="text-center weatherBox">
+		  		<div class="weather-title">
+		  			<span>30℃</span>	
+		  			<span class="weather-text">
+						<p>
+							<img src="images/Weather.png" />
+						</p>			  				
+						<p>Sunny</p>			  				
+		  			</span>	
+		  		</div>
+		  		<div class="weather-content ft-carousel" id="weather-banner">
+		  			<div class="weather-banner carousel-inner">
+		  				<ul class="banner-text bt-one carousel-item">
+		  					<li>
+		  						<div>
+		  							<p>日出-日落</p>
+		  							<p>06:19-18:38</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>云量</p>
+		  							<p>78454</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>环境温度</p>
+		  							<p>20℃</p>
+		  						</div>
+		  					</li>
+		  				</ul>
+		  				<ul class="banner-text bt-one carousel-item">
+		  					<li>
+		  						<div>
+		  							<p>风向</p>
+		  							<p>189°</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>风速</p>
+		  							<p>204M/s</p>
+		  						</div>
+		  					</li>
+		  				</ul>
+		  			</div>
+		  		</div>
+			</div>
+		</div>
+		<!--以上内容共用-->
+		<!--内容区域开始-->
+		<div class="content-box">
+			<div class="setBox sameBox">
+				<div class="setTitle allTag">
+					<ul class="setUl-box clearBox sameTitle-t">
+						<li class="same-textS">
+							账号管理
+							<i></i>
+						</li>
+						<li>用户信息<i></i></li>
+						<li>电站信息<i></i></li>
+						<li>系统参数设置<i></i></li>
+						<li>下载<i></i></li>
+					</ul>
+				</div>
+				<!--正式开发以下各个模块作为单独的jsp页面-->
+				<!--账号管理开始-->
+				<div class="pasd-box setModule">
+					<div class="pasdBox-text">
+						<span>个人信息</span>
+						<span>(请完善一下信息,方便我们更好的为您服务)</span>
+					</div>
+					<div class="pasdTable">
+						<table>
+							<tr>
+								<td>用户名</td>
+								<td><input type="text" class="allInput"/></td>
+							</tr>
+							<tr>
+								<td>公司名称</td>
+								<td><input type="text" class="allInput"/></td>
+							</tr>
+							<tr>
+								<td>真实姓名</td>
+								<td><input type="text" class="allInput"/></td>
+							</tr>
+							<tr>
+								<td><span class="sameRequire"></span>电子邮箱</td>
+								<td><input type="text" class="allInput"/></td>
+							</tr>
+							<tr>
+								<td>联系电话</td>
+								<td><input type="text" class="allInput"/></td>
+							</tr>
+							<tr>
+								<td><span class="sameRequire"></span>时区</td>
+								<td>
+									<div class="layui-form inline-block">
+									    <select name="quiz1">
+										    <option value="1">GMT+8</option>
+										    <option value="2">GMT+8</option>
+										    <option value="3">GMT+8</option>
+									   	</select>
+								    </div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="sameRequire"></span>语言
+								</td>
+								<td>
+									<div class="layui-form inline-block">
+									    <select name="quiz1">
+										    <option value="1">中文</option>
+										    <option value="2">英文</option>
+									   	</select>
+								    </div>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<button class="hasColorBtn">保存</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--账号管理结束-->
+				<!--用户信息开始-->
+				<div class="userInfo-box setModule" style="display: none;">
+					<ul class="sameSetUL userUl clearBox">
+						<li>
+							<div class="layui-form inline-block">
+							    <select name="quiz1">
+							    	<option value="">用户类型</option>
+								    <option value="1">所有用户</option>
+								    <option value="2">其它用户</option>
+							   	</select>
+						    </div>
+						</li>
+						<li>
+							<input type="text" class="allInput" placeholder="请输入用户名" />
+						</li>
+						<li>
+							<button class="hasColorBtn">搜索</button>
+						</li>
+					</ul>
+					<div class="table-box table-responsive">
+						<table class="allTable table">
+							<thead>
+								<tr>
+									<td>序号</td>
+									<td>用户名</td>
+									<td>用户类型</td>
+									<td>电子邮箱</td>
+									<td>公司名称</td>
+									<td>联系电话</td>
+									<td>账户状态</td>
+									<td>注册时间</td>
+									<td>最后登录时间</td>
+									<td>操作</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>张三</td>
+									<td>普通管理员</td>
+									<td>55155@163.com</td>
+									<td>growatt</td>
+									<td>15258523666</td>
+									<td>启用</td>
+									<td>2016-02-02</td>
+									<td>2018-03-03</td>
+									<td>
+										<a class="smallBtn editSbtn" title="编辑"></a>
+										<a class="smallBtn deleteSbtn" title="删除"></a>
+										<a class="smallBtn rufuSbtn" title="刷新"></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--分页容器-->
+						<div class="page clearBox">
+							<div class="floatR" id="b"></div>
+						</div>
+					</div>
+				</div>
+				<!--用户信息结束-->
+				<!--电站信息开始-->
+				<div class="plantInfo-box setModule" style="display: none;">
+					<ul class="sameSetUL plantUl clearBox">
+						<li>
+							<input type="text" class="allInput" placeholder="电站名称" />
+						</li>
+						<li>
+							<input type="text" class="allInput" placeholder="所属用户" />
+						</li>
+						<li>
+							<div class="layui-form inline-block">
+							    <select name="quiz1">
+							    	<option value="">所属国家</option>
+								    <option value="1">中国</option>
+								    <option value="2">其它用户</option>
+							   	</select>
+						    </div>
+						</li>
+						<li>
+							<div class="layui-form inline-block">
+							    <select name="quiz1">
+							    	<option value="">所属时区</option>
+								    <option value="1">GMT+8</option>
+								    <option value="2">GMT+8</option>
+								    <option value="3">GMT+8</option>
+							   	</select>
+						    </div>
+						</li>
+						<li>
+							<button class="hasColorBtn">搜索</button>
+						</li>
+					</ul>
+					<div class="table-box table-responsive">
+						<table class="allTable table">
+							<thead>
+								<tr>
+									<td>序号</td>
+									<td>用户名</td>
+									<td>用户类型</td>
+									<td>电子邮箱</td>
+									<td>公司名称</td>
+									<td>联系电话</td>
+									<td>账户状态</td>
+									<td>注册时间</td>
+									<td>最后登录时间</td>
+									<td>操作</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>张三</td>
+									<td>普通管理员</td>
+									<td>18552525@163.com</td>
+									<td>古瑞瓦特</td>
+									<td>18524523652</td>
+									<td>启用</td>	
+									<td>2017-05-05</td>
+									<td>2018-05-01</td>
+									<td>
+										<a class='smallBtn editSbtn' title='编辑'></a>
+										<a class='smallBtn deleteSbtn' title='删除'></a>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>张三</td>
+									<td>普通管理员</td>
+									<td>18552525@163.com</td>
+									<td>古瑞瓦特</td>
+									<td>18524523652</td>
+									<td>启用</td>	
+									<td>2017-05-05</td>
+									<td>2018-05-01</td>
+									<td>
+										<a class='smallBtn editSbtn' title='编辑'></a>
+										<a class='smallBtn deleteSbtn' title='删除'></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--分页容器-->
+						<div class="page clearBox">
+							<div class="floatR" id="c"></div>
+						</div>
+					</div>
+				
+				</div>
+				<!--电站信息结束-->
+				<!--系统参数设置开始-->
+				<div class="paramSet-box setModule" style="display: none;">
+					
+					<h1>待设计。。。。。。。。。。。。。</h1>
+					
+					
+				</div>
+				<!--系统参数设置结束-->
+				<!--下载 开始-->
+				<div class="down-box setModule" style="display: none;">
+					<div class="down-text">
+						<span>文件下载</span>
+					</div>
+					<div class="table-box table-responsive">
+						<table class="allTable table">
+							<thead>
+								<tr>
+									<td>序号</td>
+									<td>文件名称</td>
+									<td>文件类型</td>
+									<td>文件大小</td>
+									<td>更新时间</td>
+									<td>下载</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>ShineWifi</td>
+									<td>.apk</td>
+									<td>1.8MB</td>
+									<td>2018-02-02</td>
+									<td>
+										<a class="sameDtext">中文</a>
+										<a class="sameDtext">英文</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="down-text">
+						<span>工具下载</span>
+					</div>
+					<div class="table-box table-responsive">
+						<table class="allTable table">
+							<thead>
+								<tr>
+									<td>序号</td>
+									<td>文件名称</td>
+									<td>文件类型</td>
+									<td>文件大小</td>
+									<td>更新时间</td>
+									<td>下载</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>ShineWifi</td>
+									<td>.apk</td>
+									<td>1.8MB</td>
+									<td>2018-02-02</td>
+									<td><a class="sameDtext">下载</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!--下载结束-->
+			</div>
+		</div>
+		<!--内容结束-->
+		<!--页脚版权信息-->
+		<div class="footer">
+			Copyright©2018 - SHENZHEN GROWATT NEW ENERGY TECHNOLOGY Co., Ltd ShineServer-3.6.0.0 
+		</div>
+		<!--------------------------------------弹框内容开始------------------------------------------------->
+		<!--添加电站弹框-->
+		<div class="allDialog addPlant-dialog">
+			<!--内容-->
+			<div class="addPlantdia-box" style="width: 200px;height: 200px;line-height: 200px;text-align: center;">
+				暂无内容
+			</div>
+			<!--按钮-->
+			<div class="dialog-btn">
+				<a class="hasColorBtn">确定</a>
+				<a class="commonBtn">取消</a>
+			</div>
+		</div>
+		<!--添加设备弹框-->
+		<div class="allDialog addDevice-dialog">
+			<!--内容-->
+			<div class="addPlantdia-box">
+				<table>
+					<tr>
+						<td>SN</td>
+						<td><input type="text" class="allInput"/></td>
+					</tr>
+					<tr>
+						<td>属性电站</td>
+						<td class="layui-form">
+							<select name="a">
+						        <option value="18">储能机</option>
+						        <option value="19">逆变器</option>
+						        <option value="20">Max</option>
+					        </select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--按钮-->
+			<div class="dialog-btn">
+				<a class="hasColorBtn">确定</a>
+				<a class="commonBtn">取消</a>
+			</div>
+		</div>
+		<!--------------------------------------弹框内容结束------------------------------------------------->
+		<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+		<script src="https://img.hcharts.cn/highcharts/modules/no-data-to-display.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="layui-v2.2.5/layui.all.js"></script>
+		<script src="js/serverCommon.js"></script>
+		<!--轮播-->
+		<script src="Carousel/carousel.min.js"></script>
+		<script>
+			 //分页
+			laypage.render({
+			    elem: 'b',
+			    count: 100,
+			    theme: '#009cff',
+			    layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
+			    jump: function(obj){
+			      console.log(obj)
+			    }
+			});
+			laypage.render({
+			    elem: 'c',
+			    count: 20,
+			    theme: '#009cff',
+			    layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
+			    jump: function(obj){
+			      console.log(obj)
+			    }
+			});
+			//常规用法
+			$(function(){
+				$(".log-text li").click(function(){
+					$(this).addClass("log-textS").siblings("li").removeClass("log-textS");
+				});
+				laydate.render({
+					elem: '#logtime' //指定元素
+				});
+				//默认加载时间
+				$("#logtime").val(showTime(1))
+				//切换tag
+				$(".sameTitle-t>li").click(function(){
+					var index = $(this).index();
+					$(".setModule").eq(index).show().siblings(".setModule").hide();
+				})
+			})
+		</script>
+	</body>
+</html>

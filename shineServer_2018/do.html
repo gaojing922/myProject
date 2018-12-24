@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="go" onclick="a()">点击</button>
+		<script>
+			function a(){
+				console.log(1)
+			}
+			setInterval(function(){
+				var obj = document.getElementById('go');
+				if(document.all){
+					obj.click();
+				}else{
+					var e = document.createEvent('MouseEvents');
+					e.initEvent('click', true, true);
+					obj.dispatchEvent(e);
+				}
+			},1000)
+		</script>
+	</body>
+</html>

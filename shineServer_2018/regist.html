@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" href="css/regist.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/scrollReveal.js"></script>
+		<script>
+    		$(function(){
+    			//页面动画
+    			window.scrollReveal = new scrollReveal();
+    		})
+    	</script>
+	</head>
+	<body>
+		<div class="registLogo clearBox">
+			<a class="registL" href="login.html"></a>
+			<a class="registT">注册</a>
+			<a class="backLogin" href="login.html"><返回登录</a>
+		</div>
+		<div class="registBox" data-scroll-reveal="enter top and move 100px over .7s">
+			<div class="registTitle">
+				<ul class="registUl clearBox sameLs">
+					<li class="registS">用户<i></i></li>
+					<li>安装商<i></i></li>
+					<li>分销商<i></i></li>
+				</ul>
+			</div>
+			<div class="registContent">
+				<!--用户-->
+				<div class="rcUser sameRegistRow">
+					<table>
+						<tr>
+							<td>国家</td>
+							<td><input /></td>
+						</tr>
+						<tr>
+							<td>用户名</td>
+							<td><input /></td>
+						</tr>
+						<tr>
+							<td>密码</td>
+							<td><input /></td>
+						</tr>
+						<tr>
+							<td>确认密码</td>
+							<td><input /></td>
+						</tr>
+						<tr>
+							<td>语言</td>
+							<td><input /></td>
+						</tr>
+						<tr>
+							<td>电子邮箱</td>
+							<td><input /></td>
+						</tr>
+						<tr>
+							<td>安装商编码</td>
+							<td><input /></td>
+						</tr>
+					</table>
+				</div>
+				<!--安装商-->
+				<div class="rcInstaller sameRegistRow hide">
+					<!--暂无内容,不能去掉-->
+				</div>
+				<!--分销商-->
+				<div class="rcDistributor sameRegistRow hide">
+					<table>
+						<tr>
+							<td>公司名称</td>
+							<td><input /></td>
+						</tr>
+						<tr>
+							<td>订单号</td>
+							<td><input /></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="registBottom">
+				<div class="registAgree">
+					<div class="radioBox" data-name="0">
+						<span class="sameRadio-box"></span>
+						<span class="sameRadio-text">《同意本公司各用户条款》</span>
+					</div>
+				</div>
+				<div class="registBtn">
+					<button>注册</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				//注册类别
+				$(".registUl li").click(function(){
+					$(this).addClass("sameSelectL").siblings("li").removeClass("sameSelectL");
+					$(".registContent>div").eq($(this).index()).show().siblings("div").hide();
+				});
+				//同意
+				$(".sameRadio-box").click(function(){
+					if($(this).parents(".radioBox").attr("data-name") == 0){
+						$(this).parents(".radioBox").attr("data-name",1)
+					}else{
+						$(this).parents(".radioBox").attr("data-name",0)
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

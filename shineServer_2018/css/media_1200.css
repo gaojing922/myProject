@@ -1,0 +1,64 @@
+/*1280分辨率以上（大于1200px）*/
+@media screen and (min-width:1200px){
+a.logoBox+span{font-size: 20px;}
+.header_m  ul.headMenu>li:not(:nth-child(1)){margin-left: 20px;}
+.header_m  ul.headMenu>li input.layui-input{width: 248px;}   
+.header_m  ul.headMenu>li.chooseDevice input.allInput{width: 185px;}
+/*头部导航*/
+
+.menuBox-title,.menue-content,.weatherBox{float: left;}
+.menuBox{padding-left: 30px;}
+.menueBox{width: 100px;height: 80px;font-size: 14px;}
+.menueBox>p:nth-child(1){height: 45px;line-height: 45px;}
+.menueBox>p:nth-child(2){height: 35px;line-height: 35px;}
+.menuBox-title{width: 25%;text-align: left;}
+.menuBox-title div:nth-child(1){font-size: 24px;}
+
+.menue-content{width:50%;}
+.weatherBox{width: 25%;}
+.weather-banner .bt-one li:nth-child(1){width: 40%;}
+.weather-banner .bt-one li:nth-child(2){width: 30%;}
+.weather-banner .bt-one li:nth-child(3){width: 30%;}
+.system-box li{float: left;width: 50%;height: 736px;}
+.sameS-box{width: 120px;height: 120px;}
+/*battery*/
+.battery-pre>div{width: 517px;}
+/*en*/
+.Enviro-box>div{height: 191px;}
+.eb-one,.dsb-one{float: left;}
+.eb-two,.dsb-two{float: left;margin:0 2%;}
+.eb-three,.dsb-three{float: right;}
+.sameEb-bg{height: 191px;width: 40%;background-size: 105px 106px;}
+.sameEb-text{height: 191px;width: 60%;}
+.sameEb-text p{height: 53px;line-height: 53px;padding-left: 15px;}
+.sameEb-text p:nth-child(1){margin-top: 43px;}
+.sameEb-text p:nth-child(2){font-size: 16px;}
+.sameEb-text p:nth-child(1) span:nth-child(1){font-size: 35px;}
+.sameEb-text p:nth-child(1) span:nth-child(2){font-size: 14px;}
+/*设备管理*/
+.device-dis-box>div{height: 145px;}
+.device-same-box>div:nth-child(1){width: 25%;background-size: 79px 79px;}
+.device-same-box>div:nth-child(2){width: 75%;}
+.device-same-box>div:nth-child(2) table tr td .dsb-count{font-size: 36px;}
+
+
+.ddc-row-one{float: left;height: 210px;padding-left: 20px;}
+.ddc-row-two{float: right;height: 210px;}
+.ddc-row-title{height: 20px;line-height: 20px;font-size: 16px;margin-top: 20px;}	
+.ddc-row-img{width: 120px;height: 150px;line-height: 150px;}
+.ddc-row-img>img{max-width: 120px;height: auto;max-height: 140px;}
+.ddc-row-table{height: 150px;margin-left: 10px;}	
+.ddc-row-table table{height: 150px;font-size: 14px;}
+.ddc-row-table table tr td:nth-child(1){width: 180px;}
+.ddc-row-table table tr td:nth-child(2){width: 220px;}
+.ddc-row-tDo>div{float: left;width: 105px;height: 105px;border-left: 1px solid #dddddd;cursor: pointer;transition: all .2s linear;}
+.ddc-row-tDo>div>p:nth-child(1){background-size: 53px 52px;height: 80px;width: 105px;}
+
+
+
+
+
+
+
+
+}

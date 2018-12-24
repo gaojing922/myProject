@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*弹框样式*/
+.allDialog{display: none;}
+.allDialog-content{position: relative;}
+.layui-layer .nicescroll-rails{top: 42px!important;}
+.sameDialog-box{display: none;}
+.dialog-btn{padding:10px 15px 10px 0;text-align: right;}
+.dialog-btn>a:not(:first-child){margin-left: 8px;}
+/*添加设备/电站*/
+.addPlantdia-box table tr td{padding: 10px 0px;}
+.addPlantdia-box table tr td:nth-child(1){width: 110px;text-align: right;}
+.addPlantdia-box table tr td:nth-child(2){width: 240px;padding-left: 3px;}
+.addPlantdia-box table tr td input{width: 180px;height: 32px;}
+.addPlantdia-box table tr td .layui-unselect{width: 180px;height: 32px;}
+.addPlantdia-box table tr td .layui-form-select dl{top: 34px;}
+/*控制*/
+.controldia-box{position: relative;}
+.allPasswd-box{width: 100%;height: 40px;line-height: 40px;text-align: center;
+			-webkit-animation-duration: .6s;
+		    animation-duration: .6s;
+		    -webkit-animation-fill-mode: both;
+		    animation-fill-mode: both;
+		    -webkit-animation-name: showD;
+		    animation-name: showD;
+		    display: none;}
+@keyframes showD{
+	from{transform:translate3d(-130px,0,0);opacity:.3}
+	to{transform:translate3d(0,0,0);opacity:1}
+}
+.control-table tr td{padding: 7px 0;}
+.control-table tr td:nth-child(1){width: 250px;}
+.control-table tr td input{width: 110px;}
+.control-table tr td .layui-unselect .layui-input{height: 28px;}
+.control-table tr td .layui-form-select dl {top: 30px;}
+.control-table tr td .switch{height: 28px;line-height: 28px;}
+.control-table tr td .switch em{width: 80px;}
+.control-table tr td .switch i {margin-top: 5px;}
+.control-table tr td .layui-input{height: 28px;}
+/*参数*/
+.param-dialog{padding: 0 20px;}
+.param-title{height: 45px;line-height: 45px;}
+.param-title>span{font-size: 16px;color: #333333;}
+.param-title input{width: 150px;text-align: center;}
+.param-text{color: #888888;}
+.param-text li{float: left;}
+.param-text li:not(:first-child){margin-left: 20px;}
+.param-table{border: 1px solid red;width: 500px;height: 400px;margin-top: 10px;}

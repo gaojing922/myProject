@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>古瑞瓦特光伏电站监控系统</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" /><!--滚动条-->
+    	<link rel="stylesheet" type="text/css" href="css/base.css" />
+    	<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+    	<link rel="stylesheet" type="text/css" href="layui-v2.2.5/css/layui.css" />
+    	<link rel="stylesheet" type="text/css" href="css/login.css" />
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/scrollReveal.js"></script>
+    	<script src="js/browser.js"></script>
+    	<script>
+    		$(function(){
+    			//页面动画
+    			window.scrollReveal = new scrollReveal();
+    		})
+    	</script>
+	</head>
+	<body>
+		<div class="loginTop">
+			<div class="loginHeader clearBox">
+				<a class="floatL loginL"></a>
+				<ul class="loginMenu floatR clearBox">
+					<li>光伏电站设计</li>
+					<li>下载</li>
+					<li>帮助</li>
+					<li>更新日志</li>
+					<li class="menuLang">
+						<span>语言切换</span>
+						<div class="langBox">
+							<a>中文</a>
+							<a>英文</a>
+							<a>法语</a>
+							<a>日语</a>
+							<a>意大利语</a>
+							<a>荷兰语</a>
+							<a>土耳其语</a>
+							<a>波兰语</a>
+							<a>希腊语</a>
+							<a>德语</a>
+							<a>葡萄牙</a>
+							<a>印度语</a>
+							<a>西班牙语</a>
+						</div>
+					</li>
+					<li class="exper">体验馆</li>
+				</ul>
+				<div class="toogleMenue">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<!--登录框-->
+			<div class="loginContent clearBox">
+				<div class="loginBanner floatL">
+					<div class="loginLeft-bg" data-scroll-reveal="enter left and move 50px over 1s"></div>
+				</div>
+				<div class="loginBox floatL">
+					<div class="loginPro" data-scroll-reveal="enter right and move 50px over 1s">
+						<div class="loginPro-title">监控/运维OSS登录</div>
+						<div class="loginPro-box">
+							<div class="sameLogin-row clearBox">
+								<span>用户名</span>
+								<input type="text" class="sameLogin userNameVal" placeholder="请输入用户名"/>
+								<i class="userBg"></i>
+							</div>
+							<div class="sameLogin-row clearBox">
+								<span>密码</span>
+								<input type="password" class="sameLogin pasdVal" placeholder="请输入密码"/>
+								<i class="pasdBg"></i>
+							</div>
+							<div class="sameLogin-row clearBox">
+								<span>验证码</span>
+								<input type="text" class="loginV checkVal" placeholder="请输入验证码"/>
+								<em class="loginVal">aaa</em>
+							</div>
+							<div class="loginBtn">
+								<button class="hasColorBtn loginB">登录</button>
+							</div>
+							<div class="forgetPasd">
+								<a href="forgetPasd.html">忘记密码?</a>
+							</div>
+							<div class="registUser">
+								<a href="regist.html">新用户注册>></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--示例电站-->
+			<div class="fxPlant">
+				<div class="fx-title sameBd">示例电站</div>
+				<div class="fxImg clearBox">
+					<div class="curryData" data-scroll-reveal="enter top and move 50px over 1s">
+						<div></div>
+						<p>当前数据</p>
+					</div>
+					<div class="historyChart" data-scroll-reveal="enter bottom and move 50px over 1s">
+						<div></div>
+						<p>历史图表</p>
+					</div>
+					<div class="fxClear"></div><!--这个元素不能去掉-->
+					<div class="plantData" data-scroll-reveal="enter top and move 50px over 1s">
+						<div></div>
+						<p>电站数据</p>
+					</div>
+					<div class="plantMsa" data-scroll-reveal="enter bottom and move 50px over 1s">
+						<div></div>
+						<p>电站分析</p>
+					</div>
+				</div>
+				<div class="fxBtn">
+					<button class="commonBtn">立即体验</button>
+				</div>
+			</div>
+			<!--客户案例-->
+			<div class="customerCase">
+				<div class="fx-title sameBd">客户案例</div>
+				<div class="cc-img clearBox">
+					<div class="sameCS case_1" data-scroll-reveal="enter bottom and move 50px over 1s">
+						<div class="sameCs_img">
+							<img src="images/testImg_1.png" />
+						</div>
+						<div class="sameCs_text">
+							<p>
+								<span>阳队22KW</span>
+								<i class="zxColor">在线</i>
+							</p>
+							<p>
+								中国湖南衡阳
+							</p>
+						</div>
+						<table>
+							<tr>
+								<td>
+									<p>22000</p>
+									<p>设计功率</p>
+								</td>
+								<td>
+									<p>22.4</p>
+									<p>今日发电量</p>
+								</td>
+								<td>
+									<p>22000</p>
+									<p>累计发电量</p>
+								</td>	
+							</tr>
+						</table>
+					</div>
+					<div class="sameCS case_2" data-scroll-reveal="enter top and move 50px over 1s">
+						<div class="sameCs_img">
+							<img src="images/testImg_2.png" />
+						</div>
+						<div class="sameCs_text">
+							<p>
+								<span>阳队22KW</span>
+								<i class="zxColor">在线</i>
+							</p>
+							<p>
+								中国湖南衡阳
+							</p>
+						</div>
+						<table>
+							<tr>
+								<td>
+									<p>22000</p>
+									<p>设计功率</p>
+								</td>
+								<td>
+									<p>22.4</p>
+									<p>今日发电量</p>
+								</td>
+								<td>
+									<p>22000</p>
+									<p>累计发电量</p>
+								</td>	
+							</tr>
+						</table>
+					</div>
+					<div class="csClear"></div><!--这个元素不能去掉-->
+					<div class="sameCS case_3" data-scroll-reveal="enter bottom and move 50px over 1s">
+						<div class="sameCs_img">
+							<img src="images/testImg_3.png" />
+						</div>
+						<div class="sameCs_text">
+							<p>
+								<span>阳队22KW</span>
+								<i class="zxColor">在线</i>
+							</p>
+							<p>
+								中国湖南衡阳
+							</p>
+						</div>
+						<table>
+							<tr>
+								<td>
+									<p>22000</p>
+									<p>设计功率</p>
+								</td>
+								<td>
+									<p>22.4</p>
+									<p>今日发电量</p>
+								</td>
+								<td>
+									<p>22000</p>
+									<p>累计发电量</p>
+								</td>	
+							</tr>
+						</table>
+					</div>
+					<div class="sameCS case_4" data-scroll-reveal="enter top and move 50px over 1s">
+						<div class="sameCs_img">
+							<img src="images/testImg_4.png" />
+						</div>
+						<div class="sameCs_text">
+							<p>
+								<span>阳队22KW</span>
+								<i class="lxColor">离线</i>
+							</p>
+							<p>
+								中国湖南衡阳
+							</p>
+						</div>
+						<table>
+							<tr>
+								<td>
+									<p>22000</p>
+									<p>设计功率</p>
+								</td>
+								<td>
+									<p>22.4</p>
+									<p>今日发电量</p>
+								</td>
+								<td>
+									<p>22000</p>
+									<p>累计发电量</p>
+								</td>	
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="fxBtn">
+					<button class="commonBtn">查看更多</button>
+				</div>
+			</div>
+			<!--通知-->
+			<div class="notice">
+				<div class="fx-title sameBd">通知</div>
+				<div class="noticeBox">
+					<div class="sameNotice" data-scroll-reveal="enter left and move 140px over 0.7s">
+						<p class="snTitle">新闻标题</p>
+						<p class="snTime">2016-01-12</p>
+						<div class="snText">
+							为了浏览速度的提高，我们为中国用户创建了一个新的服务器，http://server-cn.growatt.com,采集器将自动转移到新的服务器。 其它国家我们将在稍后支持。						
+							为了浏览速度的提高，我们为中国用户创建了一个新的服务器,采集器将自动转移到新的服务器。 其它国家我们将在稍后支持。						
+						</div>
+					</div>
+					<div class="sameNotice" data-scroll-reveal="enter left and move 120px over 0.6s">
+						<p class="snTitle">新闻标题</p>
+						<p class="snTime">2016-01-12</p>
+						<div class="snText">
+							为了浏览速度的提高，我们为中国用户创建了一个新的服务器.	
+						</div>
+					</div>
+					<div class="sameNotice" data-scroll-reveal="enter left and move 100px over 0.5s">
+						<p class="snTitle">新闻标题</p>
+						<p class="snTime">2016-01-12</p>
+						<div class="snText">
+							为了浏览速度的提高，我们为中国用户创建了一个新的服务器，http://server-cn.growatt.com,采集器将自动转移到新的服务器。 其它国家我们将在稍后支持。						
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--客户端下载-->
+			<div class="clinBox">
+				<div class="fx-title sameBd">客户端下载</div>
+				<div class="clDowlond clearBox">
+					<div class="phoneImg"></div>
+					<div class="dowText">
+						<div class="sameDo iosApp">
+							<span>IOS App</span>
+							<img src="" />
+						</div>
+						<div class="sameDo azApp">
+							<span>Android App</span>
+						</div>
+						<div class="downloadBox">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--底部-->
+			<div class="loginFooter clearBox">
+				<div class="lfLeft">
+					<p>Corpyright&copy;2017</p>
+					<p>深圳古瑞瓦特新能源股份有限公司 ShineServer-3.6.0.0 </p>
+				</div>
+				<div class="lfRight">
+					<img src="images/logo.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="layui-v2.2.5/layui.all.js"></script>
+	<script>
+		layui.use(['laypage', 'layer'], function(){})
+		var form = layui.form,
+		layer = layui.layer;
+		$(function(){
+			$(".menuLang>span").on("click",function(){
+				$(this).toggleClass("menuSelected")
+				if($(this).siblings(".langBox").is(":hidden")){
+					$(this).siblings(".langBox").show();
+				}else{
+					$(this).siblings(".langBox").hide();
+				}
+			});
+			$(".langBox>a").click(function(){
+				$(this).addClass("langA").siblings("a").removeClass("langA");
+				$(this).parents(".langBox").hide().siblings("span").removeClass("menuSelected").text($(this).text())
+			});
+			//回车键登录
+			$(document).keydown(function(event){ 
+				if(event.keyCode==13){ 
+					$(".loginB").click(); 
+				} 
+			}); 
+			//登录
+			$(".loginB").click(function(){
+				var userNameVal = $(".userNameVal").val();
+				var pasdVal = $(".pasdVal").val();
+				var checkVal = $(".checkVal").val();
+				var loginVal = $(".loginVal").text();
+				if(userNameVal == ""){
+					tipContent("请输入用户名",$(".userNameVal").parents(".sameLogin-row"));
+					return false;
+				}else if(pasdVal == ""){
+					tipContent("请输入密码",$(".pasdVal").parents(".sameLogin-row"));
+					return false;
+				}else if(checkVal == "" || checkVal.length!=3 || checkVal != loginVal ){
+					tipContent("请输入正确的验证码",$(".checkVal").parents(".sameLogin-row"));
+					return false;
+				}else{
+					window.location.href="dashboard.html"
+				}
+			});
+		})
+		function tipContent(text,obj){
+			layer.tips(text,obj, {
+				tips: [2, '#3595CC'],
+	  			time: 3000
+			});
+		}
+	</script>
+</html>

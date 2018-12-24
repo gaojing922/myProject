@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>古瑞瓦特光伏电站监控系统</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" /><!--滚动条-->
+		<link href="Carousel/carousel.css" rel="stylesheet" /><!--轮播-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" media="screen"/>
+    	<link rel="stylesheet" type="text/css" href="css/base.css" />
+    	<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+    	<link rel="stylesheet" type="text/css" href="layui-v2.2.5/css/layui.css" />
+    	<link rel="stylesheet" type="text/css" href="css/sameIndex.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_1200.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_980.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_780.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_580.css" />
+    	<link rel="stylesheet" type="text/css" href="css/media_579.css" />
+    	<link rel="stylesheet" type="text/css" href="css/otherMedia.css" />
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/scrollReveal.js"></script>
+    	<!--滚动条-->
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/jquery.mCustomScrollbar.min.js"></script>
+		<script>
+    		$(function(){
+    			//页面动画
+    			window.scrollReveal = new scrollReveal();
+    		})
+    	</script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header_m indexHead-bg clearBox">
+			<a class="logoBox floatL" href="dashboard.html">
+				<img src="images/logo.png">
+			</a>
+			<span>电站监控系统</span>
+			<ul class="headMenu floatR">
+				<li class="menuSearch">
+					<div class="menu-searchImg">
+						<div class="openSearch"></div>
+						<div class="closeSearch"></div>
+					</div>
+					<div class="menu-searchBox layui-form">
+						<div class="layui-inline">
+							<select name="modules" lay-verify="required" lay-search="">
+						        <option value="">选择搜索电站或设备</option>
+						        <option value="18">checkbox</option>
+						        <option value="19">switch</option>
+						        <option value="20">radio</option>
+					        </select>
+						</div>
+					</div>
+				</li>
+				<li class="addPlant-box">
+					<div class="addPlant-img"></div>
+					<ul class="addPlant-content">
+						<li class="ac-one">
+							添加电站
+						</li>
+						<li class="ac-two">
+							添加设备
+						</li>
+					</ul>
+				</li>
+				<!--<li class="layui-form choosePlant">
+					<div class="layui-inline">
+						<select name="modules" lay-verify="required" lay-search="">
+					        <option value="">直接选择或搜索电站</option>
+					        <option value="18">checkbox</option>
+					        <option value="19">switch</option>
+					        <option value="20">radio</option>
+				        </select>
+					</div>
+					<span class="addPlant-btn"></span>
+				</li>
+				<li class="chooseDevice">
+					<div class="layui-form inline-block">
+					    <select name="quiz1">
+						    <option value="">选择设备</option>
+						    <option value="1">MIX</option>
+						    <option value="2">储能机</option>
+						    <option value="3">逆变器</option>
+					   	</select>
+				    </div>
+				    <div class="inline-block">
+				    	<input type="text" class="allInput" placeholder="输入设备名称"/>
+				    </div>
+				</li>
+				<li class="headSearch">
+					<span class="commonBtn">搜索</span>
+				</li>-->
+				<li class="loginUser">
+					<span>welcome:</span>
+					<span>guest(管理员)</span>
+				</li>
+			</ul>
+			<div class="logout">
+				<span></span>
+			</div>
+			<!--其它菜单-->
+			<div class="otherMenu">
+				<span class="menuBg-x"></span>
+				<ul class="menuBg-c">
+					<li>
+						<a title="告警" class="mc-1"></a>
+					</li>
+					<li>
+						<a title="告警"  class="mc-2"></a>
+						<div class="same-menuBox same-waring-menuBox">
+							<div class="same-menuBox-title">Fault log</div>
+							<div class="same-menuBox-content">
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+								<div class="same-menuBox-row">
+									<p class="clearBox">
+										<span class="floatL">H1564561513</span>
+										<span class="floatR">2017-08-09 21:02:02</span>
+									</p>
+									<p>逆变器有逆变器有逆变器</p>
+								</div>
+							</div>
+							<div class="same-menuBox-foot">
+								Look at the More>>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a title="分享"  class="mc-3"></a>
+						<div class="same-menuBox same-share-menuBox">
+							<a>微信</a>
+							<a>QQ</a>
+							<a>微博</a>
+						</div>
+					</li>
+					<li>
+						<a title="下载"  class="mc-4"></a>
+					</li>
+					<li>
+						<a title="下载"  class="mc-5"></a>
+					</li>
+					<li>
+						<a title="语言"  class="mc-6"></a>
+						<div class="same-menuBox same-lang-menuBox">
+							<a>中文</a>
+							<a>English</a>
+							<a>Français</a>
+							<a>日本語</a>
+							<a>In Italiano</a>
+							<a>Nederland</a>
+							<a>Türkçe</a>
+							<a>Polish</a>
+							<a>Greek</a>
+							<a>German</a>
+							<a>Português</a>
+							<a>Spanish</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--切换菜单-->
+			<div class="toogleMenue">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!--切换菜单显示之后的菜单,只有手机端显示-->
+			<div class="phone-menu">
+				<div class="phone-menu-box">
+					<div class="layui-form inline-block">
+					    <select name="quiz1">
+						    <option value="">选择设备</option>
+						    <option value="1">MIX</option>
+						    <option value="2">储能机</option>
+						    <option value="3">逆变器</option>
+					   	</select>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!--头部菜单-->
+		<div class="menuBox clearBox">
+			<div class="menuBox-title">
+				<!--设备-->
+				<div>能源</div>
+				<div>
+					<span>当前位置:</span>
+					<span>能源首页</span>
+				</div>
+			</div>
+			<div class="menue-content">
+				<table>
+					<tr>
+						<td>
+							<a class="menueBox" href="dashboard.html">
+								<p class="dash-img"></p>
+								<p>仪表盘</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox selectedM" href="energy.html">
+								<p class="charts-img"></p>
+								<p>能源</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="deviceManage.html">
+								<p class="device-img"></p>
+								<p>设备</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="log.html"> 
+								<p class="log-img"></p>
+								<p>日志</p>
+							</a>
+						</td>
+						<td>
+							<a class="menueBox" href="set.html">
+								<p class="set-img"></p>
+								<p>设置</p>
+							</a>
+						</td>
+					</tr>
+				</table>
+		 	</div>
+		 	<div class="clearAfter"></div><!--止DIV不能动-->
+		 	<div class="text-center weatherBox">
+		  		<div class="weather-title">
+		  			<span>30℃</span>	
+		  			<span class="weather-text">
+						<p>
+							<img src="images/Weather.png" />
+						</p>			  				
+						<p>Sunny</p>			  				
+		  			</span>	
+		  		</div>
+		  		<div class="weather-content ft-carousel" id="weather-banner">
+		  			<div class="weather-banner carousel-inner">
+		  				<ul class="banner-text bt-one carousel-item">
+		  					<li>
+		  						<div>
+		  							<p>日出-日落</p>
+		  							<p>06:19-18:38</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>云量</p>
+		  							<p>78454</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>环境温度</p>
+		  							<p>20℃</p>
+		  						</div>
+		  					</li>
+		  				</ul>
+		  				<ul class="banner-text bt-one carousel-item">
+		  					<li>
+		  						<div>
+		  							<p>风向</p>
+		  							<p>189°</p>
+		  						</div>
+		  					</li>
+		  					<li>
+		  						<div>
+		  							<p>风速</p>
+		  							<p>204M/s</p>
+		  						</div>
+		  					</li>
+		  				</ul>
+		  			</div>
+		  		</div>
+			</div>
+		</div>
+		<!--以上内容共用-->
+		<!--内容区域开始-->
+		<div class="content-box">
+			<div class="sameBox energyBox">
+				<div class="energyTitle clearBox">
+					<ul class="energy-t floatL sameTitle-t">
+						<li class="same-textS">电站发电<i></i></li>
+						<li>能源消耗<i></i></li>
+						<li>参数对比<i></i></li>
+					</ul>
+				</div>
+				<!--电站发电-->
+				<div class="sameTab-box plantPg">
+					<ul class="plantPg-top clearBox" >
+						<li class="eng_1 enSelected">
+							<p data-scroll-reveal="enter top and move 20px over 1s">
+								<span>1.8</span>
+								<span>KWh</span>
+							</p>
+							<p data-scroll-reveal="enter bottom and move 20px over 1s">当日发电</p>
+						</li>
+						<li class="eng_2">
+							<p data-scroll-reveal="enter top and move 20px over 1s">
+								<span>100</span>
+								<span>KWh</span>
+							</p>
+							<p data-scroll-reveal="enter bottom and move 20px over 1s">当月发电</p>
+						</li>
+						<li class="eng_3">
+							<p data-scroll-reveal="enter top and move 20px over 1s">
+								<span>300</span>
+								<span>KWh</span>
+							</p>
+							<p data-scroll-reveal="enter bottom and move 20px over 1s">当年发电</p>
+						</li>
+						<li class="eng_4">
+							<p data-scroll-reveal="enter top and move 20px over 1s">
+								<span>500</span>
+								<span>KWh</span>
+							</p>
+							<p data-scroll-reveal="enter bottom and move 20px over 1s">累计发电</p>
+						</li>
+					</ul>
+					<div class="plantPg-chart">
+						<!--图表-->
+					</div>
+					<div class="table-box table-responsive plantPg-table">
+						<table class="allTable table">
+							<thead>
+								<tr>
+									<td>序号</td>
+									<td>电站名称</td>
+									<td>国家</td>
+									<td>城市</td>
+									<td>累计发电(KWh)</td>
+									<td>操作</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>张三的电站</td>
+									<td>中国</td>
+									<td>深圳</td>
+									<td>20000</td>
+									<td>
+										<a class='smallBtn editSbtn' title='编辑'></a>
+										<a class='smallBtn smallSet' title='设置'></a>
+										<a class='smallBtn smallDeltet' title='删除'></a>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>张三的电站</td>
+									<td>中国</td>
+									<td>深圳</td>
+									<td>20000</td>
+									<td>
+										<a class='smallBtn editSbtn' title='编辑'></a>
+										<a class='smallBtn smallSet' title='设置'></a>
+										<a class='smallBtn smallDeltet' title='删除'></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="page clearBox">
+							<div class="floatR" id="a"></div>
+						</div>
+					</div>
+				</div>
+				<!--能源消耗-->
+				<div class="sameTab-box EnergyCp hide">
+					<div class="energyCp-top samePadding">
+						<div class="et-box">
+							<div class="et-same-box" data-scroll-reveal="enter left and move 40px over 1s">
+								<div class="esb-title clearBox">
+									<div class="floatL">当月产生电量</div>
+									<div class="floatR">
+										<span class="refresh"></span>
+										<span class="right"></span>
+									</div>
+								</div>
+								<div class="esb-time">
+									<div class="allDate-select">
+										<div class="dsSelect">当天</div>
+										<div>当月</div>
+										<div>近半年</div>
+										<div>全部</div>
+									</div>	
+								</div>
+								<div class="esb-count esbCount-1">
+									<div class="esb-count-title">
+										<span class="esb-countUp">324</span>
+										<span>Kwh</span>
+									</div>
+									<div class="eeImg_1"></div>
+								</div>
+								<div class="esbchart_1"></div>
+							</div>
+						</div>
+						<div class="et-box" data-scroll-reveal="enter top and move 40px over 1s">
+							<ul class="et-banner-img">
+								<li class="ebi_1"></li>
+								<li class="ebi_2"></li>
+								<li class="ebi_3"></li>
+								<li class="ebi_4"></li>
+							</ul>
+							<!--箭头-->
+							<a class="ebsLeft"></a>
+							<a class="ebsRight"></a>
+						</div>
+						<div class="et-box">
+							<div class="et-same-box" data-scroll-reveal="enter right and move 40px over 1s">
+								<div class="esb-title clearBox">
+									<div class="floatL">当月产生电量</div>
+									<div class="floatR">
+										<span class="refresh"></span>
+										<span class="right"></span>
+									</div>
+								</div>
+								<div class="esb-time">
+									<div class="allDate-select">
+										<div class="dsSelect">当天</div>
+										<div>当月</div>
+										<div>近半年</div>
+										<div>全部</div>
+									</div>	
+								</div>
+								<div class="esb-count esbCount-2">
+									<div class="esb-count-title">
+										<span class="esb-countUp">55522</span>
+										<span>元</span>
+									</div>
+									<div class="eeImg_2"></div>
+								</div>
+								<div class="esbchart_2"></div>
+							</div>
+						</div>
+					</div>
+					<!--小图-->
+					<div class="bottomImg">
+						<div class="bt-box-1 btSelect"></div>
+						<div class="bt-box-2"></div>
+						<div class="bt-box-3"></div>
+						<div class="bt-box-4"></div>
+					</div>
+				</div>
+				<!--参数对比-->
+				<div class="sameTab-box parametersCt samePadding hide">
+					<div class="parCompare clearBox">
+						<div class="paramBox">
+							<div class="paramBox-list">
+								<ul class="paramUl-one">
+									<li>
+										<div class="paramTitle sameTitleClick">
+											<span class="showList">+</span><span class="listTitle">BQ1655635</span>
+										</div>
+										<ul class="paramUl-two">
+											<li>
+												<div class="sercondTitle sameTitleClick">
+													<span class="showList">+</span>逆变器
+												</div>
+												<ul class="paramUl-three">
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+												</ul>
+											</li>
+											<li>
+												<div class="sercondTitle sameTitleClick">
+													<span class="showList">+</span>储能机
+												</div>
+												<ul class="paramUl-three">
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<div class="paramTitle sameTitleClick">
+											<span class="showList">+</span><span class="listTitle">ACE365525</span>
+										</div>
+										<ul class="paramUl-two">
+											<li>
+												<div class="sercondTitle sameTitleClick">
+													<span class="showList">+</span>混储一体机
+												</div>
+												<ul class="paramUl-three">
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+												</ul>
+											</li>
+											<li>
+												<div class="sercondTitle sameTitleClick">
+													<span class="showList">+</span>智能电表
+												</div>
+												<ul class="paramUl-three">
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<div class="paramTitle sameTitleClick">
+											<span class="showList">+</span><span class="listTitle">XYZ365525</span>
+										</div>
+										<ul class="paramUl-two">
+											<li>
+												<div class="sercondTitle sameTitleClick">
+													<span class="showList">+</span>MAX
+												</div>
+												<ul class="paramUl-three">
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+												</ul>
+											</li>
+											<li>
+												<div class="sercondTitle sameTitleClick">
+													<span class="showList">+</span>环境检测仪
+												</div>
+												<ul class="paramUl-three">
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<div class="paramTitle sameTitleClick">
+											<span class="showList">+</span><span class="listTitle">DYQ365588</span>
+										</div>
+										<ul class="paramUl-two">
+											<li>
+												<div class="sercondTitle sameTitleClick">
+													<span class="showList">+</span>逆变器
+												</div>
+												<ul class="paramUl-three">
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+												</ul>
+											</li>
+											<li>
+												<div class="sercondTitle sameTitleClick">
+													<span class="showList">+</span>储能机
+												</div>
+												<ul class="paramUl-three">
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+													<li>FWC381000A</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="paramContent">
+							<div class="paramChart">
+								
+								
+								
+								
+								
+							</div>
+						</div>
+						
+					</div>
+					
+				
+				
+				
+				</div>
+			</div>
+		</div>
+		<!--内容结束-->
+		<!--页脚版权信息-->
+		<div class="footer">
+			Copyright©2018 - SHENZHEN GROWATT NEW ENERGY TECHNOLOGY Co., Ltd ShineServer-3.6.0.0 
+		</div>
+		<!--------------------------------------弹框内容开始------------------------------------------------->
+		<!--添加电站弹框-->
+		<div class="allDialog addPlant-dialog">
+			<!--内容-->
+			<div class="addPlantdia-box" style="width: 200px;height: 200px;line-height: 200px;text-align: center;">
+				暂无内容
+			</div>
+			<!--按钮-->
+			<div class="dialog-btn">
+				<a class="hasColorBtn">确定</a>
+				<a class="commonBtn">取消</a>
+			</div>
+		</div>
+		<!--添加设备弹框-->
+		<div class="allDialog addDevice-dialog">
+			<!--内容-->
+			<div class="addPlantdia-box">
+				<table>
+					<tr>
+						<td>SN</td>
+						<td><input type="text" class="allInput"/></td>
+					</tr>
+					<tr>
+						<td>属性电站</td>
+						<td class="layui-form">
+							<select name="a">
+						        <option value="18">储能机</option>
+						        <option value="19">逆变器</option>
+						        <option value="20">Max</option>
+					        </select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--按钮-->
+			<div class="dialog-btn">
+				<a class="hasColorBtn">确定</a>
+				<a class="commonBtn">取消</a>
+			</div>
+		</div>
+		
+		<!--------------------------------------弹框内容结束------------------------------------------------->
+		<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+		<script src="https://img.hcharts.cn/highcharts/modules/no-data-to-display.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="layui-v2.2.5/layui.all.js"></script>
+		<script src="js/serverCommon.js"></script>
+		<!--轮播-->
+		<script src="Carousel/carousel.min.js"></script>
+		<!--数字滚动-->
+		<script src="js/countUp/jquery.countup.min.js"></script>
+		<script src="js/countUp/jquery.waypoints.min.js"></script>
+		<script>
+			 //完整功能
+			  laypage.render({
+			    elem: 'a',
+			    count: 100,
+			    theme: '#009cff',
+			    layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
+			    jump: function(obj){
+			      console.log(obj)
+			    }
+			  });
+			//常规用法
+			$(function(){
+				$('.esb-countUp').countUp();
+				laydate.render({
+					elem: '#logtime' //指定元素
+				});
+				//默认加载时间
+				$("#logtime").val(showTime(1));
+				//切换 图片
+				var i = 0;
+				var len = $(".et-banner-img li").length;
+				$(".ebsRight").click(function(){
+					i++;
+					if(i == len) i=0 ;
+					showImg();
+				})
+				$(".ebsLeft").click(function(){
+					i--;
+					if(i == -1) i= len-1 ;
+					showImg();
+				})
+				function showImg(){
+					$(".et-banner-img li").eq(i).fadeIn(300).siblings("li").fadeOut(300);
+					$(".bottomImg>div").eq(i).addClass("btSelect").siblings("div").removeClass("btSelect");
+				}
+				//参数列表点击
+				$(".sameTitleClick").click(function(){
+					$(this).children(".showList").toggleClass("openshowList")
+					if($(this).siblings("ul").is(":hidden")){
+						$(this).siblings("ul").show();
+					}else{
+						$(this).siblings("ul").hide();
+					}
+				});
+				//选择日期
+				$(".allTime-select>div").click(function(){
+					$(this).addClass("dateTimeS").siblings("div").removeClass("dateTimeS");
+				});
+				//模拟页面跳转
+				$(".energy-t li").click(function(){
+					var i = $(this).index();
+					if(i == 0){
+						window.location.href="energyFd.html"
+					}else if(i == 1){
+						window.location.href="energyNyxh.html"
+					}else{
+						window.location.href="energyCsdb.html"
+					}
+				})
+				//电站发电图表
+				$('.plantPg-chart').highcharts({
+					credits:{
+			    		enabled:false
+			    	},
+			        chart: {
+			            type: 'areaspline'
+			        },
+			        title: {
+			            text: null
+			        },
+			        xAxis: {
+			            categories: [
+			                '06:00',
+			                '07:00',
+			                '08:00',
+			                '09:00',
+			                '10:00',
+			                '11:00',
+			                '12:00',
+			                '13:00',
+			                '14:00',
+			                '15:00',
+			                '16:00',
+			                '17:00'
+			            ],
+			            crosshair: true
+			        },
+			        yAxis: {
+			            min: 0,
+			            title: {
+			                text: '功率 (W)',
+			                style: {
+								color: '#555555',
+								fontSize:'14px',
+								fontWeight: 'bold'
+							}
+			            }
+			        },
+			        legend: {
+			            enabled:false
+			        },
+			        tooltip: {
+			            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+			            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+			            '<td style="padding:0"><b>{point.y:.1f}kWh</b></td></tr>',
+			            footerFormat: '</table>',
+			            shared: true,
+			            useHTML: true
+			        },
+			        plotOptions:{
+			            series: {
+			                marker: {
+			                    enabled: false
+			                },
+			                fillOpacity: 0.2//图表阴影
+			            }
+					},
+			        series: [{
+			            name: '发电量',
+			            color:'#009cff',
+			            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+			        }],
+			        lang: {
+			            noData: '亲,暂无数据显示哦...',
+			        },
+			        noData:{
+			        	style:{
+			        		fontWeight:'bold',
+			        		fontSize:'50px',
+			        		color:'#dedede'
+			        	}
+			        }
+			    });
+			    //电量
+				$('.esbchart_1').highcharts({
+					credits:{
+			    		enabled:false
+			    	},
+			        chart: {
+			            type: 'areaspline'
+			        },
+			        title: {
+			            text: null
+			        },
+			        xAxis: {
+			            categories: [
+			                '06:00',
+			                '07:00',
+			                '08:00',
+			                '09:00',
+			                '10:00',
+			                '11:00',
+			                '12:00',
+			                '13:00',
+			                '14:00',
+			                '15:00',
+			                '16:00',
+			                '17:00'
+			            ],
+			            crosshair: true
+			        },
+			        yAxis: {
+			            min: 0,
+			            title: {
+			                text: null
+			                
+			            }
+			        },
+			        legend: {
+			            enabled:false
+			        },
+			        tooltip: {
+			            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+			            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+			            '<td style="padding:0"><b>{point.y:.1f}kWh</b></td></tr>',
+			            footerFormat: '</table>',
+			            shared: true,
+			            useHTML: true
+			        },
+			        plotOptions:{
+			            series: {
+			                marker: {
+			                    enabled: false
+			                },
+			                fillOpacity: 0.2//图表阴影
+			            }
+					},
+			        series: [{
+			            name: '发电量',
+			            color:'#009cff',
+			            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+			        }],
+			        lang: {
+			            noData: '亲,暂无数据哦...',
+			        },
+			        noData:{
+			        	style:{
+			        		fontWeight:'bold',
+			        		fontSize:'50px',
+			        		color:'#dedede'
+			        	}
+			        }
+			    });
+			    //电费
+				$('.esbchart_2').highcharts({
+					credits:{
+			    		enabled:false
+			    	},
+			        chart: {
+			            type: 'areaspline'
+			        },
+			        title: {
+			            text: null
+			        },
+			        xAxis: {
+			            categories: [
+			                '06:00',
+			                '07:00',
+			                '08:00',
+			                '09:00',
+			                '10:00',
+			                '11:00',
+			                '12:00',
+			                '13:00',
+			                '14:00',
+			                '15:00',
+			                '16:00',
+			                '17:00'
+			            ],
+			            crosshair: true
+			        },
+			        yAxis: {
+			            min: 0,
+			            title: {
+			                text: null
+			            }
+			        },
+			        legend: {
+			            enabled:false
+			        },
+			        tooltip: {
+			            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+			            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+			            '<td style="padding:0"><b>{point.y:.1f}元</b></td></tr>',
+			            footerFormat: '</table>',
+			            shared: true,
+			            useHTML: true
+			        },
+			        plotOptions:{
+			            series: {
+			                marker: {
+			                    enabled: false
+			                },
+			                fillOpacity: 0.2//图表阴影
+			            }
+					},
+			        series: [{
+			            name: '电费',
+			            color:'#009cff',
+			            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+			        }],
+			        lang: {
+			            noData: '亲,暂无数据哦...',
+			        },
+			        noData:{
+			        	style:{
+			        		fontWeight:'bold',
+			        		fontSize:'50px',
+			        		color:'#dedede'
+			        	}
+			        }
+			    });
+			     //当日图表
+				$('.paramChart').highcharts({
+					credits:{
+			    		enabled:false
+			    	},
+			        chart: {
+			            type: 'areaspline'
+			        },
+			        title: {
+			            text: null
+			        },
+			        xAxis: {
+			            categories: [
+			                '06:00',
+			                '07:00',
+			                '08:00',
+			                '09:00',
+			                '10:00',
+			                '11:00',
+			                '12:00',
+			                '13:00',
+			                '14:00',
+			                '15:00',
+			                '16:00',
+			                '17:00'
+			            ],
+			            crosshair: true
+			        },
+			        yAxis: {
+			            min: 0,
+			            title: {
+			                text: '电压(V)',
+			                style:{
+			                	fontSize:'14px',
+			                	color:'#222222'
+			                }
+			            }
+			        },
+			        legend: {
+			            enabled:false
+			        },
+			        tooltip: {
+			            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+			            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+			            '<td style="padding:0"><b>{point.y:.1f}V</b></td></tr>',
+			            footerFormat: '</table>',
+			            shared: true,
+			            useHTML: true
+			        },
+			        plotOptions:{
+			            series: {
+			                marker: {
+			                    enabled: false
+			                },
+			                fillOpacity: 0.1//图表阴影
+			            }
+					},
+			        series: [{
+			            name: '电压',
+			            color:'#009cff',
+			            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+			        }],
+			        lang: {
+			            noData: '亲,暂无数据哦...',
+			        },
+			        noData:{
+			        	style:{
+			        		fontWeight:'bold',
+			        		fontSize:'50px',
+			        		color:'#dedede'
+			        	}
+			        }
+			    });
+			})
+		</script>
+	</body>
+</html>

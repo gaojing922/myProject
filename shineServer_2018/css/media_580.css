@@ -1,0 +1,91 @@
+/*720分辨率（大于480px，小于767px*/
+@media only screen and (min-width: 580px) and (max-width: 779px){
+	.ul.headMenu{margin-right: 78px;}
+    .logoBox+span {display: none;}
+	.header_m  ul.headMenu>li:not(:nth-child(1)){margin-left: 10px;}
+	.menuSearch .menu-searchBox{width: 150px;left: -150px;}
+	.header_m  ul.headMenu>li input.layui-input{width: 150px;}   
+	.header_m  ul.headMenu>li.chooseDevice input.allInput{width: 90px;}
+	/*头部导航*/
+	.menuBox-title,.menue-content{float: left;}
+	.menuBox{padding-left: 0px;}
+    .menuBox-title{width: 25%;text-align: left;font-size: 20px;}
+    .menue-content{width:75%;}
+    .menueBox{width: 86px;height: 68px;font-size: 14px;}
+	.menueBox>p:nth-child(1){height: 38px;line-height: 38px;}
+	.menueBox>p:nth-child(2){height: 28px;line-height: 28px;}
+    .clearAfter{clear: both;}
+    /*.weatherBox{float: none;width: 100%;margin-top: 10px;}*/
+    .weatherBox{display: none;}
+    .weather-banner .bt-one li:nth-child(1){width: 50%;}
+	.weather-banner .bt-one li:nth-child(2){width: 25%;}
+	.weather-banner .bt-one li:nth-child(3){width: 25%;}
+	/*内容区域*/
+	/*状态图*/
+	.sys-title {font-size: 14px;}
+	.system-box li{height: 400px;float: left;width: 50%;}
+	.allState-box{height: 370px;}
+	.toBottom-img>span,.sysTo-top>span{height: 20px;}
+	.sameS-box {width: 64px;height: 64px;}
+	.allState-box {width: 330px;}
+	.sysTo-bottom{top: 88px;}
+	.sysTo-top{top: 223px;}
+	.state-left-title,.state-right-title{top: 220px;}
+	.select-model{left: 0;}
+	.select-model .layui-select-title input{ width: 80px;}
+	.sysTo-right, .sysTo-left{width: 70px;}
+	.sysTo-right{left: 62px;}
+	.sysTo-left {right: 62px;}
+	.same-count-text .sct-one>span:nth-child(1){font-size: 18px;}
+	.sys-count {height: 197px;}
+    .sys-count>div{height: 197px;}
+    .same-count-text {height: 197px;}
+	.state-right,.state-left,.state-center{margin-top: -32px;}
+	.state-bottom,.state-top,.state-center{margin-left: -32px;}
+	.same-count-bg {height: 197px;}
+	.sct-one {margin-top: 39px;}
+	.same-count-bg{width: 40%;background-size: 60px 60px;}
+	.same-count-text{width: 60%;}
+	/*battery*/
+	.bp-one,.bp-two{float: none;width: 100%;}
+	/*en*/
+	.Enviro-box>div{height: 170px;}
+	.eb-one,.dsb-one{float: left;}
+	.eb-two,.dsb-two{float: left;margin:0 2%;}
+	.eb-three,.dsb-three{float: right;}
+	.sameEb-bg{height: 170px;width: 25%;}
+	.eb-one .sameEb-bg,.eb-three .sameEb-bg,.eb-two .sameEb-bg{background-position:center;background-size: 60px 60px;}
+	.sameEb-text{height: 170px;width: 75%;}
+	.sameEb-text p{height: 40px;line-height: 40px;padding-left: 10px;}
+	.sameEb-text p:nth-child(1){margin-top: 43px;}
+	.sameEb-text p:nth-child(2){font-size: 14px;}
+	.sameEb-text p:nth-child(1) span:nth-child(1){font-size: 28px;}
+	.sameEb-text p:nth-child(1) span:nth-child(2){font-size: 14px;}
+	/*设备管理*/
+	.device-dis-box>div{height: 145px;}
+	.device-same-box>div:nth-child(1){width: 15%;background-size: 30px 30px;}
+	.device-same-box>div:nth-child(2){width: 85%;}
+	.device-same-box>div:nth-child(2) table tr td .dsb-count{font-size: 20px;}
+	.ddc-select ul.ddc-select li{float: left;margin-left: 10px;}
+	.ddc-select ul.ddc-select li dl{top: 32px;}
+	.ddc-select ul.ddc-select li .allInput,.ddc-select ul li .layui-input{height: 30px;width: 162px;}
+	
+	.ddc-row-one{height: 140px;padding-left: 20px;}
+	.ddc-row-title{height: 20px;line-height: 20px;font-size: 16px;margin-top: 5px;}	
+	.ddc-row-img{width:13%;height: 120px;line-height: 120px;}
+	.ddc-row-img>img{max-width: 85px;height: auto;max-height: 85px;}
+	.ddc-row-table{height: 120px;width: 87%;}	
+	.ddc-row-table table{height: 120px;font-size: 14px;}
+	.ddc-row-two{box-sizing: border-box;border-top: 1px solid #f2f2f2;}
+	.ddc-row-two:after{display: block;content: '';clear: both;}
+	.ddc-row-tDo{float: left;width: 50%;}
+	.ddc-row-tDo>div{float: left;width: 50%;height: 95px;cursor: pointer;transition: all .2s linear;border: none;}
+	.ddc-row-tDo>div>p:nth-child(1){background-size: 53px 52px;height: 70px;width: 100%;}
+	.ddc-row-tDo>div>p:nth-child(2){height: 25px;line-height: 25px;}
+	.log-title-box>ul{width: 100%;}
+	.log-title-box>ul.log-text>li{width: 49%;box-sizing: border-box;margin: 0;text-align: center;}
+	.log-title-box>ul.log-text>li:nth-child(1){float: left;}
+	.log-title-box>ul.log-text>li:nth-child(2){float: right;}
+	.log-search li input{width: 100px;}
+	.log-box{padding-left: 0!important;padding-right: 0!important;margin:0!important;}
+}

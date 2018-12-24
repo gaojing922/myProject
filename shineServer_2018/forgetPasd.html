@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" href="css/regist.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/scrollReveal.js"></script>
+		<script>
+    		$(function(){
+    			//页面动画
+    			window.scrollReveal = new scrollReveal();
+    		})
+    	</script>
+	</head>
+	<body>
+		<div class="registLogo clearBox">
+			<a class="registL" href="login.html"></a>
+			<a class="registT">忘记密码</a>
+			<a class="backLogin" href="login.html"><返回登录</a>
+		</div>
+		<div class="registBox" data-scroll-reveal="enter top and move 100px over .7s">
+			<div class="forgetTile">
+				<ul class="forgetUl clearBox sameLs">
+					<li class="sameSelectL">用户名找回密码<i></i></li>
+					<li>采集器找回密码<i></i></li>
+				</ul>
+			</div>
+			<div class="registContent">
+				<!--用户名找回密码-->
+				<div class="rcUser sameRegistRow">
+					<table>
+						<tr>
+							<td>用户名</td>
+							<td><input /></td>
+						</tr>
+					</table>
+				</div>
+				<!--通过采集器找回密码-->
+				<div class="rcDistributor sameRegistRow hide">
+					<table>
+						<tr>
+							<td>采集器序列号</td>
+							<td><input /></td>
+						</tr>
+						<tr>
+							<td>采集器验证码</td>
+							<td><input /></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="registBottom">
+				<div class="registBtn">
+					<button>发送邮件</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				//注册类别
+				$(".forgetUl li").click(function(){
+					$(this).addClass("sameSelectL").siblings("li").removeClass("sameSelectL");
+					$(".registContent>div").eq($(this).index()).show().siblings("div").hide();
+				});
+			})
+		</script>
+	</body>
+</html>

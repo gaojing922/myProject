@@ -1,0 +1,45 @@
+@charset "utf-8";
+*{padding: 0;margin: 0;list-style: none;}
+body{background: #f1f1f1;}
+.registLogo{height: 100px;line-height: 100px;padding: 0 30px;}
+.clearBox:after{display: block;content: '';clear: both;}
+.registL{float: left;display: block;width: 175px;height: 50px;margin-top: 20px;background: url(../images/registLogo.png) no-repeat center;cursor: pointer;}
+.registT{float: left;color: #464646;font-size: 24px;margin-left: 30px;}
+.backLogin{float: right;cursor: pointer;color: #1d79e7;font-size: 18px;}
+.backLogin:hover{text-decoration: underline;}
+.registBox{width: 540px;background: #ffffff;border-radius: 5px;margin: 0 auto;}
+.registTitle{height: 50px;line-height: 50px;border-bottom: 1px solid #e1e1e1;}
+.registUl,.registContent,.registBottom{width: 500px;margin: 0 auto;}
+.sameLs li{float: left;text-align: center;position: relative;transition: all .3s linear;cursor: pointer;color: #3a3a3a;}
+.sameLs li i{position: absolute;height: 3px;background: #009cff;width: 0;bottom: -2px;left: 50%;transition: all .3s linear;border-radius: 1px;}
+.sameLs li:hover i,.sameLs li.sameSelectL i{width: 100%;left: 0;}
+.sameLs li.sameSelectL,.sameLs li:hover{color: #009CFF;}
+.registUl li:not(:first-child){margin-left: 70px;}
+.registUl li{width: 120px;}
+.hide{display: none;}
+.sameRegistRow table tr td{padding: 10px 0;}
+.sameRegistRow table tr td:nth-child(1){width: 120px;text-align: right;color: #676767;font-size: 14px;}
+.sameRegistRow table tr td:nth-child(2){padding-left: 10px;}
+.sameRegistRow table tr td:nth-child(2) input{border:1px solid #f1f1f1;transition: all .3s linear;border-radius: 5px;width: 352px;height: 48px;background: #f1f1f1;outline: none;color: #444444;font-size: 14px;padding-left: 10px;}
+.sameRegistRow table tr td:nth-child(2) input:focus{background-color: #ffffff;border-color: #009cff;}
+.registBottom{padding-bottom: 30px;}
+.registContent{padding-top: 15px;}
+/*自定义单选*/
+.registAgree,.registBtn{padding-left: 133px;}
+.registAgree{margin-top: 15px;}
+.radioBox{display: inline-block;cursor: pointer;font-size: 14px;}
+.sameRadio-box{margin-bottom: 2px;margin-right: 1px;transition: all .2s linear;display: inline-block;vertical-align: middle;width: 19px;height: 19px;background-repeat: no-repeat;background-position: center;}
+.radioBox[data-name='0'] .sameRadio-box{background-image: url(../images/radioSelect.png);}
+.radioBox[data-name='1'] .sameRadio-box{background-image: url(../images/radioSelected.png);}
+.radioBox[data-name='0']{color: #676767;}
+.radioBox[data-name='1']{color: #009CFF;}
+.radioBox span.sameRadio-text{transition: all .2s linear;position: relative; top: 1px;}
+.registAgree .sameRadio-text:hover{text-decoration: underline;}
+.registBtn{margin-top: 30px;}
+.registBtn button{background: #009cff;color: #FFFFFF;width: 220px;text-align: center;font-size: 14px;border-radius: 20px;border: none;outline: none;padding: 10px 15px;transition: all .3s linear;cursor: pointer;}
+.registBtn button:hover{background:#0e5391;box-shadow: 0px 0px 11px #009cff;}
+/*忘记密码*/
+.forgetTile{height: 50px;line-height: 50px;text-align: center;border-bottom: 1px solid #e1e1e1;}
+.forgetTile .forgetUl{display: inline-block;}
+.forgetTile .forgetUl li:nth-child(1){margin-right: 25px;}
+.forgetTile .forgetUl li:nth-child(2){margin-left: 25px;}
